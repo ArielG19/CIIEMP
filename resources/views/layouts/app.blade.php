@@ -11,7 +11,8 @@
     <!--link rel="shortcut icon" href="favicon.ico"-->
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
-    
+
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
     <!-- Icomoon Icon Fonts-->
@@ -41,8 +42,7 @@
 <body>
     @include('include.nav')
     <div class="row">                                                      
-            @yield('content')
-                                            
+            @yield('content')                                
     </div>
     @include('include.footer')
     

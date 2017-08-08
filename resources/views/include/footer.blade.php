@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-						<div class="fh5co-logo"><span class="logo">C</span> CIIEMP</div>
+						<div class="fh5co-logo"><span class="logo">C</span>IIEMP</div>
 							<p class="fh5co-copyright">&copy; 2017. 
 								<br>
 									All Rights Reserved. 
