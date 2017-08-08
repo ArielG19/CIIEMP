@@ -4,12 +4,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {{--CONTENIDO--}}
+            {{--CONTENIDO modulos--}}
             <div class="fh5co-blog-style-1">
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Recent From Blog</h2>
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">CIIEMP Modulos</h2>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 					</div>
 				</div>
@@ -18,8 +18,8 @@
 						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.1s">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>	
+								<img src="styleVoltage/images/bolsadeempleo.png" alt="Image" class="img-responsive">
 								
-								<img src="images/img_same_dimension_2.jpg" alt="Image" class="img-responsive">
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">Bolsa de Empleo</a></h3>
@@ -35,7 +35,7 @@
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>	
 								
-								<img src="images/img_same_dimension_3.jpg" alt="Image" class="img-responsive">
+								<img src="styleVoltage/images/socieconomico.png" alt="Image" class="img-responsive">
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">Observatorio Socioeconómico</a></h3>
@@ -46,19 +46,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="clearfix visible-sm-block"></div>
 					
-					<div class="clearfix visible-sm-block"></div>
 				</div>
-				<div class="row">
-					<div class="col-md- col-md-offset-4 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-						<a href="#" class="btn btn-primary btn-lg">View All Post</a>
-					</div>
-				</div>
+				
 			</div>
 		</div>
+            {{--Fin modulos--}}
+            
+			{{--CONTENIDO noticias--}}
 
-        
             <div class="fh5co-content-style-6">
                 <div class="container">
                         <div class="row p-b text-center">

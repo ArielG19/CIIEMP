@@ -392,6 +392,7 @@ a:hover .lnk-icon-right {
 
 .p-b {
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1378,7 +1379,7 @@ a:hover .lnk-icon-right {
 .fh5co-content-style-8,
 .fh5co-content-style-9,
 .fh5co-content-style-10 {
-  padding: 5em 0;
+  padding: bottom 5;
   background: #fff;
 }
 @media screen and (max-width: 768px) {
@@ -2198,7 +2199,7 @@ a:hover .lnk-icon-right {
 */
 /* BLOG STYLE #1 */
 .fh5co-blog-style-1 {
-  padding: 7em 0;
+  padding: 0;
   background: #fff;
 }
 @media screen and (max-width: 768px) {

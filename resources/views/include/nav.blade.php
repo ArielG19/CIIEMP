@@ -10,7 +10,7 @@
                         <li class="active"><a href="#">Inicio</a></li>
                         <li><a href="#">Bolsa de Empleo</a></li>
                         <li><a href="#">Observatorio Socioeconómico </a></li>
-                        <li><a id="linkB" href="#">Biblioteca Virtual</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
@@ -64,7 +64,7 @@
                             <div class="fh5co-cover-intro">
                                 <h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Centro de Investigación para la Innovación y el Emprendimiento</h1>
                                 <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="http://freehtml5.co/" class="btn btn-primary btn-outline btn-lg">Acerca de nosotros</a></p>
+                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="#" class="btn btn-primary btn-outline btn-lg">Acerca de nosotros</a></p>
                             </div>
                         </div>
                     </div>
