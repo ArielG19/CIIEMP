@@ -52,6 +52,11 @@
 			</div>
 		</div>
             {{--Fin modulos--}}
+
+            {{--CONTENIDO Proyectos--}}
+
+           
+            {{--Fin Proyectos--}}
             
 			{{--CONTENIDO noticias--}}
 

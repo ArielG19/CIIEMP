@@ -9,7 +9,8 @@
                     <ul data-offcanvass="yes">
                         <li class="active"><a href="#">Inicio</a></li>
                         <li><a href="#">Bolsa de Empleo</a></li>
-                        <li><a href="#">Observatorio Socioeconómico </a></li>
+                        <li><a href="#">Observatorio</a></li>
+                        <li><a href="{{ url('/acercade') }}">Acerca de nosotros</a></li>
                         
                     </ul>
                 </div>
@@ -19,7 +20,7 @@
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
                                     <li><a href="{{ url('/login') }}">Login</a></li>
-                                    <li><a href="{{ url('/register') }}">Register</a></li>
+                                    <li><a href="{{ url('/register') }}" class="call-to-action">Register</a></li>
                                 @else
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
