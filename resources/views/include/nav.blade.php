@@ -8,7 +8,7 @@
                 <div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
                     <ul data-offcanvass="yes">
                         <li class="active"><a href="#">Enlace 1</a></li>
-                        <li><a href="#">Enlace 2</a></li>
+                        <li><a id="enlace" href="#">Enlace 2</a></li>
                         <li><a href="#">Enlace 3</a></li>
                         <li><a href="#">Enlace 4</a></li>
                     </ul>
