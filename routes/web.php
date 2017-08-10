@@ -27,3 +27,10 @@ Route::get('/acercade', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('agregar', function () {
+    return view('agregarPersonas');
+
+
+    
+});
