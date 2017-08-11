@@ -11,7 +11,11 @@
     <!--link rel="shortcut icon" href="favicon.ico"-->
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> b6ed23f446016710adc5b6b6d24030843603e466
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
@@ -43,8 +47,7 @@
 <body>
     @include('include.nav')
     <div class="row">                                                      
-            @yield('content')
-                                            
+            @yield('content')                                
     </div>
     @include('include.footer')
     

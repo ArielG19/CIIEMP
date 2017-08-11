@@ -392,6 +392,7 @@ a:hover .lnk-icon-right {
 
 .p-b {
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1378,7 +1379,7 @@ a:hover .lnk-icon-right {
 .fh5co-content-style-8,
 .fh5co-content-style-9,
 .fh5co-content-style-10 {
-  padding: 5em 0;
+  padding: bottom 5;
   background: #fff;
 }
 @media screen and (max-width: 768px) {
@@ -2198,12 +2199,12 @@ a:hover .lnk-icon-right {
 */
 /* BLOG STYLE #1 */
 .fh5co-blog-style-1 {
-  padding: 7em 0;
+  padding: 0;
   background: #fff;
 }
 @media screen and (max-width: 768px) {
   .fh5co-blog-style-1 {
-    padding: 4em 0;
+    padding: 0em 0;
   }
 }
 .fh5co-blog-style-1 .fh5co-post {
@@ -2250,7 +2251,7 @@ a:hover .lnk-icon-right {
 }
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-image .fh5co-overlay {
   z-index: 1;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3466,5 +3467,6 @@ a:hover .lnk-icon-right {
     display: block;
   }
 }
+
 
 /*# sourceMappingURL=cards.css.map */

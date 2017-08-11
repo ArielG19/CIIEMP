@@ -7,19 +7,27 @@
                 </div>
                 <div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
                     <ul data-offcanvass="yes">
+<<<<<<< HEAD
                         <li class="active"><a href="#">Enlace 1</a></li>
                         <li><a id="enlace" href="#">Enlace 2</a></li>
                         <li><a href="#">Enlace 3</a></li>
                         <li><a href="#">Enlace 4</a></li>
+=======
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Bolsa de Empleo</a></li>
+                        <li><a href="#">Observatorio</a></li>
+                        <li><a href="{{ url('/acercade') }}">Acerca de nosotros</a></li>
+                        
+>>>>>>> b6ed23f446016710adc5b6b6d24030843603e466
                     </ul>
-                </div> 
+                </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
                     <ul class="fh5co-special" data-offcanvass="yes">
-                        
+
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
                                     <li><a href="{{ url('/login') }}">Login</a></li>
-                                    <li><a href="{{ url('/register') }}">Register</a></li>
+                                    <li><a href="{{ url('/register') }}" class="call-to-action">Register</a></li>
                                 @else
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -41,7 +49,7 @@
                                         </ul>
                                     </li>
                                 @endif
-                        
+
 
 
 
@@ -62,15 +70,14 @@
                     <div class="row">
                         <div class="col-md-push-6 col-md-6 full-height js-full-height">
                             <div class="fh5co-cover-intro">
-                                <h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Create Amazing Things</h1>
+                                <h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Centro de Investigación para la Innovación y el Emprendimiento</h1>
                                 <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="http://freehtml5.co/" class="btn btn-primary btn-outline btn-lg">See Our Work</a></p>
+                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="#" class="btn btn-primary btn-outline btn-lg">Acerca de nosotros</a></p>
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
 </div>
-        
-</div>
 
+</div>
