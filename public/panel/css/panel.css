@@ -38,7 +38,7 @@
   }
   /*modificando el color de texto en el dropdown*/
   .skin-blue .main-header .navbar .dropdown-menu li a {
-    color: #999;
+    color: #080808;
   }
   .skin-blue .main-header .navbar .dropdown-menu li a:hover {
     background: #367fa9;

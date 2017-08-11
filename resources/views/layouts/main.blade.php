@@ -22,19 +22,20 @@
 </head>
 <body>
     @include('include.navInterno')
-    <div class="row">                                                      
-            @yield('content')
-                                            
+    <div class="row">
+        <div class="col-md-12">
+             @yield('content')
+        </div>                                                                                                  
     </div>
     {{--@include('include.footer')--}}
     
     
     <!-- jQuery -->
     <script src="{{asset('jquery/jquery.js')}}"></script>
-
-
     <!-- Bootstrap -->
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+
+    @yield('script')
    
 </body>
 </html>

@@ -19,6 +19,7 @@ class CreateProyectosTable extends Migration
             $table->string('responsable');
             $table->string('objetivo');
             $table->string('resumen');
+            $table->string('imagen');
             $table->integer('id_usuario')->unsigned();
 
             $table->foreign('id_usuario')->references('id')->on('users');

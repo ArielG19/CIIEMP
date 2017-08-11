@@ -17,6 +17,7 @@ class CreateBibliotecasTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('pdf');
+            $table->string('imagen');
             $table->integer('id_usuario')->unsigned();
 
             $table->foreign('id_usuario')->references('id')->on('users');
