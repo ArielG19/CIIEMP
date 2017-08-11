@@ -58,9 +58,12 @@
                           <ul class="sidebar-menu">
                                    <li class="treeview">
                                       <a href="#">
-
+                                        <i class="fa fa-pencil"></i>
                                         <span>Admin</span>
                                         <i class="fa fa-angle-left pull-right"></i>
+                                        <ul class="treeview-menu">
+                                        <li><a href="agregar"><i class="fa fa-circle-o"></i>Agregar Personas</a></li>
+                                      </ul>
                                       </a>
                                     
                                   </li>
@@ -119,7 +122,9 @@
           <!-- Content Wrapper. Contains page content -->
           <div class="content-wrapper">
                 <!-- Main content -->
-                <section class="content"></section><!-- /.content -->
+                <section class="content">
+                    @yield('contenido')
+                </section><!-- /.content -->
           </div>
           <!--Fin-Contenido-->
           <footer class="main-footer">
