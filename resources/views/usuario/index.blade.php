@@ -35,6 +35,7 @@
 			</div>
 	</div>
 </div>
+@include('usuario.modalCreate')
 
 @section('script')
 	<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
