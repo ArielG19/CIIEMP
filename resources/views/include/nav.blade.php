@@ -7,18 +7,13 @@
                 </div>
                 <div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
                     <ul data-offcanvass="yes">
-<<<<<<< HEAD
-                        <li class="active"><a href="#">Enlace 1</a></li>
-                        <li><a id="enlace" href="#">Enlace 2</a></li>
-                        <li><a href="#">Enlace 3</a></li>
-                        <li><a href="#">Enlace 4</a></li>
-=======
+
                         <li class="active"><a href="#">Inicio</a></li>
                         <li><a href="#">Bolsa de Empleo</a></li>
                         <li><a href="#">Observatorio</a></li>
                         <li><a href="{{ url('/acercade') }}">Acerca de nosotros</a></li>
-                        
->>>>>>> b6ed23f446016710adc5b6b6d24030843603e466
+
+
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">

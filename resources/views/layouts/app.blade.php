@@ -11,11 +11,7 @@
     <!--link rel="shortcut icon" href="favicon.ico"-->
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> b6ed23f446016710adc5b6b6d24030843603e466
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
@@ -29,29 +25,29 @@
     <link rel="stylesheet" href="{{asset('styleVoltage/css/owl.theme.default.min.css')}}">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/bootstrap.css')}}">
-    
+
     <!-- Cards -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/cards.css')}}">
 
       <!-- Modernizr JS -->
     <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
 
-    
+
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
 
-  
-    
-    
+
+
+
 </head>
 <body>
     @include('include.nav')
-    <div class="row">                                                      
-            @yield('content')                                
+    <div class="row">
+            @yield('content')
     </div>
     @include('include.footer')
-    
-    
+
+
     <!-- jQuery -->
     <script src="{{asset('styleVoltage/js/jquery.min.js')}}"></script>
 
@@ -81,13 +77,13 @@
 
     <script> new WOW().init();</script>
 
-    
-   
+
+
     <!-- Main -->
     <script src="{{asset('styleVoltage/js/main.js')}}"></script>
-    
-    
 
-   
+
+
+
 </body>
 </html>
