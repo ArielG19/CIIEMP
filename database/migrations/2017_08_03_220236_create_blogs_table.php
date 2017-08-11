@@ -17,9 +17,14 @@ class CreateBlogsTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('descripcion');
+            $table->string('slug')->nullable();
+            $table->string('path');
+            $table->string('tags');
             $table->integer('id_usuario')->unsigned();
+            $table->integer('id_categoria')->unsigned();
 
             $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->timestamps();
         });
     }
@@ -31,6 +36,7 @@ class CreateBlogsTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('blogs');
     }
 }
