@@ -1,0 +1,2 @@
+slug
+composer require cviebrock/eloquent-sluggable

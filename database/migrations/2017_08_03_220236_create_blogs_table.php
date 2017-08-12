@@ -23,8 +23,8 @@ class CreateBlogsTable extends Migration
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_categoria')->unsigned();
 
-            $table->foreign('id_usuario')->references('id')->on('users');
-            $table->foreign('id_categoria')->references('id')->on('categorias');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade');
             $table->timestamps();
         });
     }

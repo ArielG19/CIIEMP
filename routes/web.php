@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 
 
-    
+
 });
 
 Route::get('/acercade', function () {
@@ -28,9 +28,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('agregar', function () {
+Route::get('/agregar', function () {
     return view('agregarPersonas');
 
-
-    
 });
+
+
+Route::resource('categoria', 'CategoriaController');
+
+Route::get('categoria/{id}/destroy',[
+	'uses' =>'CategoriaController@destroy',
+	'as'   =>'categoria.destroy'
+
+	]);
