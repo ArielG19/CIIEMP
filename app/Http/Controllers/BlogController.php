@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Blog;
+use App\User;
 use App\Categoria;
 use Session;
 use Redirect;
 
-class CategoriaController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +20,8 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-      $categorias = Categoria::orderBy('id','DESC')->paginate(5);
-      return view('panel.categorias.index', compact('categorias'));
+      $blogs =Blog::orderBy('id','DESC')->paginate(5);
+      return view('panel.blog.index', compact('blogs'));
     }
 
     /**
@@ -29,7 +31,8 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('panel.categorias.create');
+      $categorias = Categoria::pluck('name','id');
+      return view('panel.blog.create',compact('categorias'));
     }
 
     /**
@@ -40,11 +43,13 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-      $categoria = new Categoria($request->all());
+      $blog = new Blog($request->all());
 
-      $categoria->save();
-      Session::flash('message','Categoria fue creada correctamente');
-      return redirect::to('categoria');
+
+      $blog->save();
+      Session::flash('message','La entrada del blog fue creada correctamente');
+      return redirect::to('blogs');
+
     }
 
     /**
@@ -66,8 +71,7 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-      $categoria= Categoria::find($id);
-     return view('panel.categorias.edit',compact('categoria'));
+        //
     }
 
     /**
@@ -79,12 +83,7 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $categoria= Categoria::find($id);
-       $categoria->fill($request->all());
-       $categoria->save();
-
-       Session::flash('message','Categoria actualizada correctamente');
-      return redirect::to('admin/categoria');
+        //
     }
 
     /**
@@ -95,10 +94,6 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-      $categoria= Categoria::find($id);
-      $categoria->delete();
-
-      Session::flash('message','Categoria eliminada correctamente');
-      return redirect::to('admin/categoria');
+        //
     }
 }

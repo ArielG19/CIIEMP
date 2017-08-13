@@ -3,13 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Categoria;
-use Session;
-use Redirect;
 
-class CategoriaController extends Controller
+class FrontController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +13,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-      $categorias = Categoria::orderBy('id','DESC')->paginate(5);
-      return view('panel.categorias.index', compact('categorias'));
+        return view('blog/index');
     }
 
     /**
@@ -29,7 +23,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('panel.categorias.create');
+        //
     }
 
     /**
@@ -40,11 +34,7 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-      $categoria = new Categoria($request->all());
-
-      $categoria->save();
-      Session::flash('message','Categoria fue creada correctamente');
-      return redirect::to('categoria');
+        //
     }
 
     /**
@@ -66,8 +56,7 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-      $categoria= Categoria::find($id);
-     return view('panel.categorias.edit',compact('categoria'));
+        //
     }
 
     /**
@@ -79,12 +68,7 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $categoria= Categoria::find($id);
-       $categoria->fill($request->all());
-       $categoria->save();
-
-       Session::flash('message','Categoria actualizada correctamente');
-      return redirect::to('admin/categoria');
+        //
     }
 
     /**
@@ -95,10 +79,6 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-      $categoria= Categoria::find($id);
-      $categoria->delete();
-
-      Session::flash('message','Categoria eliminada correctamente');
-      return redirect::to('admin/categoria');
+        //
     }
 }

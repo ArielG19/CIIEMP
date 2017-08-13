@@ -14,9 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 
-
-
 });
+
+Route::get('/blog',[
+	'uses' => 'FrontController@index',
+	'as'   => 'blog'
+	]);
 
 Route::get('/acercade', function () {
     return view('acercade');
@@ -35,9 +38,17 @@ Route::get('/agregar', function () {
 
 
 Route::resource('categoria', 'CategoriaController');
+Route::resource('blogs', 'BlogController');
 
 Route::get('categoria/{id}/destroy',[
 	'uses' =>'CategoriaController@destroy',
 	'as'   =>'categoria.destroy'
 
 	]);
+
+
+  Route::get('categoria/create',[
+  	'uses' =>'CategoriaController@create',
+  	'as'   =>'categoria.create'
+
+  	]);

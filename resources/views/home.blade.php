@@ -86,8 +86,10 @@
                                          <i class="fa fa-angle-left pull-right"></i>
                                       </a>
                                       <ul class="treeview-menu">
-                                        <li><a href="categoria"><i class="fa fa-circle-o"></i>Listado de categorias</a></li>
-                                        <li><a href="compras/proveedor"><i class="fa fa-circle-o"></i>Crear una Categoria</a></li>
+                                        <li><a href="{{route('categoria.index')}}"><i class="fa fa-circle-o"></i>Listado de categorias</a></li>
+                                        <li><a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>Crear categorias</a></li>
+                                        <li><a href="{{route('blogs.index')}}"><i class="fa fa-circle-o"></i>Entradas de blog</a></li>
+                                        <li><a href="{{route('blogs.create')}}"><i class="fa fa-circle-o"></i>Crear Entradas</a></li>
                                       </ul>
                                   </li>
 
