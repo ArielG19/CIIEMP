@@ -42,6 +42,18 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        if($request->ajax()){
+            $usuarios = User::create($request->all());
+            $usuarios->password=bcrypt($request->password);
+            $usuarios->save();
+            //si no hay error entonces
+            if($usuarios){
+                //Session::flash('save','Se ha creado correctamente');
+                return response()->json(['success'=>'true']);
+            }else{
+                return response()->json(['success'=>'false']);
+            }
+        }
     }
 
     /**
@@ -64,6 +76,10 @@ class UserController extends Controller
     public function edit($id)
     {
         //
+        $usuarios = User::FindOrFail($id);            
+        return response()->json($usuarios);
+
+
     }
 
     /**
@@ -75,7 +91,20 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if($request->ajax()){
+
+                $usuarios =User::FindOrFail($id);
+                //en input amacenamos toda la info del request
+                $input = $request->all();
+                $resultado = $usuarios->fill($input)->save();
+
+                if($resultado){
+                    return response()->json(['success'=>'true']);
+                }else{
+                    return response()->json(['success'=>'false']);
+                }
+        }
+
     }
 
     /**

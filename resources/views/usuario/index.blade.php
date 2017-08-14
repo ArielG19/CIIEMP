@@ -1,6 +1,6 @@
-@extends('layouts.main')
+@extends('home')
 @section('title','Usuarios')
-@section('content')
+@section('contenido')
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 			<div id="message-save" class="alert alert-success alert-dismissible" role="alert" style="display:none">
@@ -16,7 +16,8 @@
 	            </button>
 				<strong> Se actualizo correctamente</strong>
 			</div>
-			<div class="row">
+
+						<div class="row">
 				<div class="col-md-6">
 					<h5>Lista de Usuarios</h5>
 					<hr>
@@ -36,10 +37,10 @@
 	</div>
 </div>
 @include('usuario.modalCreate')
+@include('usuario.modalUpdate')
 
 @section('script')
 	<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
-	<script>listarUsuario();</script>
-@endsection	
+	@endsection	
 
 @endsection		

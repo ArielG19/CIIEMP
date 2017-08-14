@@ -20,6 +20,10 @@
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
                                     <li><a href="{{ url('/login') }}">Login</a></li>
+                                    <li><a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                         LoginCollapse
+                                    </a>
+                                    </li>
                                     <li><a href="{{ url('/register') }}" class="call-to-action">Register</a></li>
                                 @else
                                     <li class="dropdown">
@@ -74,3 +78,5 @@
 </div>
 
 </div>
+
+@include('auth.login')

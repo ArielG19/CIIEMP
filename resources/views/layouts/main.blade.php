@@ -21,7 +21,7 @@
     
 </head>
 <body>
-    @include('include.navInterno')
+    {{--@include('include.navInterno')--}}
     <div class="row">
         <div class="col-md-12">
              @yield('content')

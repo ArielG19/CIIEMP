@@ -20,33 +20,28 @@
 
 							 <div class="form-group">
                         		{!!form::label('Nombre:')!!}
-                            	{!!form::text('name',null,['id'=>'addName','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
+                            	{!!form::text('name',null,['id'=>'name','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
           					</div>
-                    		<div class="form-group">
-                        		<!--Nombramos las cajas de texto igual que los campos de la bd-->
-                        		{!!form::label('Cargo:')!!}
-                        		{!!form::text('cargo',null,['id'=>'addCargo','class'=>'form-control','placeholder'=>'Escriba un cargo'])!!}
-                    		</div>
-
+                    		
                     		<div class="form-group">
               					<!--Nombramos las cajas de texto igual que los campos de la bd-->
               					{!!form::label('Email:')!!}
-              					{!!form::email('email',null,['id'=>'addEmail','class'=>'form-control','placeholder'=>'Escriba un correo example@gmil.com'])!!}
+              					{!!form::email('email',null,['id'=>'email','class'=>'form-control','placeholder'=>'Escriba un correo example@gmil.com'])!!}
             				</div>
             				<div class="form-group">
               				{!!Form::label('Contraseña:')!!}
-              				{!!Form::password('password',['id'=>'addPassword','class' => 'form-control','placeholder'=> '*******','required'])!!}
+              				{!!Form::password('password',['id'=>'password','class' => 'form-control','placeholder'=> '*******','required'])!!}
             				</div>
 
                     		<div class="form-group">
                         		{!!Form::label('Tipo')!!}
-                        		{!!Form::select('type',[''=>'Seleccione un tipo','admin'=>'administrador','usuario'=>'Usuario'],null,['id'=>'addType','class'=>'form-control'])!!}
+                        		{!!Form::select('type',[''=>'Seleccione un tipo','admin'=>'administrador','profesor'=>'Profesor','estudiante'=>'Estudiante'],null,['id'=>'type','class'=>'form-control'])!!}
                     		</div>
                 		{!!Form::close()!!}
 					</div>
 
 					<div class="modal-footer">
-						{!!link_to('#',$title ='Guardar',$attributes= ['id'=>'addUsuario','class'=>'btn btn-info'],$secure = null)!!}
+						{!!link_to('#',$title ='Guardar',$attributes= ['id'=>'guardar','class'=>'btn btn-info'],$secure = null)!!}
 					</div>		
 		</div>
 	</div>
