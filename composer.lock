@@ -4,12 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "75ba431fb4ccf48ce8a358d938bb8d86",
-=======
-    "hash": "50a7af6f91867fc3d219c15f9bf53804",
     "content-hash": "612c242ac4c263631d35090bb983715c",
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
     "packages": [
         {
             "name": "cocur/slugify",
@@ -73,7 +68,7 @@
                 "slug",
                 "slugify"
             ],
-            "time": "2017-03-23 21:52:55"
+            "time": "2017-03-23T21:52:55+00:00"
         },
         {
             "name": "cviebrock/eloquent-sluggable",
@@ -132,7 +127,7 @@
                 "laravel",
                 "slug"
             ],
-            "time": "2017-07-04 14:15:50"
+            "time": "2017-07-04T14:15:50+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -339,7 +334,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20 17:10:46"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "intervention/image",
@@ -409,7 +404,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2017-07-03 15:50:40"
+            "time": "2017-07-03T15:50:40+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -499,13 +494,8 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "laravel/framework",
-            "version": "v5.4.32",
-=======
             "name": "jenssegers/date",
             "version": "v3.2.12",
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
             "source": {
                 "type": "git",
                 "url": "https://github.com/jenssegers/date.git",
@@ -513,8 +503,6 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
-=======
                 "url": "https://api.github.com/repos/jenssegers/date/zipball/1db4d580d1d45085a48fd4a332697619b9a3851c",
                 "reference": "1db4d580d1d45085a48fd4a332697619b9a3851c",
                 "shasum": ""
@@ -568,25 +556,24 @@
                 "time",
                 "translation"
             ],
-            "time": "2017-06-30 11:51:03"
+            "time": "2017-06-30T11:51:03+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.32",
+            "version": "v5.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b8300578d159199b1195413b67318c79068cd24d"
+                "reference": "e53a81a2bf406f501cdf818ad949f8d6c8dabfc0"
             },
             "dist": {
                 "type": "zip",
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b8300578d159199b1195413b67318c79068cd24d",
-                "reference": "b8300578d159199b1195413b67318c79068cd24d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e53a81a2bf406f501cdf818ad949f8d6c8dabfc0",
+                "reference": "e53a81a2bf406f501cdf818ad949f8d6c8dabfc0",
                 "shasum": ""
             },
             "require": {
-                "doctrine/inflector": "~1.1.0",
+                "doctrine/inflector": "~1.1",
                 "erusev/parsedown": "~1.6",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
@@ -698,11 +685,7 @@
                 "framework",
                 "laravel"
             ],
-<<<<<<< HEAD
-            "time": "2017-08-03T12:59:42+00:00"
-=======
-            "time": "2017-08-03 12:59:42"
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
+            "time": "2017-08-14T20:17:41+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -819,11 +802,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-<<<<<<< HEAD
             "time": "2017-05-22T06:35:07+00:00"
-=======
-            "time": "2017-05-22 06:35:07"
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
         },
         {
             "name": "league/flysystem",
@@ -906,11 +885,7 @@
                 "sftp",
                 "storage"
             ],
-<<<<<<< HEAD
             "time": "2017-08-06T17:41:04+00:00"
-=======
-            "time": "2017-08-06 17:41:04"
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
         },
         {
             "name": "monolog/monolog",
@@ -1234,7 +1209,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -1436,11 +1411,7 @@
                 "identifier",
                 "uuid"
             ],
-<<<<<<< HEAD
             "time": "2017-08-04T13:39:04+00:00"
-=======
-            "time": "2017-08-04 13:39:04"
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2694,11 +2665,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-<<<<<<< HEAD
             "time": "2017-08-08T06:39:58+00:00"
-=======
-            "time": "2017-08-08 06:39:58"
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -2745,11 +2712,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-<<<<<<< HEAD
             "time": "2017-06-03T08:32:36+00:00"
-=======
-            "time": "2017-06-03 08:32:36"
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
         },
         {
             "name": "phpspec/prophecy",

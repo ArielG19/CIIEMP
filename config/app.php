@@ -234,11 +234,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-<<<<<<< HEAD
-=======
         'Date' => Jenssegers\Date\Date::class,
         'Image' => Intervention\Image\Facades\Image::class
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
+
 
     ],
 

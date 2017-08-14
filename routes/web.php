@@ -45,15 +45,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-<<<<<<< HEAD
 
 Route::Resource('/usuarios','UserController');
 Route::get('/listar-usuarios','UserController@listarUsuario');
 
 Route::get('agregar', function () {
-=======
-Route::get('/agregar', function () {
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
+
     return view('agregarPersonas');
 
 });
@@ -73,10 +70,5 @@ Route::get('blogs/{id}/destroy',[
     'uses' =>'BlogController@destroy',
     'as'   =>'blogs.destroy'
 
-<<<<<<< HEAD
-    
-});
-
-=======
 ]);
->>>>>>> 9ecb7b3c9bf02ed687c1bb46730d707358884d67
+
