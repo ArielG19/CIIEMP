@@ -16,10 +16,24 @@ Route::get('/', function () {
 
 });
 
-Route::get('/blog',[
+Route::get('/bloghome',[
 	'uses' => 'FrontController@index',
-	'as'   => 'blog'
+	'as'   => 'bloghome'
 	]);
+
+  Route::get('/imagen/{img}',function($img){
+    return \Image::make(public_path("/image/$img"))->resize(200, 200)->response('jpg');
+});
+
+
+
+
+
+  Route::get('blogin/{slug}',[
+	'uses' => 'FrontController@blog',
+	'as'   => 'blogin'
+	]);
+
 
 Route::get('/acercade', function () {
     return view('acercade');
@@ -40,15 +54,15 @@ Route::get('/agregar', function () {
 Route::resource('categoria', 'CategoriaController');
 Route::resource('blogs', 'BlogController');
 
+
+
 Route::get('categoria/{id}/destroy',[
-	'uses' =>'CategoriaController@destroy',
-	'as'   =>'categoria.destroy'
+  'uses' =>'CategoriaController@destroy',
+  'as'   =>'categoria.destroy'
+]);
 
-	]);
+Route::get('blogs/{id}/destroy',[
+    'uses' =>'BlogController@destroy',
+    'as'   =>'blogs.destroy'
 
-
-  Route::get('categoria/create',[
-  	'uses' =>'CategoriaController@create',
-  	'as'   =>'categoria.create'
-
-  	]);
+]);

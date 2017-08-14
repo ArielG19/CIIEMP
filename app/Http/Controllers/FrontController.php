@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Blog;
+use Jenssegers\Date\Date;
 
 class FrontController extends Controller
 {
@@ -11,10 +13,16 @@ class FrontController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+      Date::setLocale('es');
+    }
     public function index()
     {
-        return view('blog/index');
+      $blogs = Blog::OrderBy('id', 'DESC')->paginate(4);
+      return view('blog/index',compact('blogs'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -24,6 +32,14 @@ class FrontController extends Controller
     public function create()
     {
         //
+    }
+
+    public function blog($slug)
+    {
+        $blogs = Blog::findBySlug($slug);
+       /* $articles->paginate();*/
+
+        return view('blog',compact('blogs'));
     }
 
     /**

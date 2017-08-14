@@ -10,6 +10,7 @@ use App\User;
 use App\Categoria;
 use Session;
 use Redirect;
+use Image;
 
 class BlogController extends Controller
 {
@@ -23,6 +24,8 @@ class BlogController extends Controller
       $blogs =Blog::orderBy('id','DESC')->paginate(5);
       return view('panel.blog.index', compact('blogs'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -71,7 +74,13 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+       $users = User::pluck('name', 'id');
+       $categorias =Categoria::pluck('name', 'id');
+
+
+       $blog = Blog::find($id);
+
+       return view('panel.blog.edit',compact('users','categorias','blog'));
     }
 
     /**
@@ -83,7 +92,15 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $blog = Blog::find($id);
+      $blog->  fill($request->all());
+      $blog->save();
+
+
+
+      $blog->save();
+      Session::flash('message','Entrada del blog editada Correctamente');
+      return redirect::to('blogs') ;
     }
 
     /**
@@ -94,6 +111,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+       Blog::destroy($id);
+       Session::flash('message','Entrada de blog eliminada Correctamente');
+       return redirect::to('blogs') ;
     }
 }
