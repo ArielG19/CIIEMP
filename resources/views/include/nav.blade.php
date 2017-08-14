@@ -11,16 +11,10 @@
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#"><i class="fa fa-home fa-lg" aria-hidden="true"></i> Inicio<span class="sr-only">(current)</span></a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-book fa-lg" aria-hidden="true"></i> Blog</a>
-					<ul class="dropdown-menu" role="menu">
+        <li class="active"><a href="{{ url('/') }}"><i class="fa fa-home fa-lg" aria-hidden="true"></i> Inicio<span class="sr-only">(current)</span></a></li>
 
-						<li><a href="#"><span class="badge">E</span>Entradas recientes</a></li>
-						<li><a href="#"><span class="badge"></span> sayfasında iletiniz beğenildi</a></li>
+        <li class="active"><a href="{{ url('bloghome') }}"><i class="fa fa-book fa-lg" aria-hidden="true"></i> Blog<span class="sr-only">(current)</span></a></li>
 
-					</ul>
-				</li>
         <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-puzzle-piece fa-lg" aria-hidden="true"></i> Modulos</a>
 					<ul class="dropdown-menu" role="menu">
@@ -62,7 +56,7 @@
 	</div>
 </nav>
         <!--FIN DE MENU-->
-         <div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"  style="background-image: url(styleVoltage/images/full_1.jpg);">
+         <div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"  style="background-image: url(styleVoltage/images/ciiemp-Walpaper.png);">
             <span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
                 <a href="#">
                     <span class="mouse"><span></span></span>

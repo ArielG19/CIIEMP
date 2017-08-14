@@ -3,16 +3,14 @@
 @section('content')
 <div class="fh5co-blog-style-1">
 			<div class="container">
-				<div class="row p-b">
-					<div class="col-md-12 col-md-offset-6 ">
-						<h2> Últimas Noticias</h2>
+				<h2> Últimas Noticias</h2>
 
-					</div>
-				</div>
-				@foreach($blogs as $blog)
+
 				<div class="row p-b">
-					<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.1s">
+
+					<div class="col-md-8 col-sm-6 col-xs-6 col-xxs-12">
+						@foreach($blogs as $blog)
+						<div class="fh5co-post wow fadeInLeft">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>
 								<div class="fh5co-category"><a href="#">{{$blog->category->name}}</a></div>
@@ -20,8 +18,8 @@
 								<img src="/images/no-imagen.png"  class="img-responsive">
 								@else
 
-								<img src="/images/creatividad4.jpg" alt="Image" class="img-responsive">
-								
+								<img src="/images/blogciiemp.png" alt="Image" class="img-responsive">
+
 								@endif
 							</div>
 							<div class="fh5co-post-text">
@@ -38,11 +36,26 @@
 
 
 						</div>
+						@endforeach()
 					</div>
 
 
+					<div class="col-md-4  categoryd">
+							<!-- Category -->
+							<div class="single category">
+								<h3 class="side-title">Categorias</h3>
+								@foreach($blogs as $blog)
+								<ul class="list-unstyled">
+									<li><a href="" title="">{{$blog->category->name}} </a></li>
+								@endforeach()
+								</ul>
+   				</div>
 				</div>
-				@endforeach()
+				</div>
+
+
+
+
 				{!! $blogs->render()!!}
 
 			</div>
