@@ -21,13 +21,6 @@ Route::get('/bloghome',[
 	'as'   => 'bloghome'
 	]);
 
-  Route::get('/imagen/{img}',function($img){
-    return \Image::make(public_path("/image/$img"))->resize(200, 200)->response('jpg');
-});
-
-
-
-
 
   Route::get('blogin/{slug}',[
 	'uses' => 'FrontController@blog',
@@ -38,11 +31,13 @@ Route::get('/bloghome',[
 Route::get('/acercade', function () {
     return view('acercade');
     });
+Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
 
+    Route::resource('categoria', 'CategoriaController');
+    Route::resource('blogs', 'BlogController');
+    Route::resource('bibliotecas', 'BibliotecaController');
 
-
-
-
+});
 
 Auth::routes();
 
@@ -54,13 +49,6 @@ Route::get('/agregar', function () {
 
 });
 
-
-Route::resource('categoria', 'CategoriaController');
-Route::resource('blogs', 'BlogController');
-Route::resource('bibliotecas', 'BibliotecaController');
-
-
-
 Route::get('categoria/{id}/destroy',[
   'uses' =>'CategoriaController@destroy',
   'as'   =>'categoria.destroy'
@@ -71,6 +59,13 @@ Route::get('blogs/{id}/destroy',[
     'as'   =>'blogs.destroy'
 
 ]);
+
+Route::get('bibliotecas/{id}/destroy',[
+    'uses' =>'bibliotecaController@destroy',
+    'as'   =>'bibliotecas.destroy'
+
+]);
+
 
 
 Route::get('/biblioteca', 'BibliotecaController@downfunc');

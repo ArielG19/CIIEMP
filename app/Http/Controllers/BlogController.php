@@ -52,7 +52,7 @@ class BlogController extends Controller
 
       $blog->save();
       Session::flash('message','La entrada del blog fue creada correctamente');
-      return redirect::to('blogs');
+      return redirect::to('home/blogs');
 
     }
 
@@ -101,7 +101,7 @@ class BlogController extends Controller
 
       $blog->save();
       Session::flash('message','Entrada del blog editada Correctamente');
-      return redirect::to('blogs') ;
+      return redirect::to('home/blogs') ;
     }
 
     /**
@@ -114,6 +114,6 @@ class BlogController extends Controller
     {
        Blog::destroy($id);
        Session::flash('message','Entrada de blog eliminada Correctamente');
-       return redirect::to('blogs') ;
+       return redirect::to('home/blogs') ;
     }
 }

@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 use App\Blog;
 use App\Biblioteca;
 use App\Categoria;
+use App\User;
 use Illuminate\Http\Request;
+use Session;
+use Redirect;
 use DB;
 
 class BibliotecaController extends Controller
@@ -25,7 +28,8 @@ class BibliotecaController extends Controller
      */
     public function index()
     {
-        //
+      $biblios =Biblioteca::orderBy('id','DESC')->paginate(5);
+      return view('panel.biblioteca.index', compact('biblios'));
     }
 
     /**
@@ -51,7 +55,9 @@ class BibliotecaController extends Controller
 
 
       $biblio->save();
-      
+      Session::flash('message','El archivo se ha subido correctamente');
+      return redirect::to('home/bibliotecas');
+
       return redirect::to('bibliotecas');
     }
 
@@ -74,7 +80,13 @@ class BibliotecaController extends Controller
      */
     public function edit($id)
     {
-        //
+      $users = User::pluck('name', 'id');
+      $categorias =Categoria::pluck('name', 'id');
+
+
+      $biblio = Biblioteca::find($id);
+
+      return view('panel.biblioteca.edit',compact('users','categorias','biblio'));
     }
 
     /**
@@ -86,7 +98,15 @@ class BibliotecaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $biblio = Biblioteca::find($id);
+      $biblio->  fill($request->all());
+      $biblio->save();
+
+
+
+      $biblio->save();
+      Session::flash('message','El archivo de la biblioteca se ha editado Correctamente');
+      return redirect::to('home/bibliotecas');
     }
 
     /**
@@ -97,6 +117,8 @@ class BibliotecaController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Biblioteca::destroy($id);
+      Session::flash('message','El archivo de la biblioteca se ha eliminado Correctamente');
+      return redirect::to('home/bibliotecas') ;
     }
 }

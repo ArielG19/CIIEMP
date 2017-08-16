@@ -22,7 +22,7 @@
 
 				<div class="form-group">
 					{!! Form::label('descripcion','Contenido') !!}
-					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Contenido del artículo','required'])!!}
+					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Contenido del artículo','maxlength' => 100,'minlength' =>100,'required'])!!}
 				</div>
 
 
@@ -37,8 +37,8 @@
 				</div>
 
 				<div class="form-group">
-					{!! Form::label('Archivo PDF','PDF') !!}
-					{!! Form::file('path')!!}
+					{!! Form::label('Archivo PDF','Archivo') !!}
+					{!! Form::file('path',['required'])!!}
 				</div>
 
 

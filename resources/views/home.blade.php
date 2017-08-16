@@ -100,8 +100,8 @@
                                          <i class="fa fa-angle-left pull-right"></i>
                                       </a>
                                       <ul class="treeview-menu">
-                                        <li><a href="ventas/venta"><i class="fa fa-circle-o"></i>enlace 1</a></li>
-                                        <li><a href="ventas/cliente"><i class="fa fa-circle-o"></i>enlace 2</a></li>
+                                        <li><a href="{{route('bibliotecas.index')}}"><i class="fa fa-circle-o"></i>lista</a></li>
+                                        <li><a href="{{route('bibliotecas.create')}}"><i class="fa fa-circle-o"></i>Crear</a></li>
                                       </ul>
                                   </li>
 

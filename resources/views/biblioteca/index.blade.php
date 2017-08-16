@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Entradas recientes')
+@section('title','Biblioteca Virtual')
 @section('content')
 <div class="fh5co-blog-style-1">
 			<div class="container">
@@ -19,6 +19,7 @@
 								<p>{{$down->descripcion}}</p>
 							</div>
 							<div class="fh5co-post-meta" id="btn">
+								<a class="btn btn-primary" href="download/pdf/{{$down->path}}" target="_blank" role="button">Visualizar</a>
                 <a class="btn btn-primary" href="download/pdf/{{$down->path}}" download="{{$down->path}}" role="button">Descagar</a>
 							</div>
 						</div>
