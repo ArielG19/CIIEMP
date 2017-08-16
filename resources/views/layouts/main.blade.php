@@ -32,9 +32,14 @@
     <!-- jQuery -->
     <script src="{{asset('jquery/jquery.js')}}"></script>
 
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+    <script src="{{asset('js/scrollin-animated.js')}}"></script> 
     <!-- Bootstrap -->
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+
+     
+
    
 </body>
 </html>

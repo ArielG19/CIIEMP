@@ -38,6 +38,7 @@
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 
     <script src="{{asset('panel/js/app.min.js')}}"></script>
+
    
 </body>
 </html>

@@ -33,6 +33,7 @@
     <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
 
 
+
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
 
@@ -77,13 +78,11 @@
 
     <script> new WOW().init();</script>
 
-
+    <script src="{{asset('js/scrolling-animated.js')}}"></script>
 
     <!-- Main -->
     <script src="{{asset('styleVoltage/js/main.js')}}"></script>
-
-
-
+    
 
 </body>
 </html>
