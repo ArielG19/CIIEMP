@@ -38,6 +38,10 @@
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 
     <script src="{{asset('panel/js/app.min.js')}}"></script>
+<<<<<<< HEAD
+=======
+    @yield('script')
+>>>>>>> d587aa0c4b0275291387ca803011107a342e9332
 
    
 </body>

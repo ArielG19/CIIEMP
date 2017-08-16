@@ -21,16 +21,18 @@
     
 </head>
 <body>
-    @include('include.navInterno')
-    <div class="row">                                                      
-            @yield('content')
-                                            
+    {{--@include('include.navInterno')--}}
+    <div class="row">
+        <div class="col-md-12">
+             @yield('content')
+        </div>                                                                                                  
     </div>
     {{--@include('include.footer')--}}
     
     
     <!-- jQuery -->
     <script src="{{asset('jquery/jquery.js')}}"></script>
+<<<<<<< HEAD
 
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -40,6 +42,12 @@
 
      
 
+=======
+    <!-- Bootstrap -->
+    <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+
+    @yield('script')
+>>>>>>> d587aa0c4b0275291387ca803011107a342e9332
    
 </body>
 </html>

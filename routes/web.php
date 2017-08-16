@@ -45,7 +45,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/agregar', function () {
+
+Route::Resource('/usuarios','UserController');
+Route::get('/listar-usuarios','UserController@listarUsuario');
+
+Route::get('agregar', function () {
+
     return view('agregarPersonas');
 
 });
@@ -66,3 +71,4 @@ Route::get('blogs/{id}/destroy',[
     'as'   =>'blogs.destroy'
 
 ]);
+
