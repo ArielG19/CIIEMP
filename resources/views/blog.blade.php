@@ -17,11 +17,14 @@
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">{{$blogs->titulo}}</a></h3>
-								<p class="parrafo1">{{$blogs->descripcion}}</p>
+
+
+								<p class="parrafo1">{!!nl2br(e($blogs->descripcion))!!}</p>
 							</div>
 							<div class="fh5co-post-meta">
 								<a href="#"><i class="icon-chat"></i> ejem 33</a>
 								<a href="#"><i class="icon-clock2 "></i>{{Date::parse($blogs->created_at)->format('j \d\e F \d\e Y')}}</a>
+								<a href="#"><i class="icon-user" aria-hidden="true"></i>{{$blogs->users->name}}</a>
 
 							</div>
 						</div>

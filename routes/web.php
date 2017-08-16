@@ -37,13 +37,17 @@ Route::get('/bloghome',[
 
 Route::get('/acercade', function () {
     return view('acercade');
-});
+    });
+
+
+
 
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
 
 Route::get('/agregar', function () {
     return view('agregarPersonas');
@@ -53,6 +57,7 @@ Route::get('/agregar', function () {
 
 Route::resource('categoria', 'CategoriaController');
 Route::resource('blogs', 'BlogController');
+Route::resource('bibliotecas', 'BibliotecaController');
 
 
 
@@ -66,3 +71,6 @@ Route::get('blogs/{id}/destroy',[
     'as'   =>'blogs.destroy'
 
 ]);
+
+
+Route::get('/biblioteca', 'BibliotecaController@downfunc');

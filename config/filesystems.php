@@ -48,6 +48,11 @@ return [
             'root' => public_path('images'),
         ],
 
+        'localB' => [
+            'driver' => 'local',
+            'root' => public_path('download/pdf'),
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

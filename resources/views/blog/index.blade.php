@@ -18,7 +18,7 @@
 								<img src="/images/no-imagen.png"  class="img-responsive">
 								@else
 
-								<img src="/images/blogciiemp.png" alt="Image" class="img-responsive">
+								<img src="/styleVoltage/images/CiiempBlog.png" alt="Image" class="img-responsive">
 
 								@endif
 							</div>
@@ -29,7 +29,7 @@
 							<div class="fh5co-post-meta">
 								<a href="#"><i class="icon-chat"></i> ejem 33</a>
 								<a href="#"><i class="icon-clock2"></i>{{Date::parse($blog->created_at)->format('j \d\e F \d\e Y')}}</a>
-
+								<a href="#"><i class="icon-user" aria-hidden="true"></i>{{$blog->users->name}}</a>
 							</div>
 
 							<a class="btn btn-primary" href="{{'blogin'}}/{{$blog->slug}}" role="button">Leer mas</a>

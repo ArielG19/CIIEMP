@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Crear entradas para el blog')
+@section('title', 'Subir archivo PDF')
 @section('contenido')
 
 @if(count($errors) > 0)
@@ -12,7 +12,7 @@
 </div>
 @endif
 
-		{!! Form::open(['route' => 'blogs.store', 'method' => 'POST','files'=>true]) !!}
+		{!! Form::open(['route' => 'bibliotecas.store', 'method' => 'POST','files'=>true]) !!}
 
 
 				<div class="form-group">
@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="form-group">
-					{!! Form::label('imagen','Imagen') !!}
+					{!! Form::label('Archivo PDF','PDF') !!}
 					{!! Form::file('path')!!}
 				</div>
 

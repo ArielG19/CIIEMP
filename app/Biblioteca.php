@@ -6,5 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Biblioteca extends Model
 {
-    //
+  protected $table = "bibliotecas";
+
+  protected $fillable = ['id','titulo','path','descripcion','id_usuario','id_categoria'];
+
+  public function category()
+   {
+       return $this->belongsTo('App\Categoria','id_categoria','id');
+   }
+   public function users()
+   {
+       return $this->belongsTo('App\User','id_usuario','id');
+   }
+
+   public function setPathAttribute($path){
+
+         if(!empty($path)){
+           $nombre = $path->getClientOriginalName();
+           $this->attributes['path'] = $nombre;
+           \Storage::disk('localB')->put($nombre, \File::get($path));
+         }
+
+      }
 }

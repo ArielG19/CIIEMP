@@ -16,10 +16,13 @@ class CreateBibliotecasTable extends Migration
         Schema::create('bibliotecas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
-            $table->string('pdf');
+            $table->string('path');
+            $table->text('descripcion');
             $table->integer('id_usuario')->unsigned();
+            $table->integer('id_categoria')->unsigned();
 
             $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->timestamps();
         });
     }

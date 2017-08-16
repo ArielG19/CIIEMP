@@ -1,20 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Requests\BlogRequest;
-use App\Http\Controllers\Controller;
 use App\Blog;
-use App\User;
+use App\Biblioteca;
 use App\Categoria;
-use Session;
-use Redirect;
-use Image;
+use Illuminate\Http\Request;
+use DB;
 
-class BlogController extends Controller
+class BibliotecaController extends Controller
 {
+    public function downfunc()
+    {
+      $downloads=DB::table('bibliotecas')
+      ->join('categorias', 'bibliotecas.id_categoria', '=', 'categorias.id')
+      ->select('titulo','path','descripcion','categorias.name')
+      ->get();
+    	return view('Biblioteca.index',compact('downloads'));
+
+    }
     /**
      * Display a listing of the resource.
      *
@@ -22,11 +25,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-      $blogs =Blog::orderBy('id','DESC')->paginate(5);
-      return view('panel.blog.index', compact('blogs'));
+        //
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -36,7 +36,7 @@ class BlogController extends Controller
     public function create()
     {
       $categorias = Categoria::pluck('name','id');
-      return view('panel.blog.create',compact('categorias'));
+      return view('panel.biblioteca.create',compact('categorias'));
     }
 
     /**
@@ -45,15 +45,14 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BlogRequest $request)
+    public function store(Request $request)
     {
-      $blog = new Blog($request->all());
+      $biblio = new Biblioteca($request->all());
 
 
-      $blog->save();
-      Session::flash('message','La entrada del blog fue creada correctamente');
-      return redirect::to('blogs');
-
+      $biblio->save();
+      
+      return redirect::to('bibliotecas');
     }
 
     /**
@@ -75,13 +74,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-       $users = User::pluck('name', 'id');
-       $categorias =Categoria::pluck('name', 'id');
-
-
-       $blog = Blog::find($id);
-
-       return view('panel.blog.edit',compact('users','categorias','blog'));
+        //
     }
 
     /**
@@ -93,15 +86,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $blog = Blog::find($id);
-      $blog->  fill($request->all());
-      $blog->save();
-
-
-
-      $blog->save();
-      Session::flash('message','Entrada del blog editada Correctamente');
-      return redirect::to('blogs') ;
+        //
     }
 
     /**
@@ -112,8 +97,6 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-       Blog::destroy($id);
-       Session::flash('message','Entrada de blog eliminada Correctamente');
-       return redirect::to('blogs') ;
+        //
     }
 }
