@@ -17,7 +17,8 @@ class BibliotecaController extends Controller
       $downloads=DB::table('bibliotecas')
       ->join('categorias', 'bibliotecas.id_categoria', '=', 'categorias.id')
       ->select('titulo','path','descripcion','categorias.name')
-      ->get();
+      ->orderBy('bibliotecas.id','DESC')
+      ->paginate(16);
     	return view('Biblioteca.index',compact('downloads'));
 
     }
