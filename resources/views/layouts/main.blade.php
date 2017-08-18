@@ -32,22 +32,16 @@
     
     <!-- jQuery -->
     <script src="{{asset('jquery/jquery.js')}}"></script>
-<<<<<<< HEAD
 
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script src="{{asset('js/scrollin-animated.js')}}"></script> 
     <!-- Bootstrap -->
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-
-     
-
-=======
     <!-- Bootstrap -->
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 
     @yield('script')
->>>>>>> d587aa0c4b0275291387ca803011107a342e9332
    
 </body>
 </html>

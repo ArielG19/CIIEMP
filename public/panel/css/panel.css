@@ -1,5 +1,9 @@
 .skin-blue .main-header .navbar {
-  background-color: #3c8dbc;
+  background-color: #222d32;
+
+  background-color: black;
+  border-bottom: 1px solid #3B536B;
+
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -26,6 +30,8 @@
 .skin-blue .main-header .navbar .sidebar-toggle {
   color: #fff;
   font-size: 10px;
+
+  margin-left: 10px; /*esto es para que el boton no este pegado a la orilla izquierda*/
 }
 
 /*hover toggle*/
@@ -45,9 +51,10 @@
   }
 }
 .skin-blue .main-header .logo {
-  background-color: #367fa9;
+  background-color: #222d32;
+  /*background-color: black;*/
   color: #ffffff;
-  border-bottom: 0 solid transparent;
+  /*border: 1px solid white;*/
 }
 .skin-blue .main-header .logo:hover {
   background-color: #357ca5;
@@ -149,4 +156,5 @@ i.fa.fa-angle-left.pull-right{
   font-size: 20px;
   color: #3b8ab8;
 }
+
 /*----------------------------------------------------------------*/

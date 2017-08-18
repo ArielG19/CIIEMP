@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">CIIEMP</a>
+            <a class="navbar-brand" href="/">CIIEMP</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
@@ -30,19 +30,21 @@
         <!-- Authentication Links -->
         @if (Auth::guest())
             <li><a role="button" data-toggle="collapse" href="#collapseAcceder" aria-expanded="false" aria-controls="collapseExample">
-                Acceder
-            </a></li>
+                <i class="fa fa-sign-in fa-lg"></i> Acceder
+            </a>
+            </li>
 
             <li><a role="button" data-toggle="collapse" href="#collapseRegistro" aria-expanded="false" aria-controls="collapseExample">
-                Registrarse
-            </a></li>
+                <i class="fa fa-user fa-lg"></i> Registrarse
+            </a>
+            </li>
 
         @else
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }}<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Mi cuenta</a></li>
-                        <li><a href="#">opcion #2</a></li>
+                        <li><a href="/home">Panel de Administración</a></li>
                         <li class="divider"></li>
 
                         <li><a href="{{ url('/logout') }}"
@@ -55,9 +57,7 @@
 
 
             </ul>
-            <form class="navbar-form navbar-right search-form" role="search">
-                <input type="text" class="form-control" placeholder="Búsqueda" />
-            </form>
+        
         </div>
     </div>
 </nav>
@@ -96,9 +96,3 @@
                 </div>
             </div>
 </div>
-<<<<<<< HEAD
-    
-   
-=======
-
->>>>>>> d587aa0c4b0275291387ca803011107a342e9332
