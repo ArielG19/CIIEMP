@@ -21,6 +21,11 @@ Route::get('/bloghome',[
 	'as'   => 'bloghome'
 	]);
 
+  Route::get('/biblioteca',[
+  	'uses' => 'BibliotecaController@downfunc',
+  	'as'   => 'biblioteca'
+  	]);
+
 
   Route::get('blogin/{slug}',[
 	'uses' => 'FrontController@blog',
@@ -67,5 +72,4 @@ Route::get('bibliotecas/{id}/destroy',[
 ]);
 
 
-
-Route::get('/biblioteca', 'BibliotecaController@downfunc');
+Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@buscar_archivos');

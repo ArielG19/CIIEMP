@@ -12,16 +12,16 @@ use DB;
 
 class BibliotecaController extends Controller
 {
-    public function downfunc()
+    public function downfunc(Request $request)
     {
-      $downloads=DB::table('bibliotecas')
-      ->join('categorias', 'bibliotecas.id_categoria', '=', 'categorias.id')
-      ->select('titulo','path','descripcion','categorias.name')
-      ->orderBy('bibliotecas.id','DESC')
-      ->paginate(16);
-    	return view('Biblioteca.index',compact('downloads'));
+
+      $downloads =Biblioteca::Search($request->titulo)->orderBy('id','DESC')->paginate(16);
+      return view('Biblioteca.index', compact('downloads'));
+
 
     }
+
+
     /**
      * Display a listing of the resource.
      *

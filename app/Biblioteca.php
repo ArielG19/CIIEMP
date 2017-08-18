@@ -28,4 +28,8 @@ class Biblioteca extends Model
          }
 
       }
+
+      public function scopeSearch($query, $titulo){
+        return $query->where('titulo','like', "%$titulo%");
+      }
 }

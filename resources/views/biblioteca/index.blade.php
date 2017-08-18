@@ -1,40 +1,51 @@
 @extends('layouts.app')
 @section('title','Biblioteca Virtual')
 @section('content')
+
+
+
 <div class="fh5co-blog-style-1">
 			<div class="container">
-				<h2> Biblioteca</h2>
 				<div class="row">
-        	<div class="col-xs-8 col-xs-offset-2" id="search">
-		    			<div class="input-group">
-                <div class="input-group-btn search-panel">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    	<span id="search_concept">Filtrar por</span> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#contains">Contains</a></li>                      
-                      <li class="divider"></li>
-                      <li><a href="#all">Todo</a></li>
-                    </ul>
-                </div>
-                <input type="hidden" name="search_param" value="all" id="search_param">
-                <input type="text" class="form-control" name="x" placeholder="Search term...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                </span>
-            	</div>
-        	</div>
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2> Biblioteca</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							 tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,
+							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+					</div>
 				</div>
+
+				<div class="row" >
+					<div class="col-md-3">
+					</div>
+					{!!Form::open(['route' => 'biblioteca', 'method' => 'GET'])!!}
+					<div class="col-md-6">
+				    <div class="input-group">
+							{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
+
+				      <span class="input-group-btn" id="search">
+				        <button class="btn btn-primary" type="button"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+				      </span>
+				    </div>
+				  </div>
+					{!!Form::close()!!}
+				</div>
+
+
+
+
 				<div class="row p-b">
 					@foreach($downloads as $down)
 					<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
 						<div class="fh5co-post wow fadeInLeft">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>
+								<div class="fh5co-category"><a href="#">{{$down->category->name}}</a></div>
 								<img src="{{asset('styleVoltage/images/Library-ciiemp.png')}}" alt="Image" class="img-responsive">
 							</div>
 							<div class="fh5co-post-text">
-								<h3><a href="#">{{$down->titulo}}</a></h3>
+								<h3><a >{{$down->titulo}}</a></h3>
 								<p>{{$down->descripcion}}</p>
 							</div>
 							<div class="fh5co-post-meta" id="btn">
