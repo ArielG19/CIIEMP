@@ -48,19 +48,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-
-<<<<<<< HEAD
 Route::Resource('/usuarios','UserController');
 Route::get('/listar-usuarios','UserController@listarUsuario');
 
 Route::Resource('/comentarios','ComentarioController');
 Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
 
-Route::get('agregar', function () {
 
-=======
 Route::get('/agregar', function () {
->>>>>>> c9fe5c2b60d00e3b3074a302a294d0c7183378fa
     return view('agregarPersonas');
 
 });
@@ -76,8 +71,7 @@ Route::get('blogs/{id}/destroy',[
 
 ]);
 
-<<<<<<< HEAD
-=======
+/*
 Route::get('bibliotecas/{id}/destroy',[
     'uses' =>'bibliotecaController@destroy',
     'as'   =>'bibliotecas.destroy'
@@ -86,4 +80,4 @@ Route::get('bibliotecas/{id}/destroy',[
 
 
 Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@buscar_archivos');
->>>>>>> c9fe5c2b60d00e3b3074a302a294d0c7183378fa
+*/
