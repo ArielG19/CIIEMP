@@ -21,12 +21,10 @@ Route::get('/bloghome',[
 	'as'   => 'bloghome'
 	]);
 
-  Route::get('/imagen/{img}',function($img){
-    return \Image::make(public_path("/image/$img"))->resize(200, 200)->response('jpg');
-});
-
-
-
+  Route::get('/biblioteca',[
+  	'uses' => 'BibliotecaController@downfunc',
+  	'as'   => 'biblioteca'
+  	]);
 
 
   Route::get('blogin/{slug}',[
@@ -37,15 +35,21 @@ Route::get('/bloghome',[
 
 Route::get('/acercade', function () {
     return view('acercade');
+    });
+Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
+
+    Route::resource('categoria', 'CategoriaController');
+    Route::resource('blogs', 'BlogController');
+    Route::resource('bibliotecas', 'BibliotecaController');
+
 });
-
-
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
 
+<<<<<<< HEAD
 Route::Resource('/usuarios','UserController');
 Route::get('/listar-usuarios','UserController@listarUsuario');
 
@@ -54,15 +58,12 @@ Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios'
 
 Route::get('agregar', function () {
 
+=======
+Route::get('/agregar', function () {
+>>>>>>> c9fe5c2b60d00e3b3074a302a294d0c7183378fa
     return view('agregarPersonas');
 
 });
-
-
-Route::resource('categoria', 'CategoriaController');
-Route::resource('blogs', 'BlogController');
-
-
 
 Route::get('categoria/{id}/destroy',[
   'uses' =>'CategoriaController@destroy',
@@ -75,3 +76,14 @@ Route::get('blogs/{id}/destroy',[
 
 ]);
 
+<<<<<<< HEAD
+=======
+Route::get('bibliotecas/{id}/destroy',[
+    'uses' =>'bibliotecaController@destroy',
+    'as'   =>'bibliotecas.destroy'
+
+]);
+
+
+Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@buscar_archivos');
+>>>>>>> c9fe5c2b60d00e3b3074a302a294d0c7183378fa

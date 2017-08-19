@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Http\Requests\BlogRequest;
 use App\Http\Controllers\Controller;
 use App\Blog;
 use App\User;
@@ -25,7 +26,7 @@ class BlogController extends Controller
       return view('panel.blog.index', compact('blogs'));
     }
 
-    
+
 
     /**
      * Show the form for creating a new resource.
@@ -44,14 +45,14 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
       $blog = new Blog($request->all());
 
 
       $blog->save();
       Session::flash('message','La entrada del blog fue creada correctamente');
-      return redirect::to('blogs');
+      return redirect::to('home/blogs');
 
     }
 
@@ -100,7 +101,7 @@ class BlogController extends Controller
 
       $blog->save();
       Session::flash('message','Entrada del blog editada Correctamente');
-      return redirect::to('blogs') ;
+      return redirect::to('home/blogs') ;
     }
 
     /**
@@ -113,6 +114,6 @@ class BlogController extends Controller
     {
        Blog::destroy($id);
        Session::flash('message','Entrada de blog eliminada Correctamente');
-       return redirect::to('blogs') ;
+       return redirect::to('home/blogs') ;
     }
 }

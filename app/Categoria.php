@@ -14,4 +14,8 @@ class Categoria extends Model
     return $this->hasMany('App\Blog');
 
     }
+
+    public function scopeSearch(){
+      return $query->where('name','like','%'.$s.'%');
+    }
 }

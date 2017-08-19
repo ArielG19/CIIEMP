@@ -2331,6 +2331,7 @@ a:hover .lnk-icon-right {
   margin-bottom: 20px;
   color: #b3b3b3;
 }
+
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a i {
   display: inline-block;
   margin-right: 5px;
@@ -2338,9 +2339,19 @@ a:hover .lnk-icon-right {
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a:hover, .fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a:active, .fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a:focus {
   text-decoration: none;
 }
+#btn a:hover {
+  color: #ffffff;
+
+}
+
+#btn{
+  display: flex;
+ justify-content: center;
+}
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a:hover {
   color: #000;
 }
+
 
 .fh5co-blog-style-2 {
   background: #f7f7f7;
@@ -3529,3 +3540,6 @@ text-decoration: none; }
 .categoryd, .single li a:hover {
 color: #ff173c; }
 .categoryd, .single li:last-child
+
+
+  /*Busqueda*/

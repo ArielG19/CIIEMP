@@ -44,7 +44,7 @@ class CategoriaController extends Controller
 
       $categoria->save();
       Session::flash('message','Categoria fue creada correctamente');
-      return redirect::to('categoria');
+      return redirect::to('home/categoria');
     }
 
     /**
@@ -84,7 +84,7 @@ class CategoriaController extends Controller
        $categoria->save();
 
        Session::flash('message','Categoria actualizada correctamente');
-      return redirect::to('categoria');
+      return redirect::to('home/categoria');
     }
 
     /**
@@ -99,6 +99,6 @@ class CategoriaController extends Controller
       $categoria->delete();
 
       Session::flash('message','Categoria eliminada correctamente');
-      return redirect::to('categoria');
+      return redirect::to('home/categoria');
     }
 }

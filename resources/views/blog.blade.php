@@ -17,12 +17,20 @@
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">{{$blogs->titulo}}</a></h3>
-								<p class="parrafo1">{{$blogs->descripcion}}</p>
+
+
+								<p class="parrafo1">{!!nl2br(e($blogs->descripcion))!!}</p>
 							</div>
 							<div class="fh5co-post-meta">
+<<<<<<< HEAD
 								<a href="#" data-toggle='modal' data-target='#myModalComentario'><i class="icon-chat"></i>Comentar</a>
 								<a href="#" class="pull-right"><i class="icon-clock2"></i>{{Date::parse($blogs->created_at)->format('j \d\e F \d\e Y')}}
 								</a>
+=======
+								<a href="#"><i class="icon-chat"></i> ejem 33</a>
+								<a href="#"><i class="icon-clock2 "></i>{{Date::parse($blogs->created_at)->format('j \d\e F \d\e Y')}}</a>
+								<a href="#"><i class="icon-user" aria-hidden="true"></i>{{$blogs->users->name}}</a>
+>>>>>>> c9fe5c2b60d00e3b3074a302a294d0c7183378fa
 
 								<div id="message-save" class="alert alert-success alert-dismissible" role="alert" style="display:none">
 									<strong> Se agrego correctamente</strong>
