@@ -49,6 +49,9 @@ Route::get('/home', 'HomeController@index');
 Route::Resource('/usuarios','UserController');
 Route::get('/listar-usuarios','UserController@listarUsuario');
 
+Route::Resource('/comentarios','ComentarioController');
+Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
+
 Route::get('agregar', function () {
 
     return view('agregarPersonas');

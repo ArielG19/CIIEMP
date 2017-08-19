@@ -126,19 +126,7 @@
           <div class="content-wrapper">
                 <!-- Main content -->
                 <section class="content">
-                  <div class="container">
-                     <div class="panel panel-primary">
-                         <div class="panel-heading">
-                             <h3 class="panel-title">@yield('title')</h3>
-                        </div>
-                          <div class="panel-body">
-
-                              @yield('contenido')
-
-                         </div>
-                       </div>
-
-                  </div>
+                  @yield('contenido')
                 </section><!-- /.content -->
           </div>
           <!--Fin-Contenido-->
