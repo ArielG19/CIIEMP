@@ -3,7 +3,7 @@
 @section('content')
 <div class="wrapper">
         <header class="main-header">
-                     <a href="/" class="logo">
+                     <a href="#" class="logo">
                   <!-- mini logo for sidebar mini 50x50 pixels -->
 
                   <!-- logo for regular state and mobile devices -->
@@ -24,7 +24,9 @@
                                                 @else
                                                     <li class="dropdown">
                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                                        <img src="/perfil/{{Auth::user()->imagen}}"
+                              style="width: 42px; height: 42px; position:absolute; top: 8px; left:-45px;border-radius: 50%">
+                                                            {{ Auth::user()->name }} <span class="caret" style="margin-right:20px;"></span>
                                                         </a>
 
                                                         <ul class="dropdown-menu" role="menu">

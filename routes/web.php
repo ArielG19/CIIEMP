@@ -51,6 +51,9 @@ Route::get('/home', 'HomeController@index');
 Route::Resource('/usuarios','UserController');
 Route::get('/listar-usuarios','UserController@listarUsuario');
 
+Route::get('/mi-perfil','UserController@miPerfil');
+Route::post('/mi-perfil','UserController@upPerfil');
+
 Route::Resource('/comentarios','ComentarioController');
 Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
 

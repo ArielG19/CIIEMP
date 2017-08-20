@@ -35,17 +35,6 @@
       <!-- Modernizr JS -->
     <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
 
-
-<<<<<<< HEAD
-=======
-
-    <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
-
->>>>>>> 3015acd583e4ea9d1428a09c83059df65de11e17
-
-
-
 </head>
 <body>
     @include('include.nav')

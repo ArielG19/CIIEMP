@@ -1,8 +1,12 @@
 @foreach($comentarios as $c)
                  <article class="post">
-                    <h4><i class="fa fa-user"></i> {{$c->user->name}}</h4>
+                    <h4>
+                      <img src="/perfil/{{$c->user->imagen}}" 
+                      style="width: 42px; height: 42px;border-radius: 0%;margin-right:20px;"> 
+                           {{$c->user->name}} 
+                    </h4>
                     <p>
-                        {{$c->comentario}} <h4>id:{{$c->id_blog}} publicacion</h4>
+                        {{$c->comentario}}
                     </p>
                     <div class="info">
                           {{$c->created_at->diffForHumans()}}  

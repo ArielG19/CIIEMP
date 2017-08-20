@@ -17,41 +17,36 @@
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">{{$blogs->titulo}}</a></h3>
-
-
 								<p class="parrafo1">{!!nl2br(e($blogs->descripcion))!!}</p>
 							</div>
 							<div class="fh5co-post-meta">
-<<<<<<< HEAD
-								<a href="#" data-toggle='modal' data-target='#myModalComentario'><i class="icon-chat"></i>Comentar</a>
-								<a href="#" class="pull-right"><i class="icon-clock2"></i>{{Date::parse($blogs->created_at)->format('j \d\e F \d\e Y')}}
-								</a>
-=======
-								<a href="#"><i class="icon-chat"></i> ejem 33</a>
-								<a href="#"><i class="icon-clock2 "></i>{{Date::parse($blogs->created_at)->format('j \d\e F \d\e Y')}}</a>
-								<a href="#"><i class="icon-user" aria-hidden="true"></i>{{$blogs->users->name}}</a>
->>>>>>> c9fe5c2b60d00e3b3074a302a294d0c7183378fa
+										<a href="#" data-toggle='modal' data-target='#myModalComentario'>
+											<i class="icon-chat"></i>Comentar
+										</a>
+										<a href="#" class="pull-right">
+											<i class="icon-clock2"></i>{{Date::parse($blogs->created_at)->format('j \d\e F \d\e Y')}}
+										</a>
+										{{--Inicio de comentarios--}}
+										<div id="message-save" class="alert alert-success alert-dismissible" role="alert" style="display:none">
+											<strong> Se agrego correctamente</strong>
+										</div>
 
-								<div id="message-save" class="alert alert-success alert-dismissible" role="alert" style="display:none">
-									<strong> Se agrego correctamente</strong>
-								</div>
-
-								<div id="message-update" class="alert alert-info alert-dismissible" role="alert" style="display:none">
-									<strong> Se actualizo correctamente</strong>
-								</div>
-									<a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-									  ver comentarios 
-									</a>
-									
-									<div class="collapse" id="collapseExample">
-									  <div class="well">
-									    <div id="listar-comentarios"></div>
-									  </div>
-									</div>
+										<div id="message-update" class="alert alert-info alert-dismissible" role="alert" style="display:none">
+											<strong> Se actualizo correctamente</strong>
+										</div>
+										<a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+										  ver comentarios 
+										</a>
+										
+										<div class="collapse" id="collapseExample">
+										  <div class="well">
+										    <div id="listar-comentarios"></div>
+										  </div>
+										</div>
+										{{--Fin de comentarios--}}
 							</div>
 						</div>
 					</div>
-
 					<div class="col-md-4 col-sm-2 col-xs-2 col-xxs-12 hidden-xs categoryd">
 							<!-- Category -->
 							<div class="single category">

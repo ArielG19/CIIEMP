@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
+use Image;
 
 class UserController extends Controller
 {
@@ -18,10 +20,34 @@ class UserController extends Controller
         return view('usuario.index');
     }
 
-    public function listarUsuario(){
+    public function listarUsuario()
+    {
         $users = User::all();
         return view('usuario.listar')->with('users',$users);
     }
+
+    //--------METODOS PARA EL PERFIL------------------------------------------------
+    public function miPerfil()
+    {
+        return view('perfil.perfil',array('user' => Auth::user() ));
+    }
+
+    public function upPerfil(Request $request)
+    {
+        if($request->hasFile('imagen'))
+        {
+            $imagen= $request->file('imagen');
+            $filename= time(). '.'. $imagen->getClientOriginalExtension();
+            Image::make($imagen)->resize(300,300)->save(public_path('perfil/'.$filename));
+
+            $user=Auth::user();
+            $user->imagen =$filename;
+            $user->save();
+        }
+        //return view('isnaya.usuarios.listar')->with('usuarios',$usuarios);
+        return view('perfil.perfil', array('user'=> Auth::user() ));
+    }
+    //--------METODOS PARA EL PERFIL------------------------------------------------
 
     /**
      * Show the form for creating a new resource.
