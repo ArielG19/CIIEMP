@@ -1,0 +1,9 @@
+slug
+composer require cviebrock/eloquent-sluggable
+
+fecha
+composer require jenssegers/date
+
+
+
+composer require intervention/image
