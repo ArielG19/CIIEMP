@@ -30,13 +30,11 @@ class User extends Authenticatable
     public function blogs(){
         return $this->hasMany('App\Blog');
     }
-<<<<<<< HEAD
-=======
 
       public function comentario()
    {
        return $this->hasMany('App\Comentario');
    }
 
->>>>>>> origin/master
+
 }
