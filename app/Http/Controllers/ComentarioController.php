@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comentario;
 use App\User;
+use App\Blog;
+use DB;
 use Auth;
-use Image;
 
-class UserController extends Controller
+class ComentarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,40 +19,29 @@ class UserController extends Controller
     public function index()
     {
         //
-        return view('usuario.index');
     }
 
-    public function listarUsuario()
+    public function listarComentarios($id_b)
     {
-        $users = User::all();
-        return view('usuario.listar')->with('users',$users);
-    }
+            //$comment = DB::select("select * from comentarios where id_blog = '$id_b'");
 
-    //--------METODOS PARA EL PERFIL------------------------------------------------
-    public function miPerfil()
-    {
-        return view('perfil.perfil',array('user' => Auth::user() ));
-    }
+            $comentarios = Comentario::orderBy('id','desc')->where('id_blog',$id_b)->get();        
+            $comentarios->each(function($comentarios){
+                $comentarios->user;
+                $comentarios->blog;
+                //dd($comentarios->user);
+                                
+            });
+                            
+            //dd($comentarios);
+            return view('comentarios.listar')->with('comentarios',$comentarios);
 
-    public function upPerfil(Request $request)
-    {
-        if($request->hasFile('imagen'))
-        {
-            $imagen= $request->file('imagen');
-            $filename= time(). '.'. $imagen->getClientOriginalExtension();
-            Image::make($imagen)->resize(300,300)->save(public_path('perfil/'.$filename));
-
-            $user=Auth::user();
-            $user->imagen =$filename;
-            $user->save();
-        }
-        //return view('isnaya.usuarios.listar')->with('usuarios',$usuarios);
-        return view('perfil.perfil', array('user'=> Auth::user() ));
+            
+      
     }
-    //--------METODOS PARA EL PERFIL------------------------------------------------
 
     /**
-     * Show the form for creating a new resource.
+    * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -68,18 +59,26 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-        if($request->ajax()){
-            $usuarios = User::create($request->all());
-            $usuarios->password=bcrypt($request->password);
-            $usuarios->save();
+
+         if($request->ajax()){
+
+            $comentarios = new Comentario();
+            $comentarios->comentario = $request->comentario;
+            $comentarios->id_blog = $request->id_b;
+            $comentarios->id_usuario = \Auth::user()->id;
+            $comentarios->save();
+            //dd($comentarios);
+            
             //si no hay error entonces
-            if($usuarios){
+            if($comentarios){
+
                 //Session::flash('save','Se ha creado correctamente');
                 return response()->json(['success'=>'true']);
             }else{
                 return response()->json(['success'=>'false']);
             }
         }
+
     }
 
     /**
@@ -102,9 +101,8 @@ class UserController extends Controller
     public function edit($id)
     {
         //
-        $usuarios = User::FindOrFail($id);
-        return response()->json($usuarios);
-
+        $comentarios = Comentario::FindOrFail($id);            
+        return response()->json($comentarios);
 
     }
 
@@ -117,12 +115,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //
         if($request->ajax()){
 
-                $usuarios =User::FindOrFail($id);
+                $comentarios =Comentario::FindOrFail($id);
                 //en input amacenamos toda la info del request
                 $input = $request->all();
-                $resultado = $usuarios->fill($input)->save();
+                $resultado = $comentarios->fill($input)->save();
 
                 if($resultado){
                     return response()->json(['success'=>'true']);
@@ -130,7 +129,6 @@ class UserController extends Controller
                     return response()->json(['success'=>'false']);
                 }
         }
-
     }
 
     /**

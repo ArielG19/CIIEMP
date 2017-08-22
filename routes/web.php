@@ -47,3 +47,40 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::Resource('/usuarios','UserController');
+Route::get('/listar-usuarios','UserController@listarUsuario');
+
+Route::get('/mi-perfil','UserController@miPerfil');
+Route::post('/mi-perfil','UserController@upPerfil');
+
+Route::Resource('/comentarios','ComentarioController');
+Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
+
+
+Route::get('/agregar', function () {
+    return view('agregarPersonas');
+
+});
+
+Route::get('categoria/{id}/destroy',[
+  'uses' =>'CategoriaController@destroy',
+  'as'   =>'categoria.destroy'
+]);
+
+Route::get('blogs/{id}/destroy',[
+    'uses' =>'BlogController@destroy',
+    'as'   =>'blogs.destroy'
+
+]);
+
+/*
+Route::get('bibliotecas/{id}/destroy',[
+    'uses' =>'bibliotecaController@destroy',
+    'as'   =>'bibliotecas.destroy'
+
+]);
+
+
+Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@buscar_archivos');
+*/

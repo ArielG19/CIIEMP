@@ -16,13 +16,8 @@ class CreateBibliotecasTable extends Migration
         Schema::create('bibliotecas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
-<<<<<<< HEAD:database/migrations/2017_08_03_220337_create_bibliotecas_table.php
             $table->string('path');
             $table->text('descripcion');
-=======
-            $table->string('pdf');
-            $table->string('imagen');
->>>>>>> 3015acd583e4ea9d1428a09c83059df65de11e17:database/migrations/2017_08_03_214234_create_bibliotecas_table.php
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_categoria')->unsigned();
 

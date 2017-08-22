@@ -19,7 +19,9 @@ class FrontController extends Controller
     public function index()
     {
       $blogs = Blog::OrderBy('id', 'DESC')->paginate(4);
+      //dd($blogs);
       return view('blog/index',compact('blogs'));
+
     }
 
 

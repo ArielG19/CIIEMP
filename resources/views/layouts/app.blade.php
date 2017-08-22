@@ -12,6 +12,9 @@
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
@@ -31,14 +34,6 @@
 
       <!-- Modernizr JS -->
     <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
-
-
-
-    <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
-
-
-
 
 </head>
 <body>
@@ -82,7 +77,12 @@
 
     <!-- Main -->
     <script src="{{asset('styleVoltage/js/main.js')}}"></script>
-    
+
+
+    @yield('script')
+
+
+
 
 </body>
 </html>

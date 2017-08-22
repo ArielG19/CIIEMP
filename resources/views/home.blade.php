@@ -24,15 +24,18 @@
                                                 @else
                                                     <li class="dropdown">
                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                                        <img src="/perfil/{{Auth::user()->imagen}}"
+                                                          style="width: 42px; height: 42px; position:absolute; top: 8px; left:-45px;border-radius: 50%">
+                                                            {{ Auth::user()->name }} <span class="caret" style="margin-right:20px;"></span>
                                                         </a>
 
                                                         <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="{{url('mi-perfil')}}">Mi cuenta</a></li>
                                                             <li>
                                                                 <a href="{{ url('/logout') }}"
                                                                     onclick="event.preventDefault();
                                                                              document.getElementById('logout-form').submit();">
-                                                                    Logout
+                                                                    Salir
                                                                 </a>
 
                                                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -45,9 +48,6 @@
                                 </ul>
                           </div>
                     </nav>
-
-
-
          </header>
           <aside class="main-sidebar">
             <!-- sidebar: style can be found in sidebar.less -->
@@ -62,7 +62,14 @@
                                         <span>Admin</span>
                                         <i class="fa fa-angle-left pull-right"></i>
                                         <ul class="treeview-menu">
-                                        <li><a href="/agregar"><i class="fa fa-circle-o"></i>Agregar Personas</a></li>
+                                        <li>
+                                          <a href="{{url('/usuarios') }}">
+                                          <i class="fa fa-circle-o"></i>Usuarios</a>
+                                        </li>
+                                        <li>
+                                          <a href="/agregar">
+                                          <i class="fa fa-circle-o"></i>Agregar Personas</a>
+                                        </li>
                                       </ul>
                                       </a>
 
