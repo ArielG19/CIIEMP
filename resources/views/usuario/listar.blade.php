@@ -25,7 +25,7 @@
 				              			<i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i>
 				              		</a>
 				              		<a id="elim" class="btn btn-danger btn-sm" href="#" onclick="Eliminar('{{$user->id}}','{{$user->nombre}}')">
-				                		<i class="fa fa-trash" aria-hidden="true"> Eliminar</i>
+				                		<i class="fa fa-trash" aria-hidden="true"></i>
 				              		</a>
 				           		</td>
 							</tr>
