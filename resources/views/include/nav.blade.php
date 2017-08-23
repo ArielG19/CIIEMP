@@ -10,15 +10,24 @@
             <a class="navbar-brand" href="/">CIIEMP</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
-            
+
             <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
                     <li class="active"><a href="{{ url('/') }}">
                         <i class="fa fa-home fa-lg" aria-hidden="true"> 
+=======
+                        <li class="active"><a href="{{ url('/') }}">
+                        <i class="fa fa-home fa-lg" aria-hidden="true">
+>>>>>>> ffa0350a81d970007d117a5d2cfa09101958228a
                         </i> Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="active"><a href="{{ url('bloghome') }}">
-                        <i class="fa fa-book fa-lg" aria-hidden="true">
+                        <i class="fa fa-bold fa-lg" aria-hidden="true">
                         </i> Blog<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="active"><a href="{{ url('biblioteca') }}">
+                        <i class="fa fa-book fa-lg" aria-hidden="true">
+                        </i> Biblioteca<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -36,12 +45,12 @@
                              Noticias<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="active"><a href="#">
-                        <i class="fa fa-tasks fa-lg" aria-hidden="true"></i> 
+                        <i class="fa fa-tasks fa-lg" aria-hidden="true"></i>
                         Proyectos<span class="sr-only">(current)</span></a>
                     </li>
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            
+
                              <li><a role="button" data-toggle="collapse" href="#collapseAcceder" aria-expanded="false" aria-controls="collapseExample">
                                 <i class="fa fa-sign-in fa-lg"></i> Acceder
                             </a>
@@ -54,7 +63,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    
+
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -76,7 +85,7 @@
                             </li>
                         @endif
             </ul>
-        
+
         </div>
     </div>
 </nav>
@@ -106,11 +115,11 @@
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="#" class="btn btn-primary btn-outline btn-lg">Acerca de nosotros</a></p>
 
                                 </div>
-                                                                                 
+
                             </div>
 
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

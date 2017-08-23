@@ -102,7 +102,7 @@ class UserController extends Controller
     public function edit($id)
     {
         //
-        $usuarios = User::FindOrFail($id);            
+        $usuarios = User::FindOrFail($id);
         return response()->json($usuarios);
 
 

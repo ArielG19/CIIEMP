@@ -15,13 +15,11 @@ class Comentario extends Model
    {
        return $this->belongsTo('App\User','id_usuario');
    }
-   
+
     public function blog()
     {
       return $this->belongsTo('App\Blog','id_blog');
-      
+
     }
 
 }
-
-   

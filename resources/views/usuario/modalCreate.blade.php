@@ -5,7 +5,7 @@
 					<div class="modal-content mod-yellow">
 							<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span> 
+										<span aria-hidden="true">&times;</span>
 									</button>
 									<h4 class="modal-title" id="myModalLabel">Agregar nuevo usuario</h4>
 							</div>
@@ -24,7 +24,7 @@
 		                        		{!!form::label('Nombre:')!!}
 		                            	{!!form::text('name',null,['id'=>'name','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
 		          					</div>
-		                    		
+
 		                    		<div class="form-group">
 		              					<!--Nombramos las cajas de texto igual que los campos de la bd-->
 		              					{!!form::label('Email:')!!}
@@ -44,10 +44,9 @@
 
 							<div class="modal-footer">
 								{!!link_to('#',$title ='Guardar',$attributes= ['id'=>'guardar','class'=>'btn btn-info'],$secure = null)!!}
-							</div>		
+							</div>
 					</div>
 				</div>
 		</div>
 </div>
 </div>
-		

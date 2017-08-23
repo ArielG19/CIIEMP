@@ -180,7 +180,7 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Jenssegers\Date\DateServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        
+
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,

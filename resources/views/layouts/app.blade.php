@@ -34,6 +34,14 @@
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
 
+
+
+    <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+
+
+
+
 </head>
 <body>
     @include('include.nav')
@@ -76,12 +84,23 @@
 
     <!-- Main -->
     <script src="{{asset('styleVoltage/js/main.js')}}"></script>
+<<<<<<< HEAD
     
 
     @yield('script')
+=======
+>>>>>>> ffa0350a81d970007d117a5d2cfa09101958228a
 
+    <!-- tynimce(text area advance) -->
+    <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
+    <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
 
+    @yield('script')
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> ffa0350a81d970007d117a5d2cfa09101958228a
 
 </body>
 </html>

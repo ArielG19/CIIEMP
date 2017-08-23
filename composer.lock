@@ -685,7 +685,15 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "time": "2017-08-14 20:17:41"
+=======
             "time": "2017-08-14T20:17:41+00:00"
+>>>>>>> d587aa0c4b0275291387ca803011107a342e9332
+=======
+            "time": "2017-08-14T20:17:41+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "laravel/tinker",
@@ -1898,6 +1906,18 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
+<<<<<<< HEAD
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
+=======
             "version": "v1.5.0",
             "source": {
                 "type": "git",
@@ -1908,6 +1928,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
                 "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+>>>>>>> origin/master
                 "shasum": ""
             },
             "require": {
@@ -1919,7 +1940,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
+                    "dev-master": "1.4-dev"
+=======
                     "dev-master": "1.5-dev"
+>>>>>>> origin/master
                 }
             },
             "autoload": {
@@ -1953,7 +1978,11 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
+            "time": "2017-06-09T14:24:12+00:00"
+=======
             "time": "2017-06-14T15:44:48+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "symfony/process",
@@ -2370,6 +2399,31 @@
         },
         {
             "name": "fzaninotto/faker",
+<<<<<<< HEAD
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+=======
             "version": "v1.7.1",
             "source": {
                 "type": "git",
@@ -2395,6 +2449,7 @@
                 "branch-alias": {
                     "dev-master": "1.8-dev"
                 }
+>>>>>>> origin/master
             },
             "autoload": {
                 "psr-4": {
@@ -2416,7 +2471,11 @@
                 "faker",
                 "fixtures"
             ],
+<<<<<<< HEAD
+            "time": "2016-04-29T12:21:54+00:00"
+=======
             "time": "2017-08-15T16:48:10+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "hamcrest/hamcrest-php",

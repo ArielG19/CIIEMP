@@ -15,10 +15,10 @@
 								<td>
 									{{$user->email}}
 								</td>
-								
+
 								<td>
 									{{$user->type}}</span>
-								</td>									
+								</td>
 								<td>
 				             		<!--en la ruta pasamos el parametro para mostrar el id y poder editar o eliminar luego-->
 				             		<a class="btn btn-info btn-sm" href="#" Onclick='MostrarUsuario({{$user->id}});' data-toggle='modal' data-target='#myModal' style ="margin-right: 8px;">
@@ -35,5 +35,5 @@
 		<center>
 			<h4>{{--$user->render()--}}</h4>
 		</center>
-	
+
 </div>

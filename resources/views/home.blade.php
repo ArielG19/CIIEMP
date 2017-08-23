@@ -3,11 +3,12 @@
 @section('content')
 <div class="wrapper">
         <header class="main-header">
-                    <a href="#" class="logo">
-                      <!-- mini logo for sidebar mini 50x50 pixels -->
-                      <!-- logo for regular state and mobile devices -->
-                      <span class="logo-lg"><b>CIIEMP</b></span>
-                    </a>
+                     <a href="/" class="logo">
+                  <!-- mini logo for sidebar mini 50x50 pixels -->
+
+                  <!-- logo for regular state and mobile devices -->
+                  <span class="logo-lg"><b>CIIEMP</b></span>
+                </a>
                     <nav class="navbar navbar-static-top" role="navigation">
                           <!-- Sidebar toggle button-->
                           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -125,10 +126,26 @@
                   </section>
             <!-- /.sidebar -->
           </aside>
+
+          <!--Contenido-->
+          <!-- Content Wrapper. Contains page content -->
+
           <div class="content-wrapper">
                 <!-- Main content -->
                 <section class="content">
-                  @yield('contenido')
+                  <div class="container">
+                     <div class="panel panel-primary">
+                         <div class="panel-heading">
+                             <h3 class="panel-title">@yield('title')</h3>
+                        </div>
+                          <div class="panel-body">
+
+                              @yield('contenido')
+
+                         </div>
+                       </div>
+
+                  </div>
                 </section><!-- /.content -->
           </div>
           <!--Fin-Contenido-->

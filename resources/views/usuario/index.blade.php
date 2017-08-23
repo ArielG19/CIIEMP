@@ -1,9 +1,9 @@
 @extends('home')
 @section('title','Usuarios')
-@section('contenido')			
+@section('contenido')
 			 <div class="container">
                       <div class="col-xs-10 col-md-offset-1">
-                      		  <div id="message-save" class="alert alert-success alert-dismissible" role="alert" 
+                      		  <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
                       		  		style="display:none">
 						            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						            	<span aria-hidden="true">&times;</span>
@@ -20,7 +20,7 @@
 
                               <div class="panel panel-primary">
                                  <div class="panel-heading">
-                                     
+
                                 </div>
                                   	<div class="panel-body">
                      							<div class="row">
@@ -35,23 +35,23 @@
 															 		<span>Agregar <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
 										              			</a>
 															</p>
-														</div>			
+														</div>
 												</div>
 		                                      	<div class="row">
 													<div class="col-xs-12">
-														<div id="listar-usuarios"></div>			
+														<div id="listar-usuarios"></div>
 													</div>
 		                                 		</div>
 		                       		</div>
 
                       </div>
-                   
+
 </div>
 			@include('usuario.modalCreate')
 @include('usuario.modalUpdate')
 
 @section('script')
 	<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
-	@endsection	
+	@endsection
 
-@endsection		
+@endsection

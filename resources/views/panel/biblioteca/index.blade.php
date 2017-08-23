@@ -7,7 +7,6 @@
   {{Session::get('message')}}
 </div>
 
-
 @endif
 
 

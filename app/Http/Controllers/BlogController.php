@@ -111,8 +111,13 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-       Blog::destroy($id);
+    {  
+
+
+       $file = Blog::findOrFail($id);
+       $file_path = public_path('images/').'/'.$file->path;
+       unlink($file_path);
+       $file->delete();
        Session::flash('message','Entrada de blog eliminada Correctamente');
        return redirect::to('home/blogs') ;
     }
