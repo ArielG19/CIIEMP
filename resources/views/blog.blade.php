@@ -17,7 +17,7 @@
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">{{$blogs->titulo}}</a></h3>
-								<p class="parrafo1">{!!nl2br(e($blogs->descripcion))!!}</p>
+								<p class="parrafo1">{!!($blogs->descripcion)!!}</p>
 							</div>
 							<div class="fh5co-post-meta">
 										<a href="#" data-toggle='modal' data-target='#myModalComentario'>

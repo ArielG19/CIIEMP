@@ -24,7 +24,7 @@
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">{{$blog->titulo}}</a></h3>
-								<p>{{substr($blog->descripcion, 0,300)}}...</p>
+								<p>{{substr(strip_tags($blog->descripcion), 0,300)}}...</p>
 							</div>
 							<div class="fh5co-post-meta">
 								<a href="#"><i class="icon-chat"></i> ejem 33</a>

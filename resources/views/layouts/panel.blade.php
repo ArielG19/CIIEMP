@@ -18,20 +18,20 @@
     <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
 
     <!-- AdminLTE Skins. cambiamos el panel -->
-    
+
 
     <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
 
-    
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <div class="row">                                                      
+    <div class="row">
             @yield('content')
-                                            
+
     </div>
     {{--@include('include.footer')--}}
-    
-    
+
+
     <!-- jQuery -->
     <script src="{{asset('jquery/jquery.js')}}"></script>
     <!-- Bootstrap -->
@@ -39,7 +39,25 @@
 
     <script src="{{asset('panel/js/app.min.js')}}"></script>
 
+    <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
+    <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
+    <script src="{{asset('styleVoltage/js/main.js')}}"></script>
+
+  <script>
+    tinymce.init({
+      selector: '#textareay',
+      plugins: "link",
+      plugins: "lists",
+      menubar: "false",
+      language: 'es'
+    });
+
+  </script>
+
+
+
     @yield('script')
-   
+<!-- Main -->
+
 </body>
 </html>

@@ -6,6 +6,7 @@ use App\Biblioteca;
 use App\Categoria;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Session;
 use Redirect;
 use DB;
@@ -118,7 +119,13 @@ class BibliotecaController extends Controller
      */
     public function destroy($id)
     {
-      Biblioteca::destroy($id);
+
+
+
+    $file = Biblioteca::findOrFail($id);
+    $file_path = public_path('download/pdf').'/'.$file->path;
+    unlink($file_path);
+    $file->delete();
       Session::flash('message','El archivo de la biblioteca se ha eliminado Correctamente');
       return redirect::to('home/bibliotecas') ;
     }

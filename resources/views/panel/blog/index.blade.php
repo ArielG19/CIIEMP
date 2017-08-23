@@ -31,7 +31,7 @@
 
   		@foreach ($blogs as $blog)
   		<td>{{$blog->titulo}}</td>
-  		<td>{{$blog->descripcion}}</td>
+  		<td>{{substr(strip_tags($blog->descripcion), 0,300)}}...</td>
       <td>{{$blog->category->name}}</td>
       <td>{{$blog->users->name}}</td>
 
