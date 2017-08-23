@@ -19,8 +19,8 @@ class CreateComentariosTable extends Migration
             $table->integer('id_blog')->unsigned();
             $table->integer('id_usuario')->unsigned();
 
-            $table->foreign('id_blog')->references('id')->on('blogs');
-            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_blog')->references('id')->on('blogs')->onDelete('cascade');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

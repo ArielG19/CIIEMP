@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbar">
             
             <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="{{ url('/') }}">
+                    <li class="active"><a href="{{ url('/') }}">
                         <i class="fa fa-home fa-lg" aria-hidden="true"> 
                         </i> Inicio<span class="sr-only">(current)</span></a>
                     </li>

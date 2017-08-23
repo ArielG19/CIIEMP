@@ -24,7 +24,7 @@
 
                       <li class="list-group-item">
                         <b>Tipo de Usuario:</b>
-                        <span class="label label-default" style="padding: 5px 8px; position: absolute;margin-left:100px;">{{ $user->type}}</span>
+                        <span class="label label-default" style="padding: 5px 8px; position: absolute;margin-left:78px;">{{ $user->type}}</span>
                       </li>
                       <li class="list-group-item">
                         <b>Nombre de Usuario:</b>
