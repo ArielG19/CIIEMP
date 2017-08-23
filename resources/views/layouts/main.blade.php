@@ -22,11 +22,12 @@
 </head>
 <body>
     {{--@include('include.navInterno')--}}
-    <div class="row">
+    <div>
         <div class="col-md-12">
              @yield('content')
         </div>                                                                                                  
     </div>
+    
     {{--@include('include.footer')--}}
     
     

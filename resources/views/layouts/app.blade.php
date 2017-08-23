@@ -3,16 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 
     <title>@yield('title','Default')</title>
+
+    
+   
 
     <!--link rel="shortcut icon" href="favicon.ico"-->
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
     <!-- Icomoon Icon Fonts-->
@@ -30,25 +34,41 @@
     <link rel="stylesheet" href="{{asset('styleVoltage/css/cards.css')}}">
 
       <!-- Modernizr JS -->
+<<<<<<< HEAD
     <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
 
 
+=======
+    
+>>>>>>> 75055df8ce3b5c95837d939a7854c40c872f3f23
 
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
 
+<<<<<<< HEAD
 
 
+=======
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+>>>>>>> 75055df8ce3b5c95837d939a7854c40c872f3f23
 
 </head>
 <body>
-    @include('include.nav')
-    <div class="row">
-            @yield('content')
-    </div>
-    @include('include.footer')
+
+    <section>
+        @include('include.nav')
+    </section>
+
+    <section>
+        @yield('content')
+    </section>
+    
+    <section class="col-md-12">
+        @include('include.footer')    
+    </section>
+    
 
 
     <!-- jQuery -->
@@ -85,6 +105,7 @@
     <!-- Main -->
     <script src="{{asset('styleVoltage/js/main.js')}}"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
     @yield('script')
@@ -94,13 +115,22 @@
     <!-- tynimce(text area advance) -->
     <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
     <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
+=======
+>>>>>>> 75055df8ce3b5c95837d939a7854c40c872f3f23
 
     @yield('script')
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> ffa0350a81d970007d117a5d2cfa09101958228a
+=======
+
+    <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
+
+    @yield('script')
+>>>>>>> 75055df8ce3b5c95837d939a7854c40c872f3f23
 
 </body>
 </html>
