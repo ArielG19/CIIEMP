@@ -27,7 +27,7 @@ class Blog extends Model
   public function setPathAttribute($path){
 
         if(!empty($path)){
-          $nombre = $path->getClientOriginalName();
+          $nombre =time(). "." .$path->getClientOriginalExtension();
           $this->attributes['path'] = $nombre;
           \Storage::disk('local')->put($nombre, \File::get($path));
         }

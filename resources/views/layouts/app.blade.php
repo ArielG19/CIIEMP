@@ -87,6 +87,8 @@
     <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
     <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
 
+    @yield('script')
+
 
 </body>
 </html>

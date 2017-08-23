@@ -119,13 +119,10 @@ class BibliotecaController extends Controller
      */
     public function destroy($id)
     {
-
-
-
-    $file = Biblioteca::findOrFail($id);
-    $file_path = public_path('download/pdf').'/'.$file->path;
-    unlink($file_path);
-    $file->delete();
+      $file = Biblioteca::findOrFail($id);
+      $file_path = public_path('download/pdf').'/'.$file->path;
+      unlink($file_path);
+      $file->delete();
       Session::flash('message','El archivo de la biblioteca se ha eliminado Correctamente');
       return redirect::to('home/bibliotecas') ;
     }
