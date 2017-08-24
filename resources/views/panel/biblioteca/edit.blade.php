@@ -12,7 +12,7 @@
 
 		<div class="form-group">
 					{!! Form::label('descripcion','Contenido') !!}
-					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Contenido','maxlength' => 100,'required'])!!}
+					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Contenido','maxlength' => 150,'required'])!!}
 		</div>
 
 		<div class="form-group">
