@@ -17,7 +17,7 @@
     <!-- modificamos los margenes de diseño etc. -->
     <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
 
-    <!-- AdminLTE Skins. cambiamos el panel -->
+    
     
 
     <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
@@ -25,7 +25,7 @@
     
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <div class="row">                                                      
+    <div>                                                      
             @yield('content')
                                             
     </div>
