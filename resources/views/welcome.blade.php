@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('title','Inicio')
 @section('content')
-<div class="container">
-    <div class="row">
+<div>
+    <div>
         <div class="col-md-12">
             {{--CONTENIDO modulos--}}
             <div class="fh5co-blog-style-1">
