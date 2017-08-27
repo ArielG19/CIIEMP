@@ -83,3 +83,8 @@ Route::get('bibliotecas/{id}/destroy',[
 
 
 Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@buscar_archivos');
+
+Route::get('/docentes', function () {
+    return view('docentes.index');
+
+});

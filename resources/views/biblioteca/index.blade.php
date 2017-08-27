@@ -68,4 +68,7 @@
 					@endforeach()
         </div>
 				{!! $downloads->render()!!}
+		</div>
+</div>
+
 @endsection
