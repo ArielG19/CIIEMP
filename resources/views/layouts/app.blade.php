@@ -9,14 +9,14 @@
 
     <title>@yield('title','Default')</title>
 
-    
-   
+
+
 
     <!--link rel="shortcut icon" href="favicon.ico"-->
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
 
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
     <!-- Icomoon Icon Fonts-->
@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="{{asset('styleVoltage/css/cards.css')}}">
 
       <!-- Modernizr JS -->
-    
+
 
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
@@ -59,11 +59,11 @@
     <section>
         @yield('content')
     </section>
-    
+
     <section class="col-md-12">
-        @include('include.footer')    
+        @include('include.footer')
     </section>
-    
+
 
 
     <!-- jQuery -->
@@ -104,15 +104,11 @@
     <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
     <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
 
-    @yield('script')
-
-<<<<<<< HEAD
-=======
 
     <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
 
     @yield('script')
->>>>>>> 75055df8ce3b5c95837d939a7854c40c872f3f23
+
 
 </body>
 </html>

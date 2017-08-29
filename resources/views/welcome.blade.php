@@ -17,24 +17,24 @@
 					<div class="col-md-6 col-sm-8 col-xs-8 col-xxs-12">
 						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.1s">
 							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>	
+								<div class="fh5co-overlay"></div>
 								<img src="styleVoltage/images/bolsadeempleo.png" alt="Image" class="img-responsive">
-								
+
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#">Bolsa de Empleo</a></h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit odio, perspiciatis sint minima, nulla quod recusandae tenetur, suscipit unde sapiente.</p>
 							</div>
 							<div class="fh5co-post-meta">
-								
+
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-8 col-xs-8 col-xxs-12">
 						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.4s">
 							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>	
-								
+								<div class="fh5co-overlay"></div>
+
 								<img src="styleVoltage/images/socieconomico.png" alt="Image" class="img-responsive">
 							</div>
 							<div class="fh5co-post-text">
@@ -42,22 +42,22 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit odio, perspiciatis sint minima, nulla quod recusandae tenetur, suscipit unde sapiente.</p>
 							</div>
 							<div class="fh5co-post-meta">
-								
+
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
-				
+
 			</div>
 		</div>
             {{--Fin modulos--}}
 
             {{--CONTENIDO Proyectos--}}
 
-           
+
             {{--Fin Proyectos--}}
-            
+
 			{{--CONTENIDO noticias--}}
 
             <div class="fh5co-content-style-6">
