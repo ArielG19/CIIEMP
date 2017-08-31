@@ -16,6 +16,22 @@ Route::get('/', function () {
 
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::Resource('/usuarios','UserController');
+Route::get('/listar-usuarios','UserController@listarUsuario');
+
+Route::get('/mi-perfil','UserController@miPerfil');
+Route::post('/mi-perfil','UserController@upPerfil');
+
+Route::Resource('/comentarios','ComentarioController');
+Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
+
+Route::Resource('/chat','ChatController');
+Route::get('/listar-chat','ChatController@listarChat');
+
 Route::get('/bloghome',[
 	'uses' => 'FrontController@index',
 	'as'   => 'bloghome'
@@ -44,18 +60,6 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
 
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Route::Resource('/usuarios','UserController');
-Route::get('/listar-usuarios','UserController@listarUsuario');
-
-Route::get('/mi-perfil','UserController@miPerfil');
-Route::post('/mi-perfil','UserController@upPerfil');
-
-Route::Resource('/comentarios','ComentarioController');
-Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
 
 
 Route::get('/agregar', function () {

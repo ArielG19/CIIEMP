@@ -31,10 +31,16 @@ class User extends Authenticatable
         return $this->hasMany('App\Blog');
     }
 
-      public function comentario()
-   {
+    public function comentario()
+    {
        return $this->hasMany('App\Comentario');
-   }
+    }
+
+    public function chats()
+    {
+       return $this->hasMany('App\Chat');
+    }
+
 
 
 }
