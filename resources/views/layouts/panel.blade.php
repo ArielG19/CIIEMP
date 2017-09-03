@@ -13,6 +13,7 @@
             <!-- modificamos los margenes de diseño etc. -->
             <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
             <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
             <div>
@@ -38,9 +39,8 @@
                 menubar: "false",
                 language: 'es'
               });
-          </script>
+           </script>
 
-
-
+           
             @yield('script')
 </html>

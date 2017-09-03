@@ -37,10 +37,11 @@ Route::get('/acercade', function () {
     return view('acercade');
     });
 Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
-
+    Route::resource('carrera', 'CarreraController');
     Route::resource('categoria', 'CategoriaController');
     Route::resource('blogs', 'BlogController');
     Route::resource('bibliotecas', 'BibliotecaController');
+    Route::resource('profesor', 'ProfesorController');
 
 });
 
@@ -66,6 +67,11 @@ Route::get('/agregar', function () {
 Route::get('categoria/{id}/destroy',[
   'uses' =>'CategoriaController@destroy',
   'as'   =>'categoria.destroy'
+]);
+
+Route::get('carrera/{id}/destroy',[
+  'uses' =>'CarreraController@destroy',
+  'as'   =>'carrera.destroy'
 ]);
 
 Route::get('blogs/{id}/destroy',[

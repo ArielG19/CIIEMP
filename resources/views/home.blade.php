@@ -22,7 +22,7 @@
                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"    role="button" aria-expanded="false">
                                                             <img src="/perfil/{{Auth::user()->imagen}}"
                                                               style="width: 42px; height: 42px; position:absolute; top: 8px; left:-45px;border-radius: 50%">
-                                                            {{ Auth::user()->name }} 
+                                                            {{ Auth::user()->name }}
                                                             <span class="caret" style="margin-right:20px;"></span>
                                                         </a>
 
@@ -63,6 +63,10 @@
                                             <li>
                                               <a href="/agregar">
                                               <i class="fa fa-circle-o"></i>Agregar Personas</a>
+                                            </li>
+                                            <li>
+                                              <a href="{{url('home/carrera') }}">
+                                              <i class="fa fa-circle-o"></i>Carreras</a>
                                             </li>
                                         </ul>
                                       </a>
@@ -115,10 +119,10 @@
                           </ul>
                   </section>
           </aside>
-          
+
           <div class="content-wrapper">
                 <section class="content">
-                      <div class="container">                             
+                      <div class="container">
                                   @yield('contenido')
 
                       </div>
