@@ -33,7 +33,7 @@ class ComentarioController extends Controller
                                 
             });
                             
-            //dd($comentarios);
+            dd($comentarios);
             return view('comentarios.listar')->with('comentarios',$comentarios);
 
             

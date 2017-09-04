@@ -25,6 +25,7 @@ class CreateChatsTable extends Migration
            
             
         });
+        
     }
 
     /**

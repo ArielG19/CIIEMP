@@ -21,21 +21,32 @@ class ChatController extends Controller
         return view('chat.chat')->with('users',$users);
     }
 
-    public function listarChat()
+    public function listarChat($usuario_activo)
     {
-        //SELECT tabla.name as emisor,users.name as receptor,mensaje
-        //FROM chats inner join users as tabla on chats.id_emisor = tabla.id inner join users on chats.id_receptor = users.id;
-        $chats = DB::table('chats')
+        /*SELECT chats.id,tabla.name as emisor,users.name as receptor,mensaje
+        FROM chats inner join users as tabla on chats.id_emisor = tabla.id inner join users on chats.id_receptor = users.id where tabla.id= 1 and users.id=2;*/
+
+        $query = DB::table('chats')
                    ->join('users','chats.id_emisor','=','users.id')
                    ->join('users as receptor','chats.id_receptor','=','receptor.id')
-                   ->select('users.name as emisor','users.imagen','receptor.name as receptor','receptor.imagen as imagen2','mensaje','chats.created_at',DB::raw('count(mensaje)'))
-                   ->groupBY('mensaje')->orderBy('id_emisor','id_receptor')->orderBy('mensaje','desc')->get();
+                   ->select('users.name as emisor','users.imagen','receptor.name as receptor','receptor.imagen as imagen2','mensaje','chats.created_at')
+                   ->where('receptor.id',$usuario_activo);
 
-        //dd($chats);
-        return view('chat.listar')->with('chats',$chats);
+        $query2 = DB::table('chats')
+                   ->join('users','chats.id_emisor','=','users.id')
+                   ->join('users as receptor','chats.id_receptor','=','receptor.id')
+                   ->select('users.name as emisor','users.imagen','receptor.name as receptor','receptor.imagen as imagen2','mensaje','chats.created_at')
+                   ->where('users.id',$usuario_activo)
+                   ->union($query)
+                   ->orderBy('created_at','desc')
+                   //->limit('1')
+                   ->get();
+        //dd($query2);
+        return view('chat.listar')->with('query2',$query2);
     }
 
-    /**
+    /*
+*
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -63,6 +74,7 @@ class ChatController extends Controller
             $chats->id_emisor = \Auth::user()->id;
             $chats->id_receptor = $request->id_to;
             $chats->save();
+            $message->tags()->sync($request->tag);
            
             
             //si no hay error entonces

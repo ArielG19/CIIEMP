@@ -11,12 +11,12 @@ class Chat extends Model
   	protected $fillable = ['mensaje','id_emisor','id_receptor'];
 
 
-   	public function user()
+   	public function emisor()
    	{
        return $this->belongsTo('App\User','id_emisor');
    	}
 
-   	public function userreceptor()
+   	public function receptor()
    	{
        return $this->belongsTo('App\User','id_receptor');
    	}

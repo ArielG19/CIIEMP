@@ -2,32 +2,22 @@
 @section('title','Chat')
 @section('contenido')
                   <div class="col-sm-3">
-                  <div class="well">
-                    <ul class="list-group">
-                          <li class="list-group-item">
-                           <center><b>Conversaciones</b></center>
-                          </li>
-
-                          <li class="list-group-item">
-                            <b>Tipo de Usuario:</b>
-                            <span class="label label-default" style="padding: 5px 8px; position: absolute;margin-left:78px;"></span>
-                          </li>
-                          <li class="list-group-item">
-                            <b>Nombre de Usuario:</b>
-                            <span class="label label-default" style="padding: 5px 8px; position: absolute;margin-left:80px;"></span>
-                          </li>
-                          <li class="list-group-item">
-                            <b>Correo:</b>
-                            <span class="label label-default" style="padding: 5px 8px; position: absolute;margin-left:68px;"></span>
-                          </li>
-                    </ul>
-                  </div>
-
+                    <div class="well">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                              <center><b>Conversaciones</b></center>
+                            </li>
+                            
+                            <ul class="lista list-group">  
+                            </ul>
+                        </ul>
+                    </div>
                   </div>
                   <div class="col-sm-3">
                       <div class="form-group">
                         {!!Form::label('Usuarios','Enviar mensaje a:')!!}
                         {!!Form::select('usuarios',$users,null,['id'=>'usuario_to','class'=>'form-control select-user','multiple','required'])!!}
+                        {!!Form::hidden('usuario',Auth::user()->id,null,['id'=>'usuario_id','class'=>'form-control'])!!}
                       </div>
                   </div>
                   <div class="col-sm-5 col-sm-offset-left-1 frame" id="caja" >

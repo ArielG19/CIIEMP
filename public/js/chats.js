@@ -4,13 +4,15 @@ $(document).ready(function(){
     var listarChat = function(){
     $.ajax({
         type:'get',
-        url:'listar-chat',
+        url:'/listar-chat/'+usuario_activo,
         success:function(data){
             $('#mensajes').empty().html(data);
         }
     });
 }
 
+var usuario_activo = $('input:hidden[name = usuario]').val();
+//console.log(usuario_activo);
 
 $("#Enviar").click(function(event){
 
