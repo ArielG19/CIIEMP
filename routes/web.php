@@ -21,6 +21,11 @@ Route::get('/bloghome',[
 	'as'   => 'bloghome'
 	]);
 
+  Route::get('bloghome/filtrarPorCategorias/{name}',[
+	'uses' => 'FrontController@filtraCategoria',
+	'as'   => 'bloghome.filtrar.categorias'
+	]);
+
   Route::get('/biblioteca',[
   	'uses' => 'BibliotecaController@downfunc',
   	'as'   => 'biblioteca'

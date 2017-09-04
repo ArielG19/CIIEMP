@@ -391,7 +391,7 @@ a:hover .lnk-icon-right {
 }
 
 .p-b {
-  padding-bottom: 50px;
+
   padding-top: 50px;
 }
 
@@ -1766,6 +1766,8 @@ a:hover .lnk-icon-right {
 
 .fh5co-content-style-6 {
   background: #fff;
+  padding-bottom: 80px;
+
 }
 
 .fh5co-content-style-8 h4 {

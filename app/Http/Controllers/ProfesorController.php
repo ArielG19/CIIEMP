@@ -45,7 +45,7 @@ class ProfesorController extends Controller
 
       $profesor->save();
       Session::flash('message','La entrada del blog fue creada correctamente');
-      return redirect::to('perfil.perfil');
+      return redirect::to('perfil/perfil');
 
     }
 
@@ -81,7 +81,15 @@ class ProfesorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $profesor= Profesor::find($id);
+      $profesor->  fill($request->all());
+      $profesor->save();
+
+
+
+      $profesor->save();
+      Session::flash('message','Datos de usuario actualizado Correctamente');
+      return redirect::to('perfil/perfil');
     }
 
     /**

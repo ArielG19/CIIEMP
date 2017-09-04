@@ -22,8 +22,10 @@ class BlogController extends Controller
      */
     public function index()
     {
-      $blogs =Blog::orderBy('id','DESC')->paginate(5);
-      return view('panel.blog.index', compact('blogs'));
+
+      $blogs = Blog::orderBy('id','DESC')->paginate(5);
+
+      return view('panel.blog.index')->with(compact('blogs'));
     }
 
 
@@ -111,7 +113,7 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {  
+    {
 
 
        $file = Blog::findOrFail($id);

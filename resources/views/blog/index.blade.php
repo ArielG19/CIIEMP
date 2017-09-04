@@ -13,12 +13,15 @@
 						<div class="fh5co-post wow fadeInLeft">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category"><a href="#">{{$blog->category->name}}</a></div>
+								<div class="fh5co-category">
+									<a href="{{route('bloghome.filtrar.categorias',$blog->category->name)}}">
+										{{$blog->category->name}}
+									</a></div>
 								@if(empty($blog->path))
 								<img src="/images/no-imagen.png"  class="img-responsive">
 								@else
 
-								<img src="/styleVoltage/images/CiiempBlog.png" alt="Image" class="img-responsive">
+								<img src="/styleVoltage/images/CiiempBlog.jpg" alt="Image" class="img-responsive">
 
 								@endif
 							</div>
@@ -44,9 +47,15 @@
 							<!-- Category -->
 							<div class="single category">
 								<h3 class="side-title">Categorias</h3>
-								@foreach($blogs as $blog)
-								<ul class="list-unstyled">
-									<li><a href="" title="">{{$blog->category->name}} </a></li>
+
+								<ul class="list-group">
+								@foreach($allcategorias as $cate)
+									<li class="list-group-item">
+										<span class="badge">{{$cate->blogs->count()}}</span>
+										<a href="{{route('bloghome.filtrar.categorias',$cate->name)}}">
+											{{$cate->name}}
+										</a>
+								 </li>
 								@endforeach()
 								</ul>
    				</div>

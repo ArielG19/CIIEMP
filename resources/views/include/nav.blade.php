@@ -82,7 +82,7 @@
     </div>
 </nav>
         <!--FIN DE MENU-->
-<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"  style="background: url(/styleVoltage/images/ciiemp-Walpaper.png);">
+<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"  style="background: url(/styleVoltage/images/ciiemp-Walpaper.jpg);">
                         <span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
                             <a href="#">
                                 <span class="mouse"><span></span></span>

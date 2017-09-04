@@ -12,8 +12,8 @@
 </div>
 @endif
 
-		{!! Form::open(['route' => 'profesor.store', 'method' => 'POST','files'=>true]) !!}
-						
+		{!! Form::open(['route'=>['profesor.update',$profesor],'method'=>'PUT','files' => true]) !!}
+
 						<div class="form-group">
 							{!!form::label('Nombre:')!!}
 							{!!form::text('primer_nombre',null,['class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}

@@ -14,8 +14,9 @@
                          <form enctype="multipart/form-data" action="/mi-perfil" method="POST">
                          <div  align="center"> <img alt="User Pic" src="/perfil/{{$user->imagen}}" id="profile-image1" class="img-circle img-responsive">
 
-                           {{--
+
                            <input type="hidden" name="_token" value="{{csrf_token ()}}">
+                           {{--
 
                             <input type="file" name="imagen" id="btn1">
 
