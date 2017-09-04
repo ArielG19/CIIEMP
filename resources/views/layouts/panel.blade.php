@@ -34,13 +34,12 @@
             <script>
               tinymce.init({
                 selector: '#textareay',
-                plugins: "link",
-                plugins: "lists",
+                plugins: "lists link",
                 menubar: "false",
                 language: 'es'
               });
            </script>
 
-           
+
             @yield('script')
 </html>

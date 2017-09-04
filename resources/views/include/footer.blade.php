@@ -4,18 +4,18 @@
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
 			<div class="fh5co-logo"><span class="logo">C</span>IIEMP</div>
-				<p class="fh5co-copyright">&copy; 2017. 
+				<p class="fh5co-copyright">&copy; 2017.
 					<br>
-						All Rights Reserved. 
+						All Rights Reserved.
 					<br>
-						Designed by 
-					<a target="_blank" href="#"></a> 
+						Designed by
+					<a target="_blank" href="#"></a>
 					<br>
-						Created with 
-					<a target="_blank" href="#">Cards</a> 
-					<br> 
-						Images: 
-					<a target="_blank" href="#">Unsplash</a>, 
+						Created with
+					<a target="_blank" href="#">Cards</a>
+					<br>
+						Images:
+					<a target="_blank" href="#">Unsplash</a>,
 					<a target="_blank" href="#">Pexels</a>
 				</p>
 		</div>
@@ -43,11 +43,7 @@
 			<p><a href="#" class="btn btn-success btn-sm btn-outline">I'm a button</a></p>
 		</div>
 		<div class="clearfix visible-sm-block"></div>
-		
-		<div class="container fh5co-made">
-			<div class="col-md-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-				<p>2017 <i class="heart icon-heart"></i></p>
-			</div>
+		<div class="container fh5co-made">			
 		</div>
 	</div>
 <!-- END footer -->

@@ -24,9 +24,9 @@
 			<div class="box">
 				<div class="icon">
 					<div class="image"><i class="fa fa-flag"></i></div>
-					<div class="info">
+					<div class="info  prueba">
 						<h3 class="title">Misión</h3>
-						<p class="text-center">
+						<p style="text-align: justify">
               Somos una instancia de la UNAN-Managua-FAREM-Estelí dedicada a la investigación aplicada para la promoción y
               desarrollo de proyectos de innovación y emprendimiento que se encaminen a la solución de problemas socioeconómicos,
                culturales, educativos y ambientales, mediante la organización de equipos multidisciplinarios para el crecimiento
@@ -45,9 +45,9 @@
 			<div class="box">
 				<div class="icon">
 					<div class="image"><i class="fa fa-flag"></i></div>
-					<div class="info">
-						<h3 class="title">visión</h3>
-    					<p>
+					<div class="info  prueba">
+						<h3 class="title ">visión</h3>
+    					<p style="text-align: justify">
                 Centro de investigación de UNAN-Managua; FAREM-Estelí líder y de referencia nacional en la generación de conocimiento
                  de prácticas innovadoras y emprendedoras (organización, productos, modelos de negocios, educativos y sociales), el desarrollo
                   de competencias, fortalecimiento socioeconómico, relación entre universidad-empresa-estado y acciones que aporten al crecimiento económico

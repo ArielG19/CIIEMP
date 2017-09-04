@@ -8,9 +8,9 @@
       <div class="col-md-4">
         <div class="span3 well">
             <center>
-            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-            <h3>Joe Sixpack</h3>
-            <em>click my face for more</em>
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="perfil/default.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+            <h3>Docente</h3>
+            <em>click en la imagen para más detalles</em>
     		</center>
         </div>
       </div>
@@ -18,9 +18,9 @@
       <div class="col-md-4">
         <div class="span3 well">
             <center>
-            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-            <h3>Joe Sixpack</h3>
-            <em>click my face for more</em>
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="perfil/default.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+            <h3>Docente</h3>
+            <em>click en la imagen para más detalles</em>
     		</center>
         </div>
       </div>
@@ -28,9 +28,9 @@
       <div class="col-md-4">
         <div class="span3 well">
             <center>
-            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-            <h3>Joe Sixpack</h3>
-            <em>click my face for more</em>
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="perfil/default.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+            <h3>Docente</h3>
+            <em>click en la imagen para más detalles</em>
     		</center>
         </div>
       </div>
@@ -41,9 +41,9 @@
       <div class="col-md-4">
         <div class="span3 well">
             <center>
-            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-            <h3>Joe Sixpack</h3>
-            <em>click my face for more</em>
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="perfil/default.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+            <h3>Docente</h3>
+            <em>click en la imagen para más detalles</em>
     		</center>
         </div>
       </div>
@@ -51,19 +51,19 @@
       <div class="col-md-4">
         <div class="span3 well">
             <center>
-            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-            <h3>Joe Sixpack</h3>
-            <em>click my face for more</em>
-    		</center>
-        </div>
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="perfil/default.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+            <h3>Docente</h3>
+              <em>click en la imagen para más detalles</em>
+          </center>
+          </div>
       </div>
 
       <div class="col-md-4">
         <div class="span3 well">
             <center>
-            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-            <h3>Joe Sixpack</h3>
-            <em>click my face for more</em>
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="perfil/default.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+            <h3>Docente</h3>
+            <em>click en la imagen para más detalles</em>
     		</center>
         </div>
       </div>
@@ -78,11 +78,11 @@
               <div class="modal-content">
                   <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                      <h4 class="modal-title" id="myModalLabel">More About Joe</h4>
+                      <h4 class="modal-title" id="myModalLabel">More About User</h4>
                       </div>
                   <div class="modal-body">
                       <center>
-                      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                      <img src="perfil/default.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
                       <h3 class="media-heading">Joe Sixpack <small>USA</small></h3>
                       <span><strong>Skills: </strong></span>
                           <span class="label label-warning">HTML5/CSS</span>
@@ -99,7 +99,9 @@
                   </div>
                   <div class="modal-footer">
                       <center>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">I've heard enough about Joe</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Blog</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Blog</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Blog</button>
                       </center>
                   </div>
               </div>

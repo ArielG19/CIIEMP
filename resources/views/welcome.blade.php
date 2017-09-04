@@ -62,7 +62,7 @@
 
             <div class="fh5co-content-style-6">
                 <div class="container">
-                        <div class="row p-b text-center">
+                        <div id="noticias" class="row p-b text-center">
                             <div class="col-md-6 col-md-offset-3">
                                 <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Noticias recientes.</h2>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam tempora ducimus cum nam quae inventore provident autem recusandae et aperiam, adipisci obcaecati fugit qui, unde earum nostrum voluptate, placeat?.</p>
