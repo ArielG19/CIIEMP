@@ -1,7 +1,7 @@
 @extends('home')
 @section('title','Chat')
 @section('contenido')
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
                     <div class="well">
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -13,7 +13,7 @@
                         </ul>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-2">
                       <div class="form-group">
                         {!!Form::label('Usuarios','Enviar mensaje a:')!!}
                         {!!Form::select('usuarios',$users,null,['id'=>'usuario_to','class'=>'form-control select-user','multiple','required'])!!}

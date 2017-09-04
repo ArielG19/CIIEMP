@@ -1,9 +1,8 @@
 @extends('home')
 @section('title','Usuarios')
 @section('contenido')
-			 <div class="container">
-                      <div class="col-xs-10 col-md-offset-1">
-                      		  <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
+                        <div class="col-xs-12">
+                      		   <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
                       		  		style="display:none">
 						            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						            	<span aria-hidden="true">&times;</span>
@@ -18,36 +17,24 @@
 									<strong> Se actualizo correctamente</strong>
 								</div>
 
-                              <div class="panel panel-primary">
-                                 <div class="panel-heading">
-
-                                </div>
+                              	<div class="panel panel-primary">
+	                                <div class="panel-heading">
+											<h5 class="panel-title">Lista de Usuarios</h5>
+	                                </div>
                                   	<div class="panel-body">
-                     							<div class="row">
-														<div class="col-md-6">
-															<h3 class="panel-title">Lista de Usuarios</h3>
-															<hr>
-														</div>
-
-														<div class="col-md-6">
-															<p class="navbar-text navbar-right" style="margin-right:15px; margin-top:7px;">
+										
+										<hr>
+										<p class="navbar-text navbar-right" style="margin-right:15px; margin-top:-53px;">
 															    <a class="btn btn-info btn-sm" href="#myModalcreateUser" data-toggle='modal' data-target='#myModalcreateUser'>
 															 		<span>Agregar <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
 										              			</a>
-															</p>
-														</div>
-												</div>
-		                                      	<div class="row">
-													<div class="col-xs-12">
-														<div id="listar-usuarios"></div>
-													</div>
-		                                 		</div>
-		                       		</div>
+										</p>
+										<div id="listar-usuarios"></div>
+									</div>
 
-                      </div>
-
-</div>
-			@include('usuario.modalCreate')
+                      			</div>
+                      	</div>
+@include('usuario.modalCreate')
 @include('usuario.modalUpdate')
 
 @section('script')
