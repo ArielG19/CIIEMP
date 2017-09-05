@@ -41,7 +41,7 @@
 						<div class="fh5co-post wow fadeInLeft">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category"><a href="#">{{$down->category->name}}</a></div>
+								<div class="fh5co-category"><a href="{{route('biblioteca.filtrar.categorias',$down->category->name)}}">{{$down->category->name}}</a></div>
 
 
 

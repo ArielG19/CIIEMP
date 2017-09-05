@@ -19,35 +19,35 @@ Route::get('/', function () {
 Route::get('/bloghome',[
 	'uses' => 'FrontController@index',
 	'as'   => 'bloghome'
-	]);
+]);
 
-  Route::get('bloghome/filtrarPorCategorias/{name}',[
-	'uses' => 'FrontController@filtraCategoria',
-	'as'   => 'bloghome.filtrar.categorias'
-	]);
+Route::get('/bloghome/blogin/{slug}','FrontController@blog');
 
-  Route::get('/biblioteca',[
-  	'uses' => 'BibliotecaController@downfunc',
-  	'as'   => 'biblioteca'
-  	]);
+Route::get('bloghome/{name}',[
+ 'uses' => 'FrontController@filtraCategoria',
+ 'as'   => 'bloghome.filtrar.categorias'
+]);
 
+Route::get('biblioteca/filtrarPorCategorias/{name}',[
+  'uses' => 'BibliotecaController@filtraCategoria',
+  'as'   => 'biblioteca.filtrar.categorias'
+]);
 
-  Route::get('blogin/{slug}',[
-	'uses' => 'FrontController@blog',
-	'as'   => 'blogin'
-	]);
-
+Route::get('/biblioteca',[
+  'uses' => 'BibliotecaController@downfunc',
+  'as'   => 'biblioteca'
+]);
 
 Route::get('/acercade', function () {
     return view('acercade');
-    });
+});
+
 Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('carrera', 'CarreraController');
     Route::resource('categoria', 'CategoriaController');
     Route::resource('blogs', 'BlogController');
     Route::resource('bibliotecas', 'BibliotecaController');
     Route::resource('profesor', 'ProfesorController');
-
 });
 
 Auth::routes();
@@ -62,7 +62,6 @@ Route::post('/mi-perfil','UserController@upPerfil');
 
 Route::Resource('/comentarios','ComentarioController');
 Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
-
 
 Route::get('/agregar', function () {
     return view('agregarPersonas');
