@@ -28,15 +28,15 @@ Route::get('bloghome/{name}',[
  'as'   => 'bloghome.filtrar.categorias'
 ]);
 
-Route::get('biblioteca/filtrarPorCategorias/{name}',[
-  'uses' => 'BibliotecaController@filtraCategoria',
-  'as'   => 'biblioteca.filtrar.categorias'
-]);
-
 Route::get('/biblioteca',[
   'uses' => 'BibliotecaController@downfunc',
   'as'   => 'biblioteca'
 ]);
+
+Route::get('biblioteca/{name?}','BibliotecaController@filtraCategoria');
+
+
+
 
 Route::get('/acercade', function () {
     return view('acercade');
@@ -92,7 +92,7 @@ Route::get('bibliotecas/{id}/destroy',[
 ]);
 
 
-Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@buscar_archivos');
+Route::get('buscar_archivos/{categoria}/{dato?}','BibliotecaController@downfunc');
 
 Route::get('/docentes', function () {
     return view('docentes.index');
