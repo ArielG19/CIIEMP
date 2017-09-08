@@ -30,10 +30,10 @@ class FrontController extends Controller
     {
 
         $categoria = Categoria::SearchCategory($name)->first();
-        $blogs = $categoria->blogs()->paginate(4);
+        $blogs = $categoria->blogs()->OrderBy('id', 'DESC')->paginate(4);
 
         $allcategorias = Categoria::all();
-      
+
 
         return view('blog/index',compact('blogs','allcategorias'));
     }

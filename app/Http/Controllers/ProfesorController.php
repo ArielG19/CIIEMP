@@ -29,7 +29,7 @@ class ProfesorController extends Controller
      */
     public function create()
     {
-      return view('panel.profesor.create');
+      return view('perfil.modalUpdateProfesor');
     }
 
     /**

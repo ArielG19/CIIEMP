@@ -13,7 +13,7 @@
 						<div id="message-error" class="alert alert-danger danger" role="alert" style="display:none">
 								<strong id="error"></strong>
 						</div>
-						{!! Form::open(['method'=>'PUT','files' => true]) !!}
+						{!! Form::open(['route' => 'profesor.store', 'method' => 'POST','files'=>true]]) !!}
 
 										<div class="form-group">
 											{!!form::label('Nombre:')!!}
@@ -50,28 +50,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-								<div class="form-group">
-									{!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
-
-								</div>
-
-
-
-							{!! Form::close() !!}
 					</div>
 
 					<div class="modal-footer">
-						{!!link_to('#',$title ='Actualizar',$attributes= ['id'=>'actualizar','class'=>'btn btn-info'],$secure = null)!!}
+						{!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
 					</div>
+					{!! Form::close() !!}
 		</div>
 	</div>
 </div>

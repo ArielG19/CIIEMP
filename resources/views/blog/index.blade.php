@@ -18,11 +18,11 @@
 									<a href="{{route('bloghome.filtrar.categorias',$blog->category->name)}}">
 										{{$blog->category->name}}
 									</a></div>
-								@if(empty($blog->path))
-								<img src="/images/no-imagen.png"  class="img-responsive">
+								@if($blog->path==null)
+								<img src= "{{ url('styleVoltage/images/no-disponible.jpg') }}"  class="img-responsive">
 								@else
 
-								<img src="/styleVoltage/images/CiiempBlog.jpg" alt="Image" class="img-responsive">
+								<img src="/images/{{$blog->path}}" alt="Image" class="img-responsive">
 
 								@endif
 							</div>

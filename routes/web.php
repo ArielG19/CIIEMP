@@ -48,11 +48,13 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('blogs', 'BlogController');
     Route::resource('bibliotecas', 'BibliotecaController');
     Route::resource('profesor', 'ProfesorController');
+
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
 
 Route::Resource('/usuarios','UserController');
 Route::get('/listar-usuarios','UserController@listarUsuario');

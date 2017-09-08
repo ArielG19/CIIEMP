@@ -18,7 +18,7 @@ class CreateBlogsTable extends Migration
             $table->string('titulo');
             $table->text('descripcion')->nullable();
             $table->string('slug')->nullable();
-            $table->string('path');
+            $table->string('path')->nullable();
             $table->string('tags');
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_categoria')->unsigned();

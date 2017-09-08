@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
+use Input;
+use Image;
 
 
 class Blog extends Model
@@ -24,16 +26,7 @@ class Blog extends Model
 
   protected $fillable = ['titulo','descripcion','slug','path','tags','id_usuario','id_categoria'];
 
-  public function setPathAttribute($path){
-
-        if(!empty($path)){
-          $nombre =time(). "." .$path->getClientOriginalExtension();
-          $this->attributes['path'] = $nombre;
-          \Storage::disk('local')->put($nombre, \File::get($path));
-        }
-
-     }
-
+  
 
 
 
