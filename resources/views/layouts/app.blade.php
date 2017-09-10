@@ -38,6 +38,8 @@
             <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
             <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
 
+
+
             <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
 
@@ -93,6 +95,7 @@
             <script src="{{asset('styleVoltage/js/main.js')}}"></script>
             <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
             <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
+            
 
 
 

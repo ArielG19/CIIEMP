@@ -3,7 +3,7 @@
 @section('contenido')
 
 
-{!!Form::model($blog,['route'=>['blogs.update',$blog],'method'=>'PUT','files' => true])!!}
+{!!Form::model($blog,['route'=>['noticia.update',$blog],'method'=>'PUT','files' => true])!!}
 
 	    <div class="form-group">
 			{!!Form::label('titulo','Titulo:')!!}

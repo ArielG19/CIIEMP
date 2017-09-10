@@ -14,6 +14,7 @@
             <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
             <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
 
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
             <div>
@@ -27,9 +28,13 @@
 
             <script src="{{asset('panel/js/app.min.js')}}"></script>
 
+
+
             <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
             <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
             <script src="{{asset('styleVoltage/js/main.js')}}"></script>
+
+        
 
             <script>
               tinymce.init({

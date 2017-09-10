@@ -46,6 +46,7 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('carrera', 'CarreraController');
     Route::resource('categoria', 'CategoriaController');
     Route::resource('blogs', 'BlogController');
+    Route::resource('noticia', 'NoticiaController');
     Route::resource('bibliotecas', 'BibliotecaController');
     Route::resource('profesor', 'ProfesorController');
 
@@ -85,6 +86,13 @@ Route::get('blogs/{id}/destroy',[
     'as'   =>'blogs.destroy'
 
 ]);
+
+Route::get('noticia/{id}/destroy',[
+    'uses' =>'NoticiaController@destroy',
+    'as'   =>'noticia.destroy'
+
+]);
+
 
 
 Route::get('bibliotecas/{id}/destroy',[

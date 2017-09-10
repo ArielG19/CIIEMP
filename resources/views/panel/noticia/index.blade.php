@@ -42,11 +42,11 @@
       @else
       <td><img src="{{asset('images')}}/{{$blog->path}}"  style ="width: 100px"></td>
       @endif
-
+    {{--
   		<td><a class="btn btn-success" href="{{route('blogs.edit', $blog->id)}}" role="button"><i class="fa fa-pencil-square-o"></i></a>
   		    <a class="btn btn-danger" href="{{route('blogs.destroy', $blog->id)}}" onclick="return confirm('Quiere borrar el registro?')" role="button"><i class="fa fa-trash-o"></i></a>
   		</td>
-
+      --}}
   	</tr>
   	@endforeach
   </tbody>
