@@ -12,7 +12,7 @@ $(document).ready(function(){
 }
 
 var usuario_activo = $('input:hidden[name = usuario]').val();
-//console.log(usuario_activo);
+console.log(usuario_activo);
 
 $("#Enviar").click(function(event){
 

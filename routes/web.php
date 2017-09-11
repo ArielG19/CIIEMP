@@ -32,7 +32,6 @@ Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios'
 Route::Resource('/chat','ChatController');
 Route::get('/listar-chat/{usuario_activo}','ChatController@listarChat');
 
-Route::Resource('/mensajes','MensajeController');
 
 Route::get('/bloghome',[
 	'uses' => 'FrontController@index',
