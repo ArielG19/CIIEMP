@@ -31,8 +31,18 @@ class User extends Authenticatable
         return $this->hasMany('App\Blog');
     }
 
+<<<<<<< HEAD
     public function comentario()
     {
+=======
+    public function profesors(){
+
+        return $this->hasOne('App\Profesor','id_usuario','id');
+    }
+
+      public function comentario()
+   {
+>>>>>>> 6298a5da7c429c4148587ff464232a60c953d456
        return $this->hasMany('App\Comentario');
     }
 

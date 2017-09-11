@@ -41,7 +41,7 @@
 						<div class="fh5co-post wow fadeInLeft">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category"><a href="#">{{$down->category->name}}</a></div>
+								<div class="fh5co-category"><a href="{{'biblioteca'}}/{{$down->category->name}}">{{$down->category->name}}</a></div>
 
 
 
@@ -60,12 +60,15 @@
 								<p>{{$down->descripcion}}</p>
 							</div>
 							<div class="fh5co-post-meta" id="btn">
-								<a class="btn btn-primary" href="download/pdf/{{$down->path}}" target="_blank" role="button">Visualizar</a>
-                <a class="btn btn-primary" href="download/pdf/{{$down->path}}" download="{{$down->path}}" role="button">Descagar</a>
+								<a class="btn btn-primary" href="/download/pdf/{{$down->path}}" target="_blank" role="button">Visualizar</a>
+                <a class="btn btn-primary" href="/download/pdf/{{$down->path}}" download="{{$down->path}}" role="button">Descagar</a>
 							</div>
 						</div>
 					</div>
 					@endforeach()
         </div>
 				{!! $downloads->render()!!}
+		</div>
+</div>
+
 @endsection

@@ -9,12 +9,13 @@
 
             <title>@yield('title','Default')</title>
 
-            
-            <!--link rel="shortcut icon" href="favicon.ico"-->
-            <!-- Google Fonts -->
-            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
 
-            
+
+
+    <!--link rel="shortcut icon" href="favicon.ico"-->
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+
             <!-- Animate.css -->
             <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
             <!-- Icomoon Icon Fonts-->
@@ -33,9 +34,11 @@
 
               <!-- Modernizr JS -->
             <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
-            
+
             <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
             <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+
+
 
             <link rel="stylesheet" href="{{asset('css/main.css')}}">
             
@@ -51,11 +54,11 @@
     <section>
         @yield('content')
     </section>
-    
+
     <section class="col-md-12">
-        @include('include.footer')    
+        @include('include.footer')
     </section>
-    
+
 
     </body>
             <!-- jQuery -->
@@ -91,10 +94,11 @@
 
             <!-- Main -->
             <script src="{{asset('styleVoltage/js/main.js')}}"></script>
-
-            <!-- tynimce(text area advance) -->
             <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
             <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
+            
+
+
 
             <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
 

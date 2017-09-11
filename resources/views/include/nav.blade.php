@@ -74,7 +74,7 @@
                                                                 {{ csrf_field() }}
                                                             </form>
                                                         </li>
-                                                    </ul>   
+                                                    </ul>
                                             </li>
                                         @endif
                 </ul>
@@ -82,7 +82,7 @@
     </div>
 </nav>
         <!--FIN DE MENU-->
-<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"  style="background: url(/styleVoltage/images/ciiemp-Walpaper.png);">
+<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"  style="background: url(/styleVoltage/images/ciiemp-Walpaper.jpg);">
                         <span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
                             <a href="#">
                                 <span class="mouse"><span></span></span>
@@ -98,13 +98,13 @@
 
                                         </div>
 
-                                        <div class="col-md-6 full-height js-full-height">
+                                         <div class="col-md-6 full-height js-full-height">
 
                                             <div class="fh5co-cover-intro">
                                                 <div class="well" style="background:transparent !important">
                                                         <h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Centro de Investigación para la Innovación y el Emprendimiento</h1>
                                                 <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</h2>
-                                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="#" class="btn btn-primary btn-outline btn-lg">Acerca de nosotros</a></p>
+                                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="{{ url('/acercade') }}" class="btn btn-primary btn-outline btn-lg">Acerca de nosotros</a></p>
 
                                                 </div>
 

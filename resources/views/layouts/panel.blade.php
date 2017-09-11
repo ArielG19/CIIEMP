@@ -13,8 +13,13 @@
             <!-- modificamos los margenes de diseño etc. -->
             <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
             <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
+<<<<<<< HEAD
             <link rel="stylesheet" href="{{asset('css/chat.css')}}">
             <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
+=======
+
+
+>>>>>>> 6298a5da7c429c4148587ff464232a60c953d456
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
             <div>
@@ -28,22 +33,23 @@
 
             <script src="{{asset('panel/js/app.min.js')}}"></script>
 
+
+
             <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
             <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
             <script src="{{asset('chosen/chosen.jquery.js')}}"></script>
             <script src="{{--asset('styleVoltage/js/main.js')--}}"></script>
 
-          <script>
-            tinymce.init({
-              selector: '#textareay',
-              plugins: "link",
-              plugins: "lists",
-              menubar: "false",
-              language: 'es'
-            });
+        
 
-          </script>
-
+            <script>
+              tinymce.init({
+                selector: '#textareay',
+                plugins: "lists link",
+                menubar: "false",
+                language: 'es'
+              });
+           </script>
 
 
             @yield('script')

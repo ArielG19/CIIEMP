@@ -8,7 +8,7 @@
 						<div class="fh5co-post wow fadeInLeft">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category"><a href="#">{{$blogs->category->name}}</a></div>
+								<div class="fh5co-category"><a >{{$blogs->category->name}}</a></div>
 								{{--@if(empty($blogs->path))
 								<img src="/images/no-imagen.png"  class="img-responsive">
 								@else--}}
@@ -16,7 +16,7 @@
 								{{--@endif--}}
 							</div>
 							<div class="fh5co-post-text">
-								<h3><a href="#">{{$blogs->titulo}}</a></h3>
+								<h3><a >{{$blogs->titulo}}</a></h3>
 								<p class="parrafo1">{!!($blogs->descripcion)!!}</p>
 							</div>
 							<div class="fh5co-post-meta">
