@@ -13,13 +13,8 @@
             <!-- modificamos los margenes de diseño etc. -->
             <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
             <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
-<<<<<<< HEAD
             <link rel="stylesheet" href="{{asset('css/chat.css')}}">
             <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
-=======
-
-
->>>>>>> 6298a5da7c429c4148587ff464232a60c953d456
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
             <div>

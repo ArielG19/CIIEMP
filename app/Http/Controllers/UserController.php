@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Profesor;
+use App\Student;
+use App\Career;
 use Auth;
 use Image;
 
@@ -27,9 +30,14 @@ class UserController extends Controller
     }
 
     //--------METODOS PARA EL PERFIL------------------------------------------------
-    public function miPerfil()
+    /*public function miPerfil()
     {
-        return view('perfil.perfil',array('user' => Auth::user() ));
+        $carrera = Career::Orderby('carrera','ASC')->pluck('carrera','id');
+        //->prepend('Seleccione una opcion');
+        //$categorias=Categoria::lists('nombre','id')->prepend('Seleccione la marca');
+        //dd($carrera);
+        return view('perfil.perfil',array('user' => Auth::user() ))->with('carrera',$carrera);
+        //return view('perfil.modalCreateEst')->with('carrera',$carrera);
     }
 
     public function upPerfil(Request $request)
@@ -46,7 +54,7 @@ class UserController extends Controller
         }
         //return view('isnaya.usuarios.listar')->with('usuarios',$usuarios);
         return view('perfil.perfil', array('user'=> Auth::user() ));
-    }
+    }*/
     //--------METODOS PARA EL PERFIL------------------------------------------------
 
     /**
@@ -68,17 +76,38 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-        if($request->ajax()){
-            $usuarios = User::create($request->all());
-            $usuarios->password=bcrypt($request->password);
-            $usuarios->save();
-            //si no hay error entonces
-            if($usuarios){
-                //Session::flash('save','Se ha creado correctamente');
-                return response()->json(['success'=>'true']);
-            }else{
-                return response()->json(['success'=>'false']);
-            }
+        if($request->ajax())
+        {
+                    //dd($request->type);
+                    $usuarios = new User();
+                    $usuarios->name = $request->name;
+                    $usuarios->email = $request->email;
+                    $usuarios->type = $request->type;
+                    $usuarios->password=bcrypt($request->password);
+                    $usuarios->save();
+
+                if($request->type == 'profesor')
+                {
+                    $profesor = new Profesor();
+                    $profesor->id_usuario = $usuarios->id;
+                    $profesor->save();
+
+                   
+                }
+                elseif($request->type == 'estudiante')
+                {
+                    $estudiante = new Student();
+                    $estudiante->id_usuario = $usuarios->id;
+                    $estudiante->save();
+                }
+                
+                //si no hay error entonces
+                if($usuarios){
+                    //Session::flash('save','Se ha creado correctamente');
+                    return response()->json(['success'=>'true']);
+                }else{
+                    return response()->json(['success'=>'false']);
+                }
         }
     }
 

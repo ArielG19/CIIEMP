@@ -6,8 +6,8 @@
 				<div class="form-group">
 					{!! Form::label('carrera','Carrera') !!}
 					{!! Form::text('carrera',null,['class' =>'form-control', 'placeholder' =>'Nombre de la carrera','required'])!!}
-					{!! Form::label('descripcion','Carrera') !!}
-					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Descripcion de la carrera','required'])!!}
+					{{--!! Form::label('descripcion','Carrera') !!}
+					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Descripcion de la carrera','required'])!!--}}
 				</div>
 
 

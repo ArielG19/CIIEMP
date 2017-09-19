@@ -4,11 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Profesor;
-use App\Categoria;
-
-use Session;
-
-use Redirect;
+use DB;
 
 class ProfesorController extends Controller
 {
@@ -22,6 +18,16 @@ class ProfesorController extends Controller
 
     }
 
+    public function listarProfesor($id)
+    {
+        $profesor = DB::table('profesors')
+                    ->select('profesors.primer_nombre','profesors.segundo_nombre','profesors.primer_apellido','profesors.segundo_apellido','profesors.descripcion','profesors.telefono')
+                    ->where('id_usuario',$id)
+                    ->get();
+        //dd($profesor);
+        return view('perfil.listarProf')->with('profesor',$profesor);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -29,7 +35,7 @@ class ProfesorController extends Controller
      */
     public function create()
     {
-      return view('perfil.modalUpdateProfesor');
+
     }
 
     /**
@@ -40,12 +46,6 @@ class ProfesorController extends Controller
      */
     public function store(Request $request)
     {
-      $profesor = new Profesor($request->all());
-
-
-      $profesor->save();
-      Session::flash('message','La entrada del blog fue creada correctamente');
-      return redirect::to('perfil/perfil');
 
     }
 
@@ -68,9 +68,11 @@ class ProfesorController extends Controller
      */
     public function edit($id)
     {
-      $profesor= Profesor::find($id);
-      return view('perfil.perfil',compact('profesor'));
+      //$profesor = Profesor::FindOrFail('id_usuario',$id);
+        $profesor = Profesor::where('id_usuario', $id)->get();
+        return response()->json($profesor);
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -81,15 +83,19 @@ class ProfesorController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $profesor= Profesor::find($id);
-      $profesor->  fill($request->all());
-      $profesor->save();
+        if($request->ajax()){
+                $profesor = Profesor::FindOrFail($id);
+                //en input amacenamos toda la info del request
+                $input = $request->all();
 
+                $resultado = $profesor->fill($input)->save();
 
-
-      $profesor->save();
-      Session::flash('message','Datos de usuario actualizado Correctamente');
-      return redirect::to('perfil/perfil');
+                if($resultado){
+                    return response()->json(['success'=>'true']);
+                }else{
+                    return response()->json(['success'=>'false']);
+                }
+        }
     }
 
     /**

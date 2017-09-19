@@ -122,15 +122,9 @@
 
           <div class="content-wrapper">
                 <section class="content">
-<<<<<<< HEAD
-                  <div class="row">
-                     @yield('contenido')
-=======
                       <div class="container">
                                   @yield('contenido')
->>>>>>> 6298a5da7c429c4148587ff464232a60c953d456
-
-                  </div>                          
+                      </div>                          
                 </section>
           </div>
           <!--Fin-Contenido-->

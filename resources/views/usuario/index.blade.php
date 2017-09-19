@@ -37,8 +37,8 @@
 @include('usuario.modalCreate')
 @include('usuario.modalUpdate')
 
-@section('script')
-	<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
+	@section('script')
+		<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
 	@endsection
 
 @endsection

@@ -23,7 +23,7 @@ class CreateMessagesTable extends Migration
 
             $table->foreign('id_emisor')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('id_receptor')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('conversation_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('conversation_id')->references('id')->on('conversations')->onDelete('cascade');
             $table->timestamps();
         });
     }

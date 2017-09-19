@@ -20,14 +20,30 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+//-------Rutas usuarios-----
 Route::Resource('/usuarios','UserController');
 Route::get('/listar-usuarios','UserController@listarUsuario');
+//-------Rutas usuarios-----
 
-Route::get('/mi-perfil','UserController@miPerfil');
-Route::post('/mi-perfil','UserController@upPerfil');
 
+//-------Rutas perfil-estudiante-----
+Route::Resource('/mi-perfil','EstudianteController');
+Route::post('/mi-perfil','EstudianteController@upPerfil');
+Route::get('/listar-datos/{id}','EstudianteController@listarDatos');
+
+//-------Rutas perfil-estudiante-----
+
+//-------Rutas perfil-profesor-----
+Route::Resource('/profesor', 'ProfesorController');
+Route::get('/datos-profesor/{id}','ProfesorController@listarProfesor');
+
+//-------Rutas perfil-profesor-----
+
+//-------Rutas comentarios-----
 Route::Resource('/comentarios','ComentarioController');
 Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
+
+//-------Rutas comentarios-----
 
 Route::Resource('/chat','ChatController');
 Route::get('/listar-chat/{usuario_activo}','ChatController@listarChat');
@@ -65,26 +81,11 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('blogs', 'BlogController');
     Route::resource('noticia', 'NoticiaController');
     Route::resource('bibliotecas', 'BibliotecaController');
-    Route::resource('profesor', 'ProfesorController');
+
 
 });
 
-<<<<<<< HEAD
-=======
-Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
-
-Route::Resource('/usuarios','UserController');
-Route::get('/listar-usuarios','UserController@listarUsuario');
-
-Route::get('/mi-perfil','UserController@miPerfil');
-Route::post('/mi-perfil','UserController@upPerfil');
-
-Route::Resource('/comentarios','ComentarioController');
-Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');
->>>>>>> 6298a5da7c429c4148587ff464232a60c953d456
 
 Route::get('/agregar', function () {
     return view('agregarPersonas');
