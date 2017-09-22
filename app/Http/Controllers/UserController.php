@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\Profesor;
+use App\Teacher;
 use App\Student;
 use App\Career;
 use Auth;
@@ -28,34 +28,6 @@ class UserController extends Controller
         $users = User::all();
         return view('usuario.listar')->with('users',$users);
     }
-
-    //--------METODOS PARA EL PERFIL------------------------------------------------
-    /*public function miPerfil()
-    {
-        $carrera = Career::Orderby('carrera','ASC')->pluck('carrera','id');
-        //->prepend('Seleccione una opcion');
-        //$categorias=Categoria::lists('nombre','id')->prepend('Seleccione la marca');
-        //dd($carrera);
-        return view('perfil.perfil',array('user' => Auth::user() ))->with('carrera',$carrera);
-        //return view('perfil.modalCreateEst')->with('carrera',$carrera);
-    }
-
-    public function upPerfil(Request $request)
-    {
-        if($request->hasFile('imagen'))
-        {
-            $imagen= $request->file('imagen');
-            $filename= time(). '.'. $imagen->getClientOriginalExtension();
-            Image::make($imagen)->resize(300,300)->save(public_path('perfil/'.$filename));
-
-            $user=Auth::user();
-            $user->imagen =$filename;
-            $user->save();
-        }
-        //return view('isnaya.usuarios.listar')->with('usuarios',$usuarios);
-        return view('perfil.perfil', array('user'=> Auth::user() ));
-    }*/
-    //--------METODOS PARA EL PERFIL------------------------------------------------
 
     /**
      * Show the form for creating a new resource.
@@ -88,7 +60,7 @@ class UserController extends Controller
 
                 if($request->type == 'profesor')
                 {
-                    $profesor = new Profesor();
+                    $profesor = new Teacher();
                     $profesor->id_usuario = $usuarios->id;
                     $profesor->save();
 

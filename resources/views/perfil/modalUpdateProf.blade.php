@@ -22,39 +22,51 @@
 										                            	
 									<div class="form-group">
 										{!!form::label('Nombre:')!!}
-	                            		{!!form::text('primer_nombre',null,['id'=>'namep1','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
+	                            		{!!form::text('primer_nombre',null,['id'=>'name1','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
 	                            	</div>
 
 	                            	<div class="form-group">
 										{!!form::label('Segundo Nombre::')!!}
-	                            		{!!form::text('segundo_nombre',null,['id'=>'namep2','class'=>'form-control','placeholder'=>'Escriba su segundo nombre'])!!}
+	                            		{!!form::text('segundo_nombre',null,['id'=>'name2','class'=>'form-control','placeholder'=>'Escriba su segundo nombre'])!!}
 	                            	</div>
 
 	                            	<div class="form-group">
 										{!!form::label('Primer Apellido:')!!}
-	                            		{!!form::text('primer_apellido',null,['id'=>'apellidop1','class'=>'form-control','placeholder'=>'Escriba su primer apellido'])!!}
+	                            		{!!form::text('primer_apellido',null,['id'=>'apellido1','class'=>'form-control','placeholder'=>'Escriba su primer apellido'])!!}
 	                            	</div>
 
 	                            	<div class="form-group">
 										{!!form::label('Segundo Apellido:')!!}
-	                            		{!!form::text('segundo_apellido',null,['id'=>'apellidop2','class'=>'form-control','placeholder'=>'Escriba su segundo apellido'])!!}
+	                            		{!!form::text('segundo_apellido',null,['id'=>'apellido2','class'=>'form-control','placeholder'=>'Escriba su segundo apellido'])!!}
 	                            	</div>
 
 	                            	<div class="form-group">
 										{!!form::label('Telefono:')!!}
-	                            		{!!form::text('telefono',null,['id'=>'telefonop','class'=>'form-control','placeholder'=>'Escriba su numero de telefono'])!!}
-	                            	</div>
-
-	                            	<div class="form-group">
-										{!!form::label('Descripcion:')!!}
-	                            		{!!form::text('descripcion',null,['id'=>'descripcionp','class'=>'form-control','placeholder'=>'Escriba una breve descripcion'])!!}
+	                            		{!!form::text('telefono',null,['id'=>'telefono','class'=>'form-control','placeholder'=>'Escriba su numero de telefono'])!!}
 	                            	</div>
 	          					
 	                        		 <div class="form-group">
-	                                       {!!form::label('Profesion:')!!}
-	                                       
+	                                       {!!form::label('Profesion 1:')!!}
+	                                       {!!form::text('profesion1',null,['id'=>'profesion1','class'=>'form-control','placeholder'=>'Escriba una Profesion'])!!}
 	                                 </div>
-								
+
+	                                 <div class="form-group">
+	                                       {!!form::label('Profesion 2:')!!}
+	                                       {!!form::text('profesion2',null,['id'=>'profesion2','class'=>'form-control','placeholder'=>'Escriba una Profesion'])!!}
+	                                 </div>
+
+	                                 <div class="form-group">
+	                                       {!!form::label('Profesion 3:')!!}
+	                                       {!!form::text('profesion3',null,['id'=>'profesion3','class'=>'form-control','placeholder'=>'Escriba una Profesion'])!!}
+	                                 </div>
+
+	                                 <div class="form-group">
+	                                       {!!form::label('Profesion 4:')!!}
+	                                       {!!form::text('profesion4',null,['id'=>'profesion4','class'=>'form-control','placeholder'=>'Escriba una Profesion'])!!}
+	                                 </div>
+
+
+
 		                		{!!Form::close()!!}
 							</div>
 

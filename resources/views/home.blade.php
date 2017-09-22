@@ -68,6 +68,11 @@
                                               <a href="{{url('home/carrera') }}">
                                               <i class="fa fa-circle-o"></i>Carreras</a>
                                             </li>
+                                            <li>
+                                              <a href="{{ url('profesiones') }}">
+                                              <i class="fa fa-circle-o"></i>Profesion</a>
+                                            </li>
+
                                         </ul>
                                       </a>
                                   </li>
@@ -122,9 +127,9 @@
 
           <div class="content-wrapper">
                 <section class="content">
-                      <div class="container">
+                      
                                   @yield('contenido')
-                      </div>                          
+                                                
                 </section>
           </div>
           <!--Fin-Contenido-->

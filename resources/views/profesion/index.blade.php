@@ -1,7 +1,6 @@
 @extends('home')
-@section('title','Usuarios')
+@section('title','Profesiones')
 @section('contenido')
-
 		<div class="row">
                         <div class="col-xs-12">
                       		   <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
@@ -21,27 +20,23 @@
 
                               	<div class="panel panel-primary">
 	                                <div class="panel-heading">
-											<h5 class="panel-title">Lista de Usuarios</h5>
+											<h5 class="panel-title">Lista de Profesiones</h5>
 	                                </div>
                                   	<div class="panel-body">
 										
 										<hr>
 										<p class="navbar-text navbar-right" style="margin-right:15px; margin-top:-53px;">
-															    <a class="btn btn-info btn-sm" href="#myModalcreateUser" data-toggle='modal' data-target='#myModalcreateUser'>
+															    <a class="btn btn-info btn-sm" href="#" data-toggle='modal' data-target='#createProfesion'>
 															 		<span>Agregar <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
 										              			</a>
 										</p>
-										<div id="listar-usuarios"></div>
+										<div id="listar-profesion"></div>
 									</div>
 
                       			</div>
                       	</div>
-             </div>
-@include('usuario.modalCreate')
-@include('usuario.modalUpdate')
-
-	@section('script')
-		<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
-	@endsection
-
+        </div>
+        @include('profesion.CreateProfesion')
+@section('script')
+      @endsection
 @endsection

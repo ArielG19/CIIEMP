@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Student;
 use App\User;
 use App\Career;
@@ -26,8 +27,8 @@ class EstudianteController extends Controller
      //--------METODOS PARA EL PERFIL------------------------------------------------
     public function upPerfil(Request $request)
     {
-        if($request->hasFile('imagen'))
-        {
+        //if($request->hasFile('imagen'))
+        //{
             $imagen= $request->file('imagen');
             $filename= time(). '.'. $imagen->getClientOriginalExtension();
             Image::make($imagen)->resize(300,300)->save(public_path('perfil/'.$filename));
@@ -35,9 +36,11 @@ class EstudianteController extends Controller
             $user=Auth::user();
             $user->imagen =$filename;
             $user->save();
-        }
+        //}
+
         $carrera = Career::Orderby('carrera','ASC')->pluck('carrera','id');
-        return view('perfil.index', array('user'=> Auth::user() ))->with('carrera',$carrera);
+        return redirect()->route('mi-perfil.index', array('user'=> Auth::user() ))->with('carrera',$carrera);
+
     }
     //--------METODOS PARA EL PERFIL------------------------------------------------
 

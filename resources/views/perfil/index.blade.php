@@ -50,7 +50,7 @@
                                 @elseif($user->type == "profesor")
                                     <div id="listar-Prof"></div>
                                     
-                                    <a class="btn btn-info btn-sm" href="#" Onclick='DatosProfesor({{$user->id}});'      data-toggle='modal' data-target='#myModalUpdateProf'>
+                                    <a class="btn btn-info btn-sm" href="#" Onclick='MostrarDatosProf({{$user->id}});'      data-toggle='modal' data-target='#myModalUpdateProf'>
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i>
                                     </a>
                                     @include('perfil.modalUpdateProf')
@@ -66,6 +66,6 @@
 </div>
 @section('script')
     <script type="text/javascript" src="{{asset('/js/estudiante.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/js/profesor.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/datosProfesor.js')}}"></script>
   @endsection
 @endsection

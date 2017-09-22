@@ -39,6 +39,7 @@ Route::get('/datos-profesor/{id}','ProfesorController@listarProfesor');
 
 //-------Rutas perfil-profesor-----
 
+
 //-------Rutas comentarios-----
 Route::Resource('/comentarios','ComentarioController');
 Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios');

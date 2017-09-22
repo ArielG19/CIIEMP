@@ -27,17 +27,33 @@
                                     <div class="clearfix"></div>
                                 <div class="bot-border"></div>
 
-                                <div class="col-sm-5 col-xs-6 tital">Descripcion: {{$p->descripcion}}</div>
+                                <div class="col-sm-5 col-xs-6 tital">Profesion 1: {{$p->profesion1}}</div>
                                     <div class="col-sm-7">
                                         <span class="label label-default"></span>
                                     </div>
                                     <div class="clearfix"></div>
                                 <div class="bot-border"></div>
 
-                                <div class="col-sm-5 col-xs-6 tital">Profesion:</div>
+                                 <div class="col-sm-5 col-xs-6 tital">Profesion 2: {{$p->profesion2}}</div>
                                     <div class="col-sm-7">
-                                      <span class="label label-default"></span>
+                                        <span class="label label-default"></span>
                                     </div>
                                     <div class="clearfix"></div>
-                                <div class="bot-border"></div>                              
+                                <div class="bot-border"></div>
+
+                                 <div class="col-sm-5 col-xs-6 tital">Profesion 3: {{$p->profesion3}}</div>
+                                    <div class="col-sm-7">
+                                        <span class="label label-default"></span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                <div class="bot-border"></div>
+
+                                 <div class="col-sm-5 col-xs-6 tital">Profesion 4: {{$p->profesion4}}</div>
+                                    <div class="col-sm-7">
+                                        <span class="label label-default"></span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                <div class="bot-border"></div>
+
+                                                           
 @endforeach
