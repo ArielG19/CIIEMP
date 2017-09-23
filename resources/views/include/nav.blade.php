@@ -38,7 +38,7 @@
                                     <i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i>
                                          Noticias<span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="active"><a href="#">
+                                <li class="active"><a href="{{url('proyectos')}}">
                                     <i class="fa fa-tasks fa-lg" aria-hidden="true"></i>
                                     Proyectos<span class="sr-only">(current)</span></a>
                                 </li>

@@ -16,13 +16,17 @@ class CreateProyectosTable extends Migration
         Schema::create('proyectos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
+            $table->string('imagen');
             $table->string('responsable');
             $table->string('objetivo');
-            $table->string('resumen');
-            $table->string('imagen');
+            $table->string('resumenCorto');
+            $table->string('resumenLargo');
             $table->integer('id_usuario')->unsigned();
-
+            $table->integer('id_categoria')->unsigned();
+            $table->integer('id_profesor')->unsigned();
             $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_categoria')->references('id')->on('categorias');
+            $table->foreign('id_profesor')->references('id')->on('profesors');
             $table->timestamps();
         });
     }

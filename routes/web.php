@@ -32,7 +32,6 @@ Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios'
 Route::Resource('/chat','ChatController');
 Route::get('/listar-chat/{usuario_activo}','ChatController@listarChat');
 
-Route::Resource('/mensajes','MensajeController');
 
 Route::get('/bloghome',[
 	'uses' => 'FrontController@index',
@@ -59,9 +58,9 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('categoria', 'CategoriaController');
     Route::resource('blogs', 'BlogController');
     Route::resource('bibliotecas', 'BibliotecaController');
+    Route::resource('proyectos','ProyectosController');
 
 });
-
 
 
 Route::get('/agregar', function () {
@@ -89,3 +88,16 @@ Route::get('bibliotecas/{id}/destroy',[
 
 
 Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@buscar_archivos');
+
+Route::get('/proyectos', function () {
+    return view('proyectos.indexPrincipal');
+
+});
+
+
+  Route::get('/proyectos',[
+    'uses' => 'ProyectosController@frontProyecto',
+    'as'   => 'proyectos'
+    ]);
+
+Route::get('detalleProyecto/{id}','ProyectosController@show');

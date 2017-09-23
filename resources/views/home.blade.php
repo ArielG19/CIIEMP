@@ -74,8 +74,8 @@
                                           <i class="fa fa-angle-left pull-right"></i>
                                         </a>
                                         <ul class="treeview-menu">
-                                          <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>enlace 1</a></li>
-                                          <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i>enlace 2</a></li>
+                                          <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Nuevo Proyecto</a></li>
+                                          <li><a href="{{route('proyectos.index')}}"><i class="fa fa-circle-o"></i>Listar Proyectos</a></li>
                                         </ul>
                                   </li>
                                   <li class="treeview">
