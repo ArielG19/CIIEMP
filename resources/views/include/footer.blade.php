@@ -3,7 +3,8 @@
     <div class="fh5co-footer-style-3">
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-			<div class="fh5co-logo"><span class="logo">C</span>IIEMP</div>
+			
+				<h3>Enlaces</h3>
 				<p class="fh5co-copyright">&copy; 2017. 
 					<br>
 						All Rights Reserved. 
@@ -14,14 +15,14 @@
 						Created with 
 					<a target="_blank" href="#">Cards</a> 
 					<br> 
-						Images: 
-					<a target="_blank" href="#">Unsplash</a>, 
-					<a target="_blank" href="#">Pexels</a>
+					
 				</p>
 		</div>
+
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-			<h3>Company</h3>
+			
 			<ul class="fh5co-links">
+			<h3>Company</h3>
 				<li><a href="#">Servicios</a></li>
 				<li><a href="#">Productos</a></li>
 				<li><a href="#">Blog</a></li>
@@ -45,10 +46,30 @@
 		<div class="clearfix visible-sm-block"></div>
 		
 		<div class="container fh5co-made">
-			<div class="col-md-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-				<p>2017 <i class="heart icon-heart"></i></p>
-			</div>
+		
 		</div>
 	</div>
+
+	<div class="fh5co-footer-style-3 fondo">
+
+		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo"><img src="{{asset('styleVoltage/images/Marca Negativo.png')}}" alt="" width="60%"></div>
+
+		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo2"><img src="{{asset('styleVoltage/images/CIIEMP-Coloroscuro Negativo.png')}}" alt="" width="50%"></div>	
+
+	</div>
 <!-- END footer -->
+
+	<style>
+	.fondo{
+		background: #0D0D0D;
+		height: 150px;
+		margin-top: -4em;
+	}
+		.estilo{
+			margin-top: -5em;
+		}
+		.estilo2{
+			margin-top: -4em;
+		}
+	</style>
 </footer>

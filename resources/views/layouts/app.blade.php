@@ -87,7 +87,7 @@
 
             <script> new WOW().init();</script>
 
-            <script src="{{asset('js/scrolling-animated.js')}}"></script>
+            {{--<script src="{{asset('js/scrolling-animated.js')}}"></script>--}}
 
             <!-- Main -->
             <script src="{{asset('styleVoltage/js/main.js')}}"></script>
