@@ -31,6 +31,13 @@ class ProyectosController extends Controller
     {
 
         $proyect =Proyecto::orderBy('id','DESC')->paginate(5);
+
+        $proyect->each(function($proyect){
+
+            $proyect->profesor;
+
+        });
+
         return view('proyectos.index', compact('proyect'));
 
 
@@ -63,12 +70,13 @@ class ProyectosController extends Controller
 
         $proyect = new Proyecto($request->all());
 
-        if($request->input('txtresponsable') == null){
+        if($request->input('responsable') == null){
 
-                $proyect->responsable = $request->id_profesor;
+            $proyect->id_profesor = $request->id_profesor;
         }
         else{
-            
+
+            $proyect->responsable = $request->responsable;
         }
 
         if ($request->hasFile('imagen')) {
