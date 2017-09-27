@@ -1,0 +1,146 @@
+        .text > p:last-of-type{
+            color:silver;
+            margin-bottom:-7px;
+            white-space: pre-line;
+
+        }
+
+        .mytext{
+            margin-top: 5px;
+            border-radius:50px;
+            padding:10px;
+            background:#e0e0de;
+            border-color: transparent;
+            width: 400px;
+            position: fixed; 
+            color: black;
+        }
+        .mytext-input::placeholder{
+            color: black !important;
+        }
+        /*.text{
+            width:75%;
+            display:flex;
+            flex-direction:column;
+            white-space: pre-wrap;
+
+        }
+        .text > p:first-of-type{
+            width:100%;
+            margin-top:0;
+            margin-bottom:auto;
+            line-height: 13px;
+            font-size: 12px;
+        }*/
+        /*.text-l{
+            float:left;
+            padding-right:10px;
+            width: 1px;
+         }        
+        .text-r{
+            float:right;padding-left:10px;
+        }*/
+        .avatar{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            width:15%;
+            float:left;
+            padding-right:10px;
+        }
+        .macro{
+            margin-top:5px;
+            
+            border-radius:5px;
+            padding:0px;
+            display:flex;
+        }
+        /*btn enviar*/
+        #Enviar{
+            color: black; 
+            background: #fff;
+            margin-left: 410px;
+            margin-top: 10px;
+
+        }
+        form{
+            background: transparent !important;
+            margin-top:10px;
+        }
+               
+        .msj-rta{
+            float:right;
+            background:whitesmoke;
+            position: fixed;
+        }
+        .msj{
+            float:left;
+            background:white;
+        }
+        div.msj.macro{
+            width: 100%;
+           
+        }
+        .msj-rta.macro{
+            background: transparent;
+        }
+        .frame{
+            background:#e0e0de;
+            height:450px;
+            padding:0;
+            overflow-y:scroll;
+            overflow-x: hidden; 
+        }
+        .frame > div:last-of-type{
+            position:absolute;bottom:5px;width:100%;display:flex;
+        }
+        .lista {
+            width:100%;
+            list-style-type: none;
+            padding-bottom:18px;
+            bottom:32px;
+            display:flex;
+            position: static;
+            flex-direction: column;
+
+        }
+        
+        .msj:before{
+            width: 0;
+            height: 0;
+            content:"";
+            top:-5px;
+            left:-14px;
+            position:relative;
+            border-style: solid;
+            border-width: 0 13px 13px 0;
+            border-color: transparent  transparent transparent;            
+        }
+        .msj-rta:after{
+            width: 0;
+            height: 0;
+            content:"";
+            top:-5px;
+            left:14px;
+            position:relative;
+            border-style: solid;
+            border-width: 13px 13px 0 0;
+            border-color:transparent transparent transparent;           
+        }  
+        input:focus{
+            outline: none;
+        }        
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #d4d4d4;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: #d4d4d4;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: #d4d4d4;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: #d4d4d4;
+        }   
+
+   
