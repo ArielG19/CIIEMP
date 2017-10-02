@@ -14,6 +14,8 @@ use Session;
 use Redirect;
 use Image;
 use Input;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class NoticiaController extends Controller
 {
@@ -51,8 +53,7 @@ class NoticiaController extends Controller
         $noticia = Noticia::create($request->all());
         $concursos = new Concursos($request->all());
 
-        if (isset($concursos['estado']) and $concursos['estado'] == 'on')
-        {
+        if (isset($concursos['estado']) and $concursos['estado'] == 'on') {
             $concursos->id_noticia = $noticia->id;
             $concursos->estado = "activo";
             $concursos->save();
@@ -121,19 +122,32 @@ class NoticiaController extends Controller
         $noticia = Noticia::find($id);
         $noticia->fill($request->all());
         $noticia->save();
-        if ($request->hasFile('file')) {
-            $imagen = $request->file('file');
-            $filename = time() . '.' . $imagen->getClientOriginalExtension();
-            Image::make($imagen)->resize(1000, 500)->save(public_path('images/noticia/' . $filename));
-            $noticia->file = $filename;
-            $noticia->save();
-        } else {
-            $noticia->file = null;
-            $noticia->save();
+        $concursos = new Concursos($request->all());
+
+        if (isset($concursos['estado']) and $concursos['estado'] == 'on') {
+            $concursos->id_noticia = $noticia->id;
+            $concursos->estado = "activo";
+            $concursos->save();
+
+        }
+        if ($request->hasFile('image')) {
+
+            foreach ($request->image as $image) {
+
+                $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
+                Image::make($image)->resize(1000, 600)->save(public_path('images/noticia/' . $filename));
+                File::create([
+                    'id_noticias' => $noticia->id,
+                    'image' => $filename
+                ]);
+
+
+            }
+
         }
 
 
-        Session::flash('message', 'Entrada del blog editada Correctamente');
+        Session::flash('message', 'Entrada de noticias editada Correctamente');
         return redirect::to('home/noticia');
     }
 
@@ -145,16 +159,19 @@ class NoticiaController extends Controller
      */
     public function destroy($id)
     {
-        $noticia= Noticia::find($id);
-        $noticia->delete();
+        $not = Noticia::findOrFail($id);
+        if (isset($not->articleImg[0]->image)) {
+            foreach ($not->articleImg as $img) {
+                $file_path = public_path('images/noticia/') . '/' . $img->image;
+                unlink($file_path);
+                $not->delete();
 
-//        if ($file->path == null) {
-//            $file->delete();
-//        } else {
-//            $file_path = public_path('images/noticia/') . '/' . $file->articleImg()->detach();
-//            unlink($file_path);
-//            $file->delete();
-//        }
+            }
+
+
+        } else {
+            $not->delete();
+        }
 
         Session::flash('message', 'Entrada de blog eliminada Correctamente');
         return redirect::to('home/noticia');
