@@ -22,9 +22,9 @@
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
 
 			<ul class="fh5co-links">
-			<h3>Company</h3>
-				<li><a href="#">Servicios</a></li>
-				<li><a href="#">Productos</a></li>
+			<h3>CIIEMP</h3>
+				<li><a href="#">Bolsa Empleo</a></li>
+				<li><a href="#">Obserbatorio Socioeconómico</a></li>
 				<li><a href="#">Blog</a></li>
 				<li><a href="#">Contactos</a></li>
 			</ul>
@@ -39,15 +39,16 @@
 			</ul>
 		</div>
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
-			<h3>About</h3>
+			<h3>Acerca de nosotros</h3>
 			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-			<p><a href="#" class="btn btn-success btn-sm btn-outline">I'm a button</a></p>
+			<p><a href="{{ url('/acercade') }}" class="btn btn-success btn-sm btn-outline">Más...</a></p>
 		</div>
 		<div class="clearfix visible-sm-block"></div>
 
 		<div class="container fh5co-made">
 
 		</div>
+
 	</div>
 
 	<div class="fh5co-footer-style-3 fondo">
@@ -59,9 +60,10 @@
 	</div>
 <!-- END footer -->
 
+
 	<style>
 	.fondo{
-		background: #0D0D0D;
+
 		height: 150px;
 		margin-top: -4em;
 	}

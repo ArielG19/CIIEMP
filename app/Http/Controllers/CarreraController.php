@@ -39,8 +39,9 @@ class CarreraController extends Controller
     public function store(Request $request)
     {
       $carreras = new Carrera($request->all());
-
       $carreras->save();
+
+
       Session::flash('message','La carrera fue creada correctamente');
       return redirect::to('home/carrera');
     }

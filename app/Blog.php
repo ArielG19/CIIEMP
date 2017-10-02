@@ -43,7 +43,7 @@ class Blog extends Model
 
     public function comentarios()
    {
-       return $this->hasMany('App\Comentario');
+       return $this->hasMany('App\Comentario','id_blog','id');
    }
 
 }

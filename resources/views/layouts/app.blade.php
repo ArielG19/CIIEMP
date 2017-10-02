@@ -33,6 +33,11 @@
     <!--countdown-->
     <link rel="stylesheet" href="{{asset('css/TimeCircles.css')}}">
 
+    <!--slider-->
+    <link rel="stylesheet" href="{{asset('css/bxslider.css')}}">
+    <!--zoom-->
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+
     <!-- Modernizr JS -->
     <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
 
@@ -91,7 +96,7 @@
 <script> new WOW().init();</script>
 
 
-            {{--<script src="{{asset('js/scrolling-animated.js')}}"></script>--}}
+{{--<script src="{{asset('js/scrolling-animated.js')}}"></script>--}}
 
 
 <!-- Main -->

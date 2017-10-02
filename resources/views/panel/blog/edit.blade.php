@@ -34,7 +34,7 @@
  			 @endif
 
 		<div class="form-group">
-					{!!Form::label('imagen','Imagen:')!!}
+					{!!Form::label('path','Imagen:')!!}
 					{!!Form::file('path')!!}
 		</div>
 

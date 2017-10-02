@@ -30,7 +30,7 @@
 
 
 		<div class="form-group">
-					{!!Form::label('imagen','Imagen:')!!}
+					{!!Form::label('imagen','Archivo:')!!}
 					{!!Form::file('')!!}
 					<a href="{{asset('download/pdf')}}/{{$biblio->path}}" target="_blank">{{basename($biblio->path)}}</a>
 

@@ -31,8 +31,8 @@
 								<p>{{substr(strip_tags($blog->descripcion), 0,300)}}...</p>
 							</div>
 							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-chat"></i> ejem 33</a>
-								<a href="#"><i class="icon-clock2"></i>{{Date::parse($blog->created_at)->format('j \d\e F \d\e Y')}}</a>
+								<a href="#"><i class="icon-chat"></i>{{$blog->comentarios->count()}}</a>
+								<a href="#"><i class="fa fa-calendar"></i>{{Date::parse($blog->created_at)->format('j \d\e F \d\e Y')}}</a>
 								<a href="#"><i class="icon-user" aria-hidden="true"></i>{{$blog->users->name}}</a>
 								<a class="btn btn-primary pull-right" href="{{'/bloghome/blogin'}}/{{$blog->slug}}" role="button">Leer mas</a>
 							</div>

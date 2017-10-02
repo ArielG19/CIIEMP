@@ -24,13 +24,16 @@
                                 <a><i class="fa fa-star" aria-hidden="true"></i> Concurso</a>
                             @endif
                             {{--@if(is_null($noticias->articleEvent))--}}
-                                {{--<a><i class="fa fa-calendar"--}}
-                                      {{--aria-hidden="true"></i>{{Date::parse($noticias->created_at)->format('Y-m-d')}}</a>--}}
+                            {{--<a><i class="fa fa-calendar"--}}
+                            {{--aria-hidden="true"></i>{{Date::parse($noticias->created_at)->format('Y-m-d')}}</a>--}}
                             {{--@else--}}
-                                    {{--<a><i class="fa fa-calendar"--}}
-                                          {{--aria-hidden="true"></i>Fecha de publicacion {{Date::parse($noticias->created_at)->format('Y-m-d')}}</a>--}}
+                            {{--<a><i class="fa fa-calendar"--}}
+                            {{--aria-hidden="true"></i>Fecha de publicacion {{Date::parse($noticias->created_at)->format('Y-m-d')}}</a>--}}
                             {{--@endif--}}
                             @if(is_null($noticias->articleEvent))
+                                <a><i class="fa fa-calendar"
+                                      aria-hidden="true"></i>{{Date::parse($noticias->created_at)->format('j \d\e F \d\e Y')}}
+                                </a>
                             @else
                                 <a><i class="fa fa-calendar"
                                       aria-hidden="true"></i>Inicia {{Date::parse($noticias->articleEvent->fecha_inicio)->format('Y-m-d')}}
@@ -65,6 +68,15 @@
                             @endif
                             <h3><a>{{$noticias->titulo}}</a></h3>
                             <p class="parrafo1 img-text">{!!($noticias->descripcion)!!}</p>
+                        </div>
+                        <div class="row">
+                            <ul class="bxslider">
+                                @foreach($noticias->articleImg as $img)
+                                    <li><a class="test-popup-link" href="/images/noticia/{{$img->image}}"><img src="/images/noticia/{{$img->image}}" ></a></li>
+                                @endforeach
+
+                            </ul>
+
                         </div>
                     </div>
                 </div>
@@ -220,6 +232,23 @@
             <script type="text/javascript"
                     src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
             <script type="text/javascript" src={{asset("js/TimeCircles.js")}}></script>
+            <script type="text/javascript" src={{asset("js/bxslider.js")}}></script>
+            <script type="text/javascript" src={{asset("js/jquery.magnific-popup.js")}}></script>
+
+            <script>
+                $('.bxslider').bxSlider({
+                    slideWidth: 700,
+                    auto: true
+
+
+                });
+            </script>
+            <script>
+                $('.test-popup-link').magnificPopup({
+                    type: 'image'
+                    // other options
+                });
+            </script>
             <script>
                 var timeCircles = $(".someTimer").TimeCircles();
 

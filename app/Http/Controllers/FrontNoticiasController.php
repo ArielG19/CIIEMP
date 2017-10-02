@@ -17,16 +17,26 @@ class FrontNoticiasController extends Controller
     public function index()
     {
       $allcategorias = Categoria::all();
+      $recents = Noticia::OrderBy('created_at', 'desc')
+            ->take(4)->get();
+        $events = Noticia::whereHas('articleEvent', function ($query) {
+            $query->where('estado', "activo");
+        })
+            ->orderBy('created_at', 'desc')
+            ->take(4)
+            ->get();
 
       $noticias = Noticia::OrderBy('id', 'DESC')->paginate(4);
 
-      return view('noticia/index',compact('noticias','recents'));
+      return view('noticia/index',compact('noticias','recents','events'));
     }
 
     public function noticia($slug)
     {
         $noticias = Noticia::findBySlug($slug);
+
         $not = Noticia::all();
+
        /* $articles->paginate();*/
         $recents = Noticia::OrderBy('created_at', 'desc')
             ->take(4)->get();
@@ -38,7 +48,7 @@ class FrontNoticiasController extends Controller
             ->take(4)
             ->get();
 
-        return view('noticia',compact('noticias','recents','not','events'));
+        return view('noticia',compact('noticias','recents','events'));
     }
 
     /**

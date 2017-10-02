@@ -64,12 +64,20 @@
                                 </li>
                                 <li>
                                     <a href="/agregar">
-                                        <i class="fa fa-circle-o"></i>Agregar Personas</a>
+                                        <i class="fa fa-circle-o"></i>Registrar una  Personas</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('home/carrera') }}">
-                                        <i class="fa fa-circle-o"></i>Carreras</a>
+                                    <a href="{{route('carrera.index') }}">
+                                        <i class="fa fa-circle-o"></i>Listado de carreras</a>
                                 </li>
+                                <li>
+                                    <a href="{{route('carrera.create') }}">
+                                        <i class="fa fa-circle-o"></i>Registrar una carrera</a>
+                                </li>
+                                <li><a href="{{route('categoria.index')}}"><i class="fa fa-circle-o"></i>Listado de
+                                        categorias</a></li>
+                                <li><a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>Registrar una
+                                        categoria</a></li>
                             </ul>
                         </a>
                     </li>
@@ -80,8 +88,10 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                          <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Nuevo Proyecto</a></li>
-                          <li><a href="{{route('proyectos.index')}}"><i class="fa fa-circle-o"></i>Listar Proyectos</a></li>
+                            <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Nuevo Proyecto</a>
+                            </li>
+                            <li><a href="{{route('proyectos.index')}}"><i class="fa fa-circle-o"></i>Listar
+                                    Proyectos</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -91,10 +101,6 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{route('categoria.index')}}"><i class="fa fa-circle-o"></i>Listado de
-                                    categorias</a></li>
-                            <li><a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>Crear
-                                    categorias</a></li>
                             <li><a href="{{route('blogs.index')}}"><i class="fa fa-circle-o"></i>Entradas de blog</a>
                             </li>
                             <li><a href="{{route('blogs.create')}}"><i class="fa fa-circle-o"></i>Crear Entradas</a>
@@ -118,8 +124,10 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{route('noticia.index')}}"><i class="fa fa-circle-o"></i>Entradas de articulos </a></li>
-                            <li><a href="{{route('noticia.create')}}"><i class="fa fa-circle-o"></i>Crear un articulo</a></li>
+                            <li><a href="{{route('noticia.index')}}"><i class="fa fa-circle-o"></i>Entradas de articulos
+                                </a></li>
+                            <li><a href="{{route('noticia.create')}}"><i class="fa fa-circle-o"></i>Crear un
+                                    articulo</a></li>
 
 
                         </ul>
