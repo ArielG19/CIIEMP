@@ -120,29 +120,36 @@ class NoticiaController extends Controller
     {
 
         $noticia = Noticia::find($id);
+        $not = Noticia::findOrFail($id);
         $noticia->fill($request->all());
         $noticia->save();
         $concursos = new Concursos($request->all());
-
+        //validar checkbox
         if (isset($concursos['estado']) and $concursos['estado'] == 'on') {
             $concursos->id_noticia = $noticia->id;
             $concursos->estado = "activo";
             $concursos->save();
 
         }
+        //Eliminar imagenes previas
+        foreach ($noticia->articleImg as $img) {
+            $file_path = public_path('images/noticia') . '/' . $img->image;
+            unlink($file_path);
+            $img->delete();
+
+        }
+        //guardar multiples file
         if ($request->hasFile('image')) {
-
             foreach ($request->image as $image) {
-
                 $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
                 Image::make($image)->resize(1000, 600)->save(public_path('images/noticia/' . $filename));
                 File::create([
                     'id_noticias' => $noticia->id,
                     'image' => $filename
                 ]);
-
-
             }
+
+
 
         }
 
@@ -161,8 +168,9 @@ class NoticiaController extends Controller
     {
         $not = Noticia::findOrFail($id);
         if (isset($not->articleImg[0]->image)) {
+            //eliminar multiples files
             foreach ($not->articleImg as $img) {
-                $file_path = public_path('images/noticia/') . '/' . $img->image;
+                $file_path = public_path('images/noticia') . '/' . $img->image;
                 unlink($file_path);
                 $not->delete();
 
