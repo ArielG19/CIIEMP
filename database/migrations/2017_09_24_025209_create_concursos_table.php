@@ -15,8 +15,8 @@ class CreateConcursosTable extends Migration
     {
         Schema::create('concursos', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamp('fecha_inicio');
-            $table->timestamp('fecha_final');
+            $table->date('fecha_inicio');
+            $table->date('fecha_final');
             $table->enum('estado',['activo','finalizado']);
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_noticia')->unsigned();

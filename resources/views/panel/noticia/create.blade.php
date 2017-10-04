@@ -16,8 +16,9 @@
     <div class="col-md-2 pull-right">
         <h4>¿Es un concurso?</h4>
         <div class="onoffswitch">
-            <input type="checkbox" name="estado" class="onoffswitch-checkbox" id="myonoffswitch">
-            <label class="onoffswitch-label" for="myonoffswitch">
+            <input type="checkbox" name="estado" class="onoffswitch-checkbox" id="check"
+                   onchange="javascript:showContent()">
+            <label class="onoffswitch-label" for="check">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
             </label>
@@ -63,20 +64,22 @@
     </div>
 
 
-    <div class="col-md-4">
-        <div class="form-group">
+    <div id="content" style="display: none;">
+        <div class="col-md-4">
+            <div class="form-group">
 
-            {!! Form::label('imagen','Fecha de Inicio') !!}
-            {!! Form::text('fecha_inicio',null,['class' =>'form-control datepicker'])!!}
+                {!! Form::label('imagen','Fecha de Inicio') !!}
+                {!! Form::text('fecha_inicio',null,['class' =>'form-control datepicker'])!!}
 
+            </div>
         </div>
-    </div>
 
-    <div class="col-md-4 col-md-offset-1">
-        <div class="form-group">
-            {!! Form::label('imagen','Fecha de Finalizacion') !!}
-            {!! Form::text('fecha_final',null,['class' =>'form-control datepicker'])!!}
+        <div class="col-md-4 col-md-offset-1">
+            <div class="form-group">
+                {!! Form::label('imagen','Fecha de Finalizacion') !!}
+                {!! Form::text('fecha_final',null,['class' =>'form-control datepicker'])!!}
 
+            </div>
         </div>
     </div>
 
@@ -127,6 +130,19 @@
 
     {!! Form::close() !!}
 
+
+    <script type="text/javascript">
+        function showContent() {
+            element = document.getElementById("content");
+            check = document.getElementById("check");
+            if (check.checked) {
+                element.style.display = 'block';
+            }
+            else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
 
 
 @endsection

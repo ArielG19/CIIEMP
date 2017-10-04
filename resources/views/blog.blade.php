@@ -10,7 +10,7 @@
                             <div class="fh5co-overlay"></div>
                             <div class="fh5co-category"><a>{{$blogs->category->name}}</a></div>
                             @if($blogs->path==null)
-                                <img src= "{{ url('styleVoltage/images/no-disponible.jpg') }}"  class="img-responsive">
+                                <img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" class="img-responsive">
                             @else
 
                                 <img src="/images/{{$blogs->path}}" alt="Image" class="img-responsive">
@@ -20,7 +20,12 @@
                         <div class="fh5co-post-text">
                             <h3><a>{{$blogs->titulo}}</a></h3>
                             <p class="parrafo1 img-tex">{!!($blogs->descripcion)!!}</p>
+                            @if($blogs->file != null)
+                                <a href="{{$blogs->file}}">Ver archivo</a>
+                            @endif
+
                         </div>
+
                         <div class="fh5co-post-meta">
                             <a href="#" data-toggle='modal' data-target='#myModalComentario'>
                                 <i class="icon-chat"></i>Comentar
