@@ -140,11 +140,23 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $file = Blog::findOrFail($id);
-        if ($file->path == null) {
-            $file->delete();
-        } else {
+        if (($file->path != null) and ($file->file == null)) {
             $file_path = public_path('images/') . '/' . $file->path;
             unlink($file_path);
+            $file->delete();
+        } else if(($file->path == null) and ($file->file != null)){
+            $file_pathF = public_path('download/pdf').'/'.$file->file;
+            unlink($file_pathF);
+            $file->delete();
+        }
+        else if(($file->path != null) and ($file->file != null)){
+            $file_path = public_path('images/') . '/' . $file->path;
+            $file_pathF = public_path('download/pdf').'/'.$file->file;
+            unlink($file_path);
+            unlink($file_pathF);
+            $file->delete();
+        }
+        else{
             $file->delete();
         }
 

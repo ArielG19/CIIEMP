@@ -120,7 +120,6 @@ class NoticiaController extends Controller
     {
 
         $noticia = Noticia::find($id);
-        $not = Noticia::findOrFail($id);
         $noticia->fill($request->all());
         $noticia->save();
         $concursos = new Concursos($request->all());

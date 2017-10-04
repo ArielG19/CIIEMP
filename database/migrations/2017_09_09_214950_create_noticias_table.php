@@ -18,7 +18,7 @@ class CreateNoticiasTable extends Migration
             $table->string('titulo');
             $table->text('descripcion')->nullable();
             $table->text('lugar')->nullable();
-            $table->string('slug')->nullable();
+            $table->string('slug')->unique();
             $table->string('image1')->nullable();
 
             $table->string('file')->nullable();

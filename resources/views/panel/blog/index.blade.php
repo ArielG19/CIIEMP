@@ -20,6 +20,7 @@
         <th>Autor</th>
         <th>Categoria</th>
         <th>Imagen</th>
+        <th>Archivo</th>
         <th>Acciones</th>
 
 
@@ -40,6 +41,13 @@
                     <td><img src="{{asset('images')}}/no-imagen.png" style="width: 100px"></td>
                 @else
                     <td><img src="{{asset('images')}}/{{$blog->path}}" style="width: 100px"></td>
+                @endif
+
+                @if(empty($blog->file))
+                    <td>No tiene archivo</td>
+                @else
+                    <td><a href="{{asset('download/pdf')}}/{{$blog->file}}"
+                           target="_blank">{{basename($blog->file)}}</a></td>
                 @endif
 
                 <td><a class="btn btn-success" href="{{route('blogs.edit', $blog->id)}}" role="button"><i
