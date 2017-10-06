@@ -126,7 +126,7 @@ Route::get('bibliotecas/{id}/destroy',[
 
 Route::get('buscar_archivos/{categoria}/{dato?}','BibliotecaController@downfunc');
 
-Route::get('/docentes', function () {
+Route::get('/docentes-innovadores', function () {
     return view('docentes.index');
 
 });
