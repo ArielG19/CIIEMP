@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index');
 
 //-------Rutas usuarios-----
@@ -77,7 +78,6 @@ Route::get('/acercade', function () {
 });
 
 Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
-    Route::resource('carrera', 'CarreraController');
     Route::resource('categoria', 'CategoriaController');
     Route::resource('blogs', 'BlogController');
     Route::resource('noticia', 'NoticiaController');

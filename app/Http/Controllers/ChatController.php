@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 use DB;
 
 class ChatController extends Controller
@@ -26,16 +27,53 @@ class ChatController extends Controller
         inner join users as emisor on messages.id_emisor = emisor.id
         inner join users as receptor on messages.id_receptor = receptor.id
         where conversation_id = 1;*/ 
-        
-        $message = DB::table('messages')
+
+        /*$message = DB::table('messages')
                 ->join('users as emisor','messages.id_emisor','=','emisor.id')
                 ->join('users as receptor','messages.id_receptor','=','receptor.id')
                 ->select('messages.id','mensaje','emisor.name as emisor','emisor.imagen','receptor.name as receptor','messages.created_at')
                 ->where('emisor.id',$usuario_activo)
                 ->orderBy('messages.created_at','desc')
                 ->get();
-        //dd($message); 
-        return view('chat.listar')->with('message',$message);
+        dd($message); */
+
+         $allUsers1 = DB::table('users')
+          ->Join('conversations','users.id','conversations.user_one')
+          ->where('conversations.user_two', $usuario_activo)->get();
+          //dd($allUsers1);
+
+
+          $allUsers2 = DB::table('users')
+          ->Join('conversations','users.id','conversations.user_two')
+          ->where('conversations.user_one', $usuario_activo)->get();
+
+          $conversacion = array_merge($allUsers1->toArray(), $allUsers2->toArray());
+          //dd($conversacion);
+          $array = array_pluck($conversacion,'id');
+          foreach ($array as $a) {
+            $message = DB::table('messages')
+            ->join('users', 'users.id','messages.id_emisor')
+            ->where('messages.conversation_id', $a)->get();
+
+            
+            echo $message;
+          }
+          return view('chat.prueba',compact('message'));
+          //return view('chat.prueba')->with('message',$message);
+                   //dd($array);
+
+                    
+         
+          
+
+          //dd($longitud);
+          $message = DB::table('messages')
+          ->join('users', 'users.id','messages.id_emisor')
+          ->where('messages.conversation_id', $array)->get();
+          //->where('messages.conversation_id', $conversacion[1]->id)->get();
+          //return $message;
+
+         //return view('chat.prueba')->with('message',$message);
     }
                  
 /*
