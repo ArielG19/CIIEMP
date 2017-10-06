@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+<<<<<<< HEAD
 use App\Student;
+=======
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -63,6 +66,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+<<<<<<< HEAD
         $user = new User();
         $user->name = $data['name'];
         $user->email = $data['email'];
@@ -84,3 +88,12 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);*/
+=======
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+        ]);
+    }
+}
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47

@@ -20,6 +20,10 @@ class FrontController extends Controller
     public function index()
     {
       $allcategorias = Categoria::all();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
       $blogs = Blog::OrderBy('id', 'DESC')->paginate(4);
 
       return view('blog/index',compact('blogs','allcategorias'));
@@ -53,9 +57,16 @@ class FrontController extends Controller
     public function blog($slug)
     {
         $blogs = Blog::findBySlug($slug);
+<<<<<<< HEAD
        /* $articles->paginate();*/
 
         return view('blog',compact('blogs'));
+=======
+        $allcategorias = Categoria::all();
+       /* $articles->paginate();*/
+
+        return view('blog',compact('blogs','allcategorias'));
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
     }
 
     /**

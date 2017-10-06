@@ -2,10 +2,22 @@
 @section('title','Chat')
 @section('contenido')
                   <div class="col-sm-4">
+<<<<<<< HEAD
                     <div class="well"> 
                         <ul class="list-group">
                             <div id="mensajes"></div>
                         </ul>       
+=======
+                    <div class="well">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                              <center><b>Conversaciones</b></center>
+                            </li>
+                            
+                            <ul class="lista list-group">  
+                            </ul>
+                        </ul>
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
                     </div>
                   </div>
                   <div class="col-sm-2">
@@ -16,7 +28,11 @@
                       </div>
                   </div>
                   <div class="col-sm-5 col-sm-offset-left-1 frame" id="caja" >
+<<<<<<< HEAD
                         
+=======
+                        <ul id="mensajes" class="lista"></ul>
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
                       <div>
                           <div class="msj-rta macro" style="margin:auto">                        
                               <div class="text text-r" >

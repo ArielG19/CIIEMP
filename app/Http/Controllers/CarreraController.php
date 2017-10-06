@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Career;
+=======
+use App\Carrera;
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 use Session;
 use Redirect;
 
@@ -16,7 +20,11 @@ class CarreraController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
       $carreras = Career::orderBy('id','DESC')->paginate(5);
+=======
+      $carreras = Carrera::orderBy('id','DESC')->paginate(5);
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
       return view('panel.carrera.index', compact('carreras'));
     }
 
@@ -38,9 +46,16 @@ class CarreraController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
       $carreras = new Career($request->all());
 
       $carreras->save();
+=======
+      $carreras = new Carrera($request->all());
+      $carreras->save();
+
+
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
       Session::flash('message','La carrera fue creada correctamente');
       return redirect::to('home/carrera');
     }
@@ -64,7 +79,11 @@ class CarreraController extends Controller
      */
     public function edit($id)
     {
+<<<<<<< HEAD
     $carrera= Career::find($id);
+=======
+    $carrera= Carrera::find($id);
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
      return view('panel.carrera.edit',compact('carrera'));
     }
 
@@ -77,7 +96,11 @@ class CarreraController extends Controller
      */
     public function update(Request $request, $id)
     {
+<<<<<<< HEAD
       $carrera= Career::find($id);
+=======
+      $carrera= Carrera::find($id);
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
       $carrera->fill($request->all());
       $carrera->save();
 
@@ -93,7 +116,11 @@ class CarreraController extends Controller
      */
     public function destroy($id)
     {
+<<<<<<< HEAD
       $carrera= Career::find($id);
+=======
+      $carrera= Carrera::find($id);
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
       $carrera->delete();
 
       Session::flash('message','Categoria eliminada correctamente');

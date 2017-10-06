@@ -25,7 +25,11 @@ class ComentarioController extends Controller
     {
             //$comment = DB::select("select * from comentarios where id_blog = '$id_b'");
 
+<<<<<<< HEAD
             $comentarios = Comentario::orderBy('id','desc')->where('id_blog',$id_b)->get();        
+=======
+            $comentarios = Comentario::orderBy('id','asc')->where('id_blog',$id_b)->get();
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
             $comentarios->each(function($comentarios){
                 $comentarios->user;
                 $comentarios->blog;
@@ -33,7 +37,11 @@ class ComentarioController extends Controller
                                 
             });
                             
+<<<<<<< HEAD
             dd($comentarios);
+=======
+            //dd($comentarios);
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
             return view('comentarios.listar')->with('comentarios',$comentarios);
 
             

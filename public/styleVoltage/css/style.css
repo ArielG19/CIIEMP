@@ -230,7 +230,11 @@
 
 
 #what-we-do {
+<<<<<<< HEAD
 	background-image: url(../images/what-we-do-bg.png);
+=======
+
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -280,6 +284,7 @@
     width: 7em;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1280px)
 main.css:3519
 #main > .inner > section {
@@ -290,6 +295,9 @@ main.css:3507
 #main > .inner > section {
     padding: 5em 0 3em 0;
 }
+=======
+
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 
 #main > .inner > section {
     padding: 6em 0 4em 0;
@@ -326,7 +334,13 @@ hr {
   padding-bottom: 20px;
 }
 
+<<<<<<< HEAD
 .box{
   padding-top: 30px;
   padding-bottom: 30px;
+=======
+.box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 }

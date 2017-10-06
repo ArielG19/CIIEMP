@@ -27,6 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+<<<<<<< HEAD
 
 
         public function blogs()
@@ -50,6 +51,26 @@ class User extends Authenticatable
         }*/
 
 
+=======
+    public function blogs(){
+        return $this->hasMany('App\Blog');
+    }
+
+    public function profesors(){
+
+        return $this->hasOne('App\Profesor','id_usuario','id');
+    }
+
+      public function comentario()
+   {
+       return $this->hasMany('App\Comentario');
+    }
+
+    public function chats()
+    {
+       return $this->hasMany('App\Chat');
+    }
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 
 
 
