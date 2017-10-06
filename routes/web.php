@@ -88,10 +88,6 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
 
 
 
-Route::get('/agregar', function () {
-    return view('agregarPersonas');
-
-});
 
 Route::get('categoria/{id}/destroy',[
   'uses' =>'CategoriaController@destroy',
