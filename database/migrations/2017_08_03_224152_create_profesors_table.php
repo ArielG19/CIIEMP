@@ -21,7 +21,9 @@ class CreateProfesorsTable extends Migration
             $table->string('segundo_apellido');
             $table->string('descripcion');
             $table->integer('telefono');
+            $table->integer('id_usuario')->unsigned();
             $table->timestamps();
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

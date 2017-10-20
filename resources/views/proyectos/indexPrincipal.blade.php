@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Proyectos recientes')
+@section('banner','/styleVoltage/images/innovacion.png')
 @section('content')
 
 <link rel="stylesheet" href="../css/proyectos.css">

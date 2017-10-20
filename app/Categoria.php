@@ -10,8 +10,13 @@ class Categoria extends Model
   protected $fillable = ['name'];
 
 
-  public function blogs(){
-    return $this->hasMany('App\Blog');
+    public function blogs(){
+    return $this->hasMany('App\Blog','id_categoria','id');
+
+    }
+
+    public function biblios(){
+    return $this->hasMany('App\Biblioteca','id_categoria','id');
 
     }
  	public function proyectos(){
@@ -20,5 +25,9 @@ class Categoria extends Model
     }
     public function scopeSearch(){
       return $query->where('name','like','%'.$s.'%');
+    }
+
+    public function scopeSearchCategory($query, $name){
+      return $query->where('name', $name);
     }
 }

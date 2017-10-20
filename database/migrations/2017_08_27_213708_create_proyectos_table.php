@@ -17,13 +17,13 @@ class CreateProyectosTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('imagen');
-            $table->string('responsable');
+            $table->string('responsable')-> nullable(true);
             $table->string('objetivo');
             $table->string('resumenCorto');
             $table->string('resumenLargo');
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_categoria')->unsigned();
-            $table->integer('id_profesor')->unsigned();
+            $table->integer('id_profesor')->unsigned()-> nullable(true);
             $table->foreign('id_usuario')->references('id')->on('users');
             $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->foreign('id_profesor')->references('id')->on('profesors');

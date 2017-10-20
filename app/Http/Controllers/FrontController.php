@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog;
+use App\Categoria;
 use Jenssegers\Date\Date;
 
 class FrontController extends Controller
@@ -18,10 +19,24 @@ class FrontController extends Controller
     }
     public function index()
     {
-      $blogs = Blog::OrderBy('id', 'DESC')->paginate(4);
-      //dd($blogs);
-      return view('blog/index',compact('blogs'));
+      $allcategorias = Categoria::all();
 
+      $blogs = Blog::OrderBy('id', 'DESC')->paginate(4);
+
+      return view('blog/index',compact('blogs','allcategorias'));
+
+    }
+
+    public function filtraCategoria($name)
+    {
+
+        $categoria = Categoria::SearchCategory($name)->first();
+        $blogs = $categoria->blogs()->OrderBy('id', 'DESC')->paginate(4);
+
+        $allcategorias = Categoria::all();
+
+
+        return view('blog/index',compact('blogs','allcategorias'));
     }
 
 
@@ -39,9 +54,10 @@ class FrontController extends Controller
     public function blog($slug)
     {
         $blogs = Blog::findBySlug($slug);
+        $allcategorias = Categoria::all();
        /* $articles->paginate();*/
 
-        return view('blog',compact('blogs'));
+        return view('blog',compact('blogs','allcategorias'));
     }
 
     /**
