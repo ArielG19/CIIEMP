@@ -126,3 +126,9 @@ Route::get('/proyectos', function () {
     ]);
 
 Route::get('detalleProyecto/{id}','ProyectosController@show');
+
+Route::get('proyectos/{id}/destroy', [
+    'uses' => 'ProyectosController@destroy',
+    'as' => 'proyectos.destroy'
+
+]);
