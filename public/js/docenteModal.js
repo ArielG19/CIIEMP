@@ -22,7 +22,8 @@ function Mostrar(id){
 		$("#curr").attr("href",''+url2);	
 
 		var url3 = '/publicaciones-docente/'+ data[0].id_usuario;
-		//$("#public").attr("href",''+url3);			
+		//console.log(url3);
+		$("#public").attr("href",'' +url3);			
 		
 		
 		

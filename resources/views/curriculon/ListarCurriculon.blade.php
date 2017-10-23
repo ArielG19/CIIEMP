@@ -2,12 +2,9 @@
 <html>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Resume</title>
+    <title>Curriculum vitae</title>
     <link type="text/css" rel="stylesheet" href="/curriculon_css/css/red.css" />
     <link type="text/css" rel="stylesheet" href="/font-awesome/css/font-awesome.css"/>
-
-
-
 
     </head>
     <body>

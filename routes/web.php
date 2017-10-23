@@ -67,9 +67,10 @@ Route::get('/listar-publicaciones','PublicacionesController@publicaciones');
 //-------Rutas publicaciones-----
 
 Route::Resource('/docentes-innovadores','DocentesInnovadoresController');
+
 Route::get('/listar-blog/{id}','DocentesInnovadoresController@listarBlog');
 Route::get('/curriculon-docente/{id}','DocentesInnovadoresController@Curriculon');
-Route::get('/publicaciones-docente/{id}','PublicacionesController@listarPublicaciones');
+Route::get('/publicaciones-docente/{id}','DocentesInnovadoresController@listarPublicaciones');
 
 
 

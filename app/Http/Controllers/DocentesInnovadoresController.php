@@ -52,7 +52,13 @@ class DocentesInnovadoresController extends Controller
 
     public function listarPublicaciones($id)
     {
-        dd('hoola');
+        $publicaciones = DB::table('users')
+        ->Join('publicaciones','users.id','publicaciones.id_autor')
+        ->Join('teachers','users.id','teachers.id_usuario')
+        ->select('users.imagen','teachers.primer_nombre','teachers.primer_apellido','publicaciones.publicado_en','publicaciones.fecha','publicaciones.link')
+        ->where('publicaciones.id_autor',$id)->get();
+        //dd($publicaciones);
+        return view('publicaciones.listarPublicaciones')->with('publicaciones',$publicaciones);
     }
 
     /**
