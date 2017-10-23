@@ -83,36 +83,33 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="service-item first-service">
                         <div class="icon"></div>
-                        <h4>Easy Customizations</h4>
-                        <p>Meteor is free HTML website template by Tooplate. Feel free to use this layout for your
-                            project.</p>
+                        <h4>Grupos de investigación multidisciplinarios</h4>
+                        <p>Establecer grupos de investigación multidisciplinarios y aplicados para
+                            que impulsen las líneas de investigación.
+
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item second-service">
-                        <div class="icon"></div>
-                        <h4>Creative Ideas</h4>
-                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke,
-                            typewriter.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item third-service">
-                        <div class="icon"></div>
-                        <h4>Good Profit</h4>
-                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke,
-                            typewriter.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="service-item fourth-service">
                         <div class="icon"></div>
-                        <h4>Open To Public</h4>
-                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke,
-                            typewriter.</p>
+                        <h4>Formar Recursos Humanos en investigación</h4>
+                        <p>Formar Recursos Humanos en investigación aplicada que impulsen prácticas innovadoras y
+                            emprendedoras encaminadas a la solución de problemas socioeconómicos.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12 ">
+                    <div class="service-item second-service">
+                        <div class="icon"></div>
+                        <h4>Realizar procesos innovadores</h4>
+                        <p>Realizar procesos innovadores que contribuyan a la solución de problemas socioeconómicos,
+                            en una relación de colaboración entre empresa-estado y que aporten al crecimiento económico del país.
+                        </p>
                     </div>
                 </div>
             </div>
