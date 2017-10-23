@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Proyecto extends Model
 {
     //
-<<<<<<< HEAD
-=======
     protected $table = "proyectos";
 
   	protected $fillable = ['id','titulo','imagen','responsable','objetivo','resumenCorto','resumenLargo','id_usuario','id_categoria','id_profesor'];
@@ -27,5 +25,5 @@ class Proyecto extends Model
    {
        return $this->belongsTo('App\Profesor','id_profesor','id');
    }
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
+
 }

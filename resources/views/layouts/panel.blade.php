@@ -13,14 +13,10 @@
             <!-- modificamos los margenes de diseño etc. -->
             <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
             <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
-<<<<<<< HEAD
-=======
+
             <!-- Datepicker Files -->
             <link rel="stylesheet" href="{{asset('panel/css/bootstrap-datepicker.css')}}">
             <link rel="stylesheet" href="{{asset('panel/css/bootstrap-datepicker.standalone.css')}}">
-
-
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
             <link rel="stylesheet" href="{{asset('css/chat.css')}}">
             <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
 </head>
@@ -43,20 +39,7 @@
             <script src="{{asset('chosen/chosen.jquery.js')}}"></script>
             <script src="{{--asset('styleVoltage/js/main.js')--}}"></script>
 
-<<<<<<< HEAD
-        
 
-            <script>
-              tinymce.init({
-                selector: '#textareay',
-                plugins: "lists link",
-                menubar: "false",
-                language: 'es'
-              });
-           </script>
-
-
-=======
             <script src="{{asset('panel/js/bootstrap-datepicker.js')}}"></script>
             <!-- Languaje -->
             <script src="{{asset('panel/js/bootstrap-datepicker.es.min.js')}}"></script>
@@ -106,17 +89,13 @@
                   }]
                 });
            </script>
-
-
-<script>
-$('.datepicker').datepicker({
-    format: "yyyy-mm-dd",
-    language: "es",
-    todayBtn: true,
-    autoclose: true
-}).datepicker("setDate", new Date());
- </script>
-
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
+            <script>
+            $('.datepicker').datepicker({
+                format: "yyyy-mm-dd",
+                language: "es",
+                todayBtn: true,
+                autoclose: true
+            }).datepicker("setDate", new Date());
+            </script>
             @yield('script')
 </html>

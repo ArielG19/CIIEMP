@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-<<<<<<< HEAD
 use App\Teacher;
 use App\Student;
 use App\Career;
-=======
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
+
 use Auth;
 use Image;
 
@@ -32,32 +30,7 @@ class UserController extends Controller
         return view('usuario.listar')->with('users',$users);
     }
 
-<<<<<<< HEAD
-=======
-    //--------METODOS PARA EL PERFIL------------------------------------------------
-    public function miPerfil()
-    {
-        return view('perfil.perfil',array('user' => Auth::user() ));
-    }
 
-    public function upPerfil(Request $request)
-    {
-        if($request->hasFile('imagen'))
-        {
-            $imagen= $request->file('imagen');
-            $filename= time(). '.'. $imagen->getClientOriginalExtension();
-            Image::make($imagen)->resize(300,300)->save(public_path('perfil/'.$filename));
-
-            $user=Auth::user();
-            $user->imagen =$filename;
-            $user->save();
-        }
-        //return view('isnaya.usuarios.listar')->with('usuarios',$usuarios);
-        return view('perfil.perfil', array('user'=> Auth::user() ));
-    }
-    //--------METODOS PARA EL PERFIL------------------------------------------------
-
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
     /**
      * Show the form for creating a new resource.
      *
@@ -76,8 +49,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
-<<<<<<< HEAD
         if($request->ajax())
         {
                     //dd($request->type);
@@ -110,19 +81,7 @@ class UserController extends Controller
                 }else{
                     return response()->json(['success'=>'false']);
                 }
-=======
-        if($request->ajax()){
-            $usuarios = User::create($request->all());
-            $usuarios->password=bcrypt($request->password);
-            $usuarios->save();
-            //si no hay error entonces
-            if($usuarios){
-                //Session::flash('save','Se ha creado correctamente');
-                return response()->json(['success'=>'true']);
-            }else{
-                return response()->json(['success'=>'false']);
-            }
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
+
         }
     }
 

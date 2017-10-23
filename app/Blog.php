@@ -11,15 +11,10 @@ use Image;
 
 class Blog extends Model
 {
-<<<<<<< HEAD
-  use Sluggable, SluggableScopeHelpers;
 
-  public function sluggable()
-=======
     use Sluggable, SluggableScopeHelpers;
 
     public function sluggable()
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
     {
         return [
             'slug' => [
@@ -28,31 +23,7 @@ class Blog extends Model
         ];
     }
 
-<<<<<<< HEAD
-  protected $table = "blogs";
 
-  protected $fillable = ['titulo','descripcion','slug','path','tags','id_usuario','id_categoria'];
-
-  
-
-
-
-
-
-  public function category()
-   {
-       return $this->belongsTo('App\Categoria','id_categoria','id');
-   }
-   public function users()
-   {
-       return $this->belongsTo('App\User','id_usuario','id');
-   }
-
-    public function comentarios()
-   {
-       return $this->hasMany('App\Comentario');
-   }
-=======
     protected $table = "blogs";
 
     protected $fillable = ['titulo', 'descripcion', 'slug', 'path', 'file', 'tags', 'id_usuario', 'id_categoria'];
@@ -65,7 +36,7 @@ class Blog extends Model
 
     public function users()
     {
-        return $this->belongsTo('App\User', 'id_usuario', 'id');
+        return $this->belongsTo('App\User', 'id_usuario');
     }
 
     public function comentarios()
@@ -84,6 +55,5 @@ class Blog extends Model
         }
 
     }
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 
 }

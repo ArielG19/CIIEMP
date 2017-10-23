@@ -1,11 +1,7 @@
 @extends('home')
 @section('title','Usuarios')
 @section('contenido')
-<<<<<<< HEAD
 
-		<div class="row">
-=======
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
                         <div class="col-xs-12">
                       		   <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
                       		  		style="display:none">
@@ -39,20 +35,12 @@
 
                       			</div>
                       	</div>
-<<<<<<< HEAD
-             </div>
 @include('usuario.modalCreate')
 @include('usuario.modalUpdate')
 
 	@section('script')
 		<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
-=======
-@include('usuario.modalCreate')
-@include('usuario.modalUpdate')
 
-@section('script')
-	<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 	@endsection
 
 @endsection

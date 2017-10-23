@@ -3,12 +3,8 @@
     <div class="fh5co-footer-style-3">
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-<<<<<<< HEAD
-			<div class="fh5co-logo"><span class="logo">C</span>IIEMP</div>
-=======
-
+				<div class="fh5co-logo"><span class="logo">C</span>IIEMP</div>
 				<h3>Enlaces</h3>
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 				<p class="fh5co-copyright">&copy; 2017.
 					<br>
 						All Rights Reserved.
@@ -19,19 +15,6 @@
 						Created with
 					<a target="_blank" href="#">Cards</a>
 					<br>
-<<<<<<< HEAD
-						Images:
-					<a target="_blank" href="#">Unsplash</a>,
-					<a target="_blank" href="#">Pexels</a>
-				</p>
-		</div>
-		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-			<h3>Company</h3>
-			<ul class="fh5co-links">
-				<li><a href="#">Servicios</a></li>
-				<li><a href="#">Productos</a></li>
-=======
-
 				</p>
 		</div>
 
@@ -41,7 +24,6 @@
 			<h3>CIIEMP</h3>
 				<li><a href="#">Bolsa Empleo</a></li>
 				<li><a href="#">Obserbatorio Socioeconómico</a></li>
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 				<li><a href="#">Blog</a></li>
 				<li><a href="#">Contactos</a></li>
 			</ul>
@@ -55,22 +37,13 @@
 				<li><a href="#"><i class="icon icon-instagram"></i> Instagram</a></li>
 			</ul>
 		</div>
+
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
-<<<<<<< HEAD
-			<h3>About</h3>
-			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-			<p><a href="#" class="btn btn-success btn-sm btn-outline">I'm a button</a></p>
-		</div>
-		<div class="clearfix visible-sm-block"></div>
-		<div class="container fh5co-made">			
-		</div>
-	</div>
-<!-- END footer -->
-=======
 			<h3>Acerca de nosotros</h3>
 			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 			<p><a href="{{ url('/acercade') }}" class="btn btn-success btn-sm btn-outline">Más...</a></p>
 		</div>
+
 		<div class="clearfix visible-sm-block"></div>
 
 		<div class="container fh5co-made">
@@ -102,5 +75,4 @@
 			margin-top: -4em;
 		}
 	</style>
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 </footer>

@@ -3,13 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\User;
 use Auth;
-=======
-use App\Chat;
-use App\User;
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 use DB;
 
 class ChatController extends Controller
@@ -23,27 +18,13 @@ class ChatController extends Controller
     {
         //
         $users = User::Orderby('name','ASC')->pluck('name','id');
-        return view('chat.chat')->with('users',$users);
+        //return view('chat.chat')->with('users',$users);
+        return view('chat.material');
     }
 
     public function listarChat($usuario_activo)
     {
-<<<<<<< HEAD
-     /* Select messages.id,mensaje,emisor.name as emisor,receptor.name as receptor from messages
-        inner join users as emisor on messages.id_emisor = emisor.id
-        inner join users as receptor on messages.id_receptor = receptor.id
-        where conversation_id = 1;*/ 
-
-        /*$message = DB::table('messages')
-                ->join('users as emisor','messages.id_emisor','=','emisor.id')
-                ->join('users as receptor','messages.id_receptor','=','receptor.id')
-                ->select('messages.id','mensaje','emisor.name as emisor','emisor.imagen','receptor.name as receptor','messages.created_at')
-                ->where('emisor.id',$usuario_activo)
-                ->orderBy('messages.created_at','desc')
-                ->get();
-        dd($message); */
-
-         $allUsers1 = DB::table('users')
+          $allUsers1 = DB::table('users')
           ->Join('conversations','users.id','conversations.user_one')
           ->where('conversations.user_two', $usuario_activo)->get();
           //dd($allUsers1);
@@ -56,59 +37,34 @@ class ChatController extends Controller
           $conversacion = array_merge($allUsers1->toArray(), $allUsers2->toArray());
           //dd($conversacion);
           $array = array_pluck($conversacion,'id');
-          foreach ($array as $a) {
+          //dd($array);
             $message = DB::table('messages')
             ->join('users', 'users.id','messages.id_emisor')
-            ->where('messages.conversation_id', $a)->get();
+            ->join('users as receptor', 'receptor.id','messages.id_receptor')
+            ->select('users.name as emisor','users.imagen as emisorImg','receptor.name as receptor','receptor.imagen as receptorImg',DB::raw('count(mensaje) as mensajes'),'messages.conversation_id')
+            ->Orderby('conversation_id','desc')
+            ->groupBy('conversation_id')
+            ->whereIn('messages.conversation_id', $array)->get();
+            //dd($message);
+            return view('chat.prueba')->with('message',$message);
+        
+    }
 
-            
-            echo $message;
-          }
-          return view('chat.prueba',compact('message'));
-          //return view('chat.prueba')->with('message',$message);
-                   //dd($array);
-
-                    
-         
-          
-
-          //dd($longitud);
-          $message = DB::table('messages')
-          ->join('users', 'users.id','messages.id_emisor')
-          ->where('messages.conversation_id', $array)->get();
-          //->where('messages.conversation_id', $conversacion[1]->id)->get();
-          //return $message;
-
-         //return view('chat.prueba')->with('message',$message);
+    public function listarConversacion($id)
+    {
+        $messages = DB::table('messages')
+        ->join('users', 'users.id','messages.id_emisor')
+        ->select('messages.mensaje','users.imagen as emisorImg','messages.created_at')
+        ->Orderby('messages.created_at','desc')
+        ->Where('messages.conversation_id',$id)
+        ->get();
+        //dd($messages);
+        return view('chat.listarchat')->with('messages',$messages);
+        
     }
                  
 /*
-=======
-        /*SELECT chats.id,tabla.name as emisor,users.name as receptor,mensaje
-        FROM chats inner join users as tabla on chats.id_emisor = tabla.id inner join users on chats.id_receptor = users.id where tabla.id= 1 and users.id=2;*/
 
-        $query = DB::table('chats')
-                   ->join('users','chats.id_emisor','=','users.id')
-                   ->join('users as receptor','chats.id_receptor','=','receptor.id')
-                   ->select('users.name as emisor','users.imagen','receptor.name as receptor','receptor.imagen as imagen2','mensaje','chats.created_at')
-                   ->where('receptor.id',$usuario_activo);
-
-        $query2 = DB::table('chats')
-                   ->join('users','chats.id_emisor','=','users.id')
-                   ->join('users as receptor','chats.id_receptor','=','receptor.id')
-                   ->select('users.name as emisor','users.imagen','receptor.name as receptor','receptor.imagen as imagen2','mensaje','chats.created_at')
-                   ->where('users.id',$usuario_activo)
-                   ->union($query)
-                   ->orderBy('created_at','desc')
-                   //->limit('1')
-                   ->get();
-        //dd($query2);
-        return view('chat.listar')->with('query2',$query2);
-    }
-
-    /*
-*
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -128,7 +84,7 @@ class ChatController extends Controller
     public function store(Request $request)
     {
         //
-<<<<<<< HEAD
+
         if($request->ajax()){
 
                 $my_id = \Auth::user()->id;
@@ -186,27 +142,7 @@ class ChatController extends Controller
                 return response()->json(['success'=>'false']);
             } 
             
-=======
-        //dd($request);
-        if($request->ajax()){
 
-            $chats = new Chat();
-            $chats->mensaje = $request->mensaje;
-            $chats->id_emisor = \Auth::user()->id;
-            $chats->id_receptor = $request->id_to;
-            $chats->save();
-            $message->tags()->sync($request->tag);
-           
-            
-            //si no hay error entonces
-            if($chats){
-
-                //Session::flash('save','Se ha creado correctamente');
-                return response()->json(['success'=>'true']);
-            }else{
-                return response()->json(['success'=>'false']);
-            }
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
         }
 
     }

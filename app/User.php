@@ -27,42 +27,19 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-<<<<<<< HEAD
-
-
-        public function blogs()
-        {
-            return $this->hasMany('App\Blog');
-        }
-
-        public function profesors()
-        {
-            return $this->hasOne('App\Profesor','id_usuario','id');
-        }
-
-        public function comentario()
-        {
-           return $this->hasMany('App\Comentario');
-        }
-
-        /*public function chats()
-        {
-            return $this->belongsToMany('App\Chat','chat_user');
-        }*/
-
-
-=======
-    public function blogs(){
-        return $this->hasMany('App\Blog');
+    public function blogs()
+    {
+        return $this->hasMany('App\Blog','id');
     }
 
-    public function profesors(){
+    public function teachers()
+    {
 
-        return $this->hasOne('App\Profesor','id_usuario','id');
+        return $this->hasOne('App\Teacher','id_usuario','id');
     }
 
       public function comentario()
-   {
+    {
        return $this->hasMany('App\Comentario');
     }
 
@@ -70,7 +47,6 @@ class User extends Authenticatable
     {
        return $this->hasMany('App\Chat');
     }
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
 
 
 
