@@ -34,7 +34,7 @@
     <div class="col-md-12">
         <div class="form-group">
             {!! Form::label('lugar','Lugar') !!}
-            {!! Form::text('lugar',null,['class' =>'form-control', 'placeholder' =>'Título del artículo','required'])!!}
+            {!! Form::text('lugar',null,['class' =>'form-control', 'placeholder' =>'Lugar','required'])!!}
         </div>
     </div>
 
@@ -97,20 +97,20 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                {!! Form::label('imagen','Subir varias imagenes') !!}
+                {!! Form::label('imagen','Subir multiples imagenes') !!}
                 {!! Form::file('image[]',['multiple' => 'multiple'])!!}
             </div>
         </div>
     </div>
 
-    <div class="col-md-12">
-        <div class="form-group">
-            <a data-toggle="collapse"
-               data-parent="#accordion" href="#collapseTree">
-                <button class="btn btn-warning">Subir un archivo</button>
-            </a>
-        </div>
-    </div>
+    {{--<div class="col-md-12">--}}
+        {{--<div class="form-group">--}}
+            {{--<a data-toggle="collapse"--}}
+               {{--data-parent="#accordion" href="#collapseTree">--}}
+                {{--<button class="btn btn-warning">Subir un archivo</button>--}}
+            {{--</a>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
 
 

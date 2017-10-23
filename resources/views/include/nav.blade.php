@@ -21,7 +21,7 @@
                 </li>
                 <li class="active"><a href="{{ url('biblioteca') }}">
                         <i class="fa fa-book fa-lg" aria-hidden="true">
-                        </i> Biblioteca<span class="sr-only">(current)</span></a>
+                        </i> Repositorio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

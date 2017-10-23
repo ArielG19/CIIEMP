@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2> Biblioteca</h2>
+                    <h2> Repositorio digital de Innovacion y Emprendimiento</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -62,7 +62,7 @@
                             </div>
                             <div class="fh5co-post-meta" id="btn">
                                 <a class="btn btn-primary" href="/download/pdf/{{$down->path}}" target="_blank"
-                                   role="button">Visualizar</a>
+                                   role="button">Ver</a>
                                 <a class="btn btn-primary" href="/download/pdf/{{$down->path}}"
                                    download="{{$down->path}}" role="button">Descargar</a>
                             </div>

@@ -26,13 +26,13 @@
                                              class="img-responsive">
                                     @endif
                                 </div>
-                                <div class="fh5co-post-text ">
+                                <div class="fh5co-post-text prueba">
                                     <h3>
                                         <a href="{{'/articulohome/articulo'}}/{{$noticia->slug}}">{{$noticia->titulo}}</a>
                                     </h3>
                                     <p>{{substr(strip_tags($noticia->descripcion), 0,150)}}...</p>
                                 </div>
-                                <div class="fh5co-post-meta prueba">
+                                <div class="fh5co-post-meta">
                                     @if(is_null($noticia->articleEvent))
                                     @else
                                         <a><i class="fa fa-star" aria-hidden="true"></i>Concurso</a>
@@ -43,7 +43,7 @@
                                     @if(is_null($noticia->articleEvent))
                                     @else
                                         <a><i class="fa fa-calendar"
-                                              aria-hidden="true"></i>Finaliza{{Date::parse($noticia->articleEvent->fecha_final)->format('Y-m-d')}}
+                                              aria-hidden="true"></i>Finaliza {{Date::parse($noticia->articleEvent->fecha_final)->format('Y-m-d')}}
                                         </a>
                                     @endif
                                     <a><i class="fa fa-map-marker" aria-hidden="true"></i>{{$noticia->lugar}}</a>

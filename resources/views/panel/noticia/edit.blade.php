@@ -24,7 +24,7 @@
     <div class="col-md-12">
         <div class="form-group">
             {!! Form::label('lugar','Lugar') !!}
-            {!! Form::text('lugar',null,['class' =>'form-control', 'placeholder' =>'Título del artículo','required'])!!}
+            {!! Form::text('lugar',null,['class' =>'form-control', 'placeholder' =>'Lugar','required'])!!}
         </div>
     </div>
 

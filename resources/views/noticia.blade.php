@@ -138,7 +138,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                Concursos activos
+                                Concursos recientes
                             </h3>
                         </div>
                         <div class="panel-body">
