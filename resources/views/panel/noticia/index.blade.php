@@ -36,7 +36,7 @@
                 <td>{{$noticia->users->name}}</td>
                 <td>{{$noticia->category->name}}</td>
                 <td>
-                    <a class="btn btn-info btn-sm" href="#modalimg" Onclick='' data-toggle='modal'
+                    <a class="btn btn-info btn-sm" href="" Onclick='{{$noticia->id}}' data-toggle='modal'
                        data-target='#modalimg'>
                         <span>Img <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
                     </a>
