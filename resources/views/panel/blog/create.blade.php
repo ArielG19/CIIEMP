@@ -39,7 +39,7 @@
 
     <div class="form-group">
         {!! Form::label('imagen','Imagen') !!}
-        {!! Form::file('path')!!}
+        {!! Form::file('path',['accept'=>'image/x-png,image/jpeg'])!!}
     </div>
     <div class="form-group">
         {!! Form::label('imagen','Subir un archivo') !!}

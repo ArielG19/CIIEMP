@@ -18,6 +18,7 @@
         <th>Contenido</th>
         <th>Categoria</th>
         <th>Autor</th>
+        <th>Imagen</th>
         <th>Archivo</th>
         <th>Acciones</th>
 
@@ -32,6 +33,12 @@
                 <td>{{$biblio->descripcion}}</td>
                 <td>{{$biblio->category->name}}</td>
                 <td>{{$biblio->users->name}}</td>
+
+                @if($biblio->image==null)
+                    <td><img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" style="width: 100px"></td>
+                @else
+                    <td><img src="{{asset('images/biblioteca/')}}/{{$biblio->image}}" style="width: 60px"></td>
+                @endif
                 @if(empty($biblio->path))
                     <td>No tiene archivo</td>
                 @else

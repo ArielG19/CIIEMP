@@ -37,8 +37,8 @@
 
 
 
-                @if(empty($blog->path))
-                    <td><img src="{{asset('images')}}/no-imagen.png" style="width: 100px"></td>
+                @if($blog->path==null)
+                    <td><img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" style="width: 100px"></td>
                 @else
                     <td><img src="{{asset('images')}}/{{$blog->path}}" style="width: 100px"></td>
                 @endif

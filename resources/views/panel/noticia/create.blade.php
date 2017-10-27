@@ -98,7 +98,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 {!! Form::label('imagen','Subir multiples imagenes') !!}
-                {!! Form::file('image[]',['multiple' => 'multiple'])!!}
+                {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
             </div>
         </div>
     </div>

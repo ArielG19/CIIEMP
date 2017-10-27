@@ -35,6 +35,10 @@
 
         {!! Form::hidden('id_usuario', Auth::user()->id, null,['class' =>'form-control'])!!}
     </div>
+    <div class="form-group">
+        {!! Form::label('imagen','Imagen') !!}
+        {!! Form::file('image',['accept'=>'image/x-png,image/jpeg'])!!}
+    </div>
 
     <div class="form-group">
         {!! Form::label('Archivo PDF','Archivo') !!}

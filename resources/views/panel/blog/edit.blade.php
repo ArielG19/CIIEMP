@@ -35,7 +35,13 @@
 
     <div class="form-group">
         {!!Form::label('path','Imagen:')!!}
-        {!!Form::file('path')!!}
+        {!!Form::file('path',['accept'=>'image/x-png,image/jpeg'])!!}
+    </div>
+
+    <div class="form-group">
+        {!! Form::label('file','Subir un archivo') !!}
+        {!! Form::file('file')!!}
+        <a href="{{asset('download/pdf')}}/{{$blog->file}}" target="_blank">{{basename($blog->file)}}</a>
     </div>
 
 

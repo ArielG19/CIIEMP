@@ -6,9 +6,9 @@
             <h2>Noticias Recientes</h2>
             <hr>
 
-            @foreach($noticias->chunk(2) as $noti)
+
                 <div class="row p-b">
-                    @foreach($noti as $noticia)
+                    @foreach($noticias as $noticia)
                         <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-6">
 
                             <div class="fh5co-post wow fadeInLeft">
@@ -58,7 +58,7 @@
                         </div>
                     @endforeach()
                 </div>
-            @endforeach()
+
 
             {!! $noticias->render()!!}
 

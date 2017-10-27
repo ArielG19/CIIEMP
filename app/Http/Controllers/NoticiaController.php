@@ -17,6 +17,7 @@ use Input;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
+
 class NoticiaController extends Controller
 {
     /**
@@ -88,8 +89,9 @@ class NoticiaController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -101,11 +103,10 @@ class NoticiaController extends Controller
     {
         $users = User::pluck('name', 'id');
         $categorias = Categoria::pluck('name', 'id');
-
-
         $noticia = Noticia::find($id);
 
-        return view('panel.noticia.edit', compact('users', 'categorias', 'noticia'));
+
+        return view('panel.noticia.edit', compact('users', 'categorias', 'noticia','concursos'));
 
     }
 
@@ -118,24 +119,37 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, $id)
     {
+//        $noticia = DB::table('noticias')
+//
+//            ->join('concursos','noticias.id','concursos.id_noticia')
+//            ->where('noticias.id',$id)
+//            ->get();
 
-        $noticia = Noticia::find($id);
-        $noticia->fill($request->all());
-        $noticia->save();
+        $noticia = Noticia::create($request->all());
         $concursos = new Concursos($request->all());
-        //validar checkbox
+
         if (isset($concursos['estado']) and $concursos['estado'] == 'on') {
             $concursos->id_noticia = $noticia->id;
             $concursos->estado = "activo";
             $concursos->save();
 
         }
-        //Eliminar imagenes previas
-        foreach ($noticia->articleImg as $img) {
-            $file_path = public_path('images/noticia') . '/' . $img->image;
-            unlink($file_path);
-            $img->delete();
 
+        //validar checkbox
+        if (isset($noticia['estado']) and $noticia['estado'] == 'on') {
+            $noticia->id_noticia = $noticia->id;
+            $noticia->estado = "activo";
+            $noticia->save();
+
+        }
+        //Eliminar imagenes previas
+        if ($request->hasFile('image')) {
+            foreach ($noticia->articleImg as $img) {
+                $file_path = public_path('images/noticia') . '/' . $img->image;
+                unlink($file_path);
+                $img->delete();
+
+            }
         }
         //guardar multiples file
         if ($request->hasFile('image')) {

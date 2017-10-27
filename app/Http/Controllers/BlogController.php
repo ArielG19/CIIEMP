@@ -60,7 +60,7 @@ class BlogController extends Controller
             $blog->path = $filename;
             $blog->save();
         } else {
-            $blog->path = null;
+
             $blog->save();
         }
 
@@ -109,11 +109,13 @@ class BlogController extends Controller
     {
 
         $blog = Blog::find($id);
+        $blog->fill($request->all());
         $blog->titulo = $request->input('titulo');
         $blog->descripcion = $request->input('descripcion');
         $blog->slug = $request->input('slug');
         $blog->id_categoria = $request->input('id_categoria');
         $blog->id_usuario = $request->input('id_usuario');
+
 
         if ($request->hasFile('path')) {
             $imagen = $request->file('path');
@@ -124,6 +126,7 @@ class BlogController extends Controller
             Storage::delete($oldfilename);
 
         }
+
         $blog->save();
 
 

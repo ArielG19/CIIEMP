@@ -46,12 +46,14 @@
                                 </div>
                                 {{--<div class="fh5co-category pull-right"><a href="download/pdf/{{$down->path}}">{{ pathinfo($down->path,PATHINFO_EXTENSION)}}</a></div>
 --}}
-                                @if (pathinfo($down->path,PATHINFO_EXTENSION)=== 'pdf')
-                                    <img src="{{asset('styleVoltage/images/Library-ciiemp-pdf.jpg')}}" alt="Image"
-                                         class="img-responsive">
+                                @if($down->image!=null)
+                                    <img src="/images/biblioteca/{{$down->image}}" alt="Image" class="img-responsive">
+                                @elseif(pathinfo($down->path,PATHINFO_EXTENSION)=== 'pdf')
+                                <img src="{{asset('styleVoltage/images/Library-ciiemp-pdf.jpg')}}" alt="Image"
+                                class="img-responsive">
                                 @elseif(pathinfo($down->path,PATHINFO_EXTENSION)=== 'docx')
-                                    <img src="{{asset('styleVoltage/images/Library-ciiemp-word.jpg')}}" alt="Image"
-                                         class="img-responsive">
+                                <img src="{{asset('styleVoltage/images/Library-ciiemp-word.jpg')}}" alt="Image"
+                                class="img-responsive">
                                 @endif
 
 
