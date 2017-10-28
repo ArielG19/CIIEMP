@@ -4,20 +4,136 @@
     <div>
         <div>
             <div class="col-md-12">
+            <div class="container">
+            {{--Aqui comienza el boton para el tutorial--}}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr>
+                        <div class="text-center wow fadeInUp" style="margin-right:-40px;">
+                            <a href='#myModal' class='btn btn-outline-warning btn-lg' data-toggle='modal' data-target='#playerModal'>
+                                Sigue Nuestro Tutorial
+                            </a>
+                        </div>
+                        <hr>
+                            <div class="modal fade" id='playerModal' role='dialog' tabindex='-1'>
+                                <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="close" aria-label='Close' data-dismiss='modal', type='button'>
+                                                <span aria-hidden='true'>×</span></button>
+                                                <h4 class="modal-title">Aprende a utilizar nuestra Plataforma Web</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <div id="player" class="embed-responsive-item"></div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-default" data-dismiss='modal' type='button'>
+                                                    Cerrar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        // Youtube API Functions (https://developers.google.com/youtube/iframe_api_reference)
+                        // =============================================
+
+                        var tag = document.createElement('script');
+
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        var firstScriptTag = document.getElementsByTagName('script')[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                        //### Variables
+                        var player;
+                        var playerModal = $('#playerModal');
+
+                        //### Youtube API
+                        function onYouTubeIframeAPIReady() {
+                            player = new YT.Player('player', {
+                                height: '390',
+                                width: '640',
+                                videoId: 'L2Ew6JzfZC8'
+                            });
+                        }
+
+                        //### Modal Controls (http://getbootstrap.com/javascript/#modals)
+                        // Modal when show, begin to play video
+                        playerModal.on('show.bs.modal', function (e) {
+                            player.playVideo();
+                        });
+
+                        // Modal when hidden, pause or stop playing video
+                        playerModal.on('hidden.bs.modal', function (e) {
+                            player.pauseVideo();
+                            //player.stopVideo();
+                        });
+                    </script>
+
+                {{--Aqui termina el codigo del tutorial--}}
+
                 {{--CONTENIDO modulos--}}
                 <div class="fh5co-blog-style-1">
                     <div class="container">
-
+                        
                         <section class="work-info">
                             <div class="container">
+                                {{--Aqui las letras cambiaron su diseño--}}
                                 <div class="col-md-6 col-md-offset-3 text-center">
-                                    <h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                    CIIEMP Modulos</h2>
-                                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Far far away, behind
-                                    the word mountains, far from the countries Vokalia and Consonantia, there live the
-                                    blind texts. </p>
+                                    <div class="cuerpo text-center">
+                                        <h1 class="titulo">
+                                        <div class="wow fadeInLeft">CIIEMP</div><div class="wow fadeInRight">Módulos</div>
+                                        </h1>
+                                        <p class="wow fadeInUp delay-1 parrafo">Far far away, behind
+                                        the word mountains, far from the countries Vokalia and Consonantia, there live the
+                                        blind texts.</p>
+                                    </div>
+                                    <style>
+                                        
+                                        .work-info{
+                                            margin-top:-50px;
+                                        }
+                                        .cuerpo {
+                                        height: 100%;
+                                        font-family: 'Varela Round' sans-serif;
+                                        text-align: center;
+                                        }
+
+                                        .titulo {
+                                        margin-top: 5%;
+                                        font-size: 3rem;
+                                        display: inline-block;
+                                        }
+                                        .titulo div {
+                                        position: relative;
+                                        float: left;
+                                        font-size:40px;
+                                        }
+                                        .titulo div:first-child {
+                                        color: #3498db;
+                                        margin-right: 1rem;
+                                        }
+
+                                        .parrafo {
+                                        font-size: 1.2rem;
+                                        color: gray;
+                                        text-transform: uppercase;
+                                        }
+
+                                        .delay-1 {
+                                        -moz-animation-delay: 1s;
+                                        -webkit-animation-delay: 1s;
+                                        animation-delay: 1s;
+                                        }
+                                    </style>
+
                                 </div>
-                                
+                                {{--Aqui termina el codigo de las nuevas letras--}}
                                 <div class="row">
                                     <div class=" col-md-6 col-sm-12">
                                         <div class="work-item fh5co-post wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.1s">
@@ -146,6 +262,7 @@
                         </div>
                     </div>
                     {{--FIN CONTENIDO--}}
+                    
                 </div>
             </div>
         </div>

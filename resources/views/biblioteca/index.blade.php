@@ -3,19 +3,17 @@
 @section('banner','/styleVoltage/images/Ciiemp.png')
 @section('content')
 
-
-
-    <div class="fh5co-blog-style-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2> Biblioteca</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </div>
+<div class="fh5co-blog-style-1" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2> Biblioteca</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							 tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,
+							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+					</div>
+				</div>
 
             <div class="row">
                 <div class="col-md-3">

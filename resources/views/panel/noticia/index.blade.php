@@ -29,7 +29,10 @@
 
   <tbody>
   	<tr>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
   		@foreach ($noticias as $noticia)
   		<td>{{$noticia->titulo}}</td>
   		<td>{{substr(strip_tags($noticia->descripcion), 0,300)}}...</td>
@@ -49,12 +52,19 @@
   		<td><a class="btn btn-success" href="{{route('noticia.edit', $noticia->id)}}" role="button"><i class="fa fa-pencil-square-o"></i></a>
   		    <a class="btn btn-danger" href="{{route('noticias.destroy', $noticia->id)}}" onclick="return confirm('Quiere borrar el registro?')" role="button"><i class="fa fa-trash-o"></i></a>
   		</td>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
   	</tr>
   	@endforeach
   </tbody>
 </table>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
 {!! $noticias->render() !!}
 
   @endsection

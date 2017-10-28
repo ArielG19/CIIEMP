@@ -54,7 +54,6 @@
   	</tr>
   	@endforeach
   </tbody>
-
 </table>
 
 {!! $proyect->render() !!}

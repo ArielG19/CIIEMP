@@ -32,6 +32,7 @@ class BibliotecaController extends Controller
     {
       $biblios = Biblioteca::orderBy('id','DESC')->paginate(5);
       return view('panel.biblioteca.index', compact('biblios'));
+
     }
 
     public function filtraCategoria($name)
@@ -45,7 +46,6 @@ class BibliotecaController extends Controller
 
         return view('Biblioteca.index',compact('downloads'));
     }
-
     /**
      * Show the form for creating a new resource.
      *

@@ -30,6 +30,8 @@ class BlogController extends Controller
         return view('panel.blog.index')->with(compact('blogs'));
     }
 
+        return view('panel.blog.index')->with(compact('blogs'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -64,7 +66,23 @@ class BlogController extends Controller
             $blog->save();
         }
 
+        $blog = new Blog($request->all());
+        $blog->save();
+        if ($request->hasFile('path')) {
+            $imagen = $request->file('path');
+            $filename = time() . '.' . $imagen->getClientOriginalExtension();
+            Image::make($imagen)->resize(1000, 600)->save(public_path('images/' . $filename));
+            $blog->path = $filename;
+            $blog->save();
+        } else {
+            $blog->path = null;
+            $blog->save();
+        }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
         Session::flash('message', 'La entrada del blog fue creada correctamente');
         return redirect::to('home/blogs');
 

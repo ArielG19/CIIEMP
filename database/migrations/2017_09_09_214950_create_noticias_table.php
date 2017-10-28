@@ -20,7 +20,6 @@ class CreateNoticiasTable extends Migration
             $table->text('lugar')->nullable();
             $table->string('slug')->unique();
             $table->string('image1')->nullable();
-
             $table->string('file')->nullable();
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_categoria')->unsigned();

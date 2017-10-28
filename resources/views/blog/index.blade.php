@@ -32,6 +32,10 @@
 								<p>{{substr(strip_tags($blog->descripcion), 0,300)}}...</p>
 							</div>
 							<div class="fh5co-post-meta">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
 								<a href="#"><i class="icon-chat"></i>{{$blog->comentarios->count()}}</a>
 								<a href="#"><i class="fa fa-calendar"></i>{{Date::parse($blog->created_at)->format('j \d\e F \d\e Y')}}</a>
 								<a href="#"><i class="icon-user" aria-hidden="true"></i>{{$blog->users->name}}</a>

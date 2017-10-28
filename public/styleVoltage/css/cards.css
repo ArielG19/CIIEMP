@@ -2369,7 +2369,6 @@ a:not(.btn) {color: #b3b3b3;}
  justify-content: center;
 }
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a:hover {
-
 }
 
 
@@ -3573,7 +3572,8 @@ color: #ff173c; }
 
 
 #noticias{
-  padding-bottom: 50px;
+  padding-bottom: 300px;
+  margin-bottom: 50px;
 }
 
 

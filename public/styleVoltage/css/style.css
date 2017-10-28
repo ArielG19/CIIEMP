@@ -230,7 +230,10 @@
 
 
 #what-we-do {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -280,8 +283,11 @@
     width: 7em;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
 #main > .inner > section {
     padding: 6em 0 4em 0;
     border-top: solid 2px rgba(210, 215, 217, 0.75);

@@ -3,7 +3,7 @@
 @section('contenido')
 
 <div>
-	<u><h2 class="text-center">Nuevo Proyecto</h2></u>
+	<u><h2 class="text-center">Nuevo Proyecto Estudiante</h2></u>
 	{!! Form::open(['route' => 'proyectos.store', 'method' => 'POST','files'=>true]) !!}
 
 		<div class="form-group col-md-8">

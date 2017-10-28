@@ -9,7 +9,7 @@ class Proyecto extends Model
     //
     protected $table = "proyectos";
 
-  	protected $fillable = ['id','titulo','imagen','responsable','objetivo','resumenCorto','resumenLargo','id_usuario','id_categoria','id_profesor'];
+  	protected $fillable = ['id','titulo','imagen','responsable','objetivo','resumenCorto','resumenLargo','id_usuario','id_categoria','teacher_id'];
 
    public function users()
    {
@@ -23,6 +23,6 @@ class Proyecto extends Model
 
        public function profesor()
    {
-       return $this->belongsTo('App\Profesor','id_profesor','id');
+       return $this->belongsTo('App\Teacher','teacher_id','id');
    }
 }

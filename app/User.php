@@ -27,8 +27,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function blogs(){
-        return $this->hasMany('App\Blog');
+    public function blogs()
+    {
+        return $this->hasMany('App\Blog','id');
+    }
+
+    public function teachers()
+    {
+
+        return $this->hasOne('App\Teacher','id_usuario','id');
     }
 
     public function profesors(){

@@ -1,6 +1,7 @@
 @extends('home')
 @section('title','Usuarios')
 @section('contenido')
+
                         <div class="col-xs-12">
                       		   <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
                       		  		style="display:none">
@@ -37,8 +38,9 @@
 @include('usuario.modalCreate')
 @include('usuario.modalUpdate')
 
-@section('script')
-	<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
+	@section('script')
+		<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
+
 	@endsection
 
 @endsection

@@ -6,7 +6,7 @@ use App\Biblioteca;
 use App\Proyecto;
 use App\Categoria;
 use App\User;
-use App\Profesor;
+use App\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Session;
@@ -30,7 +30,7 @@ class ProyectosController extends Controller
     public function index()
     {
 
-        $proyect =Proyecto::orderBy('id','DESC')->paginate(5);
+        $proyect = Proyecto::orderBy('id','DESC')->paginate(5);
 
         $proyect->each(function($proyect){
 
@@ -49,11 +49,20 @@ class ProyectosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function egresados()
+    {
+        $categorias = Categoria::pluck('name','id');
+
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
+       
+        return view('proyectos.createEgresado',compact('categorias','profesor'));
+    }
+
     public function create()
     {
         $categorias = Categoria::pluck('name','id');
 
-        $profesor = Profesor::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','','or','primer_apellido','!=','','or','primer_apellido','!=','')->pluck('full_name', 'id');
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
        
         return view('proyectos.create',compact('categorias','profesor'));
     }
@@ -72,7 +81,7 @@ class ProyectosController extends Controller
 
         if($request->input('responsable') == null){
 
-            $proyect->id_profesor = $request->id_profesor;
+            $proyect->teacher_id = $request->id_profesor;
         }
         else{
 
@@ -121,7 +130,7 @@ class ProyectosController extends Controller
         //
         $categorias = Categoria::pluck('name','id');
 
-        $profesor = Profesor::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','','or','primer_apellido','!=','','or','primer_apellido','!=','')->pluck('full_name', 'id');
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','','or','primer_apellido','!=','','or','primer_apellido','!=','')->pluck('full_name', 'id');
 
 
         $proyect = Proyecto::find($id);
@@ -144,7 +153,7 @@ class ProyectosController extends Controller
 
         if($request->input('responsable') == null){
 
-            $proyect->id_profesor = $request->id_profesor;
+            $proyect->teacher_id = $request->id_profesor;
         }
         else{
 

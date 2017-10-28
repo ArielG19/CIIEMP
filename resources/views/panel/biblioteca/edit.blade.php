@@ -30,7 +30,15 @@
 
 
 		<div class="form-group">
+<<<<<<< HEAD
 					{!!Form::label('imagen','Archivo:')!!}
+=======
+<<<<<<< HEAD
+					{!!Form::label('imagen','Imagen:')!!}
+=======
+					{!!Form::label('imagen','Archivo:')!!}
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
 					{!!Form::file('')!!}
 					<a href="{{asset('download/pdf')}}/{{$biblio->path}}" target="_blank">{{basename($biblio->path)}}</a>
 

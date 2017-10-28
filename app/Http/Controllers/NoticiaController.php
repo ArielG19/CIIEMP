@@ -118,7 +118,6 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $noticia = Noticia::find($id);
         $noticia->fill($request->all());
         $noticia->save();

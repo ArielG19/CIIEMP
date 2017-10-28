@@ -2,6 +2,10 @@
 @section('title', 'Listado de categorias')
 @section('contenido')
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53212f1e893b5ba1968feabf46ee055168198fa7
     @if(Session::has('message'))
         <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
