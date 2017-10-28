@@ -29,7 +29,12 @@
                                   <h2>Publicaciones</h2>
                                   <div class="content">
                                     <ul class="info">
-                                      <li><b>{{$p->publicado_en}}</b>, {{$p->fecha}} <br> {{$p->link}}</li>
+                                      <li><b>{{$p->publicado_en}}</b>
+                                      <br>
+                                      {{$p->primer_apellido}},{{$p->primer_nombre}},{{$p->colaboradores}}
+                                      ({{date('Y', strtotime($p->fecha))}}).{{$p->titulo_trabajo}} 
+                                       <br>
+                                       Disponible en:<a href="">{{$p->link}}</a></li>
                                     </ul>
                                   </div>
                                 </div>

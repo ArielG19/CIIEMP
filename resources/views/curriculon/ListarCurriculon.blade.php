@@ -41,7 +41,7 @@
                                 <!-- Begin 1st Row -->
                                 <div class="entry">
                                   <h2>Resumen</h2>
-                                  <p>{{$c->resumen}}</p>
+                                  <p>{!!$c->resumen!!}</p>
                                 </div>
                                 <!-- End 1st Row -->
 
@@ -49,7 +49,7 @@
                                 <div class="entry">
                                     <h2>Titulos academicos</h2>
                                     <div class="content">
-                                      <p>{{$c->titulos_academicos}}</p>
+                                      <p>{!!$c->titulos_academicos!!}</p>
                                     </div>
                                   
                                 </div>
@@ -57,7 +57,7 @@
                                 <div class="entry">
                                     <h2>Estudios doctorales</h2>
                                     <div class="content">
-                                      <p>{{$c->estudios_doctorales}}</p>
+                                      <p>{!!$c->estudios_doctorales!!}</p>
                                     </div>
                                   
                                 </div>
@@ -68,7 +68,7 @@
                                   <h2>Experiencia Laboral</h2>
                                   <div class="content">
                                     <ul class="info">
-                                      <li>{{$c->experiencia_laboral}}</li>
+                                      <li>{!!$c->experiencia_laboral!!}</li>
                                     </ul>
                                   </div>
                                 </div>

@@ -18,8 +18,8 @@ class ChatController extends Controller
     {
         //
         $users = User::Orderby('name','ASC')->pluck('name','id');
-        //return view('chat.chat')->with('users',$users);
-        return view('chat.material');
+        return view('chat.chat')->with('users',$users);
+        //return view('chat.material')->with('users',$users);
     }
 
     public function listarChat($usuario_activo)

@@ -16,6 +16,8 @@ class CreatePublicacionesTable extends Migration
         Schema::create('publicaciones', function (Blueprint $table) {
             $table->increments('id');
             $table->string('publicado_en');
+            $table->string('titulo_trabajo');
+            $table->string('colaboradores');
             $table->date('fecha');
             $table->string('link');
             $table->integer('id_autor')->unsigned();

@@ -11,7 +11,10 @@ $(document).ready(function(){
 	});
 }
 $("#guardar").click(function(event){
+		var colaboradores = $("#coloraboradores").val();
+		//console.log(colaboradores);
 		var publicado = $("#publicado").val();
+		var titulo = $("#titulo").val();
 	    var fecha = $("#fecha").val();
 	    var link = $("#enlace").val();
 
@@ -36,7 +39,7 @@ $("#guardar").click(function(event){
       		headers:{'X-CSRF-TOKEN':token},
       		type:'post',
       		datatype:'json',
-      		data:{publicado:publicado,fecha:fecha,link:link,id:id},
+      		data:{publicado:publicado,colaboradores:colaboradores,titulo:titulo,fecha:fecha,link:link,id:id},
 
       			success:function(data){
 			          	if(data.success=='true'){
@@ -59,7 +62,9 @@ function Publicaciones(id){
         //console.log(data);
       	$("#id").val(data.id);
       	$("#select_id_edit").val(data.id_autor);
+      	$("#coloraboradores_edit").val(data.colaboradores);
       	$("#publicado_edit").val(data.publicado_en);
+      	$("#titulo_edit").val(data.titulo_trabajo);
       	$("#fecha_edit").val(data.fecha);
       	$("#enlace_edit").val(data.link);
       
@@ -70,7 +75,9 @@ $("#editar").click(function(event){
 
 	var id = $("#id").val();
 	var id_autor = $("#select_id_edit option:selected").val();
+	var colaboradores = $("#colaboradores_edit").val();
     var publicado_en = $("#publicado_edit").val();
+    var titulo_trabajo = $("#titulo_edit").val();
     var fecha = $("#fecha_edit").val();
     var link = $("#enlace_edit").val();
 
@@ -82,7 +89,7 @@ $("#editar").click(function(event){
 				headers:{'X-CSRF-TOKEN':token},
 				type:'PUT',
 				dataType:'json',
-				data:{id_autor:id_autor,publicado_en:publicado_en,fecha:fecha,link:link},
+				data:{id_autor:id_autor,colaboradores:colaboradores,publicado_en:publicado_en,titulo_trabajo:titulo_trabajo,fecha:fecha,link:link},
 
 
       			success:function(data){

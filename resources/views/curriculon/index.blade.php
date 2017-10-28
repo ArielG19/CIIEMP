@@ -1,5 +1,5 @@
 @extends('home')
-@section('title','Curriculon')
+@section('title','Curriculum')
 @section('contenido')
        <div class="col-xs-12">
                           <div id="message-save" class="alert alert-success alert-dismissible" role="alert" style="display:none">
@@ -18,7 +18,7 @@
 
                             <div class="panel panel-primary">
                                   <div class="panel-heading">
-                                        <h5 class="panel-title">Lista de curriculons</h5>
+                                        <h5 class="panel-title">Lista de curriculum</h5>
                                   </div>
                                   <div class="panel-body">
                                       <hr>
@@ -34,7 +34,16 @@
 @include('curriculon.modalCreate')
 @include('curriculon.modalUpdate')  
   @section('script')
-           <script type="text/javascript" src="{{asset('/js/curriculon.js')}}"></script>
+    <script>
+      
+      $('textarea').trumbowyg({
+          
+      }); 
+                 
+    </script>
+    <script type="text/javascript" src="{{asset('/js/curriculon.js')}}"></script>
+           
+           
   @endsection
 
 @endsection

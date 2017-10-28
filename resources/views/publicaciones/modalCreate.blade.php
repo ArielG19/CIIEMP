@@ -24,10 +24,20 @@
 													{!!Form::select('usuario_id',$users,null,['id'=>'select_id','class'=>'form-control select-users','placeholder'=>'Seleccione un usuario','required'])!!}
 												</div>
 
+												<div class="form-group">
+					                        		{!!form::label('coloraboradores','Colaboradores:')!!}
+					                            	{!!form::text('coloraboradores',null,['id'=>'coloraboradores','class'=>'form-control','placeholder'=>'Escribe coloraboradores'])!!}
+					          					</div>
+
 
 												<div class="form-group">
 					                        		{!!form::label('publicado_en','Publicado por:')!!}
-					                            	{!!form::text('publicado_en',null,['id'=>'publicado','class'=>'form-control','placeholder'=>'Escribe donde se publico'])!!}
+					                            	{!!form::text('publicado_en',null,['id'=>'publicado','class'=>'form-control','placeholder'=>'Escribe el nombre de revista donde se publico'])!!}
+					          					</div>
+
+					          					<div class="form-group">
+					                        		{!!form::label('titulo','Nombre de trabajo:')!!}
+					                            	{!!form::text('titulo_trabajo',null,['id'=>'titulo','class'=>'form-control','placeholder'=>'Escribe el nombre del trabajo que se publica '])!!}
 					          					</div>
 
 					                    		<div class="form-group">

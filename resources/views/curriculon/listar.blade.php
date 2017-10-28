@@ -1,7 +1,6 @@
 <div class="table-responsive">
 		<table class="table table-striped">
 			<thead>
-				<th>Usuario</th>
 				<th>1.er Nombre</th>
 				<th>1.er Apellido</th>
 				<th>Resumen</th>
@@ -11,16 +10,13 @@
 						@foreach($curriculon as $c)
 							<tr>
 								<td>
-									{{$c->name}}
-								</td>
-								<td>
 									{{$c->primer_nombre}}
 								</td>
 								<td>	
 									{{$c->primer_apellido}}
 								</td>
 								<td>
-									{{$c->resumen}}
+									{!!$c->resumen!!}
 								</td>
 									
 								<td>

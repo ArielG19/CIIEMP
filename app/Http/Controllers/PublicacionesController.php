@@ -25,7 +25,7 @@ class PublicacionesController extends Controller
          $publicaciones = DB::table('users')
         ->Join('publicaciones','users.id','publicaciones.id_autor')
         ->Join('teachers','users.id','teachers.id_usuario')
-        ->select('users.name','teachers.primer_nombre','teachers.primer_apellido','publicaciones.publicado_en','publicaciones.fecha','publicaciones.link','publicaciones.id')
+        ->select('users.name','teachers.primer_nombre','teachers.primer_apellido','publicaciones.publicado_en','publicaciones.titulo_trabajo','publicaciones.colaboradores','publicaciones.fecha','publicaciones.link','publicaciones.id')
         ->get();
         //dd($publicaciones);
         return view('publicaciones.listar')->with('publicaciones',$publicaciones);
@@ -55,6 +55,8 @@ class PublicacionesController extends Controller
                     $publicacion = new Publicaciones();
                     $publicacion->id_autor = $request->id;
                     $publicacion->publicado_en = $request->publicado;
+                    $publicacion->colaboradores = $request->colaboradores;
+                    $publicacion->titulo_trabajo = $request->titulo;
                     $publicacion->fecha = $request->fecha;
                     $publicacion->link = $request->link;
                     

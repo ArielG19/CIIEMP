@@ -46,7 +46,7 @@
 
 					            				<div class="form-group">
 					              					{!!form::label('Estudios doctorales:')!!}
-					              					{!!form::textarea('estudios_doctorales',null,['id'=>'estudios_doc','class'=>'form-control','placeholder'=>'Escriba sus estudios doctorles'])!!}
+					              					{!!form::textarea('estudios_doctorales',null,['id'=>'estudios_doctorales','class'=>'form-control','placeholder'=>'Escriba sus estudios doctorles'])!!}
 					            				</div>
 									    </div>
 									    <div role="tabpanel" class="tab-pane" id="profile">

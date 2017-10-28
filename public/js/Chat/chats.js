@@ -18,6 +18,7 @@ $("#Enviar").click(function(event){
 
 
         var mensaje = $("#mensaje").val();
+        $('#mensaje').val("").focus();
         var usuario_to = $("#usuario_to").val();
         var id_to = usuario_to[0];
         //console.log(id_to);

@@ -35,8 +35,8 @@
 
 
 												<div class="form-group">
-					                        		{!!form::label('Resumen corto:')!!}
-					                            	{!!form::textarea('resumen',null,['id'=>'resumen_edit','class'=>'form-control','placeholder'=>'Escribe un resumen corto'])!!}
+					                        		{!!form::label('resumen','Resumen corto:')!!}
+					                            	{!!form::textarea('resumen',null,['class'=>'form-control','id'=>'resumen_edit'])!!}
 					          					</div>
 
 					                    		<div class="form-group">
@@ -88,4 +88,5 @@
         $('.select-users').chosen({
           no_results_text:'No se encontraron resultados',
         });
-      </script>
+</script>
+

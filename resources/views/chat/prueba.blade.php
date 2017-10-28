@@ -14,7 +14,7 @@
 		<a class="btn" id="a-nombre" style="margin-left: 15px;" data-id="{{$m->conversation_id}}">
 		 	Mensajes ({{$m->mensajes}}) 
 		</a> 
-		<hr width="300px" style="border:1px solid lightgrey">
+		<hr style="border:1px solid lightgrey">
 		<br>
 	@endif
 

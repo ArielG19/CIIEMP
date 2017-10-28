@@ -15,7 +15,7 @@ var listarCurriculon = function(){
 $("#guardar").click(function(event){
 		var resumen = $("#resumen").val();
 	    var titulos = $("#titulos_aca").val();
-	    var estudios = $("#estudios_doc").val();
+	    var estudios = $("#estudios_doctorales").val();
 	    var experiencia_lab = $("#experiencia").val();
 	    var nac = $("#nacionalidad").val();
 	    var dir = $("#direccion").val();
@@ -62,10 +62,10 @@ function DatosCurriculons(id){
         $.get(route, function(data){
         //console.log(data);
       	$("#id").val(data.id);
-      	$("#resumen_edit").val(data.resumen);
-	   	$("#titulos_aca_edit").val(data.titulos_academicos);
-	    $("#estudios_doc_edit").val(data.estudios_doctorales);
-	    $("#experiencia_edit").val(data.experiencia_laboral);
+      	$('#resumen_edit').trumbowyg('html', '<p>'+data.resumen+'</p>');
+	   	$("#titulos_aca_edit").trumbowyg('html', '<p>'+data.titulos_academicos+'</p>');
+	    $("#estudios_doc_edit").trumbowyg('html', '<p>'+data.estudios_doctorales+'</p>');
+	    $("#experiencia_edit").trumbowyg('html', '<p>'+data.experiencia_laboral+'</p>');
 		$("#nacionalidad_edit").val(data.nacionalidad);
 		$("#direccion_edit").val(data.direccion);
 	  	$("#estado_ci_edit").val(data.estado_civil);
