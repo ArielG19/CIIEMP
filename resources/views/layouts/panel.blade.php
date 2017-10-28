@@ -19,7 +19,7 @@
             <link rel="stylesheet" href="{{asset('panel/css/bootstrap-datepicker.standalone.css')}}">
             <link rel="stylesheet" href="{{asset('css/chat.css')}}">
             <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
-            <link rel="stylesheet" href="{{asset('/Trumbowyg/dist/ui/trumbowyg.css')}}">
+            <link rel="stylesheet" href="{{asset('/Trumbowyg/trumbowyg.css')}}">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
             <div>
@@ -38,7 +38,7 @@
             <script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
             <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
             <script src="{{asset('chosen/chosen.jquery.js')}}"></script>
-            <script src="{{asset('Trumbowyg/dist/trumbowyg.js')}}"></script>
+            <script src="{{asset('Trumbowyg/trumbowyg.js')}}"></script>
 
 
             <script src="{{asset('panel/js/bootstrap-datepicker.js')}}"></script>
