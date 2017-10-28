@@ -1,7 +1,6 @@
 @extends('home')
 @section('title','Usuarios')
 @section('contenido')
-<<<<<<< HEAD
 
                         <div class="col-xs-12">
                       		   <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
@@ -11,16 +10,6 @@
 						            </button>
 									<strong> Se agrego correctamente</strong>
 								</div>
-=======
-    <div class="col-xs-12">
-        <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
-             style="display:none">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <strong> Se agrego correctamente</strong>
-        </div>
->>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
 
         <div id="message-update" class="alert alert-info alert-dismissible" role="alert" style="display:none">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -50,15 +39,9 @@
     @include('usuario.modalCreate')
     @include('usuario.modalUpdate')
 
-<<<<<<< HEAD
 	@section('script')
 		<script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
 
 	@endsection
-=======
-@section('script')
-    <script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
-@endsection
->>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
 
 @endsection

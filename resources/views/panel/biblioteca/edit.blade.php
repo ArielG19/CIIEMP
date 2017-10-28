@@ -43,21 +43,6 @@
 
     </div>
 
-<<<<<<< HEAD
-		<div class="form-group">
-<<<<<<< HEAD
-					{!!Form::label('imagen','Imagen:')!!}
-=======
-					{!!Form::label('imagen','Archivo:')!!}
->>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
-					{!!Form::file('')!!}
-					<a href="{{asset('download/pdf')}}/{{$biblio->path}}" target="_blank">{{basename($biblio->path)}}</a>
-=======
->>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
-
-
-
-
     {!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
     {!!Form::close()!!}<br>
 @endsection

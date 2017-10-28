@@ -33,14 +33,8 @@ class BibliotecaController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-      $biblios = Biblioteca::orderBy('id','DESC')->paginate(5);
-      return view('panel.biblioteca.index', compact('biblios'));
-
-=======
-        $biblios = Biblioteca::orderBy('id', 'DESC')->paginate(5);
+      $biblios = Biblioteca::orderBy('id', 'DESC')->paginate(5);
         return view('panel.biblioteca.index', compact('biblios'));
->>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
     }
 
     public function filtraCategoria($name)

@@ -42,7 +42,6 @@
                     </a>
                 </td>
 
-<<<<<<< HEAD
   <tbody>
   	<tr>
   		@foreach ($noticias as $noticia)
@@ -51,9 +50,7 @@
       <td>{{$noticia->lugar}}</td>
       <td>{{$noticia->users->name}}</td>
       <td>{{$noticia->category->name}}</td>
-=======
 
->>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
 
                 <td><a class="btn btn-success" href="{{route('noticia.edit', $noticia->id)}}" role="button"><i
                                 class="fa fa-pencil-square-o"></i></a>
@@ -71,19 +68,4 @@
 
     @include('noticia.modalimg')
 
-<<<<<<< HEAD
-  		<td><a class="btn btn-success" href="{{route('noticia.edit', $noticia->id)}}" role="button"><i class="fa fa-pencil-square-o"></i></a>
-  		    <a class="btn btn-danger" href="{{route('noticias.destroy', $noticia->id)}}" onclick="return confirm('Quiere borrar el registro?')" role="button"><i class="fa fa-trash-o"></i></a>
-  		</td>
-  	</tr>
-  	@endforeach
-  </tbody>
-</table>
-
-
-{!! $noticias->render() !!}
-
-  @endsection
-=======
 @endsection
->>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2

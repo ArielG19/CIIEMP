@@ -119,11 +119,6 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, $id)
     {
-<<<<<<< HEAD
-        $noticia = Noticia::find($id);
-        $noticia->fill($request->all());
-        $noticia->save();
-=======
 //        $noticia = DB::table('noticias')
 //
 //            ->join('concursos','noticias.id','concursos.id_noticia')
@@ -131,7 +126,6 @@ class NoticiaController extends Controller
 //            ->get();
 
         $noticia = Noticia::create($request->all());
->>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
         $concursos = new Concursos($request->all());
 
         if (isset($concursos['estado']) and $concursos['estado'] == 'on') {
