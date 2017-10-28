@@ -57,7 +57,7 @@
                             @if(is_null($noticias->articleEvent))
 
                             @else
-                                <h3 class="text-center">Tiempo para que finalize el concurso</h3>
+                                <h3 class="text-center">Tiempo para que finalice el concurso</h3>
                                 <div class="col-md-offset-8 col-md-offset-2">
                                     <div class="someTimer " data-date="{{$noticias->articleEvent->fecha_final}} 23:59:59"
                                          style="width: 455px; height: 120px; padding: 0px; box-sizing: border-box; background-color: #FFFFFF"></div>
@@ -138,7 +138,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                Concursos activos
+                                Concursos recientes
                             </h3>
                         </div>
                         <div class="panel-body">

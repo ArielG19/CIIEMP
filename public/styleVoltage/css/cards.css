@@ -1,11 +1,8 @@
 /*
 ///////////////////////////////////////////////////
 
-Project Name: Drag & Drop Cards by FREEHTML5.co
-Author: FREEHTML5.co
-Website: http://freehtml5.co
-URL: http://freehtml5.co/cards/drag-drop
-License: Creative Commons Attribution 3.0 License
+
+956 linea de codigo del overlay
 
 ///////////////////////////////////////////////////
 */
@@ -959,7 +956,7 @@ a:hover .lnk-icon-right {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   z-index: 4;
 }
 

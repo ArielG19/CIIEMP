@@ -27,7 +27,7 @@
 								@endif
 							</div>
 							<div class="fh5co-post-text">
-								<h3><a href="{{'/bloghome/blogin/'}}/{{$blog->slug}}">{{$blog->titulo}}</a></h3>
+								<h3><a href="{{'/bloghome/blogin'}}/{{$blog->slug}}">{{$blog->titulo}}</a></h3>
 								<p>{{substr(strip_tags($blog->descripcion), 0,300)}}...</p>
 							</div>
 							<div class="fh5co-post-meta">

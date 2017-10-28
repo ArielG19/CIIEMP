@@ -40,7 +40,7 @@
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
 			<h3>Acerca de nosotros</h3>
-			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+			<p>Plataforma Web para la promoción y desarrollo de proyectos de innovación y emprendimiento. </p>
 			<p><a href="{{ url('/acercade') }}" class="btn btn-success btn-sm btn-outline">Más...</a></p>
 		</div>
 

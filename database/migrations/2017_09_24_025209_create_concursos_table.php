@@ -20,8 +20,8 @@ class CreateConcursosTable extends Migration
             $table->enum('estado',['activo','finalizado']);
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_noticia')->unsigned();
-            $table->foreign('id_usuario')->references('id')->on('users');
-            $table->foreign('id_noticia')->references('id')->on('noticias');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_noticia')->references('id')->on('noticias')->onDelete('cascade');
             $table->timestamps();
         });
     }

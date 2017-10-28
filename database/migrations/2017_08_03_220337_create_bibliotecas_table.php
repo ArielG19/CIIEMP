@@ -16,6 +16,7 @@ class CreateBibliotecasTable extends Migration
         Schema::create('bibliotecas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
+            $table->string('image')->nullable();
             $table->string('path');
             $table->text('descripcion');
             $table->integer('id_usuario')->unsigned();

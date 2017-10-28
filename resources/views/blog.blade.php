@@ -21,7 +21,8 @@
                             <h3><a>{{$blogs->titulo}}</a></h3>
                             <p class="parrafo1 img-tex">{!!($blogs->descripcion)!!}</p>
                             @if($blogs->file != null)
-                                <a href="{{$blogs->file}}">Ver archivo</a>
+                                <a href="/download/pdf/{{$blogs->file}}" target="_blank">Ver archivo</a>
+
                             @endif
 
                         </div>

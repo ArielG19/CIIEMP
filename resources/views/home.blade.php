@@ -110,12 +110,12 @@
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-book"></i>
-                            <span>Biblioteca Virtual</span>
+                            <span>Repositorio digital</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{route('bibliotecas.index')}}"><i class="fa fa-circle-o"></i>lista</a></li>
-                            <li><a href="{{route('bibliotecas.create')}}"><i class="fa fa-circle-o"></i>Crear</a></li>
+                            <li><a href="{{route('bibliotecas.index')}}"><i class="fa fa-circle-o"></i>Listar archivos</a></li>
+                            <li><a href="{{route('bibliotecas.create')}}"><i class="fa fa-circle-o"></i>Subir un archivo</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
