@@ -32,6 +32,8 @@ class NoticiaController extends Controller
         return view('panel.noticia.index')->with(compact('noticias'));
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -125,23 +127,19 @@ class NoticiaController extends Controller
 //            ->where('noticias.id',$id)
 //            ->get();
 
-        $noticia = Noticia::create($request->all());
-        $concursos = new Concursos($request->all());
+        $noticia = Noticia::find($id);
+        $noticia->fill($request->all())->save();
+        $concurso = Concursos::where('id_noticia',$noticia->id)->first();
+        $concurso->fill($request->all());
 
-        if (isset($concursos['estado']) and $concursos['estado'] == 'on') {
-            $concursos->id_noticia = $noticia->id;
-            $concursos->estado = "activo";
-            $concursos->save();
+        if (isset($concurso['estado']) and $concurso['estado'] == 'on') {
 
-        }
-
-        //validar checkbox
-        if (isset($noticia['estado']) and $noticia['estado'] == 'on') {
-            $noticia->id_noticia = $noticia->id;
-            $noticia->estado = "activo";
-            $noticia->save();
+            $concurso->id_noticia = $noticia->id;
+            $concurso->estado = "activo";
+            $noticia->articleEvent()->save($concurso);
 
         }
+
         //Eliminar imagenes previas
         if ($request->hasFile('image')) {
             foreach ($noticia->articleImg as $img) {

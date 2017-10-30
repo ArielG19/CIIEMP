@@ -225,3 +225,6 @@ border:5px solid #03b1ce ;}
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
 }
+.startd{
+    text-align: center;
+}

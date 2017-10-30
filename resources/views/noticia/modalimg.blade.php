@@ -10,6 +10,12 @@
 
             <div class="modal-body">
 
+                {{----}}
+                {{--@foreach($noticia->articleImg as $img)--}}
+                    {{--<img src="/images/noticia/{{$img->image}}" alt="Image" class="img-responsive">--}}
+
+                {{--@endforeach--}}
+
 
 
             </div>

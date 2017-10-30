@@ -20,10 +20,11 @@
         <th>Lugar</th>
         <th>Autor</th>
         <th>Categoria</th>
+        <th>Concurso</th>
+        <th>Empieza</th>
+        <th>Finaliza</th>
         <th>Imagen</th>
         <th>Acciones</th>
-
-
         </thead>
 
         <tbody>
@@ -35,9 +36,18 @@
                 <td>{{$noticia->lugar}}</td>
                 <td>{{$noticia->users->name}}</td>
                 <td>{{$noticia->category->name}}</td>
+                @if(isset($noticia->articleEvent))
+                    <td ><a><i class="fa fa-star" aria-hidden="true"></i></a></td>
+                    <td>{{$noticia->articleEvent->fecha_inicio}}</td>
+                    <td>{{$noticia->articleEvent->fecha_final}}</td>
+                @else
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                @endif
                 <td>
-                    <a class="btn btn-info btn-sm" href="" Onclick='{{$noticia->id}}' data-toggle='modal'
-                       data-target='#modalimg'>
+                    <a class="btn btn-info btn-sm" href="" data-id="{{$noticia->id}}" data-toggle='modal'
+                       data-target="#modalimg">
                         <span>Img <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
                     </a>
                 </td>
