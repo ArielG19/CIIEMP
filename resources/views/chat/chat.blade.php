@@ -9,7 +9,7 @@
                           </ul>       
                       </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-sm-3">
                       <div class="form-group">
                         <center> <h3><span class="label label-default">Enviar a: </span></h3> </center>
                         {!!Form::select('usuarios',$users,null,['id'=>'usuario_to','class'=>'form-control select-user','multiple','required'])!!}
@@ -18,7 +18,7 @@
                   </div>
 
                   <center> <h3><span class="label label-default">Escriba su mensaje: </span></h3> </center>
-                  <div class="col-sm-5 col-sm-offset-left-1- frame" id="caja" >
+                  <div class="col-sm-4 col-sm-offset-left-1 frame" id="caja" >
                       <div id="chats"></div>
                       <div>
                           <div class="msj-rta macro" style="margin:auto">                        

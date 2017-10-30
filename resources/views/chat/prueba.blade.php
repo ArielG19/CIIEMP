@@ -6,7 +6,7 @@
 		<a class="btn" id="a-nombre" style="margin-left: 15px;" data-id="{{$m->conversation_id}}">
 		 	Mensajes ({{$m->mensajes}}) 
 		</a> 
-		<hr width="300px" style="border:1px solid lightgrey">
+		<hr width="200px" style="border:1px solid lightgrey">
 		<br>
 	@elseif(Auth::user()->name == $m->emisor)
 		<img src="/perfil/{{$m->receptorImg}}" style="width: 42px; height: 42px;top: 8px; left:25px;border-radius: 50%">
@@ -14,7 +14,7 @@
 		<a class="btn" id="a-nombre" style="margin-left: 15px;" data-id="{{$m->conversation_id}}">
 		 	Mensajes ({{$m->mensajes}}) 
 		</a> 
-		<hr style="border:1px solid lightgrey">
+		<hr width="200px" style="border:1px solid lightgrey">
 		<br>
 	@endif
 

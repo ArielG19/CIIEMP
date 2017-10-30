@@ -17,7 +17,10 @@ class ChatController extends Controller
     public function index()
     {
         //
-        $users = User::Orderby('name','ASC')->pluck('name','id');
+        $log = Auth::user()->id;
+        //dd($log);
+        $users = DB::table('users')->where('id','!=', $log)->pluck('name','id');
+        //dd($users);
         return view('chat.chat')->with('users',$users);
         //return view('chat.material')->with('users',$users);
     }
