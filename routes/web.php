@@ -126,3 +126,4 @@ Route::get('/proyectos', function () {
     ]);
 
 Route::get('detalleProyecto/{id}','ProyectosController@show');
+Route::get('noticias/image/{id}','NoticiaController@show');

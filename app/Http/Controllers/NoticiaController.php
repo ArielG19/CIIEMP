@@ -91,6 +91,11 @@ class NoticiaController extends Controller
      */
     public function show($id)
     {
+        $noticia = Noticia::find($id);
+        return view('panel.noticia.modalimg', compact('noticia'));
+
+
+
 
     }
 
@@ -177,8 +182,21 @@ class NoticiaController extends Controller
      */
     public function destroy($id)
     {
+//        $not = Noticia::findOrFail($id);
+//        if (isset($not->articleImg[0]->image)) {
+//            //eliminar multiples files
+//            foreach ($not->articleImg as $img) {
+//                $file_path = public_path('images/noticia') . '/' . $img->image;
+//                unlink($file_path);
+//                $not->delete();
+//
+//            }
+//        } else {
+//            $not->delete();
+//        }
+
         $not = Noticia::findOrFail($id);
-        if (isset($not->articleImg[0]->image)) {
+        if ((isset($not->articleImg[0])) and ($not->articleEvent == null)) {
             //eliminar multiples files
             foreach ($not->articleImg as $img) {
                 $file_path = public_path('images/noticia') . '/' . $img->image;
@@ -186,13 +204,23 @@ class NoticiaController extends Controller
                 $not->delete();
 
             }
+        } else if ((empty($not->articleImg[0])) and ($not->articleEvent != null)) {
+            $not->articleEvent->delete();
+            $not->delete();
 
+        } else if ((isset($not->articleImg[0])) and ($not->articleEvent != null)) {
+            foreach ($not->articleImg as $img) {
+                $file_path = public_path('images/noticia') . '/' . $img->image;
+                unlink($file_path);
 
+            }
+            $not->articleEvent->delete();
+            $not->delete();
         } else {
             $not->delete();
         }
 
-        Session::flash('message', 'Entrada de blog eliminada Correctamente');
+        Session::flash('message', 'Entrada de noticia eliminada Correctamente');
         return redirect::to('home/noticia');
 
     }
