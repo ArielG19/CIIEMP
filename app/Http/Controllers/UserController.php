@@ -26,7 +26,7 @@ class UserController extends Controller
 
     public function listarUsuario()
     {
-        $users = User::all();
+        $users = User::Orderby('name','desc')->paginate(7);
         return view('usuario.listar')->with('users',$users);
     }
 
@@ -145,5 +145,16 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+                $usuarios = User::FindOrFail($id);
+                
+                $resultado = $usuarios->delete();
+
+                if($resultado)
+                {
+                    return response()->json(['success'=>'true']);
+                }else
+                {
+                    return response()->json(['success'=>'false']);
+                }
     }
 }

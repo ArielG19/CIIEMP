@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Conversation;
 use Auth;
 use DB;
 
@@ -47,9 +48,12 @@ class ChatController extends Controller
             ->select('users.name as emisor','users.imagen as emisorImg','receptor.name as receptor','receptor.imagen as receptorImg',DB::raw('count(mensaje) as mensajes'),'messages.conversation_id')
             ->Orderby('conversation_id','desc')
             ->groupBy('conversation_id')
-            ->whereIn('messages.conversation_id', $array)->get();
+            ->whereIn('messages.conversation_id', $array)
+            ->Orderby('messages.conversation_id','desc')
+            ->paginate(1);
+            //->get();
             //dd($message);
-            return view('chat.prueba')->with('message',$message);
+            return view('chat.conversacion')->with('message',$message);
         
     }
 
@@ -193,5 +197,17 @@ class ChatController extends Controller
     public function destroy($id)
     {
         //
+                $conversacion = Conversation::FindOrFail($id);
+                //dd($conversacion);
+                
+                $resultado = $conversacion->delete();
+
+                if($resultado)
+                {
+                    return response()->json(['success'=>'true']);
+                }else
+                {
+                    return response()->json(['success'=>'false']);
+                }
     }
 }

@@ -46,6 +46,7 @@
 
 
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
 
 
 </head>
@@ -105,6 +106,7 @@
 <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
 <!-- countdown -->
 <script src="{{asset('js/TimeCircles.js')}}"></script>
+<script type="text/javascript" src="{{asset('/jquery-alert/jquery.alertable.js')}}"></script>
 
 
 <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>

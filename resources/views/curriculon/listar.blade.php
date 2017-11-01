@@ -1,9 +1,9 @@
 <div class="table-responsive">
 		<table class="table table-striped">
 			<thead>
-				<th>1.er Nombre</th>
-				<th>1.er Apellido</th>
-				<th>Resumen</th>
+				<th>Primer Nombre</th>
+				<th>Primer Apellido</th>
+				<th>Nacionalidad</th>
 				<th>Opciones</th>
 			</thead>
 			<tbody>
@@ -16,7 +16,7 @@
 									{{$c->primer_apellido}}
 								</td>
 								<td>
-									{!!$c->resumen!!}
+									{!!$c->nacionalidad!!}
 								</td>
 									
 								<td>
@@ -24,7 +24,7 @@
 				             		<a class="btn btn-info btn-sm" href="#" Onclick='DatosCurriculons({{$c->id}});' data-toggle='modal' data-target='#ModalEditar' style ="margin-right: 8px;">
 				              			<i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i>
 				              		</a>
-				              		<a id="elim" class="btn btn-danger btn-sm" href="#" onclick="Eliminar('{{$c->id}}','{{$c->name}}')">
+				              		<a id="elim" class="btn btn-danger btn-sm" href="#" onclick="Eliminar('{{$c->id}}','{{$c->primer_nombre}} {{$c->primer_apellido}}')">
 				                		<i class="fa fa-trash" aria-hidden="true"></i>
 				              		</a>
 
@@ -33,8 +33,7 @@
 						@endforeach
 			</tbody>
 		</table>
-		<center>
-			<h4>{{--$user->render()--}}</h4>
-		</center>
-
 </div>
+<center>
+			<h4>{{$curriculon->render()}}</h4>
+</center>

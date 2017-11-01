@@ -44,13 +44,17 @@
                                  style="display:none">
                                 <strong> Se actualizo correctamente</strong>
                             </div>
+                            <div id="message-delete" class="alert alert-danger alert-dismissible" role="alert"
+                                 style="display:none">
+                                <strong> Se ha eliminado correctamente</strong>
+                            </div>
                             <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                                aria-controls="collapseExample">
                                 ver comentarios <span class="badge">{{$blogs->comentarios->count()}}</span>
                             </a>
 
                             <div class="collapse" id="collapseExample">
-                                <div class="well">
+                                <div class="well" id="caja">
                                     <div id="listar-comentarios"></div>
                                 </div>
                             </div>
@@ -85,6 +89,6 @@
     @include('comentarios.modalComentar')
     @include('comentarios.modalEdit')
 @section('script')
-    <script type="text/javascript" src="{{asset('/js/comentarios.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/js/comentarios.js')}}"></script>
 @endsection
 @endsection

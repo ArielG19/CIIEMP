@@ -24,7 +24,8 @@
 				             		<a class="btn btn-info btn-sm" href="#" Onclick='MostrarUsuario({{$user->id}});' data-toggle='modal' data-target='#myModal' style ="margin-right: 8px;">
 				              			<i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i>
 				              		</a>
-				              		<a id="elim" class="btn btn-danger btn-sm" href="#" onclick="Eliminar('{{$user->id}}','{{$user->nombre}}')">
+
+				              		<a id="elim" class="btn btn-danger btn-sm" href="#" onclick="Eliminar('{{$user->id}}','{{$user->name}}')">
 				                		<i class="fa fa-trash" aria-hidden="true"></i>
 				              		</a>
 				           		</td>
@@ -32,8 +33,8 @@
 						@endforeach
 			</tbody>
 		</table>
-		<center>
-			<h4>{{--$user->render()--}}</h4>
-		</center>
-
 </div>
+<center>
+	<h4>{{$users->render()}}</h4>
+</center>
+

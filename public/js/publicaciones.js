@@ -1,7 +1,8 @@
 $(document).ready(function(){
 		listarPublicaciones();
 });
-	var listarPublicaciones = function(){
+
+var listarPublicaciones = function(){
 	$.ajax({
 		type:'get',
 		url:'listar-publicaciones',
@@ -10,6 +11,20 @@ $(document).ready(function(){
 		}
 	});
 }
+
+$(document).on("click",".pagination li a",function(e){
+	//se produce un evento
+	e.preventDefault();
+	var url = $(this).attr("href");
+	$.ajax({
+		type:'get',
+		url:url,
+		success:function(data){ //data contiene toda la informacion generada
+			$("#listar-publicaciones").empty().html(data);
+		}
+	});
+});
+
 $("#guardar").click(function(event){
 		var colaboradores = $("#coloraboradores").val();
 		//console.log(colaboradores);
@@ -106,3 +121,30 @@ $("#editar").click(function(event){
         		}
      });
 });
+
+var Eliminar = function(id,nombre){
+	$.alertable.confirm("<span>Estas seguro de eliminar las publicaciones de? </span>"+
+		"<strong><span><br>" +nombre+"</span></strong>",{
+		html:true
+	}).then(function(){
+		var route = "publicaciones/"+id+"";
+		var token = $("#token").val();
+
+		 $.ajax({
+      		url:route,
+				headers:{'X-CSRF-TOKEN':token},
+				type:'Delete',
+				dataType:'json',
+      			success:function(data){
+			          	if(data.success=='true')
+			          	{
+			          		listarPublicaciones();
+							$("#message-delete").fadeIn();
+							$("#message-delete").show().delay(3000).fadeOut(3);   
+			            }
+        		}
+    	});
+		
+
+	});
+}

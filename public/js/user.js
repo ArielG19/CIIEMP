@@ -1,7 +1,8 @@
-	$(document).ready(function(){
+$(document).ready(function(){
 		listarUsuario();
-	});
-	var listarUsuario = function(){
+});
+
+var listarUsuario = function(){
 	$.ajax({
 		type:'get',
 		url:'listar-usuarios',
@@ -10,6 +11,19 @@
 		}
 	});
 }
+
+$(document).on("click",".pagination li a",function(e){
+	//se produce un evento
+	e.preventDefault();
+	var url = $(this).attr("href");
+	$.ajax({
+		type:'get',
+		url:url,
+		success:function(data){ //data contiene toda la informacion generada
+			$("#listar-usuarios").empty().html(data);
+		}
+	});
+});
 
 $("#guardar").click(function(event){
 		var name = $("#name").val();
@@ -51,7 +65,7 @@ function MostrarUsuario(id){
 		//console.log(id);
 		$("#id").val(data.id);
 		$("#Name").val(data.name);
-		$("#Type").val(data.type);
+		$("#Email").val(data.email);
 
 	});
 }
@@ -59,17 +73,17 @@ function MostrarUsuario(id){
 $("#actualizar").click(function(event){
 			var id = $("#id").val();
 			var name = $("#Name").val();
-			var type = $("#Type").val();
+			var email = $("#Email").val();
 
 			var route = "usuarios/"+id+"";
 			var token = $("#token").val();
   		
-     $.ajax({
+    $.ajax({
       		url:route,
 				headers:{'X-CSRF-TOKEN':token},
 				type:'PUT',
 				dataType:'json',
-				data:{name:name,type:type},
+				data:{name:name,email:email},
 
 
       			success:function(data){
@@ -78,11 +92,35 @@ $("#actualizar").click(function(event){
 							$("#myModal").modal('toggle');
 							//pintamos un mensaje
 							$("#message-update").fadeIn();
-							$("#message-update").show().delay(3000).fadeOut(3);
-							
-
-			                
+							$("#message-update").show().delay(3000).fadeOut(3);   
 			            }
         		}
-     });
+    });
 });
+
+var Eliminar = function(id,name){
+	$.alertable.confirm("<span>Estas seguro de eliminar al usuario? </span>"+
+		"<strong><span><br>" +name+"</span></strong>",{
+		html:true
+	}).then(function(){
+		var route = "usuarios/"+id+"";
+		var token = $("#token").val();
+
+		 $.ajax({
+      		url:route,
+				headers:{'X-CSRF-TOKEN':token},
+				type:'Delete',
+				dataType:'json',
+      			success:function(data){
+			          	if(data.success=='true')
+			          	{
+			          		listarUsuario();
+							$("#message-delete").fadeIn();
+							$("#message-delete").show().delay(3000).fadeOut(3);   
+			            }
+        		}
+    	});
+		
+
+	});
+}

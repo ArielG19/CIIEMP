@@ -33,7 +33,6 @@ class ComentarioController extends Controller
                                 
             });
                             
-            dd($comentarios);
             return view('comentarios.listar')->with('comentarios',$comentarios);
 
             
@@ -140,5 +139,17 @@ class ComentarioController extends Controller
     public function destroy($id)
     {
         //
+                $comentarios = Comentario::FindOrFail($id);
+                //dd($comentarios);
+                
+                $resultado = $comentarios->delete();
+
+                if($resultado)
+                {
+                    return response()->json(['success'=>'true']);
+                }else
+                {
+                    return response()->json(['success'=>'false']);
+                }
     }
 }

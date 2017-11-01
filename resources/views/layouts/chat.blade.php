@@ -17,6 +17,7 @@
             
             <link rel="stylesheet" href="{{asset('css/chat.css')}}">
             <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
+            <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
             
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -35,6 +36,7 @@
             <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
             <script src="{{asset('panel/js/app.min.js')}}"></script>
             <script src="{{asset('chosen/chosen.jquery.js')}}"></script>
+            <script type="text/javascript" src="{{asset('/jquery-alert/jquery.alertable.js')}}"></script>
            
             @yield('script')
 </html>

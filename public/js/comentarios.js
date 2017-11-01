@@ -17,8 +17,8 @@ var listarComentarios = function(){
 
 $("#guardarComentario").click(function(event){
 		var comentario = $("#comentario").val();
-		//var id_b = ($('input:hidden[name = id_blog]').val());
 		//console.log(blog);
+
 		 
   		var token = $("input[name=_token]").val();
   		//la ruta donde se envia la informacion del formulario
@@ -39,10 +39,12 @@ $("#guardarComentario").click(function(event){
 							$("#message-save").show().delay(3000).fadeOut(3);
 
 
+
 			                
 			            }
         		}
      		});
+ 			$('#comentario').val("").focus();
 });
 
 
@@ -81,3 +83,29 @@ $("#editarComentario").click(function(event){
 	        		}
      			});
 });
+
+var Eliminar = function(id){
+	$.alertable.confirm("<span>Estas seguro de eliminar este comentario?</span>",{
+		html:true
+	}).then(function(){
+		var route = "/comentarios/"+id+"";
+		var token = $("#token").val();
+
+		$.ajax({
+      		url:route,
+				headers:{'X-CSRF-TOKEN':token},
+				type:'Delete',
+				dataType:'json',
+      			success:function(data){
+			          	if(data.success=='true')
+			          	{
+			          		listarComentarios();
+							$("#message-delete").fadeIn();
+							$("#message-delete").show().delay(3000).fadeOut(3);   
+			            }
+        		}
+    	});
+		
+
+	});
+}

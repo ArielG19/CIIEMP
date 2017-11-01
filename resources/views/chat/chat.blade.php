@@ -23,7 +23,7 @@
                       <div>
                           <div class="msj-rta macro" style="margin:auto">                        
                               <div class="text text-r" >
-                                  {!!Form::open([])!!}
+                                  {!!Form::open(['id'=>'form'])!!}
                                           <input type="hidden" name="_token" value="{{ csrf_token()}}" id="token">
                                           <input type="hidden" id="id">
                                          

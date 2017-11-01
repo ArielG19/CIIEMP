@@ -5,12 +5,26 @@ $(document).ready(function(){
 var listarCurriculon = function(){
 		$.ajax({
 			type:'get',
-			url:'listar-curriculon',
+			url:'listar-curriculum',
 			success:function(data){
 				$('#listar-curriculon').empty().html(data);
 			}
 		});
 }
+
+$(document).on("click",".pagination li a",function(e){
+	//se produce un evento
+	e.preventDefault();
+	var url = $(this).attr("href");
+	$.ajax({
+		type:'get',
+		url:url,
+		success:function(data){ //data contiene toda la informacion generada
+			$("#listar-curriculon").empty().html(data);
+		}
+	});
+});
+
 
 $("#guardar").click(function(event){
 		var resumen = $("#resumen").val();
@@ -33,7 +47,7 @@ $("#guardar").click(function(event){
 	    
   		var token = $("input[name=_token]").val();
   		//la ruta donde se envia la informacion del formulario
-  		var route = "curriculon";
+  		var route = "curriculum";
   		
      $.ajax({
       		url:route,
@@ -55,10 +69,11 @@ $("#guardar").click(function(event){
 			            }
         		}
      });
+     
 });
 
 function DatosCurriculons(id){
-    var route = "/curriculon/"+id+"/edit";
+    var route = "/curriculum/"+id+"/edit";
         $.get(route, function(data){
         //console.log(data);
       	$("#id").val(data.id);
@@ -86,7 +101,7 @@ $("#actualizar").click(function(event){
 	var estado= $("#estado_ci_edit").val();
 	var id_usuario = $("#select_id_edit option:selected").val();
 
-	var route = "/curriculon/"+id+"";
+	var route = "/curriculum/"+id+"";
 	var token = $("#token").val();
   		
      $.ajax({
@@ -111,3 +126,30 @@ $("#actualizar").click(function(event){
         		}
      });
 });
+
+var Eliminar = function(id,nombre){
+	$.alertable.confirm("<span>Estas seguro de eliminar el curriculum vitae de? </span>"+
+		"<strong><span><br>" +nombre+"</span></strong>",{
+		html:true
+	}).then(function(){
+		var route = "curriculum/"+id+"";
+		var token = $("#token").val();
+
+		 $.ajax({
+      		url:route,
+				headers:{'X-CSRF-TOKEN':token},
+				type:'Delete',
+				dataType:'json',
+      			success:function(data){
+			          	if(data.success=='true')
+			          	{
+			          		listarCurriculon();
+							$("#message-delete").fadeIn();
+							$("#message-delete").show().delay(3000).fadeOut(3);   
+			            }
+        		}
+    	});
+		
+
+	});
+}

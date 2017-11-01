@@ -17,7 +17,7 @@ class CreatePublicacionesTable extends Migration
             $table->increments('id');
             $table->string('publicado_en');
             $table->string('titulo_trabajo');
-            $table->string('colaboradores');
+            $table->string('colaboradores')->nullable();
             $table->date('fecha');
             $table->string('link');
             $table->integer('id_autor')->unsigned();

@@ -56,8 +56,8 @@ Route::get('/listar-coversacion/{id}','ChatController@listarConversacion');
 //-------Rutas chat-----
 
 //-------Rutas curriculon-----
-Route::Resource('/curriculon','CurriculonController');
-Route::get('/listar-curriculon','CurriculonController@listarCurriculon');
+Route::Resource('/curriculum','CurriculonController');
+Route::get('/listar-curriculum','CurriculonController@listarCurriculon');
 //-------Rutas curriculon-----
 
 
@@ -115,9 +115,7 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('proyectos','ProyectosController');
 });
 
-Route::get('/agregar', function () {
-    return view('agregarPersonas');
-});
+
 Route::get('categoria/{id}/destroy', [
     'uses' => 'CategoriaController@destroy',
     'as' => 'categoria.destroy'

@@ -6,6 +6,9 @@
 		<a class="btn" id="a-nombre" style="margin-left: 15px;" data-id="{{$m->conversation_id}}">
 		 	Mensajes ({{$m->mensajes}}) 
 		</a> 
+		<a style="margin-left: 15px;" href="#" onclick="Eliminar('{{$m->conversation_id}}')">
+				   Eliminar <i class="fa fa-trash"></i>
+		</a>
 		<hr width="200px" style="border:1px solid lightgrey">
 		<br>
 	@elseif(Auth::user()->name == $m->emisor)
@@ -14,9 +17,15 @@
 		<a class="btn" id="a-nombre" style="margin-left: 15px;" data-id="{{$m->conversation_id}}">
 		 	Mensajes ({{$m->mensajes}}) 
 		</a> 
+		<a style="margin-left: 15px;" href="#" onclick="Eliminar('{{$m->conversation_id}}')">
+				   Eliminar <i class="fa fa-trash"></i>
+		</a>
 		<hr width="200px" style="border:1px solid lightgrey">
 		<br>
 	@endif
 
 @endforeach
+<center>
+	<h4>{{$message->render()}}</h4>
+</center>
 <script type="text/javascript" src="{{asset('/js/Chat/chatUsuarios.js')}}"></script>

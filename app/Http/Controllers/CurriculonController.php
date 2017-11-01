@@ -27,9 +27,10 @@ class CurriculonController extends Controller
         $curriculon = DB::table('users')
         ->Join('curriculons','users.id','curriculons.id_usuario')
         ->Join('teachers','users.id','teachers.id_usuario')
-        ->select('users.name','teachers.primer_nombre','teachers.primer_apellido','curriculons.resumen','curriculons.id')
-        ->get();
-        //dd($curriculon);
+        ->select('users.name','teachers.primer_nombre','teachers.primer_apellido','curriculons.nacionalidad','curriculons.id')
+        ->Orderby('curriculons.id','desc')
+        ->paginate(7);
+        
         return view('curriculon.listar')->with('curriculon',$curriculon);
     }
 
@@ -136,5 +137,16 @@ class CurriculonController extends Controller
     public function destroy($id)
     {
         //
+                $curriculum = Curriculon::FindOrFail($id);
+                
+                $resultado = $curriculum->delete();
+
+                if($resultado)
+                {
+                    return response()->json(['success'=>'true']);
+                }else
+                {
+                    return response()->json(['success'=>'false']);
+                }
     }
 }

@@ -1,5 +1,6 @@
 $(document).ready(function(){
         listarChat();
+        
     });
     var listarChat = function(){
     $.ajax({

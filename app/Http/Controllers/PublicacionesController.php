@@ -26,7 +26,9 @@ class PublicacionesController extends Controller
         ->Join('publicaciones','users.id','publicaciones.id_autor')
         ->Join('teachers','users.id','teachers.id_usuario')
         ->select('users.name','teachers.primer_nombre','teachers.primer_apellido','publicaciones.publicado_en','publicaciones.titulo_trabajo','publicaciones.colaboradores','publicaciones.fecha','publicaciones.link','publicaciones.id')
-        ->get();
+        ->Orderby('publicaciones.id','desc')
+        ->paginate(7);
+
         //dd($publicaciones);
         return view('publicaciones.listar')->with('publicaciones',$publicaciones);
     }
@@ -129,5 +131,16 @@ class PublicacionesController extends Controller
     public function destroy($id)
     {
         //
+                $publicaciones = Publicacione::FindOrFail($id);
+                
+                $resultado = $publicaciones->delete();
+
+                if($resultado)
+                {
+                    return response()->json(['success'=>'true']);
+                }else
+                {
+                    return response()->json(['success'=>'false']);
+                }
     }
 }
