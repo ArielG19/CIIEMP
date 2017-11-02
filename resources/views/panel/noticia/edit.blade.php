@@ -10,6 +10,7 @@
     @endif
 
 
+
     {!!Form::model($noticia,['route'=>['noticia.update',$noticia,],'method'=>'PUT','files' => true])!!}
     @if(is_null($noticia->articleEvent))
     <div class="col-md-2 pull-right">

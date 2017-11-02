@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Concursos;
 use App\Http\Requests\UploadRequest;
-
 use Illuminate\Http\Request;
 use App\Noticia;
 use App\File;
@@ -27,9 +25,9 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $noticias = Noticia::orderBy('id', 'DESC')->paginate(5);
 
-        return view('panel.noticia.index')->with(compact('noticias'));
+        $noticias = Noticia::orderBy('id', 'DESC')->paginate(5);
+        return view('panel.noticia.index')->with('noticias',$noticias);
     }
 
 
@@ -41,6 +39,7 @@ class NoticiaController extends Controller
      */
     public function create()
     {
+
         $categorias = Categoria::pluck('name', 'id');
         return view('panel.noticia.create', compact('categorias'));
     }
@@ -48,6 +47,7 @@ class NoticiaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
@@ -86,7 +86,6 @@ class NoticiaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -103,11 +102,11 @@ class NoticiaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
+
         $users = User::pluck('name', 'id');
         $categorias = Categoria::pluck('name', 'id');
         $noticia = Noticia::find($id);
@@ -120,6 +119,7 @@ class NoticiaController extends Controller
     /**
      * Update the specified resource in storage.
      *
+
      * @param  \Illuminate\Http\Request $request
      * @param  int $id
      * @return \Illuminate\Http\Response

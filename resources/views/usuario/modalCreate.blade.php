@@ -20,7 +20,7 @@
 									<input type="hidden" name="_token" value="{{ csrf_token()}}" id="token">
 									<input type="hidden" id="id">
 
-									 <div class="form-group">
+									<div class="form-group">
 		                        		{!!form::label('Nombre:')!!}
 		                            	{!!form::text('name',null,['id'=>'name','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
 		          					</div>

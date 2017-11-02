@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Carrera;
+use App\Career;
 use Session;
 use Redirect;
 
@@ -16,7 +16,7 @@ class CarreraController extends Controller
      */
     public function index()
     {
-      $carreras = Carrera::orderBy('id','DESC')->paginate(5);
+      $carreras = Career::orderBy('id','DESC')->paginate(5);
       return view('panel.carrera.index', compact('carreras'));
     }
 
@@ -38,9 +38,8 @@ class CarreraController extends Controller
      */
     public function store(Request $request)
     {
-      $carreras = new Carrera($request->all());
+      $carreras = new Career($request->all());
       $carreras->save();
-
 
       Session::flash('message','La carrera fue creada correctamente');
       return redirect::to('home/carrera');
@@ -65,7 +64,7 @@ class CarreraController extends Controller
      */
     public function edit($id)
     {
-    $carrera= Carrera::find($id);
+    $carrera= Career::find($id);
      return view('panel.carrera.edit',compact('carrera'));
     }
 
@@ -78,7 +77,7 @@ class CarreraController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $carrera= Carrera::find($id);
+      $carrera= Career::find($id);
       $carrera->fill($request->all());
       $carrera->save();
 
@@ -94,7 +93,7 @@ class CarreraController extends Controller
      */
     public function destroy($id)
     {
-      $carrera= Carrera::find($id);
+      $carrera= Career::find($id);
       $carrera->delete();
 
       Session::flash('message','Categoria eliminada correctamente');

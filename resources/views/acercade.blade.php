@@ -78,19 +78,63 @@
     <div id="about" class="page-section wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay="1s">
         <div class="container">
             <div class="row">
+<<<<<<< HEAD
+              <div class="col-md-12">
+                 <h3 class="text-center" id="H3_3">Qué hacemos</h3>
+              </div>
+=======
                 <div class="col-md-12">
                     <h3 class="text-center" id="H3_3">Qué hacemos</h3>
                 </div>
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="service-item first-service">
                         <div class="icon"></div>
+<<<<<<< HEAD
+                        <h4>Easy Customizations</h4>
+<<<<<<< HEAD
+                        <p>Meteor is free HTML website template by Tooplate. Feel free to use this layout for your project.</p>
+                    </div>
+                </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item second-service">
+                        <div class="icon"></div>
+                        <h4>Creative Ideas</h4>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.</p>
+                    </div>
+                </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item third-service">
+                        <div class="icon"></div>
+                        <h4>Good Profit</h4>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.</p>
+                    </div>
+                </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item fourth-service">
+                        <div class="icon"></div>
+                        <h4>Open To Public</h4>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.</p>
+=======
+                        <p>Meteor is free HTML website template by Tooplate. Feel free to use this layout for your
+                            project.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item second-service">
+                        <div class="icon"></div>
+                        <h4>Creative Ideas</h4>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke,
+                            typewriter.</p>
+=======
                         <h4>Grupos de investigación multidisciplinarios</h4>
                         <p>Establecer grupos de investigación multidisciplinarios y aplicados para
                             que impulsen las líneas de investigación.
 
                         </p>
+>>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
                     </div>
                 </div>
 
@@ -106,10 +150,17 @@
                 <div class="col-md-4 col-sm-6 col-xs-12 ">
                     <div class="service-item second-service">
                         <div class="icon"></div>
+<<<<<<< HEAD
+                        <h4>Open To Public</h4>
+                        <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke,
+                            typewriter.</p>
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47
+=======
                         <h4>Realizar procesos innovadores</h4>
                         <p>Realizar procesos innovadores que contribuyan a la solución de problemas socioeconómicos,
                             en una relación de colaboración entre empresa-estado y que aporten al crecimiento económico del país.
                         </p>
+>>>>>>> f825dd91c7a2faefb3454e0e7c07c5a0125159a2
                     </div>
                 </div>
             </div>

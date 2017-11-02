@@ -25,4 +25,5 @@ class Proyecto extends Model
    {
        return $this->belongsTo('App\Profesor','id_profesor','id');
    }
+
 }

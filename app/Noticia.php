@@ -28,12 +28,14 @@ class Noticia extends Model
          return $this->belongsTo('App\Categoria','id_categoria','id');
      }
 
-     public function articleImg(){
+    public function articleImg()
+    {
 
          return $this->hasMany('App\File','id_noticias','id');
      }
 
-    public function articleEvent(){
+    public function articleEvent()
+    {
 
         return $this->hasOne('App\Concursos','id_noticia','id');
     }

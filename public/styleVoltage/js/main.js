@@ -220,5 +220,8 @@ $( document ).ready(function() {
 
     $(".prueba").height(maxHeight);
 });
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 696399a1ae1183c398a2cdaee84fb00c9a445b47

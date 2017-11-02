@@ -3,6 +3,7 @@
 @section('contenido')
 
 
+
     {!!Form::model($blog,['route'=>['blogs.update',$blog],'method'=>'PUT','files' => true])!!}
 
     <div class="form-group">
@@ -49,4 +50,5 @@
 
     {!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
     {!!Form::close()!!}<br>
+
 @endsection

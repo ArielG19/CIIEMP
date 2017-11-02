@@ -17,17 +17,15 @@
 							<input type="hidden" name="_token" value="{{ csrf_token()}}" id="token">
 							<input type="hidden" id="id">
 
-							 <div class="form-group">
+							<div class="form-group">
                         		{!!form::label('Nombre:')!!}
                             	{!!form::text('name',null,['id'=>'Name','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
           					</div>
-                    		
 
-                    		<div class="form-group">
-                        		{!!Form::label('Tipo')!!}
-                        		{!!Form::select('type',[''=>'Seleccione un tipo','admin'=>'administrador','profesor'=>'Profesor','estudiante'=>'Estudiante'],null,['id'=>'Type','class'=>'form-control'])!!}
-                    		</div>
-							
+          					<div class="form-group">
+                        		{!!form::label('Email:')!!}
+                            	{!!form::text('email',null,['id'=>'Email','class'=>'form-control'])!!}
+          					</div>							
                 		{!!Form::close()!!}
 					</div>
 

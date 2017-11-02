@@ -20,7 +20,6 @@ class FrontController extends Controller
     public function index()
     {
       $allcategorias = Categoria::all();
-
       $blogs = Blog::OrderBy('id', 'DESC')->paginate(4);
 
       return view('blog/index',compact('blogs','allcategorias'));

@@ -14,7 +14,6 @@ use Session;
 use Redirect;
 use Image;
 
-
 class BlogController extends Controller
 {
     /**
@@ -24,12 +23,10 @@ class BlogController extends Controller
      */
     public function index()
     {
-
         $blogs = Blog::orderBy('id', 'DESC')->paginate(5);
 
         return view('panel.blog.index')->with(compact('blogs'));
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -45,6 +42,7 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
@@ -84,23 +82,24 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
+
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
+
         $users = User::pluck('name', 'id');
         $categorias = Categoria::pluck('name', 'id');
 
-
         $blog = Blog::find($id);
-
         return view('panel.blog.edit', compact('users', 'categorias', 'blog'));
     }
 
     /**
      * Update the specified resource in storage.
      *
+
      * @param  \Illuminate\Http\Request $request
      * @param  int $id
      * @return \Illuminate\Http\Response
@@ -137,6 +136,7 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
@@ -165,5 +165,6 @@ class BlogController extends Controller
 
         Session::flash('message', 'Entrada de blog eliminada Correctamente');
         return redirect::to('home/blogs');
+
     }
 }

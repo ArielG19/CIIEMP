@@ -3,7 +3,7 @@
     <div class="fh5co-footer-style-3">
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-
+				<div class="fh5co-logo"><span class="logo">C</span>IIEMP</div>
 				<h3>Enlaces</h3>
 				<p class="fh5co-copyright">&copy; 2017.
 					<br>
@@ -15,7 +15,6 @@
 						Created with
 					<a target="_blank" href="#">Cards</a>
 					<br>
-
 				</p>
 		</div>
 
@@ -38,11 +37,13 @@
 				<li><a href="#"><i class="icon icon-instagram"></i> Instagram</a></li>
 			</ul>
 		</div>
+
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
 			<h3>Acerca de nosotros</h3>
 			<p>Plataforma Web para la promoción y desarrollo de proyectos de innovación y emprendimiento. </p>
 			<p><a href="{{ url('/acercade') }}" class="btn btn-success btn-sm btn-outline">Más...</a></p>
 		</div>
+
 		<div class="clearfix visible-sm-block"></div>
 
 		<div class="container fh5co-made">

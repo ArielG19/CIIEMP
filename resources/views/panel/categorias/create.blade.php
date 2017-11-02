@@ -13,8 +13,6 @@
         {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
 
     </div>
-
-
-
     {!! Form::close() !!}
+
 @endsection

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Teacher;
+use App\Student;
+use App\Career;
+
 use Auth;
 use Image;
 
@@ -22,32 +26,10 @@ class UserController extends Controller
 
     public function listarUsuario()
     {
-        $users = User::all();
+        $users = User::Orderby('name','desc')->paginate(7);
         return view('usuario.listar')->with('users',$users);
     }
 
-    //--------METODOS PARA EL PERFIL------------------------------------------------
-    public function miPerfil()
-    {
-        return view('perfil.perfil',array('user' => Auth::user() ));
-    }
-
-    public function upPerfil(Request $request)
-    {
-        if($request->hasFile('imagen'))
-        {
-            $imagen= $request->file('imagen');
-            $filename= time(). '.'. $imagen->getClientOriginalExtension();
-            Image::make($imagen)->resize(300,300)->save(public_path('perfil/'.$filename));
-
-            $user=Auth::user();
-            $user->imagen =$filename;
-            $user->save();
-        }
-        //return view('isnaya.usuarios.listar')->with('usuarios',$usuarios);
-        return view('perfil.perfil', array('user'=> Auth::user() ));
-    }
-    //--------METODOS PARA EL PERFIL------------------------------------------------
 
     /**
      * Show the form for creating a new resource.
@@ -67,18 +49,39 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        if($request->ajax()){
-            $usuarios = User::create($request->all());
-            $usuarios->password=bcrypt($request->password);
-            $usuarios->save();
-            //si no hay error entonces
-            if($usuarios){
-                //Session::flash('save','Se ha creado correctamente');
-                return response()->json(['success'=>'true']);
-            }else{
-                return response()->json(['success'=>'false']);
-            }
+        if($request->ajax())
+        {
+                    //dd($request->type);
+                    $usuarios = new User();
+                    $usuarios->name = $request->name;
+                    $usuarios->email = $request->email;
+                    $usuarios->type = $request->type;
+                    $usuarios->password=bcrypt($request->password);
+                    $usuarios->save();
+
+                if($request->type == 'profesor')
+                {
+                    $profesor = new Teacher();
+                    $profesor->id_usuario = $usuarios->id;
+                    $profesor->save();
+
+                   
+                }
+                elseif($request->type == 'estudiante')
+                {
+                    $estudiante = new Student();
+                    $estudiante->id_usuario = $usuarios->id;
+                    $estudiante->save();
+                }
+                
+                //si no hay error entonces
+                if($usuarios){
+                    //Session::flash('save','Se ha creado correctamente');
+                    return response()->json(['success'=>'true']);
+                }else{
+                    return response()->json(['success'=>'false']);
+                }
+
         }
     }
 
@@ -142,5 +145,16 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+                $usuarios = User::FindOrFail($id);
+                
+                $resultado = $usuarios->delete();
+
+                if($resultado)
+                {
+                    return response()->json(['success'=>'true']);
+                }else
+                {
+                    return response()->json(['success'=>'false']);
+                }
     }
 }

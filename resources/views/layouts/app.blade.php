@@ -8,10 +8,9 @@
     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive"/>
 
     <title>@yield('title','Default')</title>
-
-
     <!--link rel="shortcut icon" href="favicon.ico"-->
     <!-- Google Fonts -->
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700'
           rel='stylesheet' type='text/css'>
 
@@ -47,10 +46,12 @@
 
 
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
 
 
 </head>
 <body>
+
 
 <section>
     @include('include.nav')
@@ -105,6 +106,7 @@
 <script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
 <!-- countdown -->
 <script src="{{asset('js/TimeCircles.js')}}"></script>
+<script type="text/javascript" src="{{asset('/jquery-alert/jquery.alertable.js')}}"></script>
 
 
 <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>

@@ -1,4 +1,5 @@
 @foreach($comentarios as $c)
+
     <article class="post">
         <h4>
             <img src="/perfil/{{$c->user->imagen}}"
@@ -9,12 +10,15 @@
             {{$c->comentario}}
         </p>
         <div class="info">
-            {{$c->created_at->diffForHumans()}}
+            {{date('g:i a ', strtotime($c->created_at))}}
             {{--Si el usuario auntentificado es el que creo el post--}}
             @if(Auth::user() == $c->user)
                 <a href="#" data-toggle='modal' data-target='#editComentarioModal'
-                   Onclick='mostrarComentarios({{$c->id}});'>Edit</a>
-                <a href="#">Delete</a>
+                   Onclick='mostrarComentarios({{$c->id}});'>Editar</a>
+        
+                <a id="elim" href="#" onclick="Eliminar('{{$c->id}}')">Elimnar
+                     <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
             @endif
 
         </div>

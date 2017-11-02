@@ -1378,6 +1378,7 @@ a:hover .lnk-icon-right {
 .fh5co-content-style-8,
 .fh5co-content-style-9,
 .fh5co-content-style-10 {
+
   padding: bottom 5px;
   background: #fff;
 }
@@ -2255,7 +2256,7 @@ a:hover .lnk-icon-right {
 
 
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-text img, .img-text{
-  
+
 }
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-image {
   position: relative;
@@ -2366,7 +2367,6 @@ a:not(.btn) {color: #b3b3b3;}
  justify-content: center;
 }
 .fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a:hover {
-
 }
 
 
@@ -2897,6 +2897,7 @@ a:not(.btn) {color: #b3b3b3;}
 }
 
 .fh5co-footer-style-3 {
+
   background: #212121;
   font-size: 15px;
 }
@@ -3520,14 +3521,9 @@ nav.navbar-findcond ul.dropdown-menu > li > a { color: #fff; border-style: solid
 /*nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: rgba(71,152,185, 0.3); color: #fff; }*/
 nav.navbar-findcond span.badge { background:rgba(71,152,185, 0.3); font-weight: normal; font-size: 11px; margin: 0 4px; }
 nav.navbar-findcond span.badge.new { background: rgba(71,152,185, 0.8); color: #fff; }
-
-
-
 nav.navbar-findcond ul.navbar-nav li > a:hover { color: #f1d432; }
-nav.navbar-findcond ul.navbar-nav li > a:hover { background: transparent!important; }
-
-
-
+nav.navbar-findcond ul.navbar-nav li > a:hover { background: transparent!important; 
+}
 nav.navbar-findcond{
 
 }
@@ -3570,7 +3566,8 @@ color: #ff173c; }
 
 
 #noticias{
-  padding-bottom: 50px;
+  padding-bottom: 300px;
+  margin-bottom: 50px;
 }
 
 
