@@ -9,7 +9,7 @@ class Proyecto extends Model
     //
     protected $table = "proyectos";
 
-  	protected $fillable = ['id','titulo','imagen','responsable','objetivo','resumenCorto','resumenLargo','id_usuario','id_categoria','teacher_id'];
+  	protected $fillable = ['id','titulo','imagen','responsable','historia','resumenCorto','resumenLargo','id_usuario','id_categoria','teacher_id'];
 
    public function users()
    {

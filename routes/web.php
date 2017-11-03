@@ -190,6 +190,11 @@ Route::get('/proyectos',[
     'as'   => 'proyectos'
     ]);
 
+Route::post('/storeEgresado',[
+    'uses' => 'ProyectosController@storeEgresado',
+    'as'   => 'proyectos.storeEgresado'
+    ]);
+
 Route::get('detalleProyecto/{id}','ProyectosController@show');
 
 Route::get('proyectos/{id}/destroy', [

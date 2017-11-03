@@ -73,6 +73,36 @@ class ProyectosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function storeEgresado(Request $request){
+        try{   
+            $proyect = new Proyecto($request->all());
+            $proyect->teacher_id = null;
+            $proyect->responsable = $request->responsable;
+            $proyect->historia = $request->historia;
+            $proyect->resumenCorto = null;
+
+            if ($request->hasFile('imagen')) {
+                $imagen = $request->file('imagen');
+                $filename= time(). '.' .$imagen->getClientOriginalExtension();
+                Image::make($imagen)->resize(1000, 500)->save(public_path('images/'.$filename));
+                $proyect->imagen=$filename;
+                $proyect->save();
+            }else {
+                dd("no esta mandando imagen");
+                $proyect->imagen = null;
+                $proyect->save();
+            }
+    
+            Session::flash('message','Proyecto publicado correctamente');
+            return redirect::to('home/proyectos');        
+            
+        }
+        catch(Exception $ex){
+            dd(ex);
+        }
+        
+     }
     public function store(Request $request)
     {
         //
@@ -93,9 +123,11 @@ class ProyectosController extends Controller
           $filename= time(). '.' .$imagen->getClientOriginalExtension();
           Image::make($imagen)->resize(1000, 500)->save(public_path('images/'.$filename));
           $proyect->imagen=$filename;
+          $proyect->historia=null;
           $proyect->save();
         }else {
-          $proyect->path = null;
+          $proyect->imagen = null;
+          $proyect->historia=null;
           $proyect->save();
         }
 

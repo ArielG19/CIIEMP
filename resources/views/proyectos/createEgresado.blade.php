@@ -4,7 +4,7 @@
 
 <div>
 	<u><h2 class="text-center">Nuevo Proyecto de Egresado</h2></u>
-	{!! Form::open(['route' => 'proyectos.store', 'method' => 'POST','files'=>true]) !!}
+	{!! Form::open(['route' => 'proyectos.storeEgresado', 'method' => 'POST','files'=>true]) !!}
 
 		<div class="form-group col-md-8">
 				{!! Form::label('titulo','Título') !!}
@@ -17,27 +17,13 @@
 		</div>
 
 		<div class="form-group col-md-6">
-				{!! Form::label('profesor','Buscar Responsable') !!}
-
-				{!! Form::select('id_profesor',$profesor, null,['id'=>'cmbprofesor','class' =>'form-control'])!!}
-			
-				
-		</div>
-
-		<div class="form-group col-md-6">
-				{!! Form::label('responsable','Introducir Responsable Manualmente') !!}
-				{!! Form::checkbox('checkbox', 'value',null,['id'=>'checkbox'])!!}
-				{!! Form::text('responsable',null,['id'=>'txtresponsable','class' =>'form-control', 'placeholder' =>'Responsable del Proyecto','required','disabled'])!!}
+				{!! Form::label('responsable','Responsable') !!}
+				{!! Form::text('responsable',null,['id'=>'txtresponsable','class' =>'form-control', 'placeholder' =>'Responsable del Proyecto','required'])!!}
 		</div>
 
 		<div class="form-group col-md-8">
-				{!! Form::label('objetivos','Objetivos') !!}
-				{!! Form::textarea('objetivo',null,['class' =>'form-control', 'placeholder' =>'Objetivos del Proyecto','maxlength' => 100,'required'])!!}
-		</div>
-
-		<div class="form-group col-md-8">
-				{!! Form::label('resumenCorto','Resumen de 100 palabras') !!}
-				{!! Form::text('resumenCorto',null,['class' =>'form-control', 'placeholder' =>'Lema o Resumen corto','maxlength' => 100,'required'])!!}
+				{!! Form::label('historia','Historia') !!}
+				{!! Form::textarea('historia',null,['class' =>'form-control', 'placeholder' =>'Breve Historia del Proyecto 300 palabras','maxlength' => 300,'required'])!!}
 		</div>
 
 		<div class="form-group col-md-8">

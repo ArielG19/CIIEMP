@@ -57,12 +57,11 @@
 
 	</div>
 
-	<div class="fh5co-footer-style-3 fondo">
+	<div class="fh5co-footer-style-3 fondo color">
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo"><img src="{{asset('styleVoltage/images/Marca Negativo.png')}}" alt="" width="60%"></div>
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo2"><img src="{{asset('styleVoltage/images/CIIEMP-Coloroscuro Negativo.png')}}" alt="" width="50%"></div>
-
 	</div>
 <!-- END footer -->
 
@@ -70,14 +69,20 @@
 	<style>
 	.fondo{
 
-		height: 150px;
-		margin-top: -4em;
+		height: 100px;
 	}
 		.estilo{
-			margin-top: -5em;
+			margin-top: -4.5em;
+		
 		}
 		.estilo2{
 			margin-top: -4em;
+		
 		}
+
+	.color{
+		background:#0F0F0F;
+		
+	}
 	</style>
 </footer>

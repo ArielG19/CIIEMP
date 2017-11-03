@@ -31,11 +31,6 @@
 		</div>
 
 		<div class="form-group col-md-8">
-				{!! Form::label('objetivos','Objetivos') !!}
-				{!! Form::textarea('objetivo',null,['class' =>'form-control', 'placeholder' =>'Objetivos del Proyecto','maxlength' => 100,'required'])!!}
-		</div>
-
-		<div class="form-group col-md-8">
 				{!! Form::label('resumenCorto','Resumen de 100 palabras') !!}
 				{!! Form::text('resumenCorto',null,['class' =>'form-control', 'placeholder' =>'Lema o Resumen corto','maxlength' => 100,'required'])!!}
 		</div>

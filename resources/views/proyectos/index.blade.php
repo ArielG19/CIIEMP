@@ -17,7 +17,7 @@
   	<th>Imagen</th>
   	<th id="tdresponsable">Responsable</th>
     <th id="tdotro">Otro</th>
-    <th>Objetivo</th>
+    <th>Historia</th>
     <th>Resumen Largo</th>
     <th>Acciones</th>
 
@@ -43,7 +43,7 @@
       @else
         <td>{{$proyects->responsable}}</td>
       @endif 
-      <td>{{$proyects->objetivo}}</td>
+      <td>{{$proyects->historia}}</td>
       <td>{{$proyects->resumenLargo}}</td>
     
 
