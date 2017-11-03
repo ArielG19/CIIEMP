@@ -16,13 +16,13 @@
                         </i> Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="dropdown">
-                    <a href="{{ url('/docentes-innovadores') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
                      Investigación
                     </a>
                     <ul class="dropdown-menu" role="menu">
 
-                        <li><a href="#"></span>Docentes Investigadores</a></li>
+                        <li><a href="{{ url('/docentes-innovadores') }}"></span>Docentes Investigadores</a></li>
 
 
                     </ul>
