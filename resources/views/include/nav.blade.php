@@ -15,6 +15,18 @@
                         <i class="fa fa-home fa-lg" aria-hidden="true">
                         </i> Inicio<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="dropdown">
+                    <a href="{{ url('/docentes-innovadores') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+                     Investigación
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+
+                        <li><a href="#"></span>Docentes Investigadores</a></li>
+
+
+                    </ul>
+                </li>
                 <li class="active"><a href="{{ url('bloghome') }}">
                         <i class="fa fa-bold fa-lg" aria-hidden="true">
                         </i> Blog<span class="sr-only">(current)</span></a>

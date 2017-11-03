@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="{{asset('styleVoltage/css/magnific-popup.css')}}">
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="{{asset('styleVoltage/css/owl.carousel.min.css')}}">
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
 
     <link rel="stylesheet" href="{{asset('styleVoltage/css/owl.theme.default.min.css')}}">
     <!-- Bootstrap  -->
