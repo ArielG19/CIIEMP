@@ -16,10 +16,13 @@ class CreateFilesTable extends Migration
         Schema::create('files', function (Blueprint $table) {
             $table->increments('id');
             $table->string('image');
-            $table->integer('id_noticias')->unsigned();
+            $table->integer('id_noticias')->nullable();
+            $table->integer('id_proyectos')->nullable();
             $table->timestamps();
+            
 
             $table->foreign('id_noticias')->references('id')->on('noticias')->onDelete('cascade');
+            $table->foreign('id_proyectos')->references('id')->on('proyectos')->onDelete('cascade');
         });
     }
 

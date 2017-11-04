@@ -36,7 +36,7 @@ class ProfesorController extends Controller
      */
     public function create()
     {
-
+      
     }
 
     /**
@@ -47,6 +47,7 @@ class ProfesorController extends Controller
      */
     public function store(Request $request)
     {
+      
 
     }
 

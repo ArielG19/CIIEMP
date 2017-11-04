@@ -3,7 +3,7 @@
 @section('contenido')
 
 <div>
-	<u><h2 class="text-center">Nuevo Proyecto</h2></u>
+	<u><h2 class="text-center">Nuevo Proyecto Estudiante</h2></u>
 	{!! Form::open(['route' => 'proyectos.store', 'method' => 'POST','files'=>true]) !!}
 
 		<div class="form-group col-md-8">
@@ -28,11 +28,6 @@
 				{!! Form::label('responsable','Introducir Responsable Manualmente') !!}
 				{!! Form::checkbox('checkbox', 'value',null,['id'=>'checkbox'])!!}
 				{!! Form::text('responsable',null,['id'=>'txtresponsable','class' =>'form-control', 'placeholder' =>'Responsable del Proyecto','required','disabled'])!!}
-		</div>
-
-		<div class="form-group col-md-8">
-				{!! Form::label('objetivos','Objetivos') !!}
-				{!! Form::textarea('objetivo',null,['class' =>'form-control', 'placeholder' =>'Objetivos del Proyecto','maxlength' => 100,'required'])!!}
 		</div>
 
 		<div class="form-group col-md-8">

@@ -8,9 +8,10 @@
     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive"/>
 
     <title>@yield('title','Default')</title>
+
+
     <!--link rel="shortcut icon" href="favicon.ico"-->
     <!-- Google Fonts -->
-
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700'
           rel='stylesheet' type='text/css'>
 
@@ -55,7 +56,6 @@
 
 </head>
 <body>
-
 
 <section>
     @include('include.nav')

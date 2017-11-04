@@ -6,7 +6,7 @@ use App\Biblioteca;
 use App\Proyecto;
 use App\Categoria;
 use App\User;
-use App\Profesor;
+use App\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Session;
@@ -30,7 +30,7 @@ class ProyectosController extends Controller
     public function index()
     {
 
-        $proyect =Proyecto::orderBy('id','DESC')->paginate(5);
+        $proyect = Proyecto::orderBy('id','DESC')->paginate(5);
 
         $proyect->each(function($proyect){
 
@@ -49,11 +49,20 @@ class ProyectosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function egresados()
+    {
+        $categorias = Categoria::pluck('name','id');
+
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
+       
+        return view('proyectos.createEgresado',compact('categorias','profesor'));
+    }
+
     public function create()
     {
         $categorias = Categoria::pluck('name','id');
 
-        $profesor = Profesor::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','','or','primer_apellido','!=','','or','primer_apellido','!=','')->pluck('full_name', 'id');
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
        
         return view('proyectos.create',compact('categorias','profesor'));
     }
@@ -64,6 +73,36 @@ class ProyectosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function storeEgresado(Request $request){
+        try{   
+            $proyect = new Proyecto($request->all());
+            $proyect->teacher_id = null;
+            $proyect->responsable = $request->responsable;
+            $proyect->historia = $request->historia;
+            $proyect->resumenCorto = null;
+
+            if ($request->hasFile('imagen')) {
+                $imagen = $request->file('imagen');
+                $filename= time(). '.' .$imagen->getClientOriginalExtension();
+                Image::make($imagen)->resize(1000, 500)->save(public_path('images/'.$filename));
+                $proyect->imagen=$filename;
+                $proyect->save();
+            }else {
+                dd("no esta mandando imagen");
+                $proyect->imagen = null;
+                $proyect->save();
+            }
+    
+            Session::flash('message','Proyecto publicado correctamente');
+            return redirect::to('home/proyectos');        
+            
+        }
+        catch(Exception $ex){
+            dd(ex);
+        }
+        
+     }
     public function store(Request $request)
     {
         //
@@ -72,7 +111,7 @@ class ProyectosController extends Controller
 
         if($request->input('responsable') == null){
 
-            $proyect->id_profesor = $request->id_profesor;
+            $proyect->teacher_id = $request->id_profesor;
         }
         else{
 
@@ -84,9 +123,11 @@ class ProyectosController extends Controller
           $filename= time(). '.' .$imagen->getClientOriginalExtension();
           Image::make($imagen)->resize(1000, 500)->save(public_path('images/'.$filename));
           $proyect->imagen=$filename;
+          $proyect->historia=null;
           $proyect->save();
         }else {
-          $proyect->path = null;
+          $proyect->imagen = null;
+          $proyect->historia=null;
           $proyect->save();
         }
 
@@ -119,6 +160,14 @@ class ProyectosController extends Controller
     public function edit($id)
     {
         //
+        $categorias = Categoria::pluck('name','id');
+
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','','or','primer_apellido','!=','','or','primer_apellido','!=','')->pluck('full_name', 'id');
+
+
+        $proyect = Proyecto::find($id);
+
+        return view('proyectos.edit', compact('categorias', 'profesor','proyect'));
     }
 
     /**
@@ -130,7 +179,33 @@ class ProyectosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $proyect= proyecto::find($id);
+        $proyect->fill($request->all());
+
+        if($request->input('responsable') == null){
+
+            $proyect->teacher_id = $request->id_profesor;
+        }
+        else{
+
+            $proyect->responsable = $request->responsable;
+        }
+
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen');
+            $filename = time() . '.' . $imagen->getClientOriginalExtension();
+            Image::make($imagen)->resize(1000, 500)->save(public_path('images/' . $filename));
+            $oldfilename = $proyect->path;
+            $proyect->path = $filename;
+            Storage::delete($oldfilename);
+
+        }
+
+        $proyect->save();
+
+        Session::flash('message','Proyecto modificado correctamente');
+        return redirect::to('home/proyectos');
     }
 
     /**
@@ -142,5 +217,18 @@ class ProyectosController extends Controller
     public function destroy($id)
     {
         //
+        $proyect = Proyecto::findOrFail($id);
+
+        if ($proyect->imagen != null) {
+            $file_path = public_path('images/') . '/' . $proyect->imagen;
+            unlink($file_path);
+            $proyect->delete();
+        }
+        else{
+            $proyect->delete();
+        }
+
+        Session::flash('message', 'Proyecto eliminado Correctamente');
+        return redirect::to('home/proyectos');
     }
 }

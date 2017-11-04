@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Concursos;
 use App\Http\Requests\UploadRequest;
+
 use Illuminate\Http\Request;
 use App\Noticia;
 use App\File;
@@ -25,9 +27,9 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-
         $noticias = Noticia::orderBy('id', 'DESC')->paginate(5);
-        return view('panel.noticia.index')->with('noticias',$noticias);
+
+        return view('panel.noticia.index')->with(compact('noticias'));
     }
 
 
@@ -39,7 +41,6 @@ class NoticiaController extends Controller
      */
     public function create()
     {
-
         $categorias = Categoria::pluck('name', 'id');
         return view('panel.noticia.create', compact('categorias'));
     }
@@ -47,7 +48,6 @@ class NoticiaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
@@ -86,6 +86,7 @@ class NoticiaController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -102,13 +103,15 @@ class NoticiaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-
         $users = User::pluck('name', 'id');
         $categorias = Categoria::pluck('name', 'id');
+
+
         $noticia = Noticia::find($id);
 
 
@@ -119,18 +122,12 @@ class NoticiaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-
      * @param  \Illuminate\Http\Request $request
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-//        $noticia = DB::table('noticias')
-//
-//            ->join('concursos','noticias.id','concursos.id_noticia')
-//            ->where('noticias.id',$id)
-//            ->get();
 
         $noticia = Noticia::find($id);
         $noticia->fill($request->all())->save();
@@ -182,18 +179,6 @@ class NoticiaController extends Controller
      */
     public function destroy($id)
     {
-//        $not = Noticia::findOrFail($id);
-//        if (isset($not->articleImg[0]->image)) {
-//            //eliminar multiples files
-//            foreach ($not->articleImg as $img) {
-//                $file_path = public_path('images/noticia') . '/' . $img->image;
-//                unlink($file_path);
-//                $not->delete();
-//
-//            }
-//        } else {
-//            $not->delete();
-//        }
 
         $not = Noticia::findOrFail($id);
         if ((isset($not->articleImg[0])) and ($not->articleEvent == null)) {

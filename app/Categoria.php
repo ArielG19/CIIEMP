@@ -15,23 +15,19 @@ class Categoria extends Model
 
     }
 
-    public function biblios()
-    {
+    public function biblios(){
     return $this->hasMany('App\Biblioteca','id_categoria','id');
 
     }
-   public function proyectos()
-   {
+ 	public function proyectos(){
     return $this->hasMany('App\Proyecto');
 
     }
-    public function scopeSearch()
-    {
+    public function scopeSearch(){
       return $query->where('name','like','%'.$s.'%');
     }
 
-    public function scopeSearchCategory($query, $name)
-    {
+    public function scopeSearchCategory($query, $name){
       return $query->where('name', $name);
     }
 }

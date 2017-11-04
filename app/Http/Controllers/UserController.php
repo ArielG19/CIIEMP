@@ -30,7 +30,7 @@ class UserController extends Controller
         return view('usuario.listar')->with('users',$users);
     }
 
-
+    
     /**
      * Show the form for creating a new resource.
      *

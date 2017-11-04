@@ -15,10 +15,9 @@
   <thead>
   	<th>Titulo</th>
   	<th>Imagen</th>
-  	<th>Responsable</th>
-    <th>Otro</th>
-    <th>Objetivo</th>
-    <th>Resumen Corto</th>
+  	<th id="tdresponsable">Responsable</th>
+    <th id="tdotro">Otro</th>
+    <th>Historia</th>
     <th>Resumen Largo</th>
     <th>Acciones</th>
 
@@ -35,13 +34,16 @@
       <td><img src="{{asset('images')}}/{{$proyects->imagen}}" style="width:100px"></td>
       @endif
       @if(empty($proyects->profesor->primer_nombre))
-      <td></td>
+       <td></td>
       @else
       <td>{{$proyects->profesor->primer_nombre}} {{$proyects->profesor->primer_apellido}}</td>
       @endif
-      <td>{{$proyects->responsable}}</td>
-      <td>{{$proyects->objetivo}}</td>
-      <td>{{$proyects->resumenCorto}}</td>
+      @if(empty($proyects->responsable))
+      <td></td>
+      @else
+        <td>{{$proyects->responsable}}</td>
+      @endif 
+      <td>{{$proyects->historia}}</td>
       <td>{{$proyects->resumenLargo}}</td>
     
 

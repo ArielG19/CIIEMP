@@ -38,8 +38,13 @@ class User extends Authenticatable
         return $this->hasOne('App\Teacher','id_usuario','id');
     }
 
+    public function profesors(){
+
+        return $this->hasOne('App\Profesor','id_usuario','id');
+    }
+
       public function comentario()
-    {
+   {
        return $this->hasMany('App\Comentario');
     }
 

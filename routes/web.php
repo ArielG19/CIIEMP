@@ -74,14 +74,13 @@ Route::get('/publicaciones-docente/{id}','DocentesInnovadoresController@listarPu
 
 
 
+Route::get('/biblioteca', [
+    'uses' => 'BibliotecaController@downfunc',
+    'as' => 'biblioteca'
+]);
 
+Route::get('biblioteca/{name?}', 'BibliotecaController@filtraCategoria');
 
-  Route::get('/proyectos',[
-    'uses' => 'ProyectosController@frontProyecto',
-    'as'   => 'proyectos'
-    ]);
-
-Route::get('detalleProyecto/{id}','ProyectosController@show');
 
 Route::get('/bloghome', [
     'uses' => 'FrontController@index',
@@ -113,6 +112,7 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('bibliotecas', 'BibliotecaController');
     Route::resource('profesor', 'ProfesorController');
     Route::resource('proyectos','ProyectosController');
+
 });
 
 
@@ -120,13 +120,27 @@ Route::get('categoria/{id}/destroy', [
     'uses' => 'CategoriaController@destroy',
     'as' => 'categoria.destroy'
 ]);
+
 Route::get('carrera/{id}/destroy', [
     'uses' => 'CarreraController@destroy',
     'as' => 'carrera.destroy'
 ]);
+
 Route::get('blogs/{id}/destroy', [
     'uses' => 'BlogController@destroy',
     'as' => 'blogs.destroy'
+
+]);
+Route::get('noticias/{id}/destroy', [
+    'uses' =>'NoticiaController@destroy',
+    'as' => 'noticias.destroy'
+
+]);
+
+Route::get('bibliotecas/{id}/destroy', [
+    'uses' => 'bibliotecaController@destroy',
+    'as' => 'bibliotecas.destroy'
+
 ]);
 Route::get('noticias/{id}/destroy', [
     'uses' =>'NoticiaController@destroy',
@@ -138,13 +152,42 @@ Route::get('bibliotecas/{id}/destroy', [
 ]);
 Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@downfunc');
 
+
+Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@downfunc');
+
+Route::get('/docentes', function () {
+    return view('docentes.index');
+
+});
+
+
 Route::get('/proyectos', function () {
     return view('proyectos.indexPrincipal');
+
 });
-  Route::get('/proyectos',[
+
+Route::get('/proyectosEgresados',[
+    'uses' => 'ProyectosController@egresados',
+    'as'   => 'proyectos.createEgresados'
+    ]);
+
+Route::get('/proyectos',[
     'uses' => 'ProyectosController@frontProyecto',
     'as'   => 'proyectos'
     ]);
 
-Route::get('detalleProyecto/{id}','ProyectosController@show');
+
 Route::get('noticias/image/{id}','NoticiaController@show');
+
+Route::post('/storeEgresado',[
+    'uses' => 'ProyectosController@storeEgresado',
+    'as'   => 'proyectos.storeEgresado'
+    ]);
+
+Route::get('detalleProyecto/{id}','ProyectosController@show');
+
+Route::get('proyectos/{id}/destroy', [
+    'uses' => 'ProyectosController@destroy',
+    'as' => 'proyectos.destroy'
+
+]);
