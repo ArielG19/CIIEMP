@@ -32,7 +32,7 @@
                                     </h3>
                                     <p>{{substr(strip_tags($noticia->descripcion), 0,150)}}...</p>
                                 </div>
-                                <div class="fh5co-post-meta">
+                                <div class="fh5co-post-meta prueba2">
                                     @if(is_null($noticia->articleEvent))
                                     @else
                                         <a><i class="fa fa-star" aria-hidden="true"></i>Concurso</a>

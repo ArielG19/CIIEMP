@@ -220,3 +220,13 @@ $( document ).ready(function() {
 
     $(".prueba").height(maxHeight);
 });
+
+$( document ).ready(function() {
+    var heights = $(".prueba2").map(function() {
+        return $(this).height();
+    }).get(),
+
+    maxHeight = Math.max.apply(null, heights);
+
+    $(".prueba2").height(maxHeight);
+});
