@@ -31,9 +31,12 @@
                             <a href="#" data-toggle='modal' data-target='#myModalComentario'>
                                 <i class="icon-chat"></i>Comentar
                             </a>
-                            <a href="#" class="pull-right">
+                            <a href="" class="pull-right">
+
                                 <i class="fa fa-calendar"></i>{{Date::parse($blogs->created_at)->format('j \d\e F \d\e Y')}}
                             </a>
+                            <a href="" class="pull-right"><i class="icon-user" aria-hidden="true"></i>{{$blogs->users->name}}</a>
+
                             {{--Inicio de comentarios--}}
                             <div id="message-save" class="alert alert-success alert-dismissible" role="alert"
                                  style="display:none">

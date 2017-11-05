@@ -13,6 +13,7 @@ use Session;
 use Redirect;
 use DB;
 use Image;
+use App\File;
 
 class ProyectosController extends Controller
 {
@@ -54,7 +55,7 @@ class ProyectosController extends Controller
         $categorias = Categoria::pluck('name','id');
 
         $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
-       
+
         return view('proyectos.createEgresado',compact('categorias','profesor'));
     }
 
@@ -63,7 +64,7 @@ class ProyectosController extends Controller
         $categorias = Categoria::pluck('name','id');
 
         $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
-       
+
         return view('proyectos.create',compact('categorias','profesor'));
     }
 
@@ -75,12 +76,9 @@ class ProyectosController extends Controller
      */
 
     public function storeEgresado(Request $request){
-        try{   
+
             $proyect = new Proyecto($request->all());
-            $proyect->teacher_id = null;
-            $proyect->responsable = $request->responsable;
-            $proyect->historia = $request->historia;
-            $proyect->resumenCorto = null;
+
 
             if ($request->hasFile('imagen')) {
                 $imagen = $request->file('imagen');
@@ -89,19 +87,27 @@ class ProyectosController extends Controller
                 $proyect->imagen=$filename;
                 $proyect->save();
             }else {
-                dd("no esta mandando imagen");
-                $proyect->imagen = null;
+
                 $proyect->save();
             }
-    
+
+            if ($request->hasFile('image')) {
+                foreach ($request->image as $image) {
+                    $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
+                    Image::make($image)->resize(1000, 600)->save(public_path('images/proyecto/' . $filename));
+                    File::create([
+
+                        'id_proyectos' => $proyect->id,
+                        'image' => $filename
+                    ]);
+                }
+            }
+
             Session::flash('message','Proyecto publicado correctamente');
-            return redirect::to('home/proyectos');        
-            
-        }
-        catch(Exception $ex){
-            dd(ex);
-        }
-        
+            return redirect::to('home/proyectos');
+
+
+
      }
     public function store(Request $request)
     {
@@ -126,10 +132,23 @@ class ProyectosController extends Controller
           $proyect->historia=null;
           $proyect->save();
         }else {
-          $proyect->imagen = null;
+
           $proyect->historia=null;
           $proyect->save();
         }
+
+        if ($request->hasFile('image')) {
+            foreach ($request->image as $image) {
+                $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
+                Image::make($image)->resize(1000, 600)->save(public_path('images/proyecto/' . $filename));
+                File::create([
+
+                    'id_proyectos' => $proyect->id,
+                    'image' => $filename
+                ]);
+            }
+        }
+
 
         Session::flash('message','Proyecto publicado correctamente');
         return redirect::to('home/proyectos');

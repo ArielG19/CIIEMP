@@ -20,8 +20,8 @@
 				{!! Form::label('profesor','Buscar Responsable') !!}
 
 				{!! Form::select('id_profesor',$profesor, null,['id'=>'cmbprofesor','class' =>'form-control'])!!}
-			
-				
+
+
 		</div>
 
 		<div class="form-group col-md-6">
@@ -50,21 +50,34 @@
 				{!! Form::hidden('id_usuario', Auth::user()->id, null,['class' =>'form-control'])!!}
 		</div>
 
+		<div class="col-md-12">
+				<div class="form-group">
+						{!! Form::label('imagen','Subir multiples imagenes') !!}
+						{!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
+				</div>
+		</div>
+
+
+
+
+
+
+
 		<div class="form-group col-md-8">
-	
+
 				{!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
 
 		</div>
 
-		
+
 	{!! Form::close() !!}
 
 </div>
 	@section('script')
-		
+
 		<script>
 			$(function(){
-				
+
 				//$('#txtresponsable').hide();
 
 				$('#checkbox').click(function(){

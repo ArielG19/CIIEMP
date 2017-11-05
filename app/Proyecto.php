@@ -25,4 +25,9 @@ class Proyecto extends Model
    {
        return $this->belongsTo('App\Teacher','teacher_id','id');
    }
+
+    public function proyectoImg(){
+
+        return $this->hasMany('App\File','id_proyectos','id');
+    }
 }
