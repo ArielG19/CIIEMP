@@ -14,12 +14,12 @@
                           </a>
                             <br>
                             <hr>
-                            <span><h4 style="margin-right: 510px;">Profesiones: </h4></span><br>
-                              <span style="margin-right:310px;" id="label1" class="label label-primary"></span><br>
-                              <span style="margin-right:310px;" id="label2" class="label label-primary"></span><br>
-                              <span style="margin-right:310px;" id="label3" class="label label-primary"></span>
-                              <br>
-                              <span style="margin-right:310px;" id="label4" class="label label-primary"></span>
+                            <span><h4>Profesiones: </h4></span><br>
+                              <span id="label1" class="label label-success"></span>
+                              <span id="label2" class="label label-info"></span>
+                              <span id="label3" class="label label-primary"></span>
+
+                              <span id="label4" class="label label-warning"></span>
                             </center>
                             <hr>
                         </div>
@@ -27,7 +27,7 @@
                           <center>
                           <a id="public" class="btn btn-default" href="">publicaciones</a>
                           <a id="blog" class="btn btn-default" href="">Blog</a>
-                          <a id="curr" class="btn btn-default" href="">curriculon</a>
+                          <a id="curr" class="btn btn-default" href="">curriculon viate</a>
                           </center>
                       </div>
               </div>

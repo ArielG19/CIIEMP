@@ -63,7 +63,7 @@
 					<article>
 					  <div class="item-wrapper">
 					    <figure>
-					      <div class="image img-responsive" style="background-image:url('/images/{{$proyecto->imagen}}');"></div>
+					      <div class="image img-responsive" style="background-image:url('/images/proyecto/{{$proyecto->imagen}}');"></div>
 					      <div class="lighting"></div>
 					    </figure>
 					    <div class="item-content">

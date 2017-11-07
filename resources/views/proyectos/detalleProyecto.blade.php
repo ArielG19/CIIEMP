@@ -13,7 +13,7 @@
                                 <img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" class="img-responsive">
                             @else
 
-                                <img src="/images/{{$proyecto->imagen}}" alt="Image" class="img-responsive">
+                                <img src="/images/proyecto/{{$proyecto->imagen}}" alt="Image" class="img-responsive">
 
                             @endif
                         </div>
@@ -53,12 +53,12 @@
                 <div class="col-md-4">
 
                     <div class="panel panel-default">
-
+                        @if($proyecto->historia==null)
                         <div class="panel-body text-left">
                             <div class="row">
                                 <div class="col-md-12 ">
                                     <center>
-                                        <img alt="User Pic" src="/perfil/{{$proyecto->users->imagen}}" width="200" id="profile-image1" class="img-circle img-responsive">
+                                        <img alt="User Pic" src="/perfil/{{$proyecto->profesor->users->imagen}}" width="200" id="profile-image1" class="img-circle img-responsive">
 
                                     </center>
                                 </div>
@@ -67,13 +67,38 @@
                                     <h2>{{$proyecto->profesor->primer_nombre}} {{$proyecto->profesor->primer_apellido}}</h2>
                                     <p>{{$proyecto->profesor->profesion1}}</p>
                                     <p>
-                                        <a  class="remove-decoration"><i class="glyphicon glyphicon-envelope"></i> david@gmail.com</a> <br>
-                                        <a  target="_blank" class="remove-decoration"><i class="glyphicon glyphicon-globe"></i> www.sachitha-seram.branded.me </a><br>
-                                        <a  class="remove-decoration"> <i class="glyphicon glyphicon-phone"></i> {{$proyecto->profesor->telefono}}</a>
+                                        <a  class="remove-decoration"><i class="glyphicon glyphicon-envelope"></i> {{$proyecto->profesor->users->email}}</a> <br>
+                                        <a  class="remove-decoration"> <i class="glyphicon glyphicon-phone"></i> {{$proyecto->profesor->telefono}}</a> <br>
+                                        <a  class="remove-decoration"> <i class="fa fa-check-square"></i> {{$proyecto->profesor->profesion2}}</a> <br>
+                                        <a  class="remove-decoration"> <i class="fa fa-check-square"></i> {{$proyecto->profesor->profesion3}}</a> <br>
+                                        <a class="remove-decoration"><i class="fa fa-check-square" aria-hidden="true"></i> {{$proyecto->profesor->profesion4}}</a>
+
                                     </p>
                                 </div>
                             </div>
                         </div>
+                        @else
+                            <div class="panel-body text-left">
+                                <div class="row">
+                                    <div class="col-md-12 ">
+                                        <center>
+                                            <img alt="User Pic" src="/perfil/default.jpg" width="200" class="img-circle img-responsive">
+
+                                        </center>
+                                    </div>
+                                    <div class="col-md-12">
+
+                                        <h2>{{$proyecto->responsable}}</h2>
+                                        <p></p>
+                                        <p>
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+
                         <div id="IdFooter" class="panel-footer text-center">
                             <h3><span class="label label-primary">Responsable</span></h3>
                         </div>

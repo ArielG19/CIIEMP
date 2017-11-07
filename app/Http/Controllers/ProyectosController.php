@@ -127,7 +127,7 @@ class ProyectosController extends Controller
         if ($request->hasFile('imagen')) {
           $imagen = $request->file('imagen');
           $filename= time(). '.' .$imagen->getClientOriginalExtension();
-          Image::make($imagen)->resize(1000, 500)->save(public_path('images/'.$filename));
+          Image::make($imagen)->resize(1000, 500)->save(public_path('images/proyecto/'.$filename));
           $proyect->imagen=$filename;
           $proyect->historia=null;
           $proyect->save();
@@ -166,8 +166,9 @@ class ProyectosController extends Controller
     {
         //
         $proyecto = Proyecto::find($id);
+        $teacher = Teacher::find($proyecto->teacher_id);
 
-        return view("proyectos.detalleProyecto", compact('proyecto'));
+        return view("proyectos.detalleProyecto", compact('proyecto','teacher'));
     }
 
     /**
@@ -214,13 +215,35 @@ class ProyectosController extends Controller
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time() . '.' . $imagen->getClientOriginalExtension();
-            Image::make($imagen)->resize(1000, 500)->save(public_path('images/' . $filename));
+            Image::make($imagen)->resize(1000, 500)->save(public_path('images/proyecto/' . $filename));
             $oldfilename = $proyect->path;
             $proyect->path = $filename;
             Storage::delete($oldfilename);
 
         }
+        //Eliminar imagenes previas
+        if ($request->hasFile('image')) {
+            foreach ($proyect->articleImg as $img) {
+                $file_path = public_path('images/noticia') . '/' . $img->image;
+                unlink($file_path);
+                $img->delete();
 
+            }
+        }
+        //guardar multiples file
+        if ($request->hasFile('image')) {
+            foreach ($request->image as $image) {
+                $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
+                Image::make($image)->resize(1000, 600)->save(public_path('images/noticia/' . $filename));
+                File::create([
+                    'id_noticias' => $proyect->id,
+                    'image' => $filename
+                ]);
+            }
+
+
+
+        }
         $proyect->save();
 
         Session::flash('message','Proyecto modificado correctamente');
@@ -238,16 +261,34 @@ class ProyectosController extends Controller
         //
         $proyect = Proyecto::findOrFail($id);
 
-        if ($proyect->imagen != null) {
-            $file_path = public_path('images/') . '/' . $proyect->imagen;
+        if ((isset($proyect->proyectoImg[0])) and ($proyect->imagen == null)) {
+            //eliminar multiples files
+            foreach ($proyect->proyectoImg as $img) {
+                $file_path = public_path('images/proyecto') . '/' . $img->image;
+                unlink($file_path);
+                $proyect->delete();
+
+            }
+        } else if ((empty($proyect->proyectoImg[0])) and ($proyect->imagen != null)) {
+            $file_path = public_path('images/proyecto') . '/' . $proyect->imagen;
             unlink($file_path);
             $proyect->delete();
-        }
-        else{
+
+        } else if ((isset($proyect->proyectoImg[0])) and ($proyect->imagen != null)) {
+            foreach ($proyect->proyectoImg as $img) {
+                $file_path = public_path('images/proyecto') . '/' . $img->image;
+                unlink($file_path);
+
+
+            }
+            $file_path = public_path('images/proyecto') . '/' . $proyect->imagen;
+            unlink($file_path);
+            $proyect->delete();
+        } else {
             $proyect->delete();
         }
-
+//
         Session::flash('message', 'Proyecto eliminado Correctamente');
         return redirect::to('home/proyectos');
-    }
+     }
 }
