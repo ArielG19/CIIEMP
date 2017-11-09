@@ -12,6 +12,6 @@ class Teacher extends Model
 
 	public function users()
 	{
-	    return $this->hasOne('App\User','id_usuario','id');
+	    return $this->belongsTo('App\User','id_usuario','id');
 	}
 }

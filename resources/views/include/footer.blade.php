@@ -4,13 +4,26 @@
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
 				<div class="fh5co-logo"><span class="logo">C</span>IIEMP</div>
-				<h3>Enlaces</h3>
 				<p class="fh5co-copyright">&copy; 2017.
 					<br>
-						All Rights Reserved.
+						Derechos Reservados
 					<br>
+<<<<<<< HEAD
 						Designed by
 					<a target="_blank" href="https://arielg19.github.io/mySite/">ArielGot19</a>
+=======
+						Página Web diseñada por
+					<a target="_blank" href="#"></a>
+					<br>
+
+					<a target="_blank" href="#">Greyner Cáceres</a>
+					<br>
+
+					<a target="_blank" href="#">Rubén Perez</a>
+					<br>
+
+					<a target="_blank" href="https://holamusicos.wordpress.com/">David Rivera Lanuza</a>
+>>>>>>> 2fd47fd3a9cacc8c543c7ce78225f032f431401f
 					<br>
 					
 				</p>
@@ -38,7 +51,7 @@
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
 			<h3>Acerca de nosotros</h3>
-			<p>Plataforma Web para la promoción y desarrollo de proyectos de innovación y emprendimiento. </p>
+			<p>Somos una instancia de la UNAN-Managua-FAREM-Estelí dedicada a la investigación aplicada para la promoción y desarrollo de proyectos de innovación y emprendimiento. </p>
 			<p><a href="{{ url('/acercade') }}" class="btn btn-success btn-sm btn-outline">Más...</a></p>
 		</div>
 
@@ -50,12 +63,11 @@
 
 	</div>
 
-	<div class="fh5co-footer-style-3 fondo">
+	<div class="fh5co-footer-style-3 fondo color">
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo"><img src="{{asset('styleVoltage/images/Marca Negativo.png')}}" alt="" width="60%"></div>
 
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo2"><img src="{{asset('styleVoltage/images/CIIEMP-Coloroscuro Negativo.png')}}" alt="" width="50%"></div>
-
 	</div>
 <!-- END footer -->
 
@@ -63,14 +75,20 @@
 	<style>
 	.fondo{
 
-		height: 150px;
-		margin-top: -4em;
+		height: 100px;
 	}
 		.estilo{
-			margin-top: -5em;
+			margin-top: -4.5em;
+
 		}
 		.estilo2{
 			margin-top: -4em;
+
 		}
+
+	.color{
+		background:#0F0F0F;
+
+	}
 	</style>
 </footer>

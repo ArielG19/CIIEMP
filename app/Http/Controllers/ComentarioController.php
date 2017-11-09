@@ -25,18 +25,18 @@ class ComentarioController extends Controller
     {
             //$comment = DB::select("select * from comentarios where id_blog = '$id_b'");
 
-            $comentarios = Comentario::orderBy('id','desc')->where('id_blog',$id_b)->get();        
+            $comentarios = Comentario::orderBy('id','asc')->where('id_blog',$id_b)->get();
             $comentarios->each(function($comentarios){
                 $comentarios->user;
                 $comentarios->blog;
                 //dd($comentarios->user);
-                                
+
             });
-                            
+
             return view('comentarios.listar')->with('comentarios',$comentarios);
 
-            
-      
+
+
     }
 
     /**
@@ -67,7 +67,7 @@ class ComentarioController extends Controller
             $comentarios->id_usuario = \Auth::user()->id;
             $comentarios->save();
             //dd($comentarios);
-            
+
             //si no hay error entonces
             if($comentarios){
 
@@ -100,7 +100,7 @@ class ComentarioController extends Controller
     public function edit($id)
     {
         //
-        $comentarios = Comentario::FindOrFail($id);            
+        $comentarios = Comentario::FindOrFail($id);
         return response()->json($comentarios);
 
     }
@@ -141,7 +141,7 @@ class ComentarioController extends Controller
         //
                 $comentarios = Comentario::FindOrFail($id);
                 //dd($comentarios);
-                
+
                 $resultado = $comentarios->delete();
 
                 if($resultado)

@@ -76,39 +76,40 @@ Route::get('/listar-blog/{id}','DocentesInnovadoresController@listarBlog');
 Route::get('/curriculon-docente/{id}','DocentesInnovadoresController@Curriculon');
 Route::get('/publicaciones-docente/{id}','DocentesInnovadoresController@listarPublicaciones');
 
-
-
-
-
-  Route::get('/proyectos',[
-    'uses' => 'ProyectosController@frontProyecto',
-    'as'   => 'proyectos'
-    ]);
-
-Route::get('detalleProyecto/{id}','ProyectosController@show');
-
-Route::get('/bloghome', [
-    'uses' => 'FrontController@index',
-    'as' => 'bloghome'
-]);
-Route::get('/articulohome', [
-    'uses' => 'FrontNoticiasController@index',
-    'as' => 'articulohome'
-]);
-Route::get('/bloghome/blogin/{slug}', 'FrontController@blog');
-Route::get('/articulohome/articulo/{slug}', 'FrontNoticiasController@noticia');
-Route::get('bloghome/{name}', [
-    'uses' => 'FrontController@filtraCategoria',
-    'as' => 'bloghome.filtrar.categorias'
-]);
+//--------Rutas de biblioteca--------
 Route::get('/biblioteca', [
     'uses' => 'BibliotecaController@downfunc',
     'as' => 'biblioteca'
 ]);
 Route::get('biblioteca/{name?}', 'BibliotecaController@filtraCategoria');
+
+//--------Rutas del blog--------
+Route::get('/bloghome', [
+    'uses' => 'FrontController@index',
+    'as' => 'bloghome'
+]);
+Route::get('/bloghome/blogin/{slug}', 'FrontController@blog');
+
+Route::get('bloghome/{name}', [
+    'uses' => 'FrontController@filtraCategoria',
+    'as' => 'bloghome.filtrar.categorias'
+]);
+//--------Rutas del noticias--------
+
+Route::get('/articulohome', [
+    'uses' => 'FrontNoticiasController@index',
+    'as' => 'articulohome'
+]);
+
+Route::get('/articulohome/articulo/{slug}', 'FrontNoticiasController@noticia');
+
+
+//--------Ruta Acerca de nosotros--------
 Route::get('/acercade', function () {
     return view('acercade');
 });
+
+//--------Rutas del Panel de admin--------
 Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('carrera', 'CarreraController');
     Route::resource('categoria', 'CategoriaController');
@@ -117,21 +118,31 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('bibliotecas', 'BibliotecaController');
     Route::resource('profesor', 'ProfesorController');
     Route::resource('proyectos','ProyectosController');
+
 });
 
-
+//--------Rutas de categoria -------
 Route::get('categoria/{id}/destroy', [
     'uses' => 'CategoriaController@destroy',
     'as' => 'categoria.destroy'
 ]);
+//--------Rutas de carrera -------
 Route::get('carrera/{id}/destroy', [
     'uses' => 'CarreraController@destroy',
     'as' => 'carrera.destroy'
 ]);
+
 Route::get('blogs/{id}/destroy', [
     'uses' => 'BlogController@destroy',
     'as' => 'blogs.destroy'
+
 ]);
+Route::get('noticias/{id}/destroy', [
+    'uses' =>'NoticiaController@destroy',
+    'as' => 'noticias.destroy'
+
+]);
+
 Route::get('noticias/{id}/destroy', [
     'uses' =>'NoticiaController@destroy',
     'as' => 'noticias.destroy'
@@ -142,11 +153,49 @@ Route::get('bibliotecas/{id}/destroy', [
 ]);
 Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@downfunc');
 
+
+
+
+Route::get('/docentes', function () {
+    return view('docentes.index');
+
+});
+
+
 Route::get('/proyectos', function () {
     return view('proyectos.indexPrincipal');
+
 });
-  Route::get('/proyectos',[
+
+Route::get('/proyectosEgresados',[
+    'uses' => 'ProyectosController@egresados',
+    'as'   => 'proyectos.createEgresados'
+    ]);
+
+Route::get('/proyectos',[
     'uses' => 'ProyectosController@frontProyecto',
     'as'   => 'proyectos'
     ]);
+
+
+Route::get('noticias/image/{id}','NoticiaController@show');
+
+Route::post('/storeEgresado',[
+    'uses' => 'ProyectosController@storeEgresado',
+    'as'   => 'proyectos.storeEgresado'
+    ]);
+
 Route::get('detalleProyecto/{id}','ProyectosController@show');
+
+
+Route::get('proyectos/{id}/destroy', [
+    'uses' => 'ProyectosController@destroy',
+    'as' => 'proyectos.destroy'
+
+]);
+
+Route::get('proyectos/{tipo?}',[
+    'uses' => 'ProyectosController@fitrarTipo',
+    'as' => 'proyectos.filtrar'
+
+]);

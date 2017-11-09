@@ -20,10 +20,11 @@
         <th>Lugar</th>
         <th>Autor</th>
         <th>Categoria</th>
+        <th>Concurso</th>
+        <th>Empieza</th>
+        <th>Finaliza</th>
         <th>Imagen</th>
         <th>Acciones</th>
-
-
         </thead>
 
         <tbody>
@@ -35,24 +36,29 @@
                 <td>{{$noticia->lugar}}</td>
                 <td>{{$noticia->users->name}}</td>
                 <td>{{$noticia->category->name}}</td>
+                @if(isset($noticia->articleEvent))
+                    <td><a><i class="fa fa-star" aria-hidden="true"></i></a></td>
+                    <td>{{$noticia->articleEvent->fecha_inicio}}</td>
+                    <td>{{$noticia->articleEvent->fecha_final}}</td>
+                @else
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                @endif
+
+                @if(isset($noticia->articleImg[0]))
+                    <td>
+                        <a class="btn btn-info btn-sm btnimg" role="button"
+                           href="{{route('noticia.show', $noticia->id)}}" onclick="window.open(this.href, 'mywin',
+                            'left=550,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
+                            <span>Img <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </a>
+                    </td>
+                @else
+                    <td><img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" style="width: 100px"></td>
+                @endif
                 <td>
-                    <a class="btn btn-info btn-sm" href="" Onclick='{{$noticia->id}}' data-toggle='modal'
-                       data-target='#modalimg'>
-                        <span>Img <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
-                    </a>
-                </td>
-
-  <tbody>
-  	<tr>
-  		@foreach ($noticias as $noticia)
-  		<td>{{$noticia->titulo}}</td>
-  		<td>{{substr(strip_tags($noticia->descripcion), 0,300)}}...</td>
-      <td>{{$noticia->lugar}}</td>
-      <td>{{$noticia->users->name}}</td>
-      <td>{{$noticia->category->name}}</td>
-
-
-                <td><a class="btn btn-success" href="{{route('noticia.edit', $noticia->id)}}" role="button"><i
+                    <a class="btn btn-success" href="{{route('noticia.edit', $noticia->id)}}" role="button"><i
                                 class="fa fa-pencil-square-o"></i></a>
                     <a class="btn btn-danger" href="{{route('noticias.destroy', $noticia->id)}}"
                        onclick="return confirm('Quiere borrar el registro?')" role="button"><i
@@ -64,8 +70,9 @@
         </tbody>
     </table>
 
-    {!! $noticias->render() !!}
+    {!! $noticias->render()!!}
 
-    @include('noticia.modalimg')
+
 
 @endsection
+  	

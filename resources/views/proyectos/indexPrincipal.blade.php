@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title','Proyectos recientes')
+
 @section('content')
 
 <link rel="stylesheet" href="../css/proyectos.css">
@@ -21,27 +22,53 @@
 				</div>
 
 				<div class="row" >
-					<div class="col-md-3" >
-					</div>
-					{!!Form::open(['route' => 'biblioteca', 'method' => 'GET'])!!}
-					<div class="col-md-6">
-				    <div class="input-group">
-							{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
-				      <span class="input-group-btn" id="search">
-				        <button class="btn btn-primary" name="titulo" type="button"><i class="fa fa-search fa-lg" ></i></button>
+					<div class="col-md-3"></div>
+						{!!Form::open(['route' => 'proyectos', 'method' => 'GET'])!!}
+						<div class="col-md-8">
+							<div class="input-group">
+								{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
+								<span class="input-group-btn" id="search">
+									<button class="btn btn-primary" name="titulo" type="button"><i class="fa fa-search fa-lg" ></i></button>
 
-				      </span>
-				    </div>
-				  </div>
-					{!!Form::close()!!}
+								</span>
+							</div>
+						</div>
+						{!!Form::close()!!}
+
 				</div>
+	<hr>
+				<div class="row">
+					<div class="form-group col-md-6 pull-right combo">
+						{!!Form::open(['route' => 'proyectos.filtrar', 'method' => 'GET'])!!}
+					<label class="col-xs-3 control-label">Filtrar</label>
+								<div class="col-xs-5 selectContainer">
+									<select class="form-control" name="tipo">
 
+											<option value="estudiante">Proyectos Estudiantes</option>
+											<option value="egresado">Proyectos Egresados</option>
+									</select>
+								</div>
+						<input type="button"class="btn btn-primary" name="tipo">
+						{!!Form::close()!!}
+						</div>
+
+					</div>
+
+				<style>
+
+					.combo{
+						float:right;
+						text-align:right;
+						margin-right:-100px;
+					}
+				</style>
+	<div class="row col-md-12">
 				@foreach($proyectos as $proyecto)
 				<a href="detalleProyecto/{{$proyecto->id}}">
 					<article>
 					  <div class="item-wrapper">
 					    <figure>
-					      <div class="image img-responsive" style="background-image:url('/images/{{$proyecto->imagen}}');"></div>
+					      <div class="image img-responsive" style="background-image:url('/images/proyecto/{{$proyecto->imagen}}');"></div>
 					      <div class="lighting"></div>
 					    </figure>
 					    <div class="item-content">
@@ -53,35 +80,7 @@
 					</article>
 				</a>
 				@endforeach
-
-
-				<article>
-				  <div class="item-wrapper">
-				    <figure>
-				      <div class="image" style="background-image:url(http://www.unan.edu.ni/wp-content/gallery/judc-1/14805627_1084142188305542_1641663142_n.jpg);"></div>
-				      <div class="lighting"></div>
-				    </figure>
-				    <div class="item-content">
-				      <h1>Second Article Title</h1>
-				      <p>Donec pede justo fringilla vel aliquet nec vulputate eget arcu</p>
-				      <div class="author">Edna Hardy</div>
-				    </div>
-				  </div>
-				</article>
-				<article>
-				  <div class="item-wrapper">
-				    <figure>
-				      <div class="image" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLR0dpLWJDU3lMc28);"></div>
-				      <div class="lighting"></div>
-				  </figure>
-				    <div class="item-content">
-				      <h1>Third Article Title</h1>
-				      <p>In enim justo rhoncus ut imperdiet a venenatis vitae justo</p>
-				      <div class="author">Kayla	Beck</div>
-				    </div>
-				  </div>
-				</article>
-
+	</div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 				<script>
@@ -115,7 +114,7 @@
 					  }}
 					);
 				</script>
-	
+
 		</div>
 </div>
 

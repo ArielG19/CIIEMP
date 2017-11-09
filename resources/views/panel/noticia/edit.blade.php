@@ -33,12 +33,21 @@
             {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del artículo','required'])!!}
         </div>
     </div>
-
-    <div class="col-md-12">
+    <div class="row">
+    <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('lugar','Lugar') !!}
             {!! Form::text('lugar',null,['class' =>'form-control', 'placeholder' =>'Lugar','required'])!!}
         </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('categoria','Categoria') !!}
+            {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
+        </div>
+
+    </div>
     </div>
 
 
@@ -53,13 +62,7 @@
     </div>
 
 
-    <div class="col-md-12">
-        <div class="form-group">
-            {!! Form::label('categoria','Categoria') !!}
-            {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
-        </div>
 
-    </div>
 
     <div class="form-group">
 

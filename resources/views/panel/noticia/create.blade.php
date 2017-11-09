@@ -12,30 +12,41 @@
 
     {!! Form::open(['route' => 'noticia.store', 'method' => 'POST','files'=>true]) !!}
     {{csrf_field ()}}
+    <div class="row">
+      <div class="col-md-2 pull-right">
+          <h4>¿Es un concurso?</h4>
+          <div class="onoffswitch">
+              <input type="checkbox" name="estado" class="onoffswitch-checkbox" id="check"
+                     onchange="javascript:showContent()">
+              <label class="onoffswitch-label" for="check">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+          </div>
+      </div>
+      <div class="col-md-10">
+          <div class="form-group">
+              {!! Form::label('titulo','Título') !!}
+              {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del artículo','required'])!!}
+          </div>
+      </div>
 
-    <div class="col-md-2 pull-right">
-        <h4>¿Es un concurso?</h4>
-        <div class="onoffswitch">
-            <input type="checkbox" name="estado" class="onoffswitch-checkbox" id="check"
-                   onchange="javascript:showContent()">
-            <label class="onoffswitch-label" for="check">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-            </label>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="form-group">
-            {!! Form::label('titulo','Título') !!}
-            {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del artículo','required'])!!}
-        </div>
     </div>
 
+
     <div class="col-md-12">
+      <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('lugar','Lugar') !!}
             {!! Form::text('lugar',null,['class' =>'form-control', 'placeholder' =>'Lugar','required'])!!}
         </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('categoria','Categoria') !!}
+            {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
+        </div>
+      </div>
     </div>
 
 
@@ -50,13 +61,7 @@
     </div>
 
 
-    <div class="col-md-12">
-        <div class="form-group">
-            {!! Form::label('categoria','Categoria') !!}
-            {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
-        </div>
 
-    </div>
 
     <div class="form-group">
 
@@ -118,18 +123,16 @@
 
 
     </div>
-
-
-
     <div class="col-md-12">
         <div class="form-group">
             {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
         </div>
     </div>
-
-
     {!! Form::close() !!}
 
+
+
+@endsection
 
     <script type="text/javascript">
         function showContent() {
@@ -143,6 +146,3 @@
             }
         }
     </script>
-
-
-@endsection

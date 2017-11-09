@@ -11,7 +11,6 @@ use Image;
 
 class Blog extends Model
 {
-
     use Sluggable, SluggableScopeHelpers;
 
     public function sluggable()
@@ -22,7 +21,6 @@ class Blog extends Model
             ]
         ];
     }
-
 
     protected $table = "blogs";
 
@@ -36,7 +34,7 @@ class Blog extends Model
 
     public function users()
     {
-        return $this->belongsTo('App\User', 'id_usuario');
+        return $this->belongsTo('App\User', 'id_usuario', 'id');
     }
 
     public function comentarios()

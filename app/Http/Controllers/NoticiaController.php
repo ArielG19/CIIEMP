@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Concursos;
 use App\Http\Requests\UploadRequest;
+
 use Illuminate\Http\Request;
 use App\Noticia;
 use App\File;
@@ -25,10 +27,12 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-
         $noticias = Noticia::orderBy('id', 'DESC')->paginate(5);
-        return view('panel.noticia.index')->with('noticias',$noticias);
+
+        return view('panel.noticia.index')->with(compact('noticias'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -37,7 +41,6 @@ class NoticiaController extends Controller
      */
     public function create()
     {
-
         $categorias = Categoria::pluck('name', 'id');
         return view('panel.noticia.create', compact('categorias'));
     }
@@ -45,7 +48,6 @@ class NoticiaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
@@ -84,10 +86,16 @@ class NoticiaController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
+        $noticia = Noticia::find($id);
+        return view('panel.noticia.modalimg', compact('noticia'));
+
+
+
 
     }
 
@@ -95,13 +103,15 @@ class NoticiaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-
         $users = User::pluck('name', 'id');
         $categorias = Categoria::pluck('name', 'id');
+
+
         $noticia = Noticia::find($id);
 
 
@@ -112,36 +122,26 @@ class NoticiaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-
      * @param  \Illuminate\Http\Request $request
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-//        $noticia = DB::table('noticias')
-//
-//            ->join('concursos','noticias.id','concursos.id_noticia')
-//            ->where('noticias.id',$id)
-//            ->get();
 
-        $noticia = Noticia::create($request->all());
-        $concursos = new Concursos($request->all());
+        $noticia = Noticia::find($id);
+        $noticia->fill($request->all())->save();
+        $concurso = Concursos::where('id_noticia',$noticia->id)->first();
+        $concurso->fill($request->all());
 
-        if (isset($concursos['estado']) and $concursos['estado'] == 'on') {
-            $concursos->id_noticia = $noticia->id;
-            $concursos->estado = "activo";
-            $concursos->save();
+        if (isset($concurso['estado']) and $concurso['estado'] == 'on') {
+
+            $concurso->id_noticia = $noticia->id;
+            $concurso->estado = "activo";
+            $noticia->articleEvent()->save($concurso);
 
         }
 
-        //validar checkbox
-        if (isset($noticia['estado']) and $noticia['estado'] == 'on') {
-            $noticia->id_noticia = $noticia->id;
-            $noticia->estado = "activo";
-            $noticia->save();
-
-        }
         //Eliminar imagenes previas
         if ($request->hasFile('image')) {
             foreach ($noticia->articleImg as $img) {
@@ -181,7 +181,7 @@ class NoticiaController extends Controller
     {
 
         $not = Noticia::findOrFail($id);
-        if (isset($not->articleImg[0]->image)) {
+        if ((isset($not->articleImg[0])) and ($not->articleEvent == null)) {
             //eliminar multiples files
             foreach ($not->articleImg as $img) {
                 $file_path = public_path('images/noticia') . '/' . $img->image;
@@ -189,13 +189,23 @@ class NoticiaController extends Controller
                 $not->delete();
 
             }
+        } else if ((empty($not->articleImg[0])) and ($not->articleEvent != null)) {
+            $not->articleEvent->delete();
+            $not->delete();
 
+        } else if ((isset($not->articleImg[0])) and ($not->articleEvent != null)) {
+            foreach ($not->articleImg as $img) {
+                $file_path = public_path('images/noticia') . '/' . $img->image;
+                unlink($file_path);
 
+            }
+            $not->articleEvent->delete();
+            $not->delete();
         } else {
             $not->delete();
         }
 
-        Session::flash('message', 'Entrada de blog eliminada Correctamente');
+        Session::flash('message', 'Entrada de noticia eliminada Correctamente');
         return redirect::to('home/noticia');
 
     }

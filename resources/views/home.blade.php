@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>       registrar una categoria
+                                    <a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>Registrar una categoria
                                     </a>
                                 </li>
                         </ul>
@@ -99,7 +99,9 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Nuevo Proyecto</a>
+                            <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Proyecto de Estudiantes</a>
+                            </li>
+                            <li><a href="{{route('proyectos.createEgresados')}}"><i class="fa fa-circle-o"></i>Proyecto de Egresados</a>
                             </li>
                             <li><a href="{{route('proyectos.index')}}"><i class="fa fa-circle-o"></i>Listar
                                     Proyectos</a></li>
@@ -189,7 +191,7 @@
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-commenting-o" aria-hidden="true"></i> 
+                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
                                 <span>Chat</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
@@ -230,7 +232,9 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Nuevo Proyecto</a>
+                            <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Proyecto Estudiantes</a>
+                            </li>
+                            <li><a href="{{route('proyectos.createEgresados')}}"><i class="fa fa-circle-o"></i>Proyecto Egresados</a>
                             </li>
                             <li><a href="{{route('proyectos.index')}}"><i class="fa fa-circle-o"></i>Listar
                                     Proyectos</a></li>
@@ -310,12 +314,15 @@
 
         <div class="content-wrapper">
             <section class="content">
+                <div class="container">
                     @yield('contenido')
+
+                </div>
             </section>
         </div>
         <!--Fin-Contenido-->
         <footer class="main-footer">
-            
+
         </footer>
     </div>
 @endsection

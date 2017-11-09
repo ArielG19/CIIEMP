@@ -48,7 +48,6 @@ class BlogController extends Controller
      */
     public function store(BlogRequest $request)
     {
-
         $blog = new Blog($request->all());
         $blog->save();
         if ($request->hasFile('path')) {
@@ -58,14 +57,12 @@ class BlogController extends Controller
             $blog->path = $filename;
             $blog->save();
         } else {
-
             $blog->save();
         }
 
 
         Session::flash('message', 'La entrada del blog fue creada correctamente');
         return redirect::to('home/blogs');
-
     }
 
     /**
@@ -88,7 +85,6 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-
         $users = User::pluck('name', 'id');
         $categorias = Categoria::pluck('name', 'id');
 
@@ -106,7 +102,6 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $blog = Blog::find($id);
         $blog->fill($request->all());
         $blog->titulo = $request->input('titulo');
@@ -123,7 +118,6 @@ class BlogController extends Controller
             $oldfilename = $blog->path;
             $blog->path = $filename;
             Storage::delete($oldfilename);
-
         }
 
         $blog->save();
@@ -147,24 +141,21 @@ class BlogController extends Controller
             $file_path = public_path('images/') . '/' . $file->path;
             unlink($file_path);
             $file->delete();
-        } else if(($file->path == null) and ($file->file != null)){
+        } elseif (($file->path == null) and ($file->file != null)) {
             $file_pathF = public_path('download/pdf').'/'.$file->file;
             unlink($file_pathF);
             $file->delete();
-        }
-        else if(($file->path != null) and ($file->file != null)){
+        } elseif (($file->path != null) and ($file->file != null)) {
             $file_path = public_path('images/') . '/' . $file->path;
             $file_pathF = public_path('download/pdf').'/'.$file->file;
             unlink($file_path);
             unlink($file_pathF);
             $file->delete();
-        }
-        else{
+        } else {
             $file->delete();
         }
 
         Session::flash('message', 'Entrada de blog eliminada Correctamente');
         return redirect::to('home/blogs');
-
     }
 }

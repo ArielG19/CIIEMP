@@ -175,6 +175,9 @@ border:5px solid #03b1ce ;}
 #btn1{
   margin-top:8px;
 }
+
+
+
 /* Custom Style */
 .onoffswitch {
     position: relative; width: 90px;
@@ -222,4 +225,6 @@ border:5px solid #03b1ce ;}
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
 }
-
+.startd{
+    text-align: center;
+}
