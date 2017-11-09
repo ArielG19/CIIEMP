@@ -37,31 +37,7 @@
 
 				</div>
 	<hr>
-				<div class="row">
-					<div class="form-group col-md-6 pull-right combo">
-						{!!Form::open(['route' => 'proyectos.filtrar', 'method' => 'GET'])!!}
-					<label class="col-xs-3 control-label">Filtrar</label>
-								<div class="col-xs-5 selectContainer">
-									<select class="form-control" name="tipo">
-
-											<option value="estudiante">Proyectos Estudiantes</option>
-											<option value="egresado">Proyectos Egresados</option>
-									</select>
-								</div>
-						<input type="button"class="btn btn-primary" name="tipo">
-						{!!Form::close()!!}
-						</div>
-
-					</div>
-
-				<style>
-
-					.combo{
-						float:right;
-						text-align:right;
-						margin-right:-100px;
-					}
-				</style>
+				
 	<div class="row col-md-12">
 				@foreach($proyectos as $proyecto)
 				<a href="detalleProyecto/{{$proyecto->id}}">

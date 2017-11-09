@@ -132,7 +132,8 @@ class NoticiaController extends Controller
         $noticia = Noticia::find($id);
         $noticia->fill($request->all())->save();
         $concurso = Concursos::where('id_noticia',$noticia->id)->first();
-        $concurso->fill($request->all());
+        $concurso = new Concursos($request->all());
+
 
         if (isset($concurso['estado']) and $concurso['estado'] == 'on') {
 
