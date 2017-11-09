@@ -11,6 +11,8 @@
 
     @endif
 
+ 
+               
 
 
     <table class="table table-striped">
@@ -27,38 +29,64 @@
         </thead>
 
         <tbody>
-        <tr>
-
             @foreach ($blogs as $blog)
-                <td>{{$blog->titulo}}</td>
-                <td>{{substr(strip_tags($blog->descripcion), 0,300)}}...</td>
-                <td>{{$blog->category->name}}</td>
-                <td>{{$blog->users->name}}</td>
+                @if(Auth::user()->id == $blog->id_usuario)
+                    <tr>
+                        <td>{{$blog->titulo}}</td>
+                        <td>{{substr(strip_tags($blog->descripcion), 0,300)}}...</td>
+                        <td>{{$blog->category->name}}</td>
+                        <td>{{$blog->users->name}}</td>
 
+                        @if($blog->path==null)
+                            <td><img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" style="width: 100px"></td>
+                        @else
+                            <td><img src="{{asset('images')}}/{{$blog->path}}" style="width: 100px"></td>
+                        @endif
 
+                        @if(empty($blog->file))
+                            <td>No tiene archivo</td>
+                        @else
+                            <td><a href="{{asset('download/pdf')}}/{{$blog->file}}"
+                                   target="_blank">{{basename($blog->file)}}</a></td>
+                        @endif
 
-                @if($blog->path==null)
-                    <td><img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" style="width: 100px"></td>
-                @else
-                    <td><img src="{{asset('images')}}/{{$blog->path}}" style="width: 100px"></td>
+                        <td><a class="btn btn-success" href="{{route('blogs.edit', $blog->id)}}" role="button"><i
+                                        class="fa fa-pencil-square-o"></i></a>
+                            <a class="btn btn-danger" href="{{route('blogs.destroy', $blog->id)}}"
+                               onclick="return confirm('Quiere borrar el registro?')" role="button"><i
+                                        class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                @elseif(Auth::user()->type == "admin")
+                    <tr>
+                        <td>{{$blog->titulo}}</td>
+                        <td>{{substr(strip_tags($blog->descripcion), 0,300)}}...</td>
+                        <td>{{$blog->category->name}}</td>
+                        <td>{{$blog->users->name}}</td>
+
+                        @if($blog->path==null)
+                            <td><img src="{{ url('styleVoltage/images/no-disponible.jpg') }}" style="width: 100px"></td>
+                        @else
+                            <td><img src="{{asset('images')}}/{{$blog->path}}" style="width: 100px"></td>
+                        @endif
+
+                        @if(empty($blog->file))
+                            <td>No tiene archivo</td>
+                        @else
+                            <td><a href="{{asset('download/pdf')}}/{{$blog->file}}"
+                                   target="_blank">{{basename($blog->file)}}</a></td>
+                        @endif
+
+                        <td><a class="btn btn-success" href="{{route('blogs.edit', $blog->id)}}" role="button"><i
+                                        class="fa fa-pencil-square-o"></i></a>
+                            <a class="btn btn-danger" href="{{route('blogs.destroy', $blog->id)}}"
+                               onclick="return confirm('Quiere borrar el registro?')" role="button"><i
+                                        class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+
                 @endif
-
-                @if(empty($blog->file))
-                    <td>No tiene archivo</td>
-                @else
-                    <td><a href="{{asset('download/pdf')}}/{{$blog->file}}"
-                           target="_blank">{{basename($blog->file)}}</a></td>
-                @endif
-
-                <td><a class="btn btn-success" href="{{route('blogs.edit', $blog->id)}}" role="button"><i
-                                class="fa fa-pencil-square-o"></i></a>
-                    <a class="btn btn-danger" href="{{route('blogs.destroy', $blog->id)}}"
-                       onclick="return confirm('Quiere borrar el registro?')" role="button"><i
-                                class="fa fa-trash-o"></i></a>
-                </td>
-
-        </tr>
-        @endforeach
+             @endforeach
         </tbody>
     </table>
 

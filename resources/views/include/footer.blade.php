@@ -10,11 +10,9 @@
 						All Rights Reserved.
 					<br>
 						Designed by
-					<a target="_blank" href="#"></a>
+					<a target="_blank" href="https://arielg19.github.io/mySite/">ArielGot19</a>
 					<br>
-						Created with
-					<a target="_blank" href="#">Cards</a>
-					<br>
+					
 				</p>
 		</div>
 

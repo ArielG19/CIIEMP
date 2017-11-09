@@ -23,9 +23,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 //-------Rutas usuarios-----
-Route::Resource('/usuarios','UserController');
+
 Route::get('/listar-usuarios','UserController@listarUsuario');
 //-------Rutas usuarios-----
+Route::group(['middleware' => ['Admin','auth']], function () {
+    Route::Resource('/usuarios','UserController');
+});
+
 
 
 //-------Rutas perfil-estudiante-----
