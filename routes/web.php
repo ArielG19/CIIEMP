@@ -72,38 +72,40 @@ Route::get('/listar-blog/{id}','DocentesInnovadoresController@listarBlog');
 Route::get('/curriculon-docente/{id}','DocentesInnovadoresController@Curriculon');
 Route::get('/publicaciones-docente/{id}','DocentesInnovadoresController@listarPublicaciones');
 
-
-
+//--------Rutas de biblioteca--------
 Route::get('/biblioteca', [
     'uses' => 'BibliotecaController@downfunc',
     'as' => 'biblioteca'
 ]);
-
 Route::get('biblioteca/{name?}', 'BibliotecaController@filtraCategoria');
 
-
+//--------Rutas del blog--------
 Route::get('/bloghome', [
     'uses' => 'FrontController@index',
     'as' => 'bloghome'
 ]);
-Route::get('/articulohome', [
-    'uses' => 'FrontNoticiasController@index',
-    'as' => 'articulohome'
-]);
 Route::get('/bloghome/blogin/{slug}', 'FrontController@blog');
-Route::get('/articulohome/articulo/{slug}', 'FrontNoticiasController@noticia');
+
 Route::get('bloghome/{name}', [
     'uses' => 'FrontController@filtraCategoria',
     'as' => 'bloghome.filtrar.categorias'
 ]);
-Route::get('/biblioteca', [
-    'uses' => 'BibliotecaController@downfunc',
-    'as' => 'biblioteca'
+//--------Rutas del noticias--------
+
+Route::get('/articulohome', [
+    'uses' => 'FrontNoticiasController@index',
+    'as' => 'articulohome'
 ]);
-Route::get('biblioteca/{name?}', 'BibliotecaController@filtraCategoria');
+
+Route::get('/articulohome/articulo/{slug}', 'FrontNoticiasController@noticia');
+
+
+//--------Ruta Acerca de nosotros--------
 Route::get('/acercade', function () {
     return view('acercade');
 });
+
+//--------Rutas del Panel de admin--------
 Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
     Route::resource('carrera', 'CarreraController');
     Route::resource('categoria', 'CategoriaController');
@@ -115,12 +117,12 @@ Route::group(['prefix' => 'home', 'middleware' => 'auth'], function () {
 
 });
 
-
+//--------Rutas de categoria -------
 Route::get('categoria/{id}/destroy', [
     'uses' => 'CategoriaController@destroy',
     'as' => 'categoria.destroy'
 ]);
-
+//--------Rutas de carrera -------
 Route::get('carrera/{id}/destroy', [
     'uses' => 'CarreraController@destroy',
     'as' => 'carrera.destroy'
@@ -137,11 +139,6 @@ Route::get('noticias/{id}/destroy', [
 
 ]);
 
-Route::get('bibliotecas/{id}/destroy', [
-    'uses' => 'bibliotecaController@destroy',
-    'as' => 'bibliotecas.destroy'
-
-]);
 Route::get('noticias/{id}/destroy', [
     'uses' =>'NoticiaController@destroy',
     'as' => 'noticias.destroy'
@@ -153,7 +150,7 @@ Route::get('bibliotecas/{id}/destroy', [
 Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@downfunc');
 
 
-Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@downfunc');
+
 
 Route::get('/docentes', function () {
     return view('docentes.index');
@@ -186,8 +183,15 @@ Route::post('/storeEgresado',[
 
 Route::get('detalleProyecto/{id}','ProyectosController@show');
 
+
 Route::get('proyectos/{id}/destroy', [
     'uses' => 'ProyectosController@destroy',
     'as' => 'proyectos.destroy'
+
+]);
+
+Route::get('proyectos/{tipo?}',[
+    'uses' => 'ProyectosController@fitrarTipo',
+    'as' => 'proyectos.filtrar'
 
 ]);

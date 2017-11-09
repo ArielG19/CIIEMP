@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>       registrar una categoria
+                                    <a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>Registrar una categoria
                                     </a>
                                 </li>
                         </ul>

@@ -18,12 +18,18 @@
                             @endif
                         </div>
                         <div class="fh5co-post-text">
-                            <h3><a>{{$proyecto->titulo}}</a></h3>
+                            <center>
+                                <h3><a>{{$proyecto->titulo}}</a></h3><br><br>
+                            </center>
                             @if ($proyecto->historia==null)
                             @else
+                             <center>
+                                <h4>Historia</h4><br><br>
+                             </center>
                                 <p>{!!($proyecto->historia)!!}</p>
                             @endif
-                            <p>{!!($proyecto->resumenCorto)!!}</p>
+                            {{--<p>{!!($proyecto->resumenCorto)!!}</p>--}}
+                            {{--<hr>--}}
                             <hr>
                             <p>{!!($proyecto->resumenLargo)!!}</p>
                             <hr>
@@ -31,7 +37,8 @@
                             <div class="row">
                                 <ul class="bxslider">
                                     @foreach($proyecto->proyectoImg as $img)
-                                        <li><a class="test-popup-link" href="/images/proyecto/{{$img->image}}"><img src="/images/proyecto/{{$img->image}}" ></a></li>
+                                        <li><a class="test-popup-link" href="/images/proyecto/{{$img->image}}"><img
+                                                        src="/images/proyecto/{{$img->image}}"></a></li>
                                     @endforeach
 
                                 </ul>
@@ -54,35 +61,47 @@
 
                     <div class="panel panel-default">
                         @if($proyecto->historia==null)
-                        <div class="panel-body text-left">
-                            <div class="row">
-                                <div class="col-md-12 ">
-                                    <center>
-                                        <img alt="User Pic" src="/perfil/{{$proyecto->profesor->users->imagen}}" width="200" id="profile-image1" class="img-circle img-responsive">
+                            <div class="panel-body text-left">
+                                <div class="row">
+                                    <div class="col-md-12 ">
+                                        <center>
+                                            <img alt="User Pic" src="/perfil/{{$proyecto->profesor->users->imagen}}"
+                                                 width="200" id="profile-image1" class="img-circle img-responsive">
 
-                                    </center>
-                                </div>
-                                <div class="col-md-12">
+                                        </center>
+                                    </div>
+                                    <div class="col-md-12">
 
-                                    <h2>{{$proyecto->profesor->primer_nombre}} {{$proyecto->profesor->primer_apellido}}</h2>
-                                    <p>{{$proyecto->profesor->profesion1}}</p>
-                                    <p>
-                                        <a  class="remove-decoration"><i class="glyphicon glyphicon-envelope"></i> {{$proyecto->profesor->users->email}}</a> <br>
-                                        <a  class="remove-decoration"> <i class="glyphicon glyphicon-phone"></i> {{$proyecto->profesor->telefono}}</a> <br>
-                                        <a  class="remove-decoration"> <i class="fa fa-check-square"></i> {{$proyecto->profesor->profesion2}}</a> <br>
-                                        <a  class="remove-decoration"> <i class="fa fa-check-square"></i> {{$proyecto->profesor->profesion3}}</a> <br>
-                                        <a class="remove-decoration"><i class="fa fa-check-square" aria-hidden="true"></i> {{$proyecto->profesor->profesion4}}</a>
+                                        <h2>{{$proyecto->profesor->primer_nombre}} {{$proyecto->profesor->primer_apellido}}</h2>
+                                        <p>{{$proyecto->profesor->profesion1}}</p>
+                                        <p>
+                                            <a class="remove-decoration"><i
+                                                        class="glyphicon glyphicon-envelope"></i> {{$proyecto->profesor->users->email}}
+                                            </a> <br>
+                                            <a class="remove-decoration"> <i
+                                                        class="glyphicon glyphicon-phone"></i> {{$proyecto->profesor->telefono}}
+                                            </a> <br>
+                                            <a class="remove-decoration"> <i
+                                                        class="fa fa-check-square"></i> {{$proyecto->profesor->profesion2}}
+                                            </a> <br>
+                                            <a class="remove-decoration"> <i
+                                                        class="fa fa-check-square"></i> {{$proyecto->profesor->profesion3}}
+                                            </a> <br>
+                                            <a class="remove-decoration"><i class="fa fa-check-square"
+                                                                            aria-hidden="true"></i> {{$proyecto->profesor->profesion4}}
+                                            </a>
 
-                                    </p>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @else
                             <div class="panel-body text-left">
                                 <div class="row">
                                     <div class="col-md-12 ">
                                         <center>
-                                            <img alt="User Pic" src="/perfil/default.jpg" width="200" class="img-circle img-responsive">
+                                            <img alt="User Pic" src="/perfil/default.jpg" width="200"
+                                                 class="img-circle img-responsive">
 
                                         </center>
                                     </div>
@@ -106,8 +125,8 @@
                 </div>
 
 
+            </div>
         </div>
-    </div>
         <script type="text/javascript"
                 src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src={{asset("js/bxslider.js")}}></script>

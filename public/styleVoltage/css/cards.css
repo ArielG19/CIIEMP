@@ -3572,7 +3572,8 @@ color: #ff173c; }
 }
 
 
-.single_stuff{float:left; display:inline; width:100%; padding:0 15px; margin-bottom:30px}
+
+/*.single_stuff{float:left; display:inline; width:100%; padding:0 15px; margin-bottom:30px}
 .single_stuff_img{float:left; display:inline; width:100%}
 .single_stuff_img a{display:block; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .single_stuff_img img{max-width:100%}
@@ -3623,7 +3624,7 @@ color: #ff173c; }
  ================= */
 
 /* footer social icons */
-ul.social-network {
+/*ul.social-network {
   list-style: none;
   display: inline;
   margin-left:0 !important;
@@ -3632,4 +3633,4 @@ ul.social-network {
 ul.social-network li {
   display: inline;
   margin: 0 5px;
-}
+}*/

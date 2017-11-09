@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Blog;
 use App\Biblioteca;
 use App\Proyecto;
@@ -23,17 +24,26 @@ class ProyectosController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function frontProyecto(){
-        $proyectos = Proyecto::orderBy('id','DESC')->paginate(5);
-        return view('proyectos.indexPrincipal',compact('proyectos'));
+    public function frontProyecto(Request $request)
+    {
+        $proyectos = Proyecto::Search($request->titulo)->orderBy('id', 'DESC')->paginate(5);
+        return view('proyectos.indexPrincipal', compact('proyectos'));
+    }
+
+    public function filtraTipo($tipo)
+    {
+        $proyectos = Proyecto::Searchtipo($tipo)->first();
+        $filtrar = $proyectos->paginate(5);
+        return view('proyectos.indexPrincipal', compact('proyectos'));
+
     }
 
     public function index()
     {
 
-        $proyect = Proyecto::orderBy('id','DESC')->paginate(5);
+        $proyect = Proyecto::orderBy('id', 'DESC')->paginate(5);
 
-        $proyect->each(function($proyect){
+        $proyect->each(function ($proyect) {
 
             $proyect->profesor;
 
@@ -52,89 +62,91 @@ class ProyectosController extends Controller
      */
     public function egresados()
     {
-        $categorias = Categoria::pluck('name','id');
+        $categorias = Categoria::pluck('name', 'id');
 
-        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre', '!=', 'Editar', 'or', 'primer_apellido', '!=', 'Editar')->pluck('full_name', 'id');
 
-        return view('proyectos.createEgresado',compact('categorias','profesor'));
+        return view('proyectos.createEgresado', compact('categorias', 'profesor'));
     }
 
     public function create()
     {
-        $categorias = Categoria::pluck('name','id');
+        $categorias = Categoria::pluck('name', 'id');
 
-        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','Editar','or','primer_apellido','!=','Editar')->pluck('full_name', 'id');
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre', '!=', 'Editar', 'or', 'primer_apellido', '!=', 'Editar')->pluck('full_name', 'id');
 
-        return view('proyectos.create',compact('categorias','profesor'));
+        return view('proyectos.create', compact('categorias', 'profesor'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
 
-    public function storeEgresado(Request $request){
+    public function storeEgresado(Request $request)
+    {
 
-            $proyect = new Proyecto($request->all());
+        $proyect = new Proyecto($request->all());
+        $proyect->tipo = 'egresado';
 
 
-            if ($request->hasFile('imagen')) {
-                $imagen = $request->file('imagen');
-                $filename= time(). '.' .$imagen->getClientOriginalExtension();
-                Image::make($imagen)->resize(1000, 500)->save(public_path('images/'.$filename));
-                $proyect->imagen=$filename;
-                $proyect->save();
-            }else {
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen');
+            $filename = time() . '.' . $imagen->getClientOriginalExtension();
+            Image::make($imagen)->resize(1000, 500)->save(public_path('images/proyecto/' . $filename));
+            $proyect->imagen = $filename;
+            $proyect->save();
+        } else {
 
-                $proyect->save();
+            $proyect->save();
+        }
+
+        if ($request->hasFile('image')) {
+            foreach ($request->image as $image) {
+                $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
+                Image::make($image)->resize(1000, 600)->save(public_path('images/proyecto/' . $filename));
+                File::create([
+
+                    'id_proyectos' => $proyect->id,
+                    'image' => $filename
+                ]);
             }
+        }
 
-            if ($request->hasFile('image')) {
-                foreach ($request->image as $image) {
-                    $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
-                    Image::make($image)->resize(1000, 600)->save(public_path('images/proyecto/' . $filename));
-                    File::create([
-
-                        'id_proyectos' => $proyect->id,
-                        'image' => $filename
-                    ]);
-                }
-            }
-
-            Session::flash('message','Proyecto publicado correctamente');
-            return redirect::to('home/proyectos');
+        Session::flash('message', 'Proyecto publicado correctamente');
+        return redirect::to('home/proyectos');
 
 
+    }
 
-     }
     public function store(Request $request)
     {
         //
 
         $proyect = new Proyecto($request->all());
+        $proyect->tipo = 'estudiante';
 
-        if($request->input('responsable') == null){
+        if ($request->input('responsable') == null) {
 
             $proyect->teacher_id = $request->id_profesor;
-        }
-        else{
+        } else {
 
             $proyect->responsable = $request->responsable;
         }
 
         if ($request->hasFile('imagen')) {
-          $imagen = $request->file('imagen');
-          $filename= time(). '.' .$imagen->getClientOriginalExtension();
-          Image::make($imagen)->resize(1000, 500)->save(public_path('images/proyecto/'.$filename));
-          $proyect->imagen=$filename;
-          $proyect->historia=null;
-          $proyect->save();
-        }else {
+            $imagen = $request->file('imagen');
+            $filename = time() . '.' . $imagen->getClientOriginalExtension();
+            Image::make($imagen)->resize(1000, 500)->save(public_path('images/proyecto/' . $filename));
+            $proyect->imagen = $filename;
+            $proyect->historia = null;
+            $proyect->save();
+        } else {
 
-          $proyect->historia=null;
-          $proyect->save();
+            $proyect->historia = null;
+            $proyect->save();
         }
 
         if ($request->hasFile('image')) {
@@ -150,7 +162,7 @@ class ProyectosController extends Controller
         }
 
 
-        Session::flash('message','Proyecto publicado correctamente');
+        Session::flash('message', 'Proyecto publicado correctamente');
         return redirect::to('home/proyectos');
 
         //return redirect::to('bibliotecas');
@@ -159,7 +171,7 @@ class ProyectosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -168,46 +180,46 @@ class ProyectosController extends Controller
         $proyecto = Proyecto::find($id);
         $teacher = Teacher::find($proyecto->teacher_id);
 
-        return view("proyectos.detalleProyecto", compact('proyecto','teacher'));
+        return view("proyectos.detalleProyecto", compact('proyecto', 'teacher'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
-        $categorias = Categoria::pluck('name','id');
+        $categorias = Categoria::pluck('name', 'id');
 
-        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre','!=','','or','primer_apellido','!=','','or','primer_apellido','!=','')->pluck('full_name', 'id');
+        $profesor = Teacher::selectRaw('id, CONCAT(primer_nombre," ",segundo_nombre," ",primer_apellido," ",segundo_apellido) as full_name')->where('primer_nombre', '!=', '', 'or', 'primer_apellido', '!=', '', 'or', 'primer_apellido', '!=', '')->pluck('full_name', 'id');
 
 
         $proyect = Proyecto::find($id);
 
-        return view('proyectos.edit', compact('categorias', 'profesor','proyect'));
+        return view('proyectos.edit', compact('categorias', 'profesor', 'proyect'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
 
-        $proyect= proyecto::find($id);
+        $proyect = proyecto::find($id);
         $proyect->fill($request->all());
 
-        if($request->input('responsable') == null){
+
+        if ($request->input('responsable') == null) {
 
             $proyect->teacher_id = $request->id_profesor;
-        }
-        else{
+        } else {
 
             $proyect->responsable = $request->responsable;
         }
@@ -223,8 +235,8 @@ class ProyectosController extends Controller
         }
         //Eliminar imagenes previas
         if ($request->hasFile('image')) {
-            foreach ($proyect->articleImg as $img) {
-                $file_path = public_path('images/noticia') . '/' . $img->image;
+            foreach ($proyect->proyectoImg as $img) {
+                $file_path = public_path('images/proyecto') . '/' . $img->image;
                 unlink($file_path);
                 $img->delete();
 
@@ -236,24 +248,23 @@ class ProyectosController extends Controller
                 $filename = uniqid() . '.' . time() . '.' . $image->getClientOriginalExtension();
                 Image::make($image)->resize(1000, 600)->save(public_path('images/noticia/' . $filename));
                 File::create([
-                    'id_noticias' => $proyect->id,
+                    'id_proyectos' => $proyect->id,
                     'image' => $filename
                 ]);
             }
 
 
-
         }
         $proyect->save();
 
-        Session::flash('message','Proyecto modificado correctamente');
+        Session::flash('message', 'Proyecto modificado correctamente');
         return redirect::to('home/proyectos');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -290,5 +301,5 @@ class ProyectosController extends Controller
 //
         Session::flash('message', 'Proyecto eliminado Correctamente');
         return redirect::to('home/proyectos');
-     }
+    }
 }

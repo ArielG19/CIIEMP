@@ -30,6 +30,16 @@ class Proyecto extends Model
 
         return $this->hasMany('App\File','id_proyectos','id');
     }
+    public function scopeSearch($query, $titulo){
+        return $query->where('titulo','like', "%$titulo%");
+    }
+
+    public function scopeSearchtipo($query, $tipo){
+        return $query->where('tipo','=', "$tipo");
+    }
+
+
+
 
 
 

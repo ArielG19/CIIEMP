@@ -39,6 +39,7 @@
 		<div class="form-group col-md-8">
 
 				{!! Form::hidden('id_usuario', Auth::user()->id, null,['class' =>'form-control'])!!}
+
 		</div>
 
 		

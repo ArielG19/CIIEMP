@@ -21,6 +21,8 @@ class CreateProyectosTable extends Migration
             $table->string('historia')->nullable(true);
             $table->string('resumenCorto')->nullable(true);
             $table->string('resumenLargo');
+            $table->string('tipo');
+            $table->string('tel')->nullable(true);
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_categoria')->unsigned();
             $table->integer('teacher_id')->unsigned()->nullable(true);

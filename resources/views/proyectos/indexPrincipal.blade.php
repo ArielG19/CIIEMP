@@ -23,7 +23,7 @@
 
 				<div class="row" >
 					<div class="col-md-3"></div>
-						{!!Form::open(['route' => 'biblioteca', 'method' => 'GET'])!!}
+						{!!Form::open(['route' => 'proyectos', 'method' => 'GET'])!!}
 						<div class="col-md-8">
 							<div class="input-group">
 								{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
@@ -39,14 +39,19 @@
 	<hr>
 				<div class="row">
 					<div class="form-group col-md-6 pull-right combo">
+						{!!Form::open(['route' => 'proyectos.filtrar', 'method' => 'GET'])!!}
 					<label class="col-xs-3 control-label">Filtrar</label>
 								<div class="col-xs-5 selectContainer">
-									<select class="form-control" name="size">
-											<option value="">Proyectos Estudiantes</option>
-											<option value="">Proyectos Egresados</option>
+									<select class="form-control" name="tipo">
+
+											<option value="estudiante">Proyectos Estudiantes</option>
+											<option value="egresado">Proyectos Egresados</option>
 									</select>
 								</div>
+						<input type="button"class="btn btn-primary" name="tipo">
+						{!!Form::close()!!}
 						</div>
+
 					</div>
 
 				<style>
