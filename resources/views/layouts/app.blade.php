@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
 
 
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
 
 

@@ -23,7 +23,7 @@
             <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
             <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
             <link rel="stylesheet" href="{{asset('/Trumbowyg/trumb/ui/trumbowyg.css')}}">
-            
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
             <div>
@@ -107,7 +107,7 @@
                   ],
                   toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
 
-        
+
                   file_picker_callback: function(callback, value, meta) {
                     if (meta.filetype == 'image') {
                       $('#upload').trigger('click');

@@ -16,7 +16,7 @@ use Image;
 use Input;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-
+use Auth;
 
 class NoticiaController extends Controller
 {
@@ -27,9 +27,21 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $noticias = Noticia::orderBy('id', 'DESC')->paginate(5);
+        //$noticias = Noticia::orderBy('id', 'DESC')->paginate(5)
 
+        if(Auth::user()->type == 'admin')
+        {
+            $noticias = Noticia::orderBy('id', 'DESC')->paginate(5);
+
+
+        }else
+
+        {
+            $noticias = Noticia::orderBy('id', 'DESC')->where('id_usuario',Auth::user()->id)->paginate(5);
+        }
         return view('panel.noticia.index')->with(compact('noticias'));
+
+
     }
 
 

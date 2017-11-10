@@ -10,7 +10,7 @@
 
     @endif
 
-
+<div class="col-xs-10">
 
     <table class="table table-striped">
         <thead>
@@ -58,7 +58,6 @@
         @endforeach
         </tbody>
     </table>
-
-    {!! $proyect->render() !!}
+    <center>{!! $proyect->render()!!}</center>
 
 @endsection

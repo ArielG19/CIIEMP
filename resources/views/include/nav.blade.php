@@ -97,40 +97,28 @@
     </div>
 </nav>
 <!--FIN DE MENU-->
-<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"
-     style="background: url(@yield('banner','/styleVoltage/images/ciiemp-Walpaper.jpg'));">
-                        <span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
-                            <a href="#">
-                                <span class="mouse"><span></span></span>
-                            </a>
-                        </span>
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover-text">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 full-height js-full-height">
-                    @include('auth.login')
-                    @include('auth.register')
-
-                </div>
-
-                <div class="col-md-6 full-height js-full-height">
-
-                    <div class="fh5co-cover-intro">
-                        <div class="well" style="background:transparent !important">
-                            <h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Centro
-                                de Investigación para la Innovación y el Emprendimiento</h1>
-                            <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-                                Plataforma Web para la promoción y desarrollo de proyectos de innovación y emprendimiento.</h2>
-                            <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a
-                                        href="{{ url('/acercade') }}" class="btn btn-primary btn-outline btn-lg">Acerca
-                                    de nosotros</a></p>
-
+<div id="banner" class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes">
+                                                <div class="fh5co-cover-text">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-10 col-md-6 full-height js-full-height">
+                                            @include('auth.login')
+                                            @include('auth.register')
+                                    </div>
+                                    <div class="col-md-6 full-height js-full-height">
+                                        <div class="fh5co-cover-intro">
+                                            <div class="well" id="text-well">
+                                                <h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Centro
+                                                    de Investigación para la Innovación y el Emprendimiento</h1>
+                                                <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                                                    Plataforma Web para la promoción y desarrollo de proyectos de innovación y emprendimiento.</h2>
+                                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a
+                                                            href="{{ url('/acercade') }}" class="btn btn-primary btn-outline btn-lg">Acerca
+                                                        de nosotros</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>

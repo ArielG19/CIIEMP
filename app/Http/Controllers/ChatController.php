@@ -49,9 +49,7 @@ class ChatController extends Controller
             ->Orderby('conversation_id','desc')
             ->groupBy('conversation_id')
             ->whereIn('messages.conversation_id', $array)
-            ->Orderby('messages.conversation_id','desc')
-            ->paginate(1);
-            //->get();
+            ->get();
             //dd($message);
             return view('chat.conversacion')->with('message',$message);
         

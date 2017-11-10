@@ -25,7 +25,4 @@
 	@endif
 
 @endforeach
-<center>
-	<h4>{{$message->render()}}</h4>
-</center>
 <script type="text/javascript" src="{{asset('/js/Chat/chatUsuarios.js')}}"></script>

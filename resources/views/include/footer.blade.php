@@ -8,18 +8,19 @@
 					<br>
 						Derechos Reservados
 					<br>
-						Página Web diseñada por
+						Página Web diseñada por :
 					<a target="_blank" href="#"></a>
 					<br>
 
 					<a target="_blank" href="#">Greyner Cáceres</a>
 					<br>
 
-					<a target="_blank" href="#">Rubén Perez</a>
+					<a target="_blank" href="https://arielg19.github.io/mySite/">Rubén Perez</a>
 					<br>
 
 					<a target="_blank" href="https://holamusicos.wordpress.com/">David Rivera Lanuza</a>
 					<br>
+					
 				</p>
 		</div>
 
