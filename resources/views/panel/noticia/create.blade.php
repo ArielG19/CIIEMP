@@ -1,7 +1,7 @@
 @extends('home')
 @section('title', 'Crear articulo para las noticias')
 @section('contenido')
-
+<div class="col-xs-10">
     @if (count($errors) > 0)
         <ul>
             @foreach ($errors->all() as $error)
@@ -131,7 +131,7 @@
     {!! Form::close() !!}
 
 
-
+</div>
 @endsection
 
     <script type="text/javascript">

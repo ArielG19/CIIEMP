@@ -13,11 +13,13 @@ use Redirect;
 use DB;
 use App\Http\Requests\UploadRequest;
 use Image;
+use Auth;
 
 class BibliotecaController extends Controller
 {
     public function downfunc(Request $request)
     {
+
 
         $downloads = Biblioteca::Search($request->titulo)->orderBy('id', 'DESC')->paginate(16);
         return view('Biblioteca.index', compact('downloads'));
@@ -33,7 +35,15 @@ class BibliotecaController extends Controller
      */
     public function index()
     {
-      $biblios = Biblioteca::orderBy('id', 'DESC')->paginate(5);
+        if(Auth::user()->type == 'admin')
+        {
+            $biblios = Biblioteca::orderBy('id', 'DESC')->paginate(5);
+        }
+        else
+        {
+            $biblios = Biblioteca::orderBy('id', 'DESC')->where('id_usuario',Auth::user()->id)->paginate(5);
+        }
+      
         return view('panel.biblioteca.index', compact('biblios'));
     }
 

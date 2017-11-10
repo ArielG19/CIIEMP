@@ -227,21 +227,6 @@
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-line-chart"></i>
-                            <span>Proyectos</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{route('proyectos.create')}}"><i class="fa fa-circle-o"></i>Proyecto Estudiantes</a>
-                            </li>
-                            <li><a href="{{route('proyectos.createEgresados')}}"><i class="fa fa-circle-o"></i>Proyecto Egresados</a>
-                            </li>
-                            <li><a href="{{route('proyectos.index')}}"><i class="fa fa-circle-o"></i>Listar
-                                    Proyectos</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
                             <i class="fa fa-bold"></i>
                             <span>Blog</span>
                             <i class="fa fa-angle-left pull-right"></i>
@@ -314,10 +299,10 @@
 
         <div class="content-wrapper">
             <section class="content">
-                <div class="container">
+                
                     @yield('contenido')
 
-                </div>
+                
             </section>
         </div>
         <!--Fin-Contenido-->

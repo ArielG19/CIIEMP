@@ -58,7 +58,6 @@
         @endforeach
         </tbody>
     </table>
-
-    {!! $proyect->render() !!}
+    <center>{!! $noticias->render()!!}</center>
 
 @endsection

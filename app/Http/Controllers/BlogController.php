@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Storage;
 use Session;
 use Redirect;
 use Image;
+use Auth;
 
 class BlogController extends Controller
 {
@@ -23,9 +24,18 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::orderBy('id', 'DESC')->paginate(5);
+        if(Auth::user()->type == 'admin')
+        {
+            $blogs = Blog::orderBy('id', 'DESC')->paginate(5);
+        }
+        else
+        {
+            $blogs = Blog::orderBy('id', 'DESC')->where('id_usuario',Auth::user()->id)->paginate(5);
+        }
+        
 
         return view('panel.blog.index')->with(compact('blogs'));
+
     }
 
     /**

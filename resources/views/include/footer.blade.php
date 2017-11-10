@@ -8,22 +8,17 @@
 					<br>
 						Derechos Reservados
 					<br>
-<<<<<<< HEAD
-						Designed by
-					<a target="_blank" href="https://arielg19.github.io/mySite/">ArielGot19</a>
-=======
-						Página Web diseñada por
+						Página Web diseñada por :
 					<a target="_blank" href="#"></a>
 					<br>
 
 					<a target="_blank" href="#">Greyner Cáceres</a>
 					<br>
 
-					<a target="_blank" href="#">Rubén Perez</a>
+					<a target="_blank" href="https://arielg19.github.io/mySite/">Rubén Perez</a>
 					<br>
 
 					<a target="_blank" href="https://holamusicos.wordpress.com/">David Rivera Lanuza</a>
->>>>>>> 2fd47fd3a9cacc8c543c7ce78225f032f431401f
 					<br>
 					
 				</p>

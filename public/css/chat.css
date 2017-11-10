@@ -103,8 +103,13 @@
             color: #999;
         }
      
-        @media screen and (min-device-width:360px){
-        #caja{
+        @media screen and (max-device-width:360px){
+            .well
+            {
+                height: 450px;
+            }
+             #caja
+            {
                 height: 300px;
                margin-bottom: 10px;
             }
@@ -125,30 +130,16 @@
             }
 
         }
-
-        @media(min-device-width:640px){
-        #caja{
-                height: 300px;
-                display: block !important;
-                 margin-bottom: 10px;
-            }
-             .mytext
-            {
-                 display: block !important;
-                 width: 80%;
-                 margin-top:1px
-            }
-            .text-r
+      @media screen and (max-width:640px){
+                   .text-r
             {
              padding-left:10px;
             }
-            #Enviar
-            {
-                margin-top: -70px;
-                margin-left:510px;
-            }
+           
 
         }  
+
+      
 
 
    
