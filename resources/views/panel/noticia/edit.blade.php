@@ -8,32 +8,29 @@
             @endforeach
         </ul>
     @endif
-
-
-
     {!!Form::model($noticia,['route'=>['noticia.update',$noticia,],'method'=>'PUT','files' => true])!!}
     @if(is_null($noticia->articleEvent))
-    <div class="col-md-2 pull-right">
-        <h4>¿Es un concurso?</h4>
-        <div class="onoffswitch">
-            <input type="checkbox"  name="estado" class="onoffswitch-checkbox" id="check"
-                   onchange="javascript:showContent()">
-            <label class="onoffswitch-label" for="check">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-            </label>
+        <div class="col-md-2">
+            <h4>¿Es un concurso?</h4>
+            <div class="onoffswitch">
+                <input type="checkbox" name="estado" class="onoffswitch-checkbox" id="check"
+                       onchange="javascript:showContent()">
+                <label class="onoffswitch-label" for="check">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
         </div>
-    </div>
     @else
         <input type="checkbox" checked="checked" name="estado" class="hidden">
     @endif
-    <div class="col-md-12">
+
         <div class="form-group">
             {!! Form::label('titulo','Título') !!}
             {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del artículo','required'])!!}
         </div>
-    </div>
-    <div class="row">
+
+
     <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('lugar','Lugar') !!}
@@ -48,10 +45,10 @@
         </div>
 
     </div>
-    </div>
 
 
-    <div class="col-md-12">
+
+
         <div class="form-group">
             {!! Form::label('descripcion','Contenido') !!}
             {!! Form::textarea('descripcion',null,['class' =>'form-control', 'id'=>'textareay', 'placeholder' =>'Contenido del artículo'])!!}
@@ -59,7 +56,7 @@
 
         <input name="iagem" type="file" id="upload" class="hidden" onchange="">
 
-    </div>
+
 
 
 
@@ -70,24 +67,24 @@
     </div>
 
     @if(is_null($noticia->articleEvent))
-    <div id="content" style="display: none;">
-        <div class="col-md-4">
-            <div class="form-group">
+        <div id="content" style="display: none;">
+            <div class="col-md-4">
+                <div class="form-group">
 
-                {!! Form::label('imagen','Fecha de Inicio') !!}
-                {!! Form::text('fecha_inicio',null,['class' =>'form-control datepicker'])!!}
+                    {!! Form::label('imagen','Fecha de Inicio') !!}
+                    {!! Form::text('fecha_inicio',null,['class' =>'form-control datepicker'])!!}
 
+                </div>
+            </div>
+
+            <div class="col-md-4 col-md-offset-1">
+                <div class="form-group">
+                    {!! Form::label('imagen','Fecha de Finalizacion') !!}
+                    {!! Form::text('fecha_final',null,['class' =>'form-control datepicker'])!!}
+
+                </div>
             </div>
         </div>
-
-        <div class="col-md-4 col-md-offset-1">
-            <div class="form-group">
-                {!! Form::label('imagen','Fecha de Finalizacion') !!}
-                {!! Form::text('fecha_final',null,['class' =>'form-control datepicker'])!!}
-
-            </div>
-        </div>
-    </div>
     @else
         <div class="col-md-4">
             <div class="form-group">

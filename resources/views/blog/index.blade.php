@@ -43,7 +43,7 @@
 					</div>
 
 
-					<div class="col-md-4 col-lg-4  categoryd">
+					<div class="col-md-4 col-lg-4 hidden-xs  categoryd">
 							<!-- Category -->
 							<div class="single category">
 								<h3 class="side-title">Categorias</h3>

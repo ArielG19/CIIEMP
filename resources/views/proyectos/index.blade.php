@@ -10,54 +10,57 @@
 
     @endif
 
-<div class="col-xs-10">
+    <div class="col-xs-10">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <th>Titulo</th>
+                <th>Imagen</th>
+                <th id="tdresponsable">Responsable</th>
+                <th id="tdotro">Otro</th>
+                <th>Historia</th>
+                <th>Resumen Largo</th>
+                <th>Acciones</th>
 
-    <table class="table table-striped">
-        <thead>
-        <th>Titulo</th>
-        <th>Imagen</th>
-        <th id="tdresponsable">Responsable</th>
-        <th id="tdotro">Otro</th>
-        <th>Historia</th>
-        <th>Resumen Largo</th>
-        <th>Acciones</th>
+                </thead>
 
-        </thead>
+                <tbody>
+                <tr>
 
-        <tbody>
-        <tr>
-
-            @foreach ($proyect as $proyects)
-                <td>{{$proyects->titulo}}</td>
-                @if(empty($proyects->imagen))
-                    <td>No tiene archivo</td>
-                @else
-                    <td><img src="{{asset('images/proyecto')}}/{{$proyects->imagen}}" style="width:100px"></td>
-                @endif
-                @if(empty($proyects->profesor->primer_nombre))
-                    <td></td>
-                @else
-                    <td>{{$proyects->profesor->primer_nombre}} {{$proyects->profesor->primer_apellido}}</td>
-                @endif
-                @if(empty($proyects->responsable))
-                    <td></td>
-                @else
-                    <td>{{$proyects->responsable}}</td>
-                @endif
-                <td>{{$proyects->historia}}</td>
-                <td>{{$proyects->resumenLargo}}</td>
+                    @foreach ($proyect as $proyects)
+                        <td>{{$proyects->titulo}}</td>
+                        @if(empty($proyects->imagen))
+                            <td>No tiene archivo</td>
+                        @else
+                            <td><img src="{{asset('images/proyecto')}}/{{$proyects->imagen}}" style="width:100px"></td>
+                        @endif
+                        @if(empty($proyects->profesor->primer_nombre))
+                            <td></td>
+                        @else
+                            <td>{{$proyects->profesor->primer_nombre}} {{$proyects->profesor->primer_apellido}}</td>
+                        @endif
+                        @if(empty($proyects->responsable))
+                            <td></td>
+                        @else
+                            <td>{{$proyects->responsable}}</td>
+                        @endif
+                        <td>{{$proyects->historia}}</td>
+                        <td>{{$proyects->resumenLargo}}</td>
 
 
-                <td><a class="btn btn-success" href="{{route('proyectos.edit', $proyects->id)}}" role="button"><i
-                                class="fa fa-pencil-square-o"></i></a>
-                    <a class="btn btn-danger" href="{{route('proyectos.destroy', $proyects->id)}}"
-                       onclick="return confirm('Quiere borrar el archivo?')" role="button"><i class="fa fa-trash-o"></i></a>
-                </td>
+                        <td><a class="btn btn-success" href="{{route('proyectos.edit', $proyects->id)}}"
+                               role="button"><i
+                                        class="fa fa-pencil-square-o"></i></a>
+                            <a class="btn btn-danger" href="{{route('proyectos.destroy', $proyects->id)}}"
+                               onclick="return confirm('Quiere borrar el archivo?')" role="button"><i
+                                        class="fa fa-trash-o"></i></a>
+                        </td>
 
-        </tr>
-        @endforeach
-        </tbody>
-    </table>
-    <center>{!! $proyect->render()!!}</center>
+                </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+        <center>{!! $proyect->render()!!}</center>
 
 @endsection

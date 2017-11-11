@@ -16,32 +16,34 @@
         <form>
             <div class="row">
                 <div class="form-group col-lg-10">
-                    <table class="table table-striped">
-                        <thead>
-                        <th>Nombre</th>
-                        <th>Acciones</th>
-                </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
 
-                </thead>
 
-                <tbody>
-                <tr>
-                    @foreach ($categorias as $categoria)
-                        <td>{{$categoria->name}}</td>
+                            </thead>
 
-                        <td>
-                            <a class="btn btn-success" href="{{route('categoria.edit', $categoria->id)}}" role="button"><i
-                                        class="fa fa-pencil-square-o"></i></a>
-                            <a class="btn btn-danger" href="{{route('categoria.destroy', $categoria->id)}}"
-                               onclick="return confirm('Quiere borrar el registro?')" role="button"><i
-                                        class="fa fa-trash-o"></i></a>
-                        </td>
+                            <tbody>
+                            <tr>
+                                @foreach ($categorias as $categoria)
+                                    <td>{{$categoria->name}}</td>
 
-                </tr>
-                @endforeach
-                </tbody>
-                </table>
-            </div>
+                                    <td>
+                                        <a class="btn btn-success" href="{{route('categoria.edit', $categoria->id)}}"
+                                           role="button"><i
+                                                    class="fa fa-pencil-square-o"></i></a>
+                                        <a class="btn btn-danger" href="{{route('categoria.destroy', $categoria->id)}}"
+                                           onclick="return confirm('Quiere borrar el registro?')" role="button"><i
+                                                    class="fa fa-trash-o"></i></a>
+                                    </td>
+
+                            </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
 
     {!! $categorias->render() !!}
 

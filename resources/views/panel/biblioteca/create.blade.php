@@ -2,6 +2,8 @@
 @section('title', 'Subir archivo PDF')
 @section('contenido')
 
+
+
     @if(count($errors) > 0)
         <div class="alert alert-danger" role="alert">
             <ul>
@@ -46,19 +48,12 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
     <div class="form-group">
         {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
 
     </div>
+
+
 
 
 
