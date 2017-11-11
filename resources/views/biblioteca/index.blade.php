@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <h2> Repositorio digital de Innovacion y Emprendimiento</h2>
-                    
+
                 </div>
             </div>
 
@@ -45,24 +45,35 @@
                                 @if($down->image!=null)
                                     <img src="/images/biblioteca/{{$down->image}}" alt="Image" class="img-responsive">
                                 @elseif(pathinfo($down->path,PATHINFO_EXTENSION)=== 'pdf')
-                                <img src="{{asset('styleVoltage/images/Library-ciiemp-pdf.jpg')}}" alt="Image"
-                                class="img-responsive">
+                                    <img src="{{asset('styleVoltage/images/Library-ciiemp-pdf.jpg')}}" alt="Image"
+                                         class="img-responsive">
                                 @elseif(pathinfo($down->path,PATHINFO_EXTENSION)=== 'docx')
-                                <img src="{{asset('styleVoltage/images/Library-ciiemp-word.jpg')}}" alt="Image"
-                                class="img-responsive">
+                                    <img src="{{asset('styleVoltage/images/Library-ciiemp-word.jpg')}}" alt="Image"
+                                         class="img-responsive">
                                 @endif
 
 
                             </div>
-                            <div class="fh5co-post-text prueba">
-                                <h3><a>{{$down->titulo}}</a></h3>
-                                <p>{{$down->descripcion}}</p>
+                            <div class="fh5co-post-text">
+                                <div class="col-md-12 col-lg-12 hidden-xs prueba">
+                                    <h3><a>{{$down->titulo}}</a></h3>
+                                </div>
+                                <div class="col-sm-12 col-xs-12 hidden-lg hidden-md prueba">
+                                    <h3><a>{{substr(strip_tags($down->titulo), 0,50)}}...</a></h3>
+                                </div>
+
+
                             </div>
-                            <div class="fh5co-post-meta" id="btn">
-                                <a class="btn btn-primary" href="/download/pdf/{{$down->path}}" target="_blank"
-                                   role="button">Ver</a>
-                                <a class="btn btn-primary" href="/download/pdf/{{$down->path}}"
-                                   download="{{$down->path}}" role="button">Descargar</a>
+                            <div class="fh5co-post-meta">
+                                <div class="col-md-4 col-xs-12">
+                                    <a class="btn btn-primary"  href="/download/pdf/{{$down->path}}" target="_blank"
+                                       role="button" style='width:90px'><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-md-4 col-xs-12 col-md-offset-1">
+                                    <a class="btn btn-primary" href="/download/pdf/{{$down->path}}"
+                                       download="{{$down->path}}" role="button" style='width:90px'><i class="fa fa-download fa-lg" aria-hidden="true"></i></a>
+                                </div>
+
                             </div>
                         </div>
                     </div>

@@ -19,12 +19,7 @@
 
     <div class="form-group">
         {!! Form::label('titulo','Título') !!}
-        {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del archivo','required'])!!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('descripcion','Contenido') !!}
-        {!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Descripcion del archivo (Max 150 caracteres)','maxlength' => 150,'required'])!!}
+        {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del archivo','maxlength' => 150,'required'])!!}
     </div>
 
 

@@ -15,8 +15,8 @@
             <thead>
             <th>Titulo</th>
             <th>Contenido</th>
-            <th>Autor</th>
             <th>Categoria</th>
+            <th>Autor</th>
             <th>Imagen</th>
             <th>Archivo</th>
             <th>Acciones</th>

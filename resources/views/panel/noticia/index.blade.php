@@ -56,7 +56,7 @@
                                 <a class="btn btn-info btn-sm btnimg" role="button"
                                    href="{{route('noticia.show', $noticia->id)}}" onclick="window.open(this.href, 'mywin',
                                     'left=550,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
-                                    <span>Img <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                                    <span>Imágenes <i class="fa fa-eye" aria-hidden="true"></i></span>
                                 </a>
                             </td>
                         @else

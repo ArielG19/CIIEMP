@@ -14,7 +14,7 @@
                 <table class="table table-striped">
                     <thead>
                     <th>Titulo</th>
-                    <th>Contenido</th>
+
                     <th>Categoria</th>
                     <th>Autor</th>
                     <th>Imagen</th>
@@ -25,8 +25,9 @@
                     @foreach ($biblios as $biblio)
                         @if(Auth::user()->id == $biblio->id_usuario)
                             <tr>
-                                <td>{{$biblio->titulo}}</td>
-                                <td>{{$biblio->descripcion}}</td>
+
+                                <td>{{substr(strip_tags($biblio->titulo), 0,100)}}...</td>
+
                                 <td>{{$biblio->category->name}}</td>
                                 <td>{{$biblio->users->name}}</td>
                                 @if($biblio->image==null)

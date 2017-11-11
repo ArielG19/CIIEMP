@@ -37,8 +37,8 @@
 
 				</div>
 	<hr>
-				
-	<div class="row col-md-12">
+
+	<div class="row col-md-12 col-xs-6">
 				@foreach($proyectos as $proyecto)
 				<a href="detalleProyecto/{{$proyecto->id}}">
 					<article>

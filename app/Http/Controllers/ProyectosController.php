@@ -183,6 +183,14 @@ class ProyectosController extends Controller
         return view("proyectos.detalleProyecto", compact('proyecto', 'teacher'));
     }
 
+    public function showimg($id)
+    {
+        $proyect = Proyecto::find($id);
+
+
+        return view("proyectos.modalimg", compact('proyect'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
