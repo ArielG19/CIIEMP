@@ -16,12 +16,13 @@
                 <thead>
                 <th>Tipo de proyecto</th>
                 <th>Titulo</th>
-                <th>Imagen de Cabecera</th>
+                <th>Img de Cabecera</th>
                 <th id="tdresponsable">Responsable</th>
                 <th id="tdotro">Otro</th>
                 <th>Historia</th>
                 <th>Resumen Largo</th>
-                <th>Imágenes del proyecto</th>
+                <th>Contacto</th>
+                <th>Imágenes</th>
                 <th>Acciones</th>
 
                 </thead>
@@ -55,6 +56,7 @@
                         @endif
                         <td>{{$proyects->historia}}</td>
                         <td>{{$proyects->resumenLargo}}</td>
+                        <td>{{$proyects->tel}}</td>
                         @if(isset($proyects->proyectoImg[0]))
                             <td>
                                 <a class="btn btn-info btn-sm btnimg" role="button"

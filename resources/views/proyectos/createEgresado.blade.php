@@ -19,6 +19,10 @@
         {!! Form::text('responsable',null,['id'=>'txtresponsable','class' =>'form-control', 'placeholder' =>'Responsable del Proyecto','required'])!!}
     </div>
     <div class="form-group">
+        {!! Form::label('responsable','Contacto') !!}
+        {!! Form::text('tel',null,['class' =>'form-control', 'placeholder' =>'Número de telefono o correo electronico','required'])!!}
+    </div>
+    <div class="form-group">
         {!! Form::label('historia','Historia') !!}
         {!! Form::textarea('historia',null,['class' =>'form-control', 'placeholder' =>'Breve Historia del Proyecto 300 palabras','maxlength' => 300,'required'])!!}
     </div>

@@ -23,9 +23,9 @@
                             </center>
                             @if ($proyecto->historia==null)
                             @else
-                             <center>
-                                <h4>Historia</h4><br><br>
-                             </center>
+                                <center>
+                                    <h4>Historia</h4><br><br>
+                                </center>
                                 <p>{!!($proyecto->historia)!!}</p>
                             @endif
                             {{--<p>{!!($proyecto->resumenCorto)!!}</p>--}}
@@ -57,10 +57,10 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-12">
 
                     <div class="panel panel-default">
-                        @if($proyecto->historia==null)
+                        @if($proyecto->responsable == null)
                             <div class="panel-body text-left">
                                 <div class="row">
                                     <div class="col-md-12 ">
@@ -108,8 +108,10 @@
                                     <div class="col-md-12">
 
                                         <h2>{{$proyecto->responsable}}</h2>
-                                        <p></p>
+
                                         <p>
+                                            <a class="remove-decoration"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Contacto {{$proyecto->tel}}
+                                            </a> <br>
 
 
                                         </p>

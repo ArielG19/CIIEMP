@@ -90,6 +90,7 @@ class ProyectosController extends Controller
 
         $proyect = new Proyecto($request->all());
         $proyect->tipo = 'egresado';
+        $proyect->tel = $request->tel;
 
 
         if ($request->hasFile('imagen')) {
@@ -134,6 +135,7 @@ class ProyectosController extends Controller
         } else {
 
             $proyect->responsable = $request->responsable;
+            $proyect->tel = $request->tel;
         }
 
         if ($request->hasFile('imagen')) {
@@ -222,6 +224,11 @@ class ProyectosController extends Controller
 
         $proyect = proyecto::find($id);
         $proyect->fill($request->all());
+        if ($proyect->tipo == 'estudiante') {
+            $proyect->tipo = 'estudiante';
+        } else {
+            $proyect->tipo = 'egresado';
+        }
 
 
         if ($request->input('responsable') == null) {
@@ -230,14 +237,15 @@ class ProyectosController extends Controller
         } else {
 
             $proyect->responsable = $request->responsable;
+            $proyect->tel = $request->tel;
         }
 
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time() . '.' . $imagen->getClientOriginalExtension();
             Image::make($imagen)->resize(1000, 500)->save(public_path('images/proyecto/' . $filename));
-            $oldfilename = $proyect->path;
-            $proyect->path = $filename;
+            $oldfilename = $proyect->imagen;
+            $proyect->imagen = $filename;
             Storage::delete($oldfilename);
 
         }

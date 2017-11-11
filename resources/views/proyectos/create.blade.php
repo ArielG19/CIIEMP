@@ -25,6 +25,10 @@
         {!! Form::checkbox('checkbox', 'value',null,['id'=>'checkbox'])!!}
         {!! Form::text('responsable',null,['id'=>'txtresponsable','class' =>'form-control', 'placeholder' =>'Responsable del Proyecto','required','disabled'])!!}
     </div>
+    <div class="form-group">
+        {!! Form::label('responsable','Contacto') !!}
+        {!! Form::text('tel',null,['id'=>'txtcontacto','class' =>'form-control','placeholder' =>'Número de telefono o correo electronico','required','disabled'])!!}
+    </div>
 
     <div class="form-group">
         {!! Form::label('resumenCorto','Resumen de 100 palabras') !!}
@@ -67,13 +71,16 @@
                 if (check) {
 
                     $('#txtresponsable').prop("disabled", false).focus();
+                    $('#txtcontacto').prop("disabled", false);
                     $('#cmbprofesor').prop("disabled", true);
                 }
                 else {
 
                     $('#txtresponsable').prop("disabled", true);
+                    $('#txtcontacto').prop("disabled", true);
                     $('#cmbprofesor').prop("disabled", false);
                     $('#txtresponsable').val("");
+                    $('#txtcontacto').val("");
                 }
 
             });
