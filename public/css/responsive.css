@@ -1,4 +1,6 @@
-
+.btn.btn-link:hover{
+	color: #fff !important;
+}
 #text-well{
 		background:transparent !important;
 	 }
