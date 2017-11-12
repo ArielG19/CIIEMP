@@ -10,25 +10,21 @@
 
 
     @endif
-
- 
-               
-
-
-    <table class="table table-striped">
-        <thead>
-        <th>Titulo</th>
-        <th>Contenido</th>
-        <th>Autor</th>
-        <th>Categoria</th>
-        <th>Imagen</th>
-        <th>Archivo</th>
-        <th>Acciones</th>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <th>Titulo</th>
+            <th>Contenido</th>
+            <th>Categoria</th>
+            <th>Autor</th>
+            <th>Imagen</th>
+            <th>Archivo</th>
+            <th>Acciones</th>
 
 
-        </thead>
+            </thead>
 
-        <tbody>
+            <tbody>
             @foreach ($blogs as $blog)
                 @if(Auth::user()->id == $blog->id_usuario)
                     <tr>
@@ -86,10 +82,10 @@
                     </tr>
 
                 @endif
-             @endforeach
-        </tbody>
-    </table>
-
+            @endforeach
+            </tbody>
+        </table>
+    </div>
     {!! $blogs->render() !!}
 
 @endsection

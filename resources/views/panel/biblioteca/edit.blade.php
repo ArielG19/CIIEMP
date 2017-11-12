@@ -7,13 +7,10 @@
 
     <div class="form-group">
         {!!Form::label('titulo','Titulo:')!!}
-        {!!Form::text('titulo',null,['class'=>'form-control','placeholder'=>'Ingresa el título','required'])!!}
+        {!!Form::text('titulo',null,['class'=>'form-control','placeholder'=>'Ingresa el título','maxlength' => 150,'required'])!!}
     </div>
 
-    <div class="form-group">
-        {!! Form::label('descripcion','Contenido') !!}
-        {!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Contenido','maxlength' => 150,'required'])!!}
-    </div>
+
 
     <div class="form-group">
         {!! Form::label('usuario','Usuario') !!}
@@ -43,6 +40,9 @@
 
     </div>
 
-    {!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
+
+
+    {!!Form::submit('Editar',['class'=>'btn btn-primary'])!!}
     {!!Form::close()!!}<br>
+
 @endsection

@@ -1,7 +1,9 @@
 @extends('home')
 @section('title', 'Listado de entradas de blog')
 @section('contenido')
-<div class="col-xs-10">
+<div class="table-responsive">
+  <div class="col-xs-10">
+
     @if(Session::has('message'))
         <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
@@ -29,7 +31,7 @@
         </thead>
 
         <tbody>
-        
+
 
             @foreach ($noticias as $noticia)
                 @if(Auth::user()->id == $noticia->id_usuario)
@@ -54,7 +56,7 @@
                                 <a class="btn btn-info btn-sm btnimg" role="button"
                                    href="{{route('noticia.show', $noticia->id)}}" onclick="window.open(this.href, 'mywin',
                                     'left=550,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
-                                    <span>Img <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                                    <span>Imágenes <i class="fa fa-eye" aria-hidden="true"></i></span>
                                 </a>
                             </td>
                         @else
@@ -104,19 +106,18 @@
                                onclick="return confirm('Quiere borrar el registro?')" role="button"><i
                                         class="fa fa-trash-o"></i></a>
                         </td>
-                    </tr>  
-                    
-                @endif    
+                    </tr>
+
+                @endif
             @endforeach
         </tbody>
 
     </table>
-    
+
     <center>{!! $noticias->render()!!}</center>
 </div>
-    
+</div>
 
 
 
 @endsection
-  	

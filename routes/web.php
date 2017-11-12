@@ -199,3 +199,9 @@ Route::get('proyectos/{tipo?}',[
     'as' => 'proyectos.filtrar'
 
 ]);
+
+Route::get('proyectos/image/{id}',[
+    'uses'=>'ProyectosController@showimg',
+    'as'=>'proyectos.showimg']);
+
+

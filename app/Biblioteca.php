@@ -8,7 +8,7 @@ class Biblioteca extends Model
 {
   protected $table = "bibliotecas";
 
-  protected $fillable = ['id','titulo','path','descripcion','id_usuario','id_categoria'];
+  protected $fillable = ['id','titulo','path','id_usuario','id_categoria'];
 
   public function category()
    {

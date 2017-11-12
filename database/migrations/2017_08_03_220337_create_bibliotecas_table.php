@@ -18,7 +18,7 @@ class CreateBibliotecasTable extends Migration
             $table->string('titulo');
             $table->string('image')->nullable();
             $table->string('path');
-            $table->text('descripcion');
+
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_categoria')->unsigned();
 

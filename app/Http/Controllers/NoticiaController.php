@@ -28,11 +28,11 @@ class NoticiaController extends Controller
     public function index()
     {
         //$noticias = Noticia::orderBy('id', 'DESC')->paginate(5)
-        
+
         if(Auth::user()->type == 'admin')
         {
             $noticias = Noticia::orderBy('id', 'DESC')->paginate(5);
-            
+
 
         }else
 
@@ -40,8 +40,8 @@ class NoticiaController extends Controller
             $noticias = Noticia::orderBy('id', 'DESC')->where('id_usuario',Auth::user()->id)->paginate(5);
         }
         return view('panel.noticia.index')->with(compact('noticias'));
-      
-        
+
+
     }
 
 
@@ -145,7 +145,7 @@ class NoticiaController extends Controller
         $noticia->fill($request->all())->save();
         $concurso = Concursos::where('id_noticia',$noticia->id)->first();
         $concurso = new Concursos($request->all());
-        //dd($concurso);
+
 
         if (isset($concurso['estado']) and $concurso['estado'] == 'on') {
 

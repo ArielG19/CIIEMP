@@ -2,6 +2,8 @@
 @section('title', 'Subir archivo PDF')
 @section('contenido')
 
+
+
     @if(count($errors) > 0)
         <div class="alert alert-danger" role="alert">
             <ul>
@@ -17,12 +19,7 @@
 
     <div class="form-group">
         {!! Form::label('titulo','Título') !!}
-        {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del archivo','required'])!!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('descripcion','Contenido') !!}
-        {!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Descripcion del archivo (Max 150 caracteres)','maxlength' => 150,'required'])!!}
+        {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del archivo','maxlength' => 150,'required'])!!}
     </div>
 
 
@@ -46,19 +43,12 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
     <div class="form-group">
         {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
 
     </div>
+
+
 
 
 

@@ -10,21 +10,12 @@
 		<div class="container">
 
 			<h2 class="text-center">Proyectos de Innovación y Emprendimiento</h2>
-
-
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							 tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,
-							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							</p>
-					</div>
-				</div>
-
+			<br>
+			 <br>
 				<div class="row" >
 					<div class="col-md-3"></div>
 						{!!Form::open(['route' => 'proyectos', 'method' => 'GET'])!!}
-						<div class="col-md-8">
+						<div class="col-md-6">
 							<div class="input-group">
 								{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
 								<span class="input-group-btn" id="search">
@@ -37,32 +28,8 @@
 
 				</div>
 	<hr>
-				<div class="row">
-					<div class="form-group col-md-6 pull-right combo">
-						{!!Form::open(['route' => 'proyectos.filtrar', 'method' => 'GET'])!!}
-					<label class="col-xs-3 control-label">Filtrar</label>
-								<div class="col-xs-5 selectContainer">
-									<select class="form-control" name="tipo">
 
-											<option value="estudiante">Proyectos Estudiantes</option>
-											<option value="egresado">Proyectos Egresados</option>
-									</select>
-								</div>
-						<input type="button"class="btn btn-primary" name="tipo">
-						{!!Form::close()!!}
-						</div>
-
-					</div>
-
-				<style>
-
-					.combo{
-						float:right;
-						text-align:right;
-						margin-right:-100px;
-					}
-				</style>
-	<div class="row col-md-12">
+	<div class="row col-md-12 col-xs-6">
 				@foreach($proyectos as $proyecto)
 				<a href="detalleProyecto/{{$proyecto->id}}">
 					<article>
