@@ -89,9 +89,8 @@
                                         <h1 class="titulo">
                                         <div class="wow fadeInLeft">CIIEMP</div><div class="wow fadeInRight">Módulos</div>
                                         </h1>
-                                        <p class="wow fadeInUp delay-1 parrafo">Far far away, behind
-                                        the word mountains, far from the countries Vokalia and Consonantia, there live the
-                                        blind texts.</p>
+                                        <p class="wow fadeInUp delay-1 parrafo">CIIEMP cuenta con dos módulos,
+                                          uno de ellos es el observatorio socioeconómico  y el otro es una bolsa de empleo.</p>
                                     </div>
                                     <style>
 
@@ -143,9 +142,8 @@
                                         </div>
                                         <div class="fh5co-post-text text-center">
                                             <h3><a href="#">Observatorio Socioeconómico</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit odio,
-                                            perspiciatis sint minima, nulla quod recusandae tenetur, suscipit unde
-                                            sapiente.</p>
+                                            <p>El Observatorio Socioeconómico de CIIEMP es un instrumento de seguimiento y monitorización de los
+                                              principales indicadores socioeconómicos a nivel Departamental.</p>
                                         </div>
                                     </div>
 
@@ -157,9 +155,8 @@
                                     </div>
                                       <div class="fh5co-post-text text-center">
                                             <h3><a href="#">Bolsa de Empleo</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit odio,
-                                            perspiciatis sint minima, nulla quod recusandae tenetur, suscipit unde
-                                            sapiente.</p>
+                                            <p>En CIIEMP queremos ayudarte a que encuentres tu próximo empleo,
+                                              por eso desde aquí puedes acceder a las mejores ofertas de trabajo que hay en Nicaragua, clasificadas por área.</p>
                                         </div>
                                 </div>
                                 </div><!--end of row-->
@@ -221,12 +218,8 @@
                     <div class="container">
                         <div id="noticias" class="row p-b text-center">
                             <div class="col-md-6 col-md-offset-3">
-                                <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Noticias
-                                    recientes.</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Lorem ipsum dolor
-                                    sit amet, consectetur adipisicing elit. Error totam tempora ducimus cum nam quae
-                                    inventore provident autem recusandae et aperiam, adipisci obcaecati fugit qui, unde
-                                    earum nostrum voluptate, placeat?.</p>
+                                <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">ÚLTIMAS NOTICIAS.</h2>
+
                             </div>
                         </div>
                         <div class="row ">
