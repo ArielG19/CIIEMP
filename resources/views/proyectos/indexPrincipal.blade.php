@@ -10,21 +10,12 @@
 		<div class="container">
 
 			<h2 class="text-center">Proyectos de Innovación y Emprendimiento</h2>
-
-
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							 tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,
-							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							</p>
-					</div>
-				</div>
-
+			<br>
+			 <br>
 				<div class="row" >
 					<div class="col-md-3"></div>
 						{!!Form::open(['route' => 'proyectos', 'method' => 'GET'])!!}
-						<div class="col-md-8">
+						<div class="col-md-6">
 							<div class="input-group">
 								{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
 								<span class="input-group-btn" id="search">
