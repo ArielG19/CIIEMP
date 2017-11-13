@@ -1,7 +1,7 @@
 
 <div class="collapse" id="collapseAcceder">
-                        <div class="well" style="margin-top:205px;padding-top: 40px; color:#fff; background:transparent !important">
-                            <div class="panel panel-default" style="background-color:rgba(71,152,185,0.3);">
+                        <div class="well" style="margin-top:190px;padding-top: 50px;padding-bottom:50px; color:#fff; background:transparent !important">
+                            <div class="panel panel-default" style="background-color:rgba(4, 43, 81,0.7);">
                                 <div class="panel-heading"  style="background-color:rgba(71,152,185,0.1);color:#fff;">Iniciar sesión</div>
                                     <div class="panel-body">
                                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">

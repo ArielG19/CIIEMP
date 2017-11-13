@@ -1,8 +1,11 @@
 .btn.btn-link:hover{
 	color: #fff !important;
 }
+
 #text-well{
 		background:transparent !important;
+		padding-top: 40px;
+		padding-bottom: 47px;
 	 }
 #banner{
 	background-image:url('/styleVoltage/images/ciiemp-Walpaper.jpg');
@@ -17,7 +20,16 @@
 	{
 		background-repeat: no-repeat;
 	 	background-size:100% auto;
-	}			
+	}
+	.fh5co-cover .fh5co-cover-text .full-height {
+
+ 	  display: none;
+ 	  
+	}
+	.fh5co-cover {
+    min-height: 25px !important;
+	}
+			
 }
 
 @media screen and (max-device-width:640px){

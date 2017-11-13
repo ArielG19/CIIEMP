@@ -1,7 +1,7 @@
 
 <div class="collapse" id="collapseRegistro">
-                        <div class="well" style="margin-top:200px;padding-top: 20px; color:#fff; background:transparent !important">
-                        <div class="panel panel-default" style="background-color:rgba(71,152,185,0.3);">
+                        <div class="well" style="margin-top:190px;padding-top: 35px; color:#fff; background:transparent !important">
+                        <div class="panel panel-default" style="background-color:rgba(4, 43, 81,0.7);">
                                 <div class="panel-heading"  style="background-color:rgba(71,152,185,0.1);color:#fff;"> Registrarse</div>
 
                                 <div class="panel-body">

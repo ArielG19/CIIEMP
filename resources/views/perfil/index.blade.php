@@ -14,7 +14,7 @@
                                     <div  align="center"> 
                                       <img alt="User Pic" src="/perfil/{{$user->imagen}}" id="profile-image1" class="img-circle img-responsive">
                                       <input type="hidden" name="_token" value="{{csrf_token ()}}">
-                                      <input type="file" name="imagen" id="btn1">
+                                      <input type="file" name="imagen" id="btn1" required>
                                       <input type="submit" value="Actualizar" class="btn btn-sm btn-info" id="btn1">
                                           
                                     </div>

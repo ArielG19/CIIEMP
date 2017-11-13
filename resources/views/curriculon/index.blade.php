@@ -45,7 +45,7 @@
     <script>
       
       $('textarea').trumbowyg({
-          
+           semantic: false,
       }); 
                  
     </script>
