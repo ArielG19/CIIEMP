@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Subir archivo PDF')
+@section('title', 'Subir archivo')
 @section('contenido')
 
 
@@ -24,7 +24,7 @@
 
 
     <div class="form-controlm-group">
-        {!! Form::label('categoria','Categoria') !!}
+        {!! Form::label('categoria','Categoría') !!}
         {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
     </div>
 

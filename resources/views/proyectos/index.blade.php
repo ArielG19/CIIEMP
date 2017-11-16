@@ -15,7 +15,7 @@
             <table class="table table-striped">
                 <thead>
                 <th>Tipo de proyecto</th>
-                <th>Titulo</th>
+                <th>Título</th>
                 <th>Img de Cabecera</th>
                 <th id="tdresponsable">Responsable</th>
                 <th id="tdotro">Otro</th>

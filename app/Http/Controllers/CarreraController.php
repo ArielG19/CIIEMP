@@ -81,7 +81,7 @@ class CarreraController extends Controller
       $carrera->fill($request->all());
       $carrera->save();
 
-      Session::flash('message','La carrera fue actualizada correctamente');
+      Session::flash('message','La carrera fue editada correctamente');
      return redirect::to('home/carrera');
     }
 

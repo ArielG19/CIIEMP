@@ -17,7 +17,7 @@
 
     <div class="form-group">
         {!! Form::label('titulo','Título') !!}
-        {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del artículo','required'])!!}
+        {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título','required'])!!}
     </div>
 
     <div class="form-group">
@@ -29,7 +29,7 @@
 
 
     <div class="form-group">
-        {!! Form::label('categoria','Categoria') !!}
+        {!! Form::label('categoria','Categoría') !!}
         {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
     </div>
 

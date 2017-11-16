@@ -43,7 +43,7 @@ class BibliotecaController extends Controller
         {
             $biblios = Biblioteca::orderBy('id', 'DESC')->where('id_usuario',Auth::user()->id)->paginate(5);
         }
-      
+
         return view('panel.biblioteca.index', compact('biblios'));
     }
 
@@ -155,7 +155,7 @@ class BibliotecaController extends Controller
             $biblio->save();
         }
 
-        Session::flash('message', 'El archivo de la biblioteca se ha editado Correctamente');
+        Session::flash('message', 'El archivo del repositorio se ha editado correctamente');
         return redirect::to('home/bibliotecas');
     }
 
@@ -187,7 +187,7 @@ class BibliotecaController extends Controller
             $file->delete();
         }
 
-        Session::flash('message', 'El archivo de la biblioteca se ha eliminado Correctamente');
+        Session::flash('message', 'El archivo del repositorio se ha eliminado correctamente');
         return redirect::to('home/bibliotecas');
     }
 }

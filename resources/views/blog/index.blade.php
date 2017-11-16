@@ -3,7 +3,7 @@
 @section('content')
 <div class="fh5co-blog-style-1">
 			<div class="container">
-				<h2>Entradas Recientes</h2>
+				<h2>ENTRADAS RECIENTES</h2>
 				<hr>
 
 
@@ -46,7 +46,7 @@
 					<div class="col-md-4 col-lg-4 hidden-xs  categoryd">
 							<!-- Category -->
 							<div class="single category">
-								<h3 class="side-title">Categorias</h3>
+								<h3 class="side-title">CATEGORÍAS</h3>
 
 								<ul class="list-group">
 								@foreach($allcategorias as $cate)

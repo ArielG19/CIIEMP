@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Listado de entradas de blog')
+@section('title', 'Listado de articulos')
 @section('contenido')
 <div class="table-responsive">
   <div class="col-xs-10">
@@ -18,11 +18,11 @@
 
     <table class="table table-striped">
         <thead>
-        <th>Titulo</th>
+        <th>Título</th>
         <th>Contenido</th>
         <th>Lugar</th>
         <th>Autor</th>
-        <th>Categoria</th>
+        <th>Categoría</th>
         <th>Concurso</th>
         <th>Empieza</th>
         <th>Finaliza</th>

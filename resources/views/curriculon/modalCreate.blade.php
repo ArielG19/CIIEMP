@@ -61,7 +61,7 @@
 					            				</div>
 
 					            				<div class="form-group">
-					              					{!!form::label('Direccion:')!!}
+					              					{!!form::label('Dirección:')!!}
 					              					{!!form::text('direccion',null,['id'=>'direccion','class'=>'form-control','placeholder'=>'Escriba su direccion'])!!}
 					            				</div>
 
@@ -69,7 +69,7 @@
 					                        		{!!Form::label('Estado civil')!!}
 					                        		{!!Form::select('estado_civil',['solter@'=>'Soltero(a)','casad@'=>'Casado(a)'],null,['id'=>'estado_ci','class'=>'form-control'])!!}
 					                    		</div>
-					                    		
+
 												{!!link_to('#',$title ='Guardar',$attributes= ['id'=>'guardar','class'=>'btn btn-info'],$secure = null)!!}
 		                						{!!Form::close()!!}
 									    </div>
@@ -79,7 +79,7 @@
 		            		</div>
 
 							<div class="modal-footer">
-								
+
 							</div>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Editar de categorias')
+@section('title', 'Editar categorías')
 @section('contenido')
     @if(count($errors) >0)
         <div class="alert alert-danger" role="alert">

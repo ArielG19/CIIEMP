@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Nuevo Proyecto')
+@section('title', 'Registrar proyecto de egresado')
 @section('contenido')
 
 
@@ -31,14 +31,14 @@
         {!! Form::textarea('resumenLargo',null,['class' =>'form-control', 'placeholder' =>'Resumen Largo','maxlength' => 300,'required'])!!}
     </div>
     <div class="form-group">
-        {!! Form::label('categoria','Categoria') !!}
+        {!! Form::label('categoria','Categoría') !!}
         {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
     </div>
     <div class="form-group">
         {!! Form::hidden('id_usuario', Auth::user()->id, null,['class' =>'form-control'])!!}
     </div>
     <div class="form-group">
-        {!! Form::label('imagen','Subir multiples imagenes') !!}
+        {!! Form::label('imagen','Subir múltiples imágenes') !!}
         {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
     </div>
     <div class="form-group">
@@ -77,5 +77,3 @@
     </script>
 
 @endsection
-
-

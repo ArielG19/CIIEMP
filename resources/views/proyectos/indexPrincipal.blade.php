@@ -9,7 +9,7 @@
 
 		<div class="container">
 
-			<h2 class="text-center">Proyectos de Innovación y Emprendimiento</h2>
+			<h2 class="text-center">PROYECTOS DE INNOVACIÓN Y EMPRENDIMIENTO </h2>
 			<br>
 			 <br>
 				<div class="row" >

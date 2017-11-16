@@ -1,13 +1,13 @@
 @extends('home')
-@section('title', 'Editar los archivos de la Biblioteca')
+@section('title', 'Editar los archivos')
 @section('contenido')
 
 
     {!!Form::model($biblio,['route'=>['bibliotecas.update',$biblio],'method'=>'PUT','files' => true])!!}
 
     <div class="form-group">
-        {!!Form::label('titulo','Titulo:')!!}
-        {!!Form::text('titulo',null,['class'=>'form-control','placeholder'=>'Ingresa el título','maxlength' => 150,'required'])!!}
+        {!!Form::label('titulo','Título')!!}
+        {!!Form::text('titulo',null,['class'=>'form-control','placeholder'=>'Título','maxlength' => 150,'required'])!!}
     </div>
 
 
@@ -18,7 +18,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('categoria','Categoria') !!}
+        {!! Form::label('categoria','Categoría') !!}
         {!! Form:: select('id_categoria',$categorias, null,['class'=>'form-control']) !!}
     </div>
 

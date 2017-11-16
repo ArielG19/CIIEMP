@@ -3,7 +3,7 @@
 @section('content')
     <div class="fh5co-blog-style-1">
         <div class="container">
-            <h2>Noticias Recientes</h2>
+            <h2>ÚLTIMAS NOTICIAS</h2>
             <hr>
 
 

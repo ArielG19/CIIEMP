@@ -39,7 +39,7 @@
 
     <div class="col-md-6 col-xs-12">
         <div class="form-group">
-            {!! Form::label('categoria','Categoria') !!}
+            {!! Form::label('categoria','Categoría') !!}
             {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
         </div>
     </div>
@@ -96,14 +96,14 @@
         <div class="form-group">
             <a data-toggle="collapse"
                data-parent="#accordion" href="#collapseTwo">
-                <button class="btn btn-warning">Subir imagenes</button>
+                <button class="btn btn-warning">Subir Imágenes</button>
             </a>
         </div>
     </div>
     <div id="collapseTwo" class="panel-collapse collapse">
 
         <div class="form-group">
-            {!! Form::label('imagen','Subir multiples imagenes') !!}
+            {!! Form::label('imagen','Subir múltiples imágenes') !!}
             {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
         </div>
     </div>
@@ -111,7 +111,7 @@
         <a class="btn btn-info btn-md btnimg" role="button"
            href="{{route('noticia.show', $noticia->id)}}" onclick="window.open(this.href, 'mywin',
                                     'left=550,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
-            <span> Ver imagenes <i class="fa fa-eye" aria-hidden="true"></i></span>
+            <span> Ver imágenes <i class="fa fa-eye" aria-hidden="true"></i></span>
         </a>
     </div>
 
@@ -133,5 +133,3 @@
         }
     }
 </script>
-
-

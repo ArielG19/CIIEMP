@@ -43,7 +43,7 @@ class CategoriaController extends Controller
       $categoria = new Categoria($request->all());
 
       $categoria->save();
-      Session::flash('message','Categoria fue creada correctamente');
+      Session::flash('message','Categoria creada correctamente');
       return redirect::to('home/categoria');
     }
 
@@ -83,7 +83,7 @@ class CategoriaController extends Controller
        $categoria->fill($request->all());
        $categoria->save();
 
-       Session::flash('message','Categoria actualizada correctamente');
+       Session::flash('message','Categoria editada correctamente');
       return redirect::to('home/categoria');
     }
 

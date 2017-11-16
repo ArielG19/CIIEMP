@@ -4,7 +4,7 @@
 				<th>Primer Nombre</th>
 				<th>Primer Apellido</th>
 				<th>Publicado en</th>
-				<th>Titulo del trabajo</th>
+				<th>Título del trabajo</th>
 				<th>Opciones</th>
 			</thead>
 			<tbody>
@@ -13,7 +13,7 @@
 								<td>
 									{{$p->primer_nombre}}
 								</td>
-								<td>	
+								<td>
 									{{$p->primer_apellido}}
 								</td>
 								<td>
@@ -22,7 +22,7 @@
 								<td>
 									{{$p->titulo_trabajo}}
 								</td>
-																								
+
 								<td>
 				             		<!--en la ruta pasamos el parametro para mostrar el id y poder editar o eliminar luego-->
 				             		<a class="btn btn-info btn-sm" href="#" Onclick='Publicaciones({{$p->id}});' data-toggle='modal' data-target='#ModalEditar' style ="margin-right: 8px;">

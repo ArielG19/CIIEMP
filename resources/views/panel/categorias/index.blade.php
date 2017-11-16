@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Listado de categorias')
+@section('title', 'Listado de categorías ')
 @section('contenido')
 
     @if(Session::has('message'))

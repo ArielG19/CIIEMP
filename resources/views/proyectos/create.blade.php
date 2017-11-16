@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Nuevo Proyecto')
+@section('title', 'Registrar proyecto de estudiante')
 @section('contenido')
     <u><h2 class="text-center">Nuevo Proyecto Estudiante</h2></u>
     {!! Form::open(['route' => 'proyectos.store', 'method' => 'POST','files'=>true]) !!}
@@ -41,14 +41,14 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('categoria','Categoria') !!}
+        {!! Form::label('categoria','Categoría') !!}
         {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
     </div>
 
     {!! Form::hidden('id_usuario', Auth::user()->id, null,['class' =>'form-control'])!!}
 
     <div class="form-group">
-        {!! Form::label('imagen','Subir multiples imagenes') !!}
+        {!! Form::label('imagen','Subir múltiples imágenes') !!}
         {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
     </div>
     {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
@@ -90,5 +90,3 @@
     </script>
 
 @endsection
-
-

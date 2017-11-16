@@ -65,11 +65,11 @@
                                 </li>
                                 <li>
                                     <a href="{{route('carrera.index') }}">
-                                        <i class="fa fa-circle-o"></i>Listado de carreras</a>
+                                        <i class="fa fa-circle-o"></i>Listar Carreras</a>
                                 </li>
                                 <li>
                                     <a href="{{route('carrera.create') }}">
-                                        <i class="fa fa-circle-o"></i>Registrar una carrera</a>
+                                        <i class="fa fa-circle-o"></i>Registrar una Carrera</a>
                                 </li>
                             </ul>
                         </a>
@@ -77,17 +77,17 @@
                      <li class="treeview">
                         <a href="#">
                             <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            <span>Categorias</span>
+                            <span>Categorías</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
                                 <li>
                                     <a href="{{route('categoria.index')}}">
-                                        <i class="fa fa-circle-o"></i>Listado de categorias
+                                        <i class="fa fa-circle-o"></i>Listar Categorías
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>Registrar una categoria
+                                    <a href="{{route('categoria.create')}}"><i class="fa fa-circle-o"></i>Registrar una Categoría
                                     </a>
                                 </li>
                         </ul>
@@ -116,12 +116,12 @@
                         <ul class="treeview-menu">
                             <li>
                                 <a href="{{route('blogs.index')}}">
-                                    <i class="fa fa-circle-o"></i>Entradas de blog
+                                    <i class="fa fa-circle-o"></i>Listar entradas de blog
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('blogs.create')}}">
-                                    <i class="fa fa-circle-o"></i>Crear Entradas
+                                    <i class="fa fa-circle-o"></i>Registrar entrada de blog
                                 </a>
                             </li>
                         </ul>
@@ -153,12 +153,12 @@
                         <ul class="treeview-menu">
                             <li>
                                     <a href="{{route('noticia.index')}}">
-                                        <i class="fa fa-circle-o"></i>Entradas de articulos
+                                        <i class="fa fa-circle-o"></i>Listar articulos
                                     </a>
                             </li>
                             <li>
                                     <a href="{{route('noticia.create')}}">
-                                        <i class="fa fa-circle-o"></i>Crear un articulo
+                                        <i class="fa fa-circle-o"></i>Registrar un articulo
                                     </a>
                             </li>
                         </ul>
@@ -299,10 +299,10 @@
 
         <div class="content-wrapper">
             <section class="content">
-                
+
                     @yield('contenido')
 
-                
+
             </section>
         </div>
         <!--Fin-Contenido-->

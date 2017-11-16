@@ -8,9 +8,8 @@
                 <h3 id="H3_3">Acerca de nosotros</h3>
             </div>
             <div class="col-md-12">
-                <p id="P_4">Lorem ipsum dolor sit amet, <br>
-                    consectetur adipisicing elit. Velit est facilis maiores,br
-                    perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+                <p id="P_4">Centro de investigación de UNAN-Managua; FAREM-Estelí líder y de referencia nacional en la generación de conocimiento de prácticas innovadoras y emprendedoras (organización, productos, modelos de negocios, educativos y sociales), el desarrollo de competencias, fortalecimiento socioeconómico-empresarial,
+                   relación entre universidad-empresa-estado y acciones que aporten al crecimiento económico del país.</p>
 
             </div>
         </div>

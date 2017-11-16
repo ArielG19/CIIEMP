@@ -180,7 +180,7 @@ class NoticiaController extends Controller
         }
 
 
-        Session::flash('message', 'Entrada de noticias editada Correctamente');
+        Session::flash('message', 'Entrada de noticias editada correctamente');
         return redirect::to('home/noticia');
     }
 
@@ -218,7 +218,7 @@ class NoticiaController extends Controller
             $not->delete();
         }
 
-        Session::flash('message', 'Entrada de noticia eliminada Correctamente');
+        Session::flash('message', 'Entrada de noticia eliminada correctamente');
         return redirect::to('home/noticia');
 
     }

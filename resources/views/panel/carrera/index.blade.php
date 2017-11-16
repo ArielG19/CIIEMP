@@ -17,7 +17,7 @@
         <table class="table table-striped">
             <thead>
             <th>Carrera</th>
-            <th>Descripcion</th>
+            <th>Descripción</th>
 
 
             </thead>

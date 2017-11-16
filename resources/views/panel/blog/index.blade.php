@@ -13,12 +13,12 @@
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
-            <th>Titulo</th>
+            <th>Título</th>
             <th>Contenido</th>
-            <th>Categoria</th>
+            <th>Categoría</th>
             <th>Autor</th>
             <th>Imagen</th>
-            <th>Archivo</th>
+            <th>Archivos</th>
             <th>Acciones</th>
 
 
