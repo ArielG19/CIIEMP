@@ -44,26 +44,18 @@
 
 
 					<div class="col-md-4 col-lg-4 hidden-xs  categoryd">
-							<!-- Category -->
+						<!-- Category -->
 							<div class="single category">
 								<h3 class="side-title">CATEGORÍAS</h3>
-
-								<ul class="list-group">
-								@foreach($allcategorias as $cate)
-									<li class="list-group-item">
-										<span class="badge">{{$cate->blogs->count()}}</span>
-										<a href="{{route('bloghome.filtrar.categorias',$cate->name)}}">
-											{{$cate->name}}
-										</a>
-								 </li>
-								@endforeach()
-								<li class="list-group-item"><a href="/bloghome">
-									Todos
-								</a></li>
+								<ul class="list-unstyled">
+									@foreach($allcategorias as $cate)
+									<li><a href="{{route('bloghome.filtrar.categorias',$cate->name)}}" title="">{{$cate->name}}
+										 <span class="badge pull-right">{{$cate->blogs->count()}}</span></a></li>
+									@endforeach()
 
 								</ul>
-   				</div>
-				</div>
+					</div>
+					</div>
 				</div>
 
 

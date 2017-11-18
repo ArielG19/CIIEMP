@@ -27,8 +27,8 @@
         {!! Form::textarea('historia',null,['class' =>'form-control', 'placeholder' =>'Breve Historia del Proyecto 300 palabras','maxlength' => 300,'required'])!!}
     </div>
     <div class="form-group">
-        {!! Form::label('resumenLargo','Resumen de 300 palabras') !!}
-        {!! Form::textarea('resumenLargo',null,['class' =>'form-control', 'placeholder' =>'Resumen Largo','maxlength' => 300,'required'])!!}
+        {!! Form::label('resumenLargo','Resumen de 500 palabras') !!}
+        {!! Form::textarea('resumenLargo',null,['class' =>'form-control', 'placeholder' =>'Resumen Largo','maxlength' => 2674,'required'])!!}
     </div>
     <div class="form-group">
         {!! Form::label('categoria','Categoría') !!}

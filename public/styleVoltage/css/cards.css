@@ -3531,19 +3531,21 @@ nav.navbar-findcond{
 /*# sourceMappingURL=cards.css.map */
 
 /*# Categoria */
-.categoryd, .single {
+.single {
 padding: 30px 15px;
-margin-top: 40px;
+-webkit-box-shadow: 0px -2px 8px 5px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px -2px 8px 5px rgba(0,0,0,0.21);
+box-shadow: 0px -2px 8px 5px rgba(0,0,0,0.21);
 background: #fcfcfc;
 border: 1px solid #f0f0f0; }
-.categoryd, .single h3.side-title {
+.single h3.side-title {
 margin: 0;
 margin-bottom: 10px;
 padding: 0;
 font-size: 20px;
 color: #333;
 text-transform: uppercase; }
-.categoryd, .single h3.side-title:after {
+.single h3.side-title:after {
 content: '';
 width: 60px;
 height: 1px;
@@ -3551,9 +3553,9 @@ background: #ff173c;
 display: block;
 margin-top: 6px; }
 
-.categoryd, .single ul {
+.single ul {
 margin-bottom: 0; }
-.categoryd, .single li a {
+.single li a {
 color: #666;
 font-size: 14px;
 text-transform: uppercase;
@@ -3561,9 +3563,10 @@ border-bottom: 1px solid #f0f0f0;
 line-height: 40px;
 display: block;
 text-decoration: none; }
-.categoryd, .single li a:hover {
+.single li a:hover {
 color: #ff173c; }
-.categoryd, .single li:last-child
+.single li:last-child a {
+border-bottom: 0; }
 
 
 #noticias{

@@ -55,7 +55,7 @@
                             <td>{{$proyects->responsable}}</td>
                         @endif
                         <td>{{$proyects->historia}}</td>
-                        <td>{{$proyects->resumenLargo}}</td>
+                        <td>{{substr(strip_tags($proyects->resumenLargo), 0,300)}}...</td>
                         <td>{{$proyects->tel}}</td>
                         @if(isset($proyects->proyectoImg[0]))
                             <td>

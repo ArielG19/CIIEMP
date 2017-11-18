@@ -31,7 +31,7 @@
                             {{--<p>{!!($proyecto->resumenCorto)!!}</p>--}}
                             {{--<hr>--}}
                             <hr>
-                            <p>{!!($proyecto->resumenLargo)!!}</p>
+                            <p>{!!nl2br($proyecto->resumenLargo)!!}</p>
                             <hr>
 
                             <div class="row">
@@ -110,7 +110,7 @@
                                         <h2>{{$proyecto->responsable}}</h2>
 
                                         <p>
-                                            <a class="remove-decoration"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Contacto {{$proyecto->tel}}
+                                            <a class="remove-decoration"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Contacto: {{$proyecto->tel}}
                                             </a> <br>
 
 
