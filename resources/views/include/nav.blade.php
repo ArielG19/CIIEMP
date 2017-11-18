@@ -10,7 +10,7 @@
             <a class="navbar-brand" href="/">CIIEMP</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" id="navegador">
                 <li class="active"><a href="{{ url('/') }}">
                         <i class="fa fa-home fa-lg" aria-hidden="true">
                         </i> Inicio<span class="sr-only">(current)</span></a>
