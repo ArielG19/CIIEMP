@@ -114,6 +114,7 @@
 
 
 <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
+<script src="{{asset('styleVoltage/js/navegador.js')}}"></script>
 
 @yield('script')
 </html>

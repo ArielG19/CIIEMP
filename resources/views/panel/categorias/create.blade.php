@@ -1,11 +1,11 @@
 @extends('home')
-@section('title', 'Crear de categorias')
+@section('title', 'Registrar Categorías')
 @section('contenido')
 
     {!! Form::open(['route' => 'categoria.store', 'method' => 'POST']) !!}
     <div class="form-group">
         {!! Form::label('name','Nombre') !!}
-        {!! Form::text('name',null,['class' =>'form-control', 'placeholder' =>'Nombre Completo','required'])!!}
+        {!! Form::text('name',null,['class' =>'form-control', 'placeholder' =>'Nombre de la categoría','required'])!!}
     </div>
 
 

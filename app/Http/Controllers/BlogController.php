@@ -71,7 +71,7 @@ class BlogController extends Controller
         }
 
 
-        Session::flash('message', 'La entrada del blog fue creada correctamente');
+        Session::flash('message', 'La entrada fue registrada correctamente');
         return redirect::to('home/blogs');
     }
 
@@ -133,7 +133,7 @@ class BlogController extends Controller
         $blog->save();
 
 
-        Session::flash('message', 'Entrada del blog editada Correctamente');
+        Session::flash('message', 'Entrada del blog fue editada correctamente');
         return redirect::to('home/blogs');
     }
 
@@ -165,7 +165,7 @@ class BlogController extends Controller
             $file->delete();
         }
 
-        Session::flash('message', 'Entrada de blog eliminada Correctamente');
+        Session::flash('message', 'Entrada de blog fue eliminada correctamente');
         return redirect::to('home/blogs');
     }
 }

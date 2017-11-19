@@ -97,7 +97,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <i class="fa fa-newspaper-o" aria-hidden="true"></i> 
-                                Noticias recientes
+                                NOTICIAS RECIENTES 
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -125,7 +125,7 @@
                                                 {{$recent->titulo}}
                                                 <br>
                                                 <small>
-                                                    <a href="{{'/articulohome/articulo'}}/{{$recent->slug}}">ver mas</a>
+                                                    <a href="{{'/articulohome/articulo'}}/{{$recent->slug}}">Ver más</a>
                                                 </small>
                                             </h4>
                                             <p>
@@ -135,7 +135,7 @@
                                     </li>
                                 @endforeach
                             </ul>
-                            <a href="/articulohome" class="btn btn-primary btn-block">Ver mas noticias »</a>
+                            <a href="/articulohome" class="btn btn-primary btn-block">Ver más noticias »</a>
                         </div>
                     </div>
                     <!-- End fluid width widget -->
@@ -147,7 +147,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                Concursos recientes
+                                CONCURSOS RECIENTES
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -177,7 +177,7 @@
                                                 {{$event->titulo}}
                                                 <br>
                                                 <small>
-                                                    <a href="{{'/articulohome/articulo'}}/{{$event->slug}}">ver mas</a>
+                                                    <a href="{{'/articulohome/articulo'}}/{{$event->slug}}">Ver más</a>
                                                 </small>
                                             </h4>
                                             <p>
@@ -187,7 +187,7 @@
                                     </li>
                                 @endforeach
                             </ul>
-                            <a href="/articulohome" class="btn btn-primary btn-block">Ver mas concursos »</a>
+                            <a href="/articulohome" class="btn btn-primary btn-block">Ver más concursos »</a>
                         </div>
                     </div>
                     <!-- End fluid width widget -->

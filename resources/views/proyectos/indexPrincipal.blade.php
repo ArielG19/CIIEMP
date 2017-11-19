@@ -9,7 +9,7 @@
 
 		<div class="container">
 
-			<h2 class="text-center">Proyectos de Innovación y Emprendimiento</h2>
+			<h2 class="text-center">PROYECTOS DE INNOVACIÓN Y EMPRENDIMIENTO </h2>
 			<br>
 			 <br>
 				<div class="row" >
@@ -39,9 +39,17 @@
 					      <div class="lighting"></div>
 					    </figure>
 					    <div class="item-content">
-					      <h1>{{$proyecto->titulo}}</h1>
-					      <p>{{$proyecto->resumenCorto}}</p>
+								@if ($proyecto->tipo == "estudiante")
+									<div align="right" class="author colorLetra">Proyecto de Estudiante</div>
+								@else
+									<div align="right" class="author colorLetra">Proyecto de Egresado</div>
+								@endif
+					      <h1>{{substr(strip_tags($proyecto->titulo), 0,44)}}...</h1>
+								<p>{{substr(strip_tags($proyecto->resumenLargo), 0,300)}}...</p>								
+
 					      <div class="author colorLetra">{{$proyecto->responsable}}</div>
+
+
 					    </div>
 					  </div>
 					</article>

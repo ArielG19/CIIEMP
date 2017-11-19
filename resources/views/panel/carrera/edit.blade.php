@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Editar de categorias')
+@section('title', 'Editar una carrera')
 @section('contenido')
 @if(count($errors) >0)
 <div class="alert alert-danger" role="alert">
@@ -19,8 +19,8 @@
 				<div class="form-group">
           {!! Form::label('carrera','Carrera') !!}
 					{!! Form::text('carrera',$carrera->carrera,['class' =>'form-control', 'placeholder' =>'Nombre de la carrera','required'])!!}
-					{!! Form::label('descripcion','Descripcion') !!}
-					{!! Form::textarea('descripcion', $carrera->descripcion,['class' =>'form-control', 'placeholder' =>'Descripcion de la carrera','required'])!!}
+					{!! Form::label('descripcion','Descripción') !!}
+					{!! Form::textarea('descripcion', $carrera->descripcion,['class' =>'form-control', 'placeholder' =>'Descripción  de la carrera','required'])!!}
 				</div>
 
 

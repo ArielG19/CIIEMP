@@ -15,7 +15,7 @@
             <table class="table table-striped">
                 <thead>
                 <th>Tipo de proyecto</th>
-                <th>Titulo</th>
+                <th>Título</th>
                 <th>Img de Cabecera</th>
                 <th id="tdresponsable">Responsable</th>
                 <th id="tdotro">Otro</th>
@@ -55,7 +55,7 @@
                             <td>{{$proyects->responsable}}</td>
                         @endif
                         <td>{{$proyects->historia}}</td>
-                        <td>{{$proyects->resumenLargo}}</td>
+                        <td>{{substr(strip_tags($proyects->resumenLargo), 0,300)}}...</td>
                         <td>{{$proyects->tel}}</td>
                         @if(isset($proyects->proyectoImg[0]))
                             <td>

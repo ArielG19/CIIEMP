@@ -20,7 +20,7 @@
 
 					<a target="_blank" href="https://holamusicos.wordpress.com/">David Rivera Lanuza</a>
 					<br>
-					
+
 				</p>
 		</div>
 
@@ -30,15 +30,19 @@
 			<h3>CIIEMP</h3>
 				<li><a href="#">Bolsa Empleo</a></li>
 				<li><a href="#">Obserbatorio Socioeconómico</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contactos</a></li>
+        <li><a href="{{ url('/docentes-innovadores') }}">Docentes Investigadores</a></li>
+				<li><a href="{{ url('bloghome') }}">Blog</a></li>
+        <li><a href="{{ url('biblioteca') }}">Repositorio</a></li>
+        <li><a href="{{ url('articulohome') }}">Noticias</a></li>
+        <li><a href="{{ url('proyectos')}}">Proyectos</a></li>
+
 			</ul>
 		</div>
 		<div class="clearfix visible-sm-block"></div>
 		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
-			<h3>Connect</h3>
+			<h3>Síguenos</h3>
 			<ul class="fh5co-links fh5co-social">
-				<li><a href="#"><i class="icon icon-facebook2"></i> Facebook</a></li>
+				<li><a href="https://www.facebook.com/CiiempFaremEsteli/"><i class="icon icon-facebook2"></i> Facebook</a></li>
 				<li><a href="#"><i class="icon icon-twitter"></i> Twitter</a></li>
 				<li><a href="#"><i class="icon icon-instagram"></i> Instagram</a></li>
 			</ul>

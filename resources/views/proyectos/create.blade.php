@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Nuevo Proyecto')
+@section('title', 'Registrar proyecto de estudiante')
 @section('contenido')
     <u><h2 class="text-center">Nuevo Proyecto Estudiante</h2></u>
     {!! Form::open(['route' => 'proyectos.store', 'method' => 'POST','files'=>true]) !!}
@@ -30,25 +30,21 @@
         {!! Form::text('tel',null,['id'=>'txtcontacto','class' =>'form-control','placeholder' =>'Número de telefono o correo electronico','required','disabled'])!!}
     </div>
 
+  
     <div class="form-group">
-        {!! Form::label('resumenCorto','Resumen de 100 palabras') !!}
-        {!! Form::text('resumenCorto',null,['class' =>'form-control', 'placeholder' =>'Lema o Resumen corto','maxlength' => 100,'required'])!!}
+        {!! Form::label('resumenLargo','Resumen de 500 palabras') !!}
+        {!! Form::textarea('resumenLargo',null,['class' =>'form-control', 'placeholder' =>'Resumen Largo','maxlength' => 2674,'required'])!!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('resumenLargo','Resumen de 300 palabras') !!}
-        {!! Form::textarea('resumenLargo',null,['class' =>'form-control', 'placeholder' =>'Resumen Largo','maxlength' => 300,'required'])!!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('categoria','Categoria') !!}
+        {!! Form::label('categoria','Categoría') !!}
         {!! Form::select('id_categoria',$categorias, null,['class' =>'form-control'])!!}
     </div>
 
     {!! Form::hidden('id_usuario', Auth::user()->id, null,['class' =>'form-control'])!!}
 
     <div class="form-group">
-        {!! Form::label('imagen','Subir multiples imagenes') !!}
+        {!! Form::label('imagen','Subir múltiples imágenes') !!}
         {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
     </div>
     {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
@@ -90,5 +86,3 @@
     </script>
 
 @endsection
-
-

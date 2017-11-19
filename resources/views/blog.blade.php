@@ -19,7 +19,7 @@
                         </div>
                         <div class="fh5co-post-text">
                             <h3><a>{{$blogs->titulo}}</a></h3>
-                            <p class="parrafo1 img-tex">{!!($blogs->descripcion)!!}</p>
+                            <p class="parrafo1 img-tex">{!!nl2br($blogs->descripcion)!!}</p>
                             @if($blogs->file != null)
                                 <a href="/download/pdf/{{$blogs->file}}" target="_blank">Ver archivo</a>
 

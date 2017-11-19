@@ -5,7 +5,7 @@
 
   @endsection
 @section('content')
-    <h2 class="fh5co-heading wow fadeIn text-center" data-wow-duration="1s" data-wow-delay=".5s">Docentes Investigadores</h2>
+    <h2 class="fh5co-heading wow fadeIn text-center" data-wow-duration="1s" data-wow-delay=".5s">DOCENTES INVESTIGADORES </h2>
 
   <div class=" container">
         <div class= "fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
@@ -20,7 +20,7 @@
                           <em>click en la imagen para más detalles</em>
                       </center>
                   </div>
-              </div> 
+              </div>
             @endforeach
         </div>
   </div>

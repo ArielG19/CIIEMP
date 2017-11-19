@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Biblioteca Virtual')
+@section('title','Repositorio')
 @section('content')
 
 
@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2> Repositorio digital de Innovacion y Emprendimiento</h2>
+                    <h2>REPOSITORIO DIGITAL DE INNOVACIÓN Y EMPRENDIMIENTO </h2>
 
                 </div>
             </div>
@@ -56,10 +56,10 @@
                             </div>
                             <div class="fh5co-post-text">
                                 <div class="col-md-12 col-lg-12 hidden-xs prueba">
-                                    <h3><a>{{$down->titulo}}</a></h3>
+                                    <h3 ALIGN="justify"><a>{{$down->titulo}}</a></h3>
                                 </div>
                                 <div class="col-sm-12 col-xs-12 hidden-lg hidden-md prueba">
-                                    <h3><a>{{substr(strip_tags($down->titulo), 0,50)}}...</a></h3>
+                                    <h3 ALIGN="justify"><a>{{substr(strip_tags($down->titulo), 0,50)}}...</a></h3>
                                 </div>
 
 

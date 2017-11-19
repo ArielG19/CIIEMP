@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Listado de archivos que se han subido al repositorio')
+@section('title', 'Listado de archivos')
 @section('contenido')
     <div class="col-xs-12">
         @if(Session::has('message'))
@@ -13,9 +13,9 @@
             <div class="col-xs-12">
                 <table class="table table-striped">
                     <thead>
-                    <th>Titulo</th>
+                    <th>Título</th>
 
-                    <th>Categoria</th>
+                    <th>Categoría</th>
                     <th>Autor</th>
                     <th>Imagen</th>
                     <th>Archivo</th>

@@ -84,7 +84,7 @@ article figure {
 }
 article figure::after {
   content: '';
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgba(0, 0, 0, 0.18);
 }
 article figure .image {
   background-position: center;

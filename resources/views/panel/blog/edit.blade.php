@@ -7,8 +7,8 @@
     {!!Form::model($blog,['route'=>['blogs.update',$blog],'method'=>'PUT','files' => true])!!}
 
     <div class="form-group">
-        {!!Form::label('titulo','Titulo:')!!}
-        {!!Form::text('titulo',null,['class'=>'form-control','placeholder'=>'Ingresa el título'])!!}
+        {!!Form::label('titulo','Título')!!}
+        {!!Form::text('titulo',null,['class'=>'form-control','placeholder'=>'Título'])!!}
     </div>
 
     <div class="form-group">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('categoria','Categoria') !!}
+        {!! Form::label('categoria','Categoría') !!}
         {!! Form:: select('id_categoria',$categorias, null,['class'=>'form-control']) !!}
     </div>
 

@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Crear de carreras')
+@section('title', 'Registrar una carrera')
 @section('contenido')
 
 {!! Form::open(['route' => 'carrera.store', 'method' => 'POST']) !!}
@@ -7,8 +7,8 @@
 					{!! Form::label('carrera','Carrera') !!}
 					{!! Form::text('carrera',null,['class' =>'form-control', 'placeholder' =>'Nombre de la carrera','required'])!!}
 
-					{!! Form::label('descripcion','Carrera') !!}
-					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Descripcion de la carrera'])!!}
+					{!! Form::label('descripcion','Descripción') !!}
+					{!! Form::textarea('descripcion',null,['class' =>'form-control', 'placeholder' =>'Descripción de la carrera'])!!}
 
 				</div>
 
