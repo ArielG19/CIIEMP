@@ -1,28 +1,19 @@
 <div class="table-responsive">
 		<table class="table table-striped">
 			<thead>
-				<th>Primer Nombre</th>
-				<th>Primer Apellido</th>
-				<th>Publicado en</th>
-				<th>Titulo del trabajo</th>
+				<th>Nombre</th>
+				<th>Publicacion</th>
 				<th>Opciones</th>
 			</thead>
 			<tbody>
 						@foreach($publicaciones as $p)
 							<tr>
 								<td>
-									{{$p->primer_nombre}}
-								</td>
-								<td>	
-									{{$p->primer_apellido}}
+									{{$p->primer_nombre}} {{$p->primer_apellido}}
 								</td>
 								<td>
-									{{$p->publicado_en}}
-								</td>
-								<td>
-									{{$p->titulo_trabajo}}
-								</td>
-																								
+									{!!$p->publicacion!!}
+								</td>																							
 								<td>
 				             		<!--en la ruta pasamos el parametro para mostrar el id y poder editar o eliminar luego-->
 				             		<a class="btn btn-info btn-sm" href="#" Onclick='Publicaciones({{$p->id}});' data-toggle='modal' data-target='#ModalEditar' style ="margin-right: 8px;">

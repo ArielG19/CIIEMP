@@ -1,7 +1,7 @@
 @extends('home')
 @section('title','Publicaciones')
 @section('contenido')
-       <div class="col-xs-12">
+       <div class="col-md-12">
                           <div id="message-save" class="alert alert-success alert-dismissible" role="alert" style="display:none">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -42,6 +42,12 @@
  @include('publicaciones.modalUpdate')
  @section('script')
            <script type="text/javascript" src="{{ asset('/js/publicaciones.js') }}"></script>
+           <script>
+            $('textarea').trumbowyg({
+                 semantic: false,
+              });           
+          </script>
+
   @endsection
 
 @endsection
