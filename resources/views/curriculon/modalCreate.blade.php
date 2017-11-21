@@ -61,7 +61,6 @@
 						              					{!!form::text('nacionalidad',null,['id'=>'nacionalidad','class'=>'form-control','placeholder'=>'Escriba su nacionalidad'])!!}
 						            				</div>
 
-<<<<<<< HEAD
 						            				<div class="form-group">
 						              					{!!form::label('Direccion:')!!}
 						              					{!!form::text('direccion',null,['id'=>'direccion','class'=>'form-control','placeholder'=>'Escriba su direccion'])!!}
@@ -69,48 +68,22 @@
 
 						                    		<div class="form-group">
 						                        		{!!Form::label('Estado civil')!!}
-						                        		{!!Form::select('estado_civil',['solter@'=>'Soltero(a)','casad@'=>'Casado(a)'],null,['id'=>'estado_ci','class'=>'form-control'])!!}
+						                        		{!!Form::select('estado_civil',['soltero(a)'=>'Soltero(a)','casado(a)'=>'Casado(a)'],null,['id'=>'estado_ci','class'=>'form-control'])!!}
 						                    		</div>
 						                    		
 													{!!link_to('#',$title ='Guardar',$attributes= ['id'=>'guardar','class'=>'btn btn-info'],$secure = null)!!}
 			                						{!!Form::close()!!}
 										    </div>
 										  </div>
-=======
-					            				<div class="form-group">
-					              					{!!form::label('Dirección:')!!}
-					              					{!!form::text('direccion',null,['id'=>'direccion','class'=>'form-control','placeholder'=>'Escriba su direccion'])!!}
-					            				</div>
-
-					                    		<div class="form-group">
-					                        		{!!Form::label('Estado civil')!!}
-					                        		{!!Form::select('estado_civil',['solter@'=>'Soltero(a)','casad@'=>'Casado(a)'],null,['id'=>'estado_ci','class'=>'form-control'])!!}
-					                    		</div>
-
-												{!!link_to('#',$title ='Guardar',$attributes= ['id'=>'guardar','class'=>'btn btn-info'],$secure = null)!!}
-		                						{!!Form::close()!!}
-									    </div>
-									  </div>
->>>>>>> 07abda6efde90ca765d53daf72b054590919f326
 
 									</div>
 			            		</div>
 
-<<<<<<< HEAD
 								<div class="modal-footer">
 									
 								</div>
 						</div>
-=======
-							<div class="modal-footer">
-
-							</div>
->>>>>>> 07abda6efde90ca765d53daf72b054590919f326
 					</div>
 	</div>
 </div>
- <script>
-        $('.select-users').chosen({
-          no_results_text:'No se encontraron resultados',
-        });
-      </script>
+

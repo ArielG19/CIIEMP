@@ -2,7 +2,7 @@
 <html>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Curriculum vitae</title>
+    <title>Publicaciones</title>
     <link type="text/css" rel="stylesheet" href="/curriculon_css/css/red.css" />
     <link type="text/css" rel="stylesheet" href="/font-awesome/css/font-awesome.css"/>
 
@@ -19,7 +19,7 @@
                                 <div class="entry">
                                       <img class="portrait" src="/perfil/{{$p->imagen}}"/>
                                       <div class="self">
-                                              <h1 class="name">{{$p->primer_nombre}} {{$p->primer_apellido}}</h1>
+                                              <h2 class="name">{{$p->primer_nombre}} {{$p->primer_apellido}}</h2>
                                               <br>
                                       </div>
                                 </div>

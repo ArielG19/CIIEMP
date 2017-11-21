@@ -10,7 +10,7 @@
 
     @endif
 
-    <div class="col-xs-10">
+    <div class="col-xs-12">
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>

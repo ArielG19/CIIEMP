@@ -8,21 +8,23 @@
 
             <title>@yield('title','Default')</title>
             <!--link rel="shortcut icon" href="favicon.ico"-->
-            <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-            <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+            <link rel="stylesheet" href="/css/panelresponsive.css">
+            <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 
             <!-- modificamos los margenes de diseño etc. -->
-            <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
-            <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
+            <link rel="stylesheet" href="/panel/css/AdminLTE.css">
+            <link rel="stylesheet" href="/panel/css/panel.css">
+            
             <!-- Datepicker Files -->
-            <link rel="stylesheet" href="{{asset('panel/css/bootstrap-datepicker.css')}}">
-            <link rel="stylesheet" href="{{asset('panel/css/bootstrap-datepicker.standalone.css')}}">
+            <link rel="stylesheet" href="/panel/css/bootstrap-datepicker.css">
+            <link rel="stylesheet" href="/panel/css/bootstrap-datepicker.standalone.css">
 
 
-            <link rel="stylesheet" href="{{asset('css/chat.css')}}">
-            <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
-            <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
-            <link rel="stylesheet" href="{{asset('/Trumbowyg/trumb/ui/trumbowyg.css')}}">
+            <link rel="stylesheet" href="/css/chat.css">
+            <link rel="stylesheet" href="/jquery-alert/jquery.alertable.css">
+            <link rel="stylesheet" href="/chosen/chosen.css">
+            <link rel="stylesheet" href="/Trumbowyg/trumb/ui/trumbowyg.css">
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -31,23 +33,18 @@
             </div>
 </body>
             <!-- jQuery -->
-            <script type="text/javascript" src="{{asset('jquery/jquery.js')}}"></script>
-            <!-- Bootstrap -->
-            <script type="text/javascript" src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+            <script type="text/javascript" src="/jquery/jquery.js"></script>
+            <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/panel/js/app.min.js"></script>
 
-            <script type="text/javascript" src="{{asset('panel/js/app.min.js')}}"></script>
+            <script type="text/javascript" src="/styleVoltage/js/tinymce/jquery.tinymce.min.js"></script>
+            <script type="text/javascript" src="/styleVoltage/js/tinymce/tinymce.min.js"></script>
+            <script type="text/javascript" src="/chosen/chosen.jquery.js"></script>
+            <script type="text/javascript" src="/Trumbowyg/trumb/trumbowyg.js"></script>
+            <script type="text/javascript" src="/jquery-alert/jquery.alertable.js"></script>
 
-
-
-            <script type="text/javascript" src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
-            <script type="text/javascript" src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
-            <script type="text/javascript" src="{{asset('chosen/chosen.jquery.js')}}"></script>
-            <script type="text/javascript" src="{{asset('Trumbowyg/trumb/trumbowyg.js')}}"></script>
-            <script type="text/javascript" src="{{asset('/jquery-alert/jquery.alertable.js')}}"></script>
-
-            <script src="{{asset('panel/js/bootstrap-datepicker.js')}}"></script>
-            <!-- Languaje -->
-            <script src="{{asset('panel/js/bootstrap-datepicker.es.min.js')}}"></script>
+            <script src="/panel/js/bootstrap-datepicker.js"></script>
+            <script src="/panel/js/bootstrap-datepicker.es.min.js"></script>
 
 
 

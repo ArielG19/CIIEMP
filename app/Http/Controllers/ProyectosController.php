@@ -41,7 +41,7 @@ class ProyectosController extends Controller
     public function index()
     {
 
-        $proyect = Proyecto::orderBy('id', 'DESC')->paginate(5);
+        $proyect = Proyecto::orderBy('id', 'DESC')->paginate(1);
 
         $proyect->each(function ($proyect) {
 

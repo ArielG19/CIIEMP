@@ -23,7 +23,7 @@
 
                                       <!-- Begin Personal Information -->
                                       <div class="self">
-                                              <h1 class="name">{{$c->primer_nombre}} {{$c->primer_apellido}}</h1>
+                                              <h2 class="name">{{$c->primer_nombre}} {{$c->primer_apellido}}</h2>
                                               <br>
 
                                               <ul>
@@ -68,7 +68,7 @@
                                   <h2>Experiencia Laboral</h2>
                                   <div class="content">
                                     <ul class="info">
-                                      <li>{!!$c->experiencia_laboral!!}</li>
+                                      {!!$c->experiencia_laboral!!}
                                     </ul>
                                   </div>
                                 </div>

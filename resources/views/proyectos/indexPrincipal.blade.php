@@ -6,58 +6,52 @@
 <link rel="stylesheet" href="../css/proyectos.css">
 
 <div class="fh5co-blog-style-1">
-
 		<div class="container">
 
-			<h2 class="text-center">PROYECTOS DE INNOVACIÓN Y EMPRENDIMIENTO </h2>
-			<br>
-			 <br>
+				<h2 class="text-center">PROYECTOS DE INNOVACIÓN Y EMPRENDIMIENTO </h2>
+				<br>
+				<br>
 				<div class="row" >
-					<div class="col-md-3"></div>
-						{!!Form::open(['route' => 'proyectos', 'method' => 'GET'])!!}
-						<div class="col-md-6">
-							<div class="input-group">
-								{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
-								<span class="input-group-btn" id="search">
-									<button class="btn btn-primary" name="titulo" type="button"><i class="fa fa-search fa-lg" ></i></button>
+								<div class="col-md-3"></div>
+									{!!Form::open(['route' => 'proyectos', 'method' => 'GET'])!!}
+									<div class="col-md-6">
+										<div class="input-group">
+											{!! Form::text('titulo', null, ['class'=>'form-control', 'placeholder'=>'Buscar por...'])!!}
+											<span class="input-group-btn" id="search">
+												<button class="btn btn-primary" name="titulo" type="button"><i class="fa fa-search fa-lg" ></i></button>
 
-								</span>
-							</div>
-						</div>
-						{!!Form::close()!!}
-
+											</span>
+										</div>
+									</div>
+									{!!Form::close()!!}
 				</div>
-	<hr>
+				<hr>
+				<div class="row col-md-12 col-xs-6">
+							@foreach($proyectos as $proyecto)
+							<a href="detalleProyecto/{{$proyecto->id}}">
+								<article>
+								  <div class="item-wrapper">
+									    <figure>
+									      <div class="image img-responsive" style="background-image:url('/images/proyecto/{{$proyecto->imagen}}');"></div>
+									      <div class="lighting"></div>
+									    </figure>
+								    	<div class="item-content">
+											@if ($proyecto->tipo == "estudiante")
+												<div align="right" class="author colorLetra">Proyecto de Estudiante</div>
+											@else
+												<div align="right" class="author colorLetra">Proyecto de Egresado</div>
+											@endif
+								      		<h1>{{substr(strip_tags($proyecto->titulo), 0,44)}}...</h1>
+											<p>{{substr(strip_tags($proyecto->resumenLargo), 0,300)}}...</p>
+								      		<div class="author colorLetra">{{$proyecto->responsable}}</div>
+								    	</div>
+								  </div>
+								</article>
+							</a>
+							@endforeach
+				</div>
 
-	<div class="row col-md-12 col-xs-6">
-				@foreach($proyectos as $proyecto)
-				<a href="detalleProyecto/{{$proyecto->id}}">
-					<article>
-					  <div class="item-wrapper">
-					    <figure>
-					      <div class="image img-responsive" style="background-image:url('/images/proyecto/{{$proyecto->imagen}}');"></div>
-					      <div class="lighting"></div>
-					    </figure>
-					    <div class="item-content">
-								@if ($proyecto->tipo == "estudiante")
-									<div align="right" class="author colorLetra">Proyecto de Estudiante</div>
-								@else
-									<div align="right" class="author colorLetra">Proyecto de Egresado</div>
-								@endif
-					      <h1>{{substr(strip_tags($proyecto->titulo), 0,44)}}...</h1>
-								<p>{{substr(strip_tags($proyecto->resumenLargo), 0,300)}}...</p>								
-
-					      <div class="author colorLetra">{{$proyecto->responsable}}</div>
-
-
-					    </div>
-					  </div>
-					</article>
-				</a>
-				@endforeach
-	</div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 				<script>
 				    var articles = $('article > .item-wrapper'),
 				    lightingRgb = '255,255,255';
@@ -92,7 +86,4 @@
 
 		</div>
 </div>
-
-
-
 @endsection
