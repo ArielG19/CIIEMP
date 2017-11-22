@@ -1,3 +1,6 @@
+<div>
+
+</div>
 @extends('home')
 @section('title', 'Registrar proyecto de estudiante')
 @section('contenido')
@@ -30,7 +33,7 @@
         {!! Form::text('tel',null,['id'=>'txtcontacto','class' =>'form-control','placeholder' =>'Número de telefono o correo electronico','required','disabled'])!!}
     </div>
 
-  
+
     <div class="form-group">
         {!! Form::label('resumenLargo','Resumen de 500 palabras') !!}
         {!! Form::textarea('resumenLargo',null,['class' =>'form-control', 'placeholder' =>'Resumen Largo','maxlength' => 2674,'required'])!!}

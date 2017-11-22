@@ -5,7 +5,7 @@
     {!! Form::open(['route' => 'categoria.store', 'method' => 'POST']) !!}
     <div class="form-group">
         {!! Form::label('name','Nombre') !!}
-        {!! Form::text('name',null,['class' =>'form-control', 'placeholder' =>'Nombre de la categoría','required'])!!}
+        {!! Form::text('name',null,['class' =>'form-control', 'placeholder' =>'Nombre de la categoría','required','unique'])!!}
     </div>
 
 
