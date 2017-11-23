@@ -87,13 +87,13 @@
         .lista {
             width:100%;
             list-style-type: none;
-            padding-bottom:18px;
             bottom:32px;
             display:flex;
             position: static;
             flex-direction: column;
 
         }
+        
         
         
         input:focus{
@@ -118,6 +118,7 @@
                  display: block !important;
                  width: 80%;
                  margin-top:1px
+                 
             }
             .text-r
             {
@@ -128,13 +129,23 @@
                 margin-top: -70px;
                 margin-left:290px;
             }
+            #form
+            {
+                margin-bottom:30px;
+            }
 
         }
       @media screen and (max-width:640px){
-                   .text-r
+            .text-r
             {
-             padding-left:10px;
+               padding-left:10px;
             }
+
+            #form
+            {
+                margin-bottom:30px;
+            }
+
            
 
         }  

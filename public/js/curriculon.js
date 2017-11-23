@@ -35,6 +35,7 @@ $("#guardar").click(function(event){
 	    var dir = $("#direccion").val();
 	    var estado = $("#estado_ci").val();
 
+
 	    var id = $("#select_id option:selected").val();
 
 	    if(id == 0)
@@ -98,7 +99,8 @@ $("#actualizar").click(function(event){
 	var experiencia_laboral = $("#experiencia_edit").val();
 	var nacionalidad = $("#nacionalidad_edit").val();
 	var direccion = $("#direccion_edit").val();
-	var estado= $("#estado_ci_edit").val();
+	var estado_civil= $("#estado_ci_edit").val();
+	console.log(estado_civil);
 	var id_usuario = $("#select_id_edit option:selected").val();
 
 	var route = "/curriculum/"+id+"";
@@ -109,7 +111,7 @@ $("#actualizar").click(function(event){
 				headers:{'X-CSRF-TOKEN':token},
 				type:'PUT',
 				dataType:'json',
-				data:{resumen:resumen,titulos_academicos:titulos_academicos,estudios_doctorales:estudios_doctorales,experiencia_laboral:experiencia_laboral,nacionalidad:nacionalidad,direccion:direccion,estado:estado,id_usuario:id_usuario},
+				data:{resumen:resumen,titulos_academicos:titulos_academicos,estudios_doctorales:estudios_doctorales,experiencia_laboral:experiencia_laboral,nacionalidad:nacionalidad,direccion:direccion,estado_civil:estado_civil,id_usuario:id_usuario},
 
 
       			success:function(data){

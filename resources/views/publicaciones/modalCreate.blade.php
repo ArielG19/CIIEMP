@@ -1,12 +1,11 @@
-<div class="col-md-10 col-md-offset-1">
-	<div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog " role="document">
 					<div class="modal-content mod-yellow">
 							<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
-									<h4 class="modal-title" id="myModalLabel">Agregar actor de publicacion</h4>
+									<h4 class="modal-title" id="myModalLabel">Agregar publicacion</h4>
 							</div>
 
 							<div class="modal-body">
@@ -25,30 +24,9 @@
 												</div>
 
 												<div class="form-group">
-					                        		{!!form::label('coloraboradores','Colaboradores:')!!}
-					                            	{!!form::text('coloraboradores',null,['id'=>'coloraboradores','class'=>'form-control','placeholder'=>'Escribe coloraboradores'])!!}
+					                        		{!!form::label('publicacion','Publicacion:')!!}
+					                            	{!!form::textarea('publicacion',null,['id'=>'publicacion','class'=>'form-control','placeholder'=>'Escriba sus publicaciones'])!!}
 					          					</div>
-
-
-												<div class="form-group">
-					                        		{!!form::label('publicado_en','Publicado por:')!!}
-					                            	{!!form::text('publicado_en',null,['id'=>'publicado','class'=>'form-control','placeholder'=>'Escribe el nombre de revista donde se publico'])!!}
-					          					</div>
-
-					          					<div class="form-group">
-					                        		{!!form::label('titulo','Nombre de trabajo:')!!}
-					                            	{!!form::text('titulo_trabajo',null,['id'=>'titulo','class'=>'form-control','placeholder'=>'Escribe el nombre del trabajo que se publica '])!!}
-					          					</div>
-
-					                    		<div class="form-group">
-					              					{!!form::label('fecha','Fecha:')!!}
-					              					{!!form::date('fecha',null,['id'=>'fecha','class'=>'form-control'])!!}
-					            				</div>
-
-					            				<div class="form-group">
-					              					{!!form::label('enlace','Enlace:')!!}
-					              					{!!form::text('enlace',null,['id'=>'enlace','class'=>'form-control','placeholder'=>'Escriba el enlace'])!!}
-					            				</div>
 		                		{!!Form::close()!!}
 							</div>
 
@@ -58,11 +36,3 @@
 					</div>
 				</div>
 	</div>
-</div>
-
-
- <script>
-        $('.select-users').chosen({
-          no_results_text:'No se encontraron resultados',
-        });
-      </script>

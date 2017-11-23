@@ -1,5 +1,5 @@
 <div class="modal fade" id="ModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog modal-lg" role="document" style="margin-left:300px;">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 							<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -67,7 +67,7 @@
 
 					                    		<div class="form-group">
 					                        		{!!Form::label('Estado civil')!!}
-					                        		{!!Form::select('estado_civil',['solter@'=>'Soltero(a)','casad@'=>'Casado(a)'],null,['id'=>'estado_ci_edit','class'=>'form-control'])!!}
+					                        		{!!Form::select('estado_civil',['soltero(a)'=>'Soltero(a)','casado(a)'=>'Casado(a)'],null,['id'=>'estado_ci_edit','class'=>'form-control'])!!}
 					                    		</div>
 					                    		
 												{!!link_to('#',$title ='actualizar',$attributes= ['id'=>'actualizar','class'=>'btn btn-info'],$secure = null)!!}
@@ -84,9 +84,4 @@
 					</div>
 				</div>
 </div>
- <script>
-        $('.select-users').chosen({
-          no_results_text:'No se encontraron resultados',
-        });
-</script>
 

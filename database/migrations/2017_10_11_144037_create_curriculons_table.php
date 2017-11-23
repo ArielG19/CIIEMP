@@ -15,13 +15,13 @@ class CreateCurriculonsTable extends Migration
     {
         Schema::create('curriculons', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('resumen');
-            $table->text('titulos_academicos');
-            $table->text('estudios_doctorales');
-            $table->text('experiencia_laboral');
-            $table->string('nacionalidad');
-            $table->enum('estado_civil',['solter@','casad@']);
-            $table->string('direccion');
+            $table->text('resumen')->nullable();
+            $table->text('titulos_academicos')->nullable();
+            $table->text('estudios_doctorales')->nullable();
+            $table->text('experiencia_laboral')->nullable();
+            $table->string('nacionalidad')->nullable();
+            $table->enum('estado_civil',['soltero(a)','casado(a)'])->nullable();
+            $table->string('direccion')->nullable();
             $table->integer('id_usuario')->unsigned();
             
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');

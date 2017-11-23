@@ -20,10 +20,10 @@ class CreateTeachersTable extends Migration
             $table->string('primer_apellido')->default('Editar');
             $table->string('segundo_apellido')->default('');
             $table->integer('telefono')->nullable();
-            $table->string('profesion1')->default('Editar');
-            $table->string('profesion2')->default('Editar');
-            $table->string('profesion3')->default('Editar');
-            $table->string('profesion4')->default('Editar');
+            $table->string('profesion1')->default('');
+            $table->string('profesion2')->default('');
+            $table->string('profesion3')->default('');
+            $table->string('profesion4')->default('');
             
             $table->integer('id_usuario')->unsigned();
             

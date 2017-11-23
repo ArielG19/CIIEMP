@@ -10,7 +10,7 @@
 
     @endif
 
-    <div class="col-xs-10">
+    <div class="col-xs-12">
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
@@ -54,8 +54,16 @@
                         @else
                             <td>{{$proyects->responsable}}</td>
                         @endif
-                        <td>{{$proyects->historia}}</td>
-                        <td>{{substr(strip_tags($proyects->resumenLargo), 0,300)}}...</td>
+
+                          <td class="col-md hidden-xs">{{substr(strip_tags($proyects->historia), 0,150)}}...</td>
+                          <td class="col-md hidden-xs">{{substr(strip_tags($proyects->resumenLargo), 0,150)}}...</td>
+
+
+                          <td class="col-xs hidden-lg">{{substr(strip_tags($proyects->historia), 0,50)}}...</td>
+                          <td class="col-xs hidden-lg" >{{substr(strip_tags($proyects->resumenLargo), 0,50)}}...</td>
+
+
+
                         <td>{{$proyects->tel}}</td>
                         @if(isset($proyects->proyectoImg[0]))
                             <td>

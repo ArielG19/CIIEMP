@@ -1,0 +1,35 @@
+@media screen and (max-device-width:360px){
+	#resumenLargo
+	{
+		height: 100px;
+	}
+	
+	
+}
+
+@media screen and (max-device-width:640px){
+	#resumenLargo
+	{
+		height: 140px;
+	}
+
+	#historia
+	{
+		height: 90px;
+	}
+
+	#resumenLargo
+	{
+		height: 140px;
+	}
+
+	#group-p
+	{
+		margin-bottom: 2px;
+		
+	}
+
+	
+				
+}
+

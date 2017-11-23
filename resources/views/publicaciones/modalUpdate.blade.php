@@ -1,5 +1,4 @@
-<div class="col-md-10 col-md-offset-1">
-	<div class="modal fade" id="ModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="ModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog " role="document">
 					<div class="modal-content mod-yellow">
 							<div class="modal-header">
@@ -25,30 +24,9 @@
 												</div>
 
 												<div class="form-group">
-					                        		{!!form::label('coloraboradores','Colaboradores:')!!}
-					                            	{!!form::text('coloraboradores',null,['id'=>'coloraboradores_edit','class'=>'form-control','placeholder'=>'Escribe el nombre de revista donde se publico'])!!}
+					                        		{!!form::label('publicacion','Publicacion:')!!}
+					                            	{!!form::textarea('publicacion',null,['id'=>'publicacion_edit','class'=>'form-control'])!!}
 					          					</div>
-
-
-												<div class="form-group">
-					                        		{!!form::label('publicado_en','Publicado por:')!!}
-					                            	{!!form::text('publicado_en',null,['id'=>'publicado_edit','class'=>'form-control','placeholder'=>'Escribe donde se publico'])!!}
-					          					</div>
-
-					          					<div class="form-group">
-					                        		{!!form::label('titulo','Nombre de trabajo:')!!}
-					                            	{!!form::text('titulo_trabajo',null,['id'=>'titulo_edit','class'=>'form-control','placeholder'=>'Escribe el nombre del trabajo que se publica '])!!}
-					          					</div>
-
-					                    		<div class="form-group">
-					              					{!!form::label('fecha','Fecha:')!!}
-					              					{!!form::date('fecha',null,['id'=>'fecha_edit','class'=>'form-control'])!!}
-					            				</div>
-
-					            				<div class="form-group">
-					              					{!!form::label('enlace','Enlace:')!!}
-					              					{!!form::text('enlace',null,['id'=>'enlace_edit','class'=>'form-control','placeholder'=>'Escriba el enlace'])!!}
-					            				</div>
 		                		{!!Form::close()!!}
 							</div>
 
@@ -59,10 +37,3 @@
 				</div>
 	</div>
 </div>
-
-
- <script>
-        $('.select-users').chosen({
-          no_results_text:'No se encontraron resultados',
-        });
-      </script>

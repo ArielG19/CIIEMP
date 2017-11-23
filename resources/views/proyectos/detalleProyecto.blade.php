@@ -56,7 +56,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-xs-12">
 
                     <div class="panel panel-default">
@@ -109,6 +108,7 @@
 
                                         <h2>{{$proyecto->responsable}}</h2>
 
+
                                         <p>
                                             <a class="remove-decoration"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Contacto: {{$proyecto->tel}}
                                             </a> <br>
@@ -125,14 +125,12 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
-        <script type="text/javascript"
-                src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src={{asset("js/bxslider.js")}}></script>
-        <script type="text/javascript" src={{asset("js/jquery.magnific-popup.js")}}></script>
+    </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bxslider.js"></script>
+        <script type="text/javascript" src="/js/jquery.magnific-popup.js"></script>
 
         <script>
             $('.bxslider').bxSlider({

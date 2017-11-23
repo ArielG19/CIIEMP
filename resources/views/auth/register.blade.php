@@ -1,7 +1,7 @@
 
 <div class="collapse" id="collapseRegistro">
-                        <div class="well" style="margin-top:200px;padding-top: 20px; color:#fff; background:transparent !important">
-                        <div class="panel panel-default" style="background-color:rgba(71,152,185,0.3);">
+                        <div class="well" style="margin-top:190px;padding-top: 35px; color:#fff; background:transparent !important">
+                        <div class="panel panel-default" style="background-color:rgba(4, 43, 81,0.7);">
                                 <div class="panel-heading"  style="background-color:rgba(71,152,185,0.1);color:#fff;"> Registrarse</div>
 
                                 <div class="panel-body">
@@ -9,7 +9,7 @@
                                         {{ csrf_field() }}
 
                                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                            <label for="name" class="col-md-4 control-label">Name</label>
+                                            <label for="name" class="col-md-4 control-label">Nombre</label>
 
                                             <div class="col-md-6">
                                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
@@ -23,7 +23,7 @@
                                         </div>
 
                                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                            <label for="email" class="col-md-4 control-label">E-Mail</label>
 
                                             <div class="col-md-6">
                                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -37,7 +37,7 @@
                                         </div>
 
                                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                            <label for="password" class="col-md-4 control-label">Password</label>
+                                            <label for="password" class="col-md-4 control-label">Contraseña</label>
 
                                             <div class="col-md-6">
                                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -51,7 +51,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                                            <label for="password-confirm" class="col-md-4 control-label">Confirmar contraseña</label>
 
                                             <div class="col-md-6">
                                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -61,7 +61,7 @@
                                         <div class="form-group">
                                             <div class="col-md-6 col-md-offset-4">
                                                 <button type="submit" class="btn btn-primary">
-                                                    Register
+                                                    Registrarse
                                                 </button>
                                             </div>
                                         </div>

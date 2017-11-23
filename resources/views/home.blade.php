@@ -153,12 +153,12 @@
                         <ul class="treeview-menu">
                             <li>
                                     <a href="{{route('noticia.index')}}">
-                                        <i class="fa fa-circle-o"></i>Listar articulos
+                                        <i class="fa fa-circle-o"></i>Listar noticias
                                     </a>
                             </li>
                             <li>
                                     <a href="{{route('noticia.create')}}">
-                                        <i class="fa fa-circle-o"></i>Registrar un articulo
+                                        <i class="fa fa-circle-o"></i>Registrar una noticia
                                     </a>
                             </li>
                         </ul>
