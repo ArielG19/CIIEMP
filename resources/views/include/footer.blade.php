@@ -64,9 +64,9 @@
 
 	<div class="fh5co-footer-style-3 fondo color">
 
-		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo"><img src="{{asset('styleVoltage/images/Marca Negativo.png')}}" alt="" width="60%"></div>
+		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo"><img src="/styleVoltage/images/Marca Negativo.png" alt="" width="60%"></div>
 
-		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo2"><img src="{{asset('styleVoltage/images/CIIEMP-Coloroscuro Negativo.png')}}" alt="" width="50%"></div>
+		<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp estilo2"><img src="/styleVoltage/images/CIIEMP-Coloroscuro Negativo.png" alt="" width="50%"></div>
 	</div>
 <!-- END footer -->
 

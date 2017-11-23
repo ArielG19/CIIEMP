@@ -22,7 +22,7 @@
                                     </button>
                                     <strong> Se elimino correctamente</strong>
                           </div>
-                          <div class="col-md-10 col-md-offset-1">
+                          
                             <div class="panel panel-primary">
                                   <div class="panel-heading">
                                         <h5 class="panel-title">Lista de publicaciones</h5>
@@ -37,12 +37,12 @@
                                       <div id="listar-publicaciones"></div>
                                   </div>
                             </div>
-                          </div>  
+                            
         </div>
  @include('publicaciones.modalCreate')
  @include('publicaciones.modalUpdate')
  @section('script')
-           <script type="text/javascript" src="{{ asset('/js/publicaciones.js') }}"></script>
+           <script type="text/javascript" src="/js/publicaciones.js"></script>
            <script>
             $('textarea').trumbowyg({
                  semantic: false,

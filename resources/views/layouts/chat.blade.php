@@ -8,16 +8,16 @@
 
             <title>@yield('title','Default')</title>
             <!--link rel="shortcut icon" href="favicon.ico"-->
-            <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-            <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+            <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
             <!-- modificamos los margenes de diseño etc. -->
-            <link rel="stylesheet" href="{{asset('panel/css/AdminLTE.css')}}">
-            <link rel="stylesheet" href="{{asset('panel/css/panel.css')}}">
+            <link rel="stylesheet" href="/panel/css/AdminLTE.css">
+            <link rel="stylesheet" href="/panel/css/panel.css">
 
             
-            <link rel="stylesheet" href="{{asset('css/chat.css')}}">
-            <link rel="stylesheet" href="{{asset('chosen/chosen.css')}}">
-            <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
+            <link rel="stylesheet" href="/css/chat.css">
+            <link rel="stylesheet" href="/chosen/chosen.css">
+            <link rel="stylesheet" href="/jquery-alert/jquery.alertable.css">
             
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -31,12 +31,12 @@
             
 </body>
             <!-- jQuery -->
-            <script src="{{asset('jquery/jquery.js')}}"></script>
+            <script src="/jquery/jquery.js"></script>
             <!-- Bootstrap -->
-            <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-            <script src="{{asset('panel/js/app.min.js')}}"></script>
-            <script src="{{asset('chosen/chosen.jquery.js')}}"></script>
-            <script type="text/javascript" src="{{asset('/jquery-alert/jquery.alertable.js')}}"></script>
+            <script src="/bootstrap/js/bootstrap.min.js"></script>
+            <script src="/panel/js/app.min.js"></script>
+            <script src="/chosen/chosen.jquery.js"></script>
+            <script src="/jquery-alert/jquery.alertable.js"></script>
            
             @yield('script')
 </html>
