@@ -10,8 +10,12 @@
                     {!! Form::label('titulo','Título') !!}
                     {!! Form::text('titulo',null,['class' =>'form-control', 'placeholder' =>'Título del Proyecto','required'])!!}
                 </div>
+                <div class="form-group">
+                    {!! Form::label('responsable','Responsable') !!}
+                    {!! Form::text('responsable',null,['id'=>'txtresponsable','class' =>'form-control', 'placeholder' =>'Responsable del Proyecto','required'])!!}
+                </div>
                 <div class="form-group" id="group-p">
-                    {!! Form::label('responsable','Contacto') !!}
+                    {!! Form::label('contacto','Contacto') !!}
                     {!! Form::text('tel',null,['class' =>'form-control', 'placeholder' =>'Número de telefono o correo electronico','required'])!!}
                 </div>
                  <div class="form-group" id="group-p">
@@ -30,8 +34,8 @@
                     {!! Form::label('imagen','Subir múltiples imágenes') !!}
                     {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
                 </div>
-                
-                
+
+
 
             </div>
             <div class="col-md-6">
@@ -49,8 +53,8 @@
                 </div>
 
             </div>
-                    
-                
+
+
     {!! Form::close() !!}
 </div>
 @endsection

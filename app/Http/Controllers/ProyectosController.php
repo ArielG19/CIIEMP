@@ -240,6 +240,10 @@ class ProyectosController extends Controller
             $proyect->tel = $request->tel;
         }
 
+        if ($request->has('responsable')) {
+           $proyect->teacher_id = null;
+        }
+
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
             $filename = time() . '.' . $imagen->getClientOriginalExtension();
