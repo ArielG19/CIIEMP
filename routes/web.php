@@ -148,7 +148,7 @@ Route::get('noticias/{id}/destroy', [
     'as' => 'noticias.destroy'
 ]);
 Route::get('bibliotecas/{id}/destroy', [
-    'uses' => 'bibliotecaController@destroy',
+    'uses' => 'BibliotecaController@destroy',
     'as' => 'bibliotecas.destroy'
 ]);
 Route::get('buscar_archivos/{categoria}/{dato?}', 'BibliotecaController@downfunc');
