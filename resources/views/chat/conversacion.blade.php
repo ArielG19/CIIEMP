@@ -4,7 +4,7 @@
 		<img src="/perfil/{{$m->emisorImg}}" style="width: 42px; height: 42px;top: 8px; left:25px;border-radius: 50%">
 		<b style="margin-left: 10px;">{{$m->emisor}}</b>
 		<a class="btn" id="a-nombre" style="margin-left: 15px;" data-id="{{$m->conversation_id}}">
-		 	Mensajes ({{$m->mensajes}}) 
+			<i style="font-size: 20px;" class="fa fa-commenting-o" aria-hidden="true"></i> ({{$m->mensajes}}) 
 		</a> 
 		<a style="margin-left: 15px;" href="#" onclick="Eliminar('{{$m->conversation_id}}')">
 				   Eliminar <i class="fa fa-trash"></i>
@@ -15,7 +15,7 @@
 		<img src="/perfil/{{$m->receptorImg}}" style="width: 42px; height: 42px;top: 8px; left:25px;border-radius: 50%">
 		<b style="margin-left: 10px;">{{$m->receptor}}</b>
 		<a class="btn" id="a-nombre" style="margin-left: 15px;" data-id="{{$m->conversation_id}}">
-		 	Mensajes ({{$m->mensajes}}) 
+			<i style="font-size: 20px;" class="fa fa-commenting-o" aria-hidden="true"></i> ({{$m->mensajes}}) 
 		</a> 
 		<a style="margin-left: 15px;" href="#" onclick="Eliminar('{{$m->conversation_id}}')">
 				   Eliminar <i class="fa fa-trash"></i>
