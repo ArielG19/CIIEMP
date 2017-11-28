@@ -45,8 +45,11 @@
                             @endif
                             <a><i class="fa fa-map-marker" aria-hidden="true"></i>{{$noticias->lugar}}</a>
                             <a><i class="icon-user" aria-hidden="true"></i>{{$noticias->users->name}}</a>
-                            <a data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-share-alt"
-                                                                                      aria-hidden="true"></i>Compartir</a>
+
+                            <div class="fb-share-button"  data-layout="button" data-size="small" data-mobile-iframe="true">
+                              <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a>
+                            </div>
+
                             <hr>
 
                         </div>
@@ -97,7 +100,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <i class="fa fa-newspaper-o" aria-hidden="true"></i> 
-                                NOTICIAS RECIENTES 
+                                NOTICIAS RECIENTES
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -308,6 +311,15 @@
 
         </div>
     </div>
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 @endsection

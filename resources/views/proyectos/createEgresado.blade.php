@@ -3,7 +3,7 @@
 @section('contenido')
 
 <div class="col-md-12">
-    <u><h2 class="text-center">Nuevo Proyecto de Egresado</h2></u>
+    <u><h5 class="text-center">Nuevo Proyecto de Egresado</h5></u>
     {!! Form::open(['route' => 'proyectos.storeEgresado', 'method' => 'POST','files'=>true]) !!}
             <div class="col-md-6">
                 <div class="form-group" id="group-p">
@@ -48,7 +48,7 @@
                     {!! Form::textarea('resumenLargo',null,['class' =>'form-control', 'placeholder' =>'Resumen Largo','maxlength' => 2674,'required'])!!}
                 </div>
                 <hr>
-                <div class="form-group">
+                <div class="form-group col">
                     {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
                 </div>
 
