@@ -1,2 +1,4 @@
-User-agent: *
-Disallow:
+User-Agent: * 
+Disallow: /wp- 
+Allow: /wp-content/uploads/ 
+Sitemap:http://ciiemp.com/sitemap.xml
