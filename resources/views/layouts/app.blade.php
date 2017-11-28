@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
+<meta name="google-site-verification" content="KwzAOs2cSOR1n89exRUW-WFf0VmWf11SNbmrqLTgHYQ" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -16,42 +17,42 @@
           rel='stylesheet' type='text/css'>
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="{{asset('styleVoltage/css/animate.css')}}">
+    <link rel="stylesheet" href="/styleVoltage/css/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="{{asset('styleVoltage/css/icomoon.css')}}">
+    <link rel="stylesheet" href="/styleVoltage/css/icomoon.css">
     <!-- Magnific Popup-->
-    <link rel="stylesheet" href="{{asset('styleVoltage/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="/styleVoltage/css/magnific-popup.css">
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="{{asset('styleVoltage/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="/styleVoltage/css/owl.carousel.min.css">
     <!-- Start WOWSlider.com HEAD section -->
-    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/engine1/style.css">
+    <script type="text/javascript" src="/engine1/jquery.js"></script>
     <!-- End WOWSlider.com HEAD section -->
 
-    <link rel="stylesheet" href="{{asset('styleVoltage/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="/styleVoltage/css/owl.theme.default.min.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{{asset('styleVoltage/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="/styleVoltage/css/bootstrap.css">
 
     <!-- Cards -->
-    <link rel="stylesheet" href="{{asset('styleVoltage/css/cards.css')}}">
+    <link rel="stylesheet" href="/styleVoltage/css/cards.css">
     <!--countdown-->
-    <link rel="stylesheet" href="{{asset('css/TimeCircles.css')}}">
+    <link rel="stylesheet" href="/css/TimeCircles.css">
 
     <!--slider-->
-    <link rel="stylesheet" href="{{asset('css/bxslider.css')}}">
+    <link rel="stylesheet" href="/css/bxslider.css">
     <!--zoom-->
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
 
     <!-- Modernizr JS -->
-    <script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
+    <script src="/styleVoltage/js/modernizr-2.6.2.min.js"></script>
 
 
-    <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 
 
-    <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
-    <link rel="stylesheet" href="{{asset('/jquery-alert/jquery.alertable.css')}}">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/jquery-alert/jquery.alertable.css">
 
 
 </head>
@@ -72,31 +73,31 @@
 
 </body>
 <!-- jQuery -->
-<script src="{{asset('styleVoltage/js/jquery.min.js')}}"></script>
+<script src="/styleVoltage/js/jquery.min.js"></script>
 
 <!-- jQuery Easing -->
-<script src="{{asset('styleVoltage/js/jquery.easing.1.3.js')}}"></script>
+<script src="/styleVoltage/js/jquery.easing.1.3.js"></script>
 
 <!-- Bootstrap -->
-<script src="{{asset('styleVoltage/js/bootstrap.min.js')}}"></script>
+<script src="/styleVoltage/js/bootstrap.min.js"></script>
 
 <!-- Waypoints -->
-<script src="{{asset('styleVoltage/js/jquery.waypoints.min.js')}}"></script>
+<script src="/styleVoltage/js/jquery.waypoints.min.js"></script>
 
 <!-- Owl Carousel -->
-<script src="{{asset('styleVoltage/js/owl.carousel.min.js')}}"></script>
+<script src="/styleVoltage/js/owl.carousel.min.js"></script>
 
 <!-- Magnific Popup -->
-<script src="{{asset('styleVoltage/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="/styleVoltage/js/jquery.magnific-popup.min.js"></script>
 
 <!-- countTo -->
-<script src="{{asset('styleVoltage/js/jquery.countTo.js')}}"></script>
+<script src="/styleVoltage/js/jquery.countTo.js"></script>
 
 <!-- Stellar -->
-<script src="{{asset('styleVoltage/js/jquery.stellar.min.js')}}"></script>
+<script src="/styleVoltage/js/jquery.stellar.min.js"></script>
 
 <!-- WOW -->
-<script src="{{asset('styleVoltage/js/wow.min.js')}}"></script>
+<script src="/styleVoltage/js/wow.min.js"></script>
 
 <script> new WOW().init();</script>
 
@@ -105,16 +106,16 @@
 
 
 <!-- Main -->
-<script src="{{asset('styleVoltage/js/main.js')}}"></script>
-<script src="{{asset('styleVoltage/js/tinymce/jquery.tinymce.min.js')}}"></script>
-<script src="{{asset('styleVoltage/js/tinymce/tinymce.min.js')}}"></script>
+<script src="/styleVoltage/js/main.js"></script>
+<script src="/styleVoltage/js/tinymce/jquery.tinymce.min.js"></script>
+<script src="/styleVoltage/js/tinymce/tinymce.min.js"></script>
 <!-- countdown -->
-<script src="{{asset('js/TimeCircles.js')}}"></script>
-<script type="text/javascript" src="{{asset('/jquery-alert/jquery.alertable.js')}}"></script>
+<script src="/js/TimeCircles.js"></script>
+<script src="/jquery-alert/jquery.alertable.js"></script>
 
 
-<script src="{{asset('styleVoltage/js/modernizr-2.6.2.min.js')}}"></script>
-<script src="{{asset('styleVoltage/js/navegador.js')}}"></script>
+<script src="/styleVoltage/js/modernizr-2.6.2.min.js"></script>
+<script src="/styleVoltage/js/navegador.js"></script>
 
 @yield('script')
 </html>
