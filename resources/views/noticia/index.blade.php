@@ -49,8 +49,7 @@
                                     <a><i class="fa fa-map-marker" aria-hidden="true"></i>{{$noticia->lugar}}</a>
                                     <a href="#"><i class="icon-user" aria-hidden="true"></i>{{$noticia->users->name}}
                                     </a>
-                                    <a data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-share-alt"
-                                                                                              aria-hidden="true"></i>Compartir</a>
+                                
                                 </div>
 
                             </div>
