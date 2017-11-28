@@ -14,6 +14,7 @@
             width: 400px;
             color: black;
             margin-top:10px;
+            margin-left: 100px;
 
 
         }
@@ -110,14 +111,16 @@
             }
              #caja
             {
-                height: 300px;
+                height: 200px;
                margin-bottom: 10px;
             }
              .mytext
             {
                  display: block !important;
-                 width: 80%;
-                 margin-top:1px
+                 width: 85%;
+                 margin-top:1px;
+                 margin-right:20px !important;
+                 float: right;
                  
             }
             .text-r
@@ -132,8 +135,9 @@
             #form
             {
                 margin-bottom:30px;
+                margin-right: 80px;
             }
-
+                         
         }
       @media screen and (max-width:640px){
             .text-r

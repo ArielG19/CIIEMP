@@ -25,10 +25,22 @@ Route::get('/home', 'HomeController@index');
 //-------Rutas usuarios-----
 
 Route::get('/listar-usuarios','UserController@listarUsuario');
-//-------Rutas usuarios-----
+
 Route::group(['middleware' => ['Admin','auth']], function () {
     Route::Resource('/usuarios','UserController');
+          
 });
+//-------Rutas usuarios-----
+
+//-------Rutas chat-----
+Route::group(['middleware' => ['auth']], function () {
+        Route::Resource('/chat','ChatController');
+        Route::get('/listar-chat/{usuario_activo}','ChatController@listarChat');
+        Route::get('/listar-coversacion/{id}','ChatController@listarConversacion');
+        //-------Rutas chat-----
+
+});
+
 
 
 
@@ -52,12 +64,6 @@ Route::get('/listar-comentarios/{id_b}','ComentarioController@listarComentarios'
 
 //-------Rutas comentarios-----
 
-
-//-------Rutas chat-----
-Route::Resource('/chat','ChatController');
-Route::get('/listar-chat/{usuario_activo}','ChatController@listarChat');
-Route::get('/listar-coversacion/{id}','ChatController@listarConversacion');
-//-------Rutas chat-----
 
 //-------Rutas curriculon-----
 Route::Resource('/curriculum','CurriculonController');
