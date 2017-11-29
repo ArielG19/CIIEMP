@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Listado de archivos que se han subido a la biblioteca digital')
+@section('title', 'Listado de proyectos')
 @section('contenido')
     @if(Session::has('message'))
         <div class="alert alert-warning alert-dismissible" role="alert">

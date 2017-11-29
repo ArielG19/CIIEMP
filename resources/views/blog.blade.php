@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Entradas recientes')
+@section('title','Blogs')
 @section('content')
     <div class="fh5co-blog-style-1">
         <div class="container">

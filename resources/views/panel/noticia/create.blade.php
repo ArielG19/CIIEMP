@@ -1,5 +1,5 @@
 @extends('home')
-@section('title', 'Registrar articulo')
+@section('title', 'Registrar noticias')
 @section('contenido')
 
     @if (count($errors) > 0)

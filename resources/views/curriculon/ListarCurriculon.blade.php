@@ -30,7 +30,7 @@
                                                 <li><i class="fa fa-user"></i> {{$c->primer_nombre}} {{$c->segundo_nombre}} {{$c->primer_apellido}} {{$c->segundo_apellido}}</li>
                                                 <li><i class="fa fa-check-square-o"> {{$c->estado_civil}}</i></li>
                                                 <li><i class="fa fa-globe"></i> {{$c->nacionalidad}}</li>
-                                                <li><i class="fa fa-home"></i> {{$c->direccion}}</li>
+                                                <li><i class="fa fa-home"></i> {{$c->direccion}}</li><br>
                                                 <li><i class="fa fa-phone"></i> {{$c->telefono}}</li>
                                                 <li><i class="fa fa-envelope-o"></i> {{$c->email}}</li>                                               
                                               </ul>

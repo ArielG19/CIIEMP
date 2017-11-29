@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Entradas recientes')
+@section('title','Docentes')
  @section('script')
     <script type="text/javascript" src="{{asset('/js/docenteModal.js')}}"></script>
 

@@ -41,8 +41,8 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
 
-                        <li><a href="#"><span class="badge">B</span>Bolsa de Empleo</a></li>
-                        <li><a href="#"><span class="badge">O</span>observatorio socioeconómico</a></li>
+                        <li><a href="http://bolsaempleo.ciiemp.com/"><span class="badge">B</span>Bolsa de Empleo</a></li>
+                        <li><a href="http://observatorio.ciiemp.com/"><span class="badge">O</span>observatorio socioeconómico</a></li>
 
                     </ul>
                 </li>

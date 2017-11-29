@@ -87,7 +87,7 @@
                                 <div class="col-md-6 col-md-offset-3 text-center">
                                     <div class="cuerpo text-center">
                                         <h1 class="titulo">
-                                        <div class="wow fadeInLeft">CIIEMP</div><div class="wow fadeInRight">Módulos</div>
+                                        <div class="wow fadeInLeft">CIIEMP</div><div class="wow fadeInRight"></div>
                                         </h1>
                                         <p class="wow fadeInUp delay-1 parrafo">CIIEMP cuenta con dos módulos,
                                           uno de ellos es el observatorio socioeconómico  y el otro es una bolsa de empleo.</p>
