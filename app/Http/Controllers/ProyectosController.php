@@ -26,14 +26,14 @@ class ProyectosController extends Controller
 
     public function frontProyecto(Request $request)
     {
-        $proyectos = Proyecto::Search($request->titulo)->orderBy('id', 'DESC')->paginate(5);
+        $proyectos = Proyecto::Search($request->titulo)->orderBy('id', 'DESC')->paginate(6);
         return view('proyectos.indexPrincipal', compact('proyectos'));
     }
 
     public function filtraTipo($tipo)
     {
         $proyectos = Proyecto::Searchtipo($tipo)->first();
-        $filtrar = $proyectos->paginate(5);
+        $filtrar = $proyectos->paginate(6);
         return view('proyectos.indexPrincipal', compact('proyectos'));
 
     }

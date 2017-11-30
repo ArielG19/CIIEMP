@@ -15,7 +15,7 @@
                                 <div class="fh5co-post-image">
                                     <div class="fh5co-overlay"></div>
                                     <div class="fh5co-category">
-                                        <a href="">
+                                        <a>
                                             {{$noticia->category->name}}
                                         </a></div>
                                     @if(isset($noticia->articleImg[0]))
@@ -49,7 +49,7 @@
                                     <a><i class="fa fa-map-marker" aria-hidden="true"></i>{{$noticia->lugar}}</a>
                                     <a href="#"><i class="icon-user" aria-hidden="true"></i>{{$noticia->users->name}}
                                     </a>
-                                
+
                                 </div>
 
                             </div>

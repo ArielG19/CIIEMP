@@ -29,7 +29,7 @@ class CreateProyectosTable extends Migration
 
 
             $table->foreign('id_usuario')->references('id')->on('users');
-            $table->foreign('id_categoria')->references('id')->on('categorias');
+            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade');
             $table->foreign('teacher_id')->references('id')->on('teachers');
             $table->timestamps();
         });
