@@ -40,8 +40,8 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('file','Subir un archivo') !!}
-        {!! Form::file('file')!!}
+      {!! Form::label('imagen','Adjuntar un documento Word o Pdf') !!}
+      {!! Form::file('file',['accept'=>'application/pdf,.doc, .docx,'])!!}
         <a href="{{asset('download/pdf')}}/{{$blog->file}}" target="_blank">{{basename($blog->file)}}</a>
     </div>
 

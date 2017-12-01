@@ -42,8 +42,8 @@
         {!! Form::file('path',['accept'=>'image/x-png,image/jpeg'])!!}
     </div>
     <div class="form-group">
-        {!! Form::label('imagen','Subir un archivo') !!}
-        {!! Form::file('file')!!}
+        {!! Form::label('imagen','Adjuntar un documento Word o Pdf') !!}
+        {!! Form::file('file',['accept'=>'application/pdf,.doc, .docx,'])!!}
     </div>
     <div class="form-group">
         {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}

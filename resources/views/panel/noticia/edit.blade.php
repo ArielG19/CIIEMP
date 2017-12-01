@@ -103,7 +103,7 @@
     <div id="collapseTwo" class="panel-collapse collapse">
 
         <div class="form-group">
-            {!! Form::label('imagen','Subir múltiples imágenes') !!}
+            {!! Form::label('imagen','Subir una o más imágenes') !!}
             {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
         </div>
     </div>

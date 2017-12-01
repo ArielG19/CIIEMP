@@ -27,11 +27,11 @@
                 </div>
                 <div class="form-group" id="group-p">
                     {!! Form::label('imagen','Imagen de Entrada') !!}
-                    {!! Form::file('imagen',['required'])!!}
+                    {!! Form::file('imagen',['required','accept'=>'image/x-png,image/jpeg'])!!}
                 </div>
                 <hr>
                 <div class="form-group" id="group-p">
-                    {!! Form::label('imagen','Subir múltiples imágenes') !!}
+                    {!! Form::label('imagen','Subir una o más imágenes') !!}
                     {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
                 </div>
 

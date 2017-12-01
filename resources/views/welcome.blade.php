@@ -136,12 +136,12 @@
                                 <div class="row">
                                     <div class=" col-md-6 col-sm-12">
                                         <div class="work-item fh5co-post wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.1s">
-                                            <a href="#">
+                                            <a href="http://observatorio.ciiemp.com/">
                                             <img src="styleVoltage/images/socieconomico.png" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="fh5co-post-text text-center">
-                                            <h3><a href="#">Observatorio Socioeconómico</a></h3>
+                                            <h3><a href="http://observatorio.ciiemp.com/">Observatorio Socioeconómico</a></h3>
                                             <p>El Observatorio Socioeconómico de CIIEMP es un instrumento de seguimiento y monitorización de los
                                               principales indicadores socioeconómicos a nivel Departamental.</p>
                                         </div>
@@ -149,12 +149,12 @@
 
                                 <div class="col-md-6 col-sm-12 ">
                                     <div class="work-item fh5co-post wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.1s">
-                                        <a href="#">
+                                        <a href="http://bolsaempleo.ciiemp.com/">
                                         <img src="styleVoltage/images/bolsadeempleo.png" class="img-responsive">
                                         </a>
                                     </div>
                                       <div class="fh5co-post-text text-center">
-                                            <h3><a href="#">Bolsa de Empleo</a></h3>
+                                            <h3><a href="http://bolsaempleo.ciiemp.com/">Bolsa de Empleo</a></h3>
                                             <p>En CIIEMP queremos ayudarte a que encuentres tu próximo empleo,
                                               por eso desde aquí puedes acceder a las mejores ofertas de trabajo que hay en Nicaragua, clasificadas por área.</p>
                                         </div>

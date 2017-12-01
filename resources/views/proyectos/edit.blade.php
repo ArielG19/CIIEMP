@@ -25,7 +25,7 @@
 
     <div class="form-group">
         {!! Form::label('imagen','Imagen de Entrada') !!}
-        {!! Form::file('imagen')!!}
+        {!! Form::file('imagen','required','accept'=>'image/x-png,image/jpeg')!!}
     </div>
 
     @if($proyect->tipo == "estudiante" and $proyect->teacher_id != null)
@@ -83,7 +83,7 @@
 
 
     <div class="form-group col-md-6 col-xs-6">
-        {!! Form::label('imagen','Subir múltiples imágenes') !!}
+        {!! Form::label('imagen','Subir una o más imágenes') !!}
         {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
     </div>
     <div class="form-group col-md-6 col-xs-12">

@@ -9,6 +9,7 @@ use App\Categoria;
 use App\User;
 use App\Teacher;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProyectoRequest;
 use Illuminate\Support\Facades\Storage;
 use Session;
 use Redirect;
@@ -85,7 +86,7 @@ class ProyectosController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function storeEgresado(Request $request)
+    public function storeEgresado(ProyectoRequest $request)
     {
 
         $proyect = new Proyecto($request->all());
@@ -122,7 +123,7 @@ class ProyectosController extends Controller
 
     }
 
-    public function store(Request $request)
+    public function store(ProyectoRequest $request)
     {
         //
 
@@ -219,7 +220,7 @@ class ProyectosController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProyectoRequest $request, $id)
     {
 
         $proyect = proyecto::find($id);
