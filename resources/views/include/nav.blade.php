@@ -56,13 +56,13 @@
                 </li>
                 <!-- Authentication Links -->
                 @if (Auth::guest())
-                    <li><a role="button" data-toggle="collapse" href="#collapseAcceder" aria-expanded="false"
+                    <li><a id="scroll1" role="button" data-toggle="collapse" href="#collapseAcceder" aria-expanded="false"
                            aria-controls="collapseExample">
                             <i class="fa fa-sign-in fa-lg"></i> Acceder
                         </a>
                     </li>
 
-                    <li><a role="button" data-toggle="collapse" href="#collapseRegistro" aria-expanded="false"
+                    <li><a id="scroll2" role="button" data-toggle="collapse" href="#collapseRegistro" aria-expanded="false"
                            aria-controls="collapseExample">
                             <i class="fa fa-user fa-lg"></i> Registrarse
                         </a>

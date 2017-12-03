@@ -261,3 +261,24 @@
         </div>
     </div>
 @endsection
+@section('script')
+    <script>
+         $(function() {
+          
+
+            $("#scroll1").on("click",function(){
+                //nos lleva a la posicion 0
+                $("html,body").animate({scrollTop:0},2000);
+                
+            });
+            $("#scroll2").on("click",function(){
+                //nos lleva a la posicion 0
+                $("html,body").animate({scrollTop:0},2000);
+                
+            });
+
+
+        });
+    </script>
+
+@endsection

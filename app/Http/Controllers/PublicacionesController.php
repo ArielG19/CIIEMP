@@ -27,7 +27,7 @@ class PublicacionesController extends Controller
         ->Join('teachers','users.id','teachers.id_usuario')
         ->select('users.name','teachers.primer_nombre','teachers.primer_apellido','publicaciones.publicacion','publicaciones.id')
         ->Orderby('publicaciones.id','desc')
-        ->paginate(1);
+        ->paginate(7);
 
         //dd($publicaciones);
         return view('publicaciones.listar')->with('publicaciones',$publicaciones);
