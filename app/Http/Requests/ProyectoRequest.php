@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class BlogRequest extends FormRequest
+class ProyectoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +23,13 @@ class BlogRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'file' => 'mimes:pdf,doc',
-            'path' => 'mimes:jpeg,png'
-        ];
+
+      $photos = count($this->input('image'));
+      foreach(range(0, $photos) as $index) {
+          $rules['image.' . $index] = 'image|mimes:jpeg,png';
+      }
+
+      return $rules;
+
     }
 }

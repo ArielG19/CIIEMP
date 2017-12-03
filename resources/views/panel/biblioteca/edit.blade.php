@@ -34,8 +34,8 @@
     </div>
 
     <div class="form-group">
-        {!!Form::label('imagen','Archivo:')!!}
-        {!!Form::file('path')!!}
+        {!!Form::label('imagen','Subir un archivo Pdf o Word')!!}
+        {!!Form::file('path',['required','accept'=>'application/pdf,.doc, .docx,'])!!}
         <a href="{{asset('download/pdf')}}/{{$biblio->path}}" target="_blank">{{basename($biblio->path)}}</a>
 
     </div>

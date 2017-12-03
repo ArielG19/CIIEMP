@@ -38,8 +38,8 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('Archivo PDF','Archivo') !!}
-        {!! Form::file('path',['required'])!!}
+        {!! Form::label('Archivo PDF','Subir un archivo Pdf o Word') !!}
+        {!! Form::file('path',['required','accept'=>'application/pdf,.doc, .docx,'])!!}
     </div>
 
 

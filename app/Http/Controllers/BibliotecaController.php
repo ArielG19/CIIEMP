@@ -12,6 +12,7 @@ use Session;
 use Redirect;
 use DB;
 use App\Http\Requests\UploadRequest;
+use App\Http\Requests\RepositorioRequest;
 use Image;
 use Auth;
 
@@ -74,7 +75,7 @@ class BibliotecaController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UploadRequest $request)
+    public function store(RepositorioRequest $request)
     {
         $biblio = new Biblioteca($request->all());
         if ($request->hasFile('image')) {
@@ -132,7 +133,7 @@ class BibliotecaController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UploadRequest $request, $id)
+    public function update(RepositorioRequest $request, $id)
     {
         $biblio = Biblioteca::find($id);
         $biblio->fill($request->all());

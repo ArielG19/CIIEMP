@@ -15,7 +15,7 @@
 
         <div class="form-group" id="grupos-p">
             {!! Form::label('imagen','Imagen de Entrada') !!}
-            {!! Form::file('imagen',['required'])!!}
+            {!! Form::file('imagen',['required','accept'=>'image/x-png,image/jpeg'])!!}
         </div>
 
         <div class="form-group col-md-6">
@@ -48,7 +48,7 @@
         {!! Form::hidden('id_usuario', Auth::user()->id, null,['class' =>'form-control'])!!}
 
         <div class="form-group">
-            {!! Form::label('imagen','Subir múltiples imágenes') !!}
+            {!! Form::label('imagen','Subir una o más imágenes') !!}
             {!! Form::file('image[]',['multiple' => 'multiple','accept'=>'image/x-png,image/jpeg'])!!}
         </div>
         {!! Form::submit('Registrar', ['class' =>'btn btn-primary']) !!}
