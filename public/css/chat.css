@@ -11,7 +11,7 @@
             padding:10px;
             background:#e0e0de;
             border-color: transparent;
-            width: 350px;
+            width: 350px !important;
             color: black;
             margin-top:10px;
             margin-left: 100px;
