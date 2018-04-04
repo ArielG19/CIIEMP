@@ -27,12 +27,12 @@
                                               <br>
 
                                               <ul>
-                                                <li><i class="fa fa-user"></i> {{$c->primer_nombre}} {{$c->segundo_nombre}} {{$c->primer_apellido}} {{$c->segundo_apellido}}</li>
+                                                <li><i class="fa fa-user"></i> {{$c->primer_nombre}} {{$c->segundo_nombre}} {{$c->primer_apellido}} {{$c->segundo_apellido}}</li><br>
                                                 <li><i class="fa fa-check-square-o"> {{$c->estado_civil}}</i></li>
                                                 <li><i class="fa fa-globe"></i> {{$c->nacionalidad}}</li>
                                                 <li><i class="fa fa-home"></i> {{$c->direccion}}</li><br>
                                                 <li><i class="fa fa-phone"></i> {{$c->telefono}}</li>
-                                                <li><i class="fa fa-envelope-o"></i> {{$c->email}}</li>                                               
+                                                <li><i class="fa fa-envelope-o"></i> {{$c->email}}</li>
                                               </ul>
                                       </div>
                                       <!-- End Personal Information -->
@@ -51,7 +51,7 @@
                                     <div class="content">
                                       <p>{!!$c->titulos_academicos!!}</p>
                                     </div>
-                                  
+
                                 </div>
 
                                 <div class="entry">
@@ -59,7 +59,7 @@
                                     <div class="content">
                                       <p>{!!$c->estudios_doctorales!!}</p>
                                     </div>
-                                  
+
                                 </div>
                                 <!-- End 2nd Row -->
 

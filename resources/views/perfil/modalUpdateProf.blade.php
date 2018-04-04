@@ -19,14 +19,14 @@
 								{!!Form::open(['id'=>'form'])!!}
 									<input type="hidden" name="_token" value="{{ csrf_token()}}" id="token">
 									<input type="hidden" id="id">
-										                            	
+
 									<div class="form-group">
 										{!!form::label('Nombre:')!!}
 	                            		{!!form::text('primer_nombre',null,['id'=>'name1','class'=>'form-control','placeholder'=>'Escriba un nombre'])!!}
 	                            	</div>
 
 	                            	<div class="form-group">
-										{!!form::label('Segundo Nombre::')!!}
+										{!!form::label('Segundo Nombre:')!!}
 	                            		{!!form::text('segundo_nombre',null,['id'=>'name2','class'=>'form-control','placeholder'=>'Escriba su segundo nombre'])!!}
 	                            	</div>
 
@@ -44,7 +44,7 @@
 										{!!form::label('Telefono:')!!}
 	                            		{!!form::text('telefono',null,['id'=>'telefono','class'=>'form-control','placeholder'=>'Escriba su numero de telefono'])!!}
 	                            	</div>
-	          					
+
 	                        		 <div class="form-group">
 	                                       {!!form::label('Profesion 1:')!!}
 	                                       {!!form::text('profesion1',null,['id'=>'profesion1','class'=>'form-control','placeholder'=>'Escriba una Profesion'])!!}

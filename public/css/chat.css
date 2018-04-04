@@ -11,7 +11,7 @@
             padding:10px;
             background:#e0e0de;
             border-color: transparent;
-            width: 400px;
+            width: 350px;
             color: black;
             margin-top:10px;
             margin-left: 100px;
@@ -22,7 +22,8 @@
             color: black !important;
         }
         .text-r{
-            padding-left:800px;
+            padding-left:700px;
+            padding-bottom: 25px;
         }
         .avatar{
             display:flex;
@@ -40,22 +41,22 @@
         }
         /*btn enviar*/
         #Enviar{
-            color: black; 
+            color: black;
             background: #fff;
             margin-left: 10px;
-            
+
 
 
         }
         #form{
             background: transparent !important;
-            
+
         }
-               
+
         .msj-rta{
             float:right;
             background:whitesmoke;
-            
+
         }
         .msj{
             float:left;
@@ -63,7 +64,7 @@
         }
         div.msj.macro{
             width: 100%;
-           
+
         }
         .msj-rta.macro{
             background: transparent;
@@ -73,13 +74,13 @@
             height:450px;
             padding:0;
             overflow-y:scroll;
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
         #scroll{
             height:400px;
             padding:0;
             overflow-y:scroll;
-            overflow-x: hidden; 
+            overflow-x: hidden;
             }
         .frame > div:last-of-type{
             bottom:5px;
@@ -94,16 +95,16 @@
             flex-direction: column;
 
         }
-        
-        
-        
+
+
+
         input:focus{
             outline: none;
-        }        
+        }
         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: #999;
         }
-     
+
         @media screen and (max-device-width:360px){
             .well
             {
@@ -121,7 +122,7 @@
                  margin-top:1px;
                  margin-right:20px !important;
                  float: right;
-                 
+
             }
             .text-r
             {
@@ -137,7 +138,7 @@
                 margin-bottom:30px;
                 margin-right: 80px;
             }
-                         
+
         }
       @media screen and (max-width:640px){
             .text-r
@@ -150,11 +151,6 @@
                 margin-bottom:30px;
             }
 
-           
-
-        }  
-
-      
 
 
-   
+        }
